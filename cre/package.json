@@ -1,0 +1,1 @@
+{"name":"@wave/cre","version":"0.1.0","private":true,"type":"module","scripts":{"typecheck":"tsc --noEmit","test":"vitest run"},"dependencies":{"@chainlink/cre-sdk":"1.23.0","viem":"^2.38.0"},"devDependencies":{"@types/node":"^22.18.0"}}
