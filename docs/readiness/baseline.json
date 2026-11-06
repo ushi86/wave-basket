@@ -1,0 +1,53 @@
+{
+  "baselineCommit": "c94529f",
+  "observations": [
+    {
+      "command": "npm run typecheck",
+      "log": "docs/readiness/baseline-typecheck.log",
+      "sha256": "e39697a7abe175682393da1d6b2b94486648d6d450634f87bef32b3acce5faf0",
+      "observedAtIST": "2026-11-06T12:01:18.039767+05:30",
+      "status": "Proven",
+      "scope": "local-check-only"
+    },
+    {
+      "command": "npm test",
+      "log": "docs/readiness/baseline-tests.log",
+      "sha256": "b135753d0738485652106e08b8b08d1cb5f85578465b3e18e79f402465560a21",
+      "observedAtIST": "2026-11-06T12:01:19.490458+05:30",
+      "status": "Proven",
+      "scope": "local-check-only"
+    },
+    {
+      "command": "npm run build",
+      "log": "docs/readiness/baseline-web-build.log",
+      "sha256": "4b2d1c4bb36b39ece492f81543b8fe69bab612ad64862c3e0503530a8e830917",
+      "observedAtIST": "2026-11-06T12:01:21.792413+05:30",
+      "status": "Proven",
+      "scope": "local-check-only"
+    },
+    {
+      "command": "npm run build:workflow",
+      "log": "docs/readiness/baseline-workflow-build.log",
+      "sha256": "9d4e3608a9ce3c480ad69b657c0b7270e3d86135bc82c101e85bb866e378cbd1",
+      "observedAtIST": "2026-11-06T12:01:24.535977+05:30",
+      "status": "Proven",
+      "scope": "local-check-only"
+    },
+    {
+      "command": "npm run check:contracts",
+      "log": "docs/readiness/baseline-contract-size.log",
+      "sha256": "3345df4cca3b0fccda00c5fcee7f61613701caf8276a2a387f7f5ce1c0ad4742",
+      "observedAtIST": "2026-11-06T12:01:24.804448+05:30",
+      "status": "Proven",
+      "scope": "local-check-only"
+    },
+    {
+      "command": "node scripts/foundry.mjs forge test --root contracts -vvv",
+      "log": "docs/readiness/baseline-foundry-verbose.log",
+      "sha256": "f42219426a77c9d74e9ba8a5d4e592815adf65d660b40b54796c65ddc6bef65d",
+      "observedAtIST": "2026-11-06T12:01:24.984952+05:30",
+      "status": "Proven",
+      "scope": "local-check-only"
+    }
+  ]
+}
