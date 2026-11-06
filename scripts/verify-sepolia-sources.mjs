@@ -5,6 +5,7 @@ import { resolve, dirname } from "node:path";
 import { homedir } from "node:os";
 import { createHash } from "node:crypto";
 import { decodeFunctionData, encodeAbiParameters } from "viem";
+import { isExactExplorerSource } from "./verify-sepolia-deployment.mjs";
 const root = resolve(import.meta.dirname, "..");
 if (process.argv.length !== 3 || !process.env.ETHERSCAN_API_KEY)
   throw Error(
@@ -56,6 +57,11 @@ async function explorer(address) {
           optimizer: row.OptimizationUsed,
           runs: row.Runs,
           evmVersion: row.EVMVersion,
+          similarMatch: row.SimilarMatch ?? "",
+          proxy: row.Proxy,
+          constructorArgsSha256: digest(
+            "0x" + (row.ConstructorArguments ?? "").replace(/^0x/, ""),
+          ),
           sourceSha256: digest(row.SourceCode),
           abiSha256: digest(row.ABI),
         }
@@ -130,7 +136,14 @@ try {
       verified: false,
     };
     let status = await explorer(c.address);
-    if (!status) {
+    if (
+      !isExactExplorerSource(
+        status,
+        name,
+        a.metadata.compiler.version,
+        row.constructorArgsSha256,
+      )
+    ) {
       const argv = [
         "verify-contract",
         c.address,
@@ -138,6 +151,7 @@ try {
         "--chain",
         "11155111",
         "--watch",
+        "--skip-is-verified-check",
         "--constructor-args",
         args,
         "--compiler-version",
@@ -178,11 +192,11 @@ try {
       await writeFile(resolve(dir, row.log), outcome.output);
       status = await explorer(c.address);
     }
-    row.verified = Boolean(
-      status?.name === name &&
-      status.compiler.replace(/^v/, "") === a.metadata.compiler.version &&
-      status.optimizer === "1" &&
-      status.runs === "200",
+    row.verified = isExactExplorerSource(
+      status,
+      name,
+      a.metadata.compiler.version,
+      row.constructorArgsSha256,
     );
     if (status) row.explorer = status;
     result.contracts.push(row);

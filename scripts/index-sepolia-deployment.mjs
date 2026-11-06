@@ -84,11 +84,21 @@ const dir =
   "docs/readiness/sepolia-live-verification-" +
   new Date().toISOString().replace(/[:.]/g, "-");
 await mkdir(resolve(root, dir));
+const snapshots = [
+  dir + "/broadcast-prefix.json",
+  dir + "/broadcast-continuation.json",
+];
+for (let i = 0; i < snapshots.length; i++)
+  await writeFile(resolve(root, snapshots[i]), bytes[i]);
 const index = {
   scope:
     "DERIVED index of actual public broadcast records. No transaction was created, signed or sent by this indexer. Receipt verification is separate.",
   chain: 11155111,
-  origins: originals.map((path, i) => ({ path, sha256: hash(bytes[i]) })),
+  origins: originals.map((path, i) => ({
+    path: snapshots[i],
+    originalPath: path,
+    sha256: hash(bytes[i]),
+  })),
   transactions,
   receipts,
 };

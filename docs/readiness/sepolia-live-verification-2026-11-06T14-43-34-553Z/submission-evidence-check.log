@@ -1,0 +1,28 @@
+
+> wave-protocol@0.1.0 check:evidence
+> node --import tsx tools/src/check-evidence.ts
+
+Submission evidence is INCOMPLETE. No artifacts were created or changed.
+- Required CRE simulation log is missing
+- Required Anon-RPC measurement is missing
+- Public repository and revision: Public repository is inaccessible
+- Required Sepolia transaction hash is missing: deposit
+- Required Sepolia transaction hash is missing: hookToward
+- Required Sepolia transaction hash is missing: hookAway
+- Required Sepolia transaction hash is missing: rebalance
+- Required Sepolia transaction hash is missing: redeemUsdc
+- Required Sepolia transaction hash is missing: redeemInKind
+- Required readiness gate is not Proven: eligibility
+- Required readiness gate is not Proven: healthyInKind
+- Required readiness gate is not Proven: approvedHook
+- Required readiness gate is not Proven: nonceReceiver
+- Required readiness gate is not Proven: rebalanceSafety
+- Required readiness gate is not Proven: securityReview
+Verified: FEEDBACK.md
+Verified: Source line _beforeInitialize
+Verified: Source line _beforeSwap
+Verified: Source line unlockCallback
+Verified: Source line onReport
+Verified: Source line runRebalance
+Verified: Source line createChainSession
+Verified: Sepolia createBasket

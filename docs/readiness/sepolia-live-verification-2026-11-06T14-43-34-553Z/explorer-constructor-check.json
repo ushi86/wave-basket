@@ -1,0 +1,102 @@
+{
+  "scope": "Additional real explorer metadata/constructor consistency check; no signing or chain writes",
+  "observedAt": "2026-11-06T14:57:10.373Z",
+  "rows": [
+    {
+      "name": "usdc",
+      "address": "0x33297104581Dd29347d9Ed37936e4F16621D59aE",
+      "similarMatch": "",
+      "proxy": "0",
+      "constructorArgumentsMatch": true,
+      "sourceCodePresent": true
+    },
+    {
+      "name": "eth",
+      "address": "0x7B178cB5e0776E769BE44919889D5A57D8BB1742",
+      "similarMatch": "0x33297104581dd29347d9ed37936e4f16621d59ae",
+      "proxy": "0",
+      "constructorArgumentsMatch": false,
+      "sourceCodePresent": true
+    },
+    {
+      "name": "btc",
+      "address": "0xBe28019380A99649579B7E9fa7F1979e6f203F79",
+      "similarMatch": "0x33297104581dd29347d9ed37936e4f16621d59ae",
+      "proxy": "0",
+      "constructorArgumentsMatch": false,
+      "sourceCodePresent": true
+    },
+    {
+      "name": "link",
+      "address": "0xDd71a1BF041dcdb68AD70A6e0766996557759525",
+      "similarMatch": "0x33297104581dd29347d9ed37936e4f16621d59ae",
+      "proxy": "0",
+      "constructorArgumentsMatch": false,
+      "sourceCodePresent": true
+    },
+    {
+      "name": "registry",
+      "address": "0x97946eFDC076af3069C624dB65859Ba775aADbB4",
+      "similarMatch": "",
+      "proxy": "0",
+      "constructorArgumentsMatch": true,
+      "sourceCodePresent": true
+    },
+    {
+      "name": "adapter",
+      "address": "0x7cbe10AA965Edc8414ad0a4C68192f8ef117f21D",
+      "similarMatch": "",
+      "proxy": "0",
+      "constructorArgumentsMatch": true,
+      "sourceCodePresent": true
+    },
+    {
+      "name": "seeder",
+      "address": "0x2A9aD8D9406d768ebBF19Eb45Ae023E5664EE02f",
+      "similarMatch": "",
+      "proxy": "0",
+      "constructorArgumentsMatch": true,
+      "sourceCodePresent": true
+    },
+    {
+      "name": "factory",
+      "address": "0x6871Eb32a280498c8668139f812f41c8389f5999",
+      "similarMatch": "",
+      "proxy": "0",
+      "constructorArgumentsMatch": true,
+      "sourceCodePresent": true
+    },
+    {
+      "name": "hook",
+      "address": "0x536a446ca6462522c5668A20a62f1503ca4d2080",
+      "similarMatch": "",
+      "proxy": "0",
+      "constructorArgumentsMatch": true,
+      "sourceCodePresent": true
+    },
+    {
+      "name": "receiver",
+      "address": "0xF9abD7a62311bA1BF1259ea3b1ADeF4d3456372F",
+      "similarMatch": "",
+      "proxy": "0",
+      "constructorArgumentsMatch": true,
+      "sourceCodePresent": true
+    },
+    {
+      "name": "vaultDeployer",
+      "address": "0x55fd77c9B780e5B9c8c806f926B2386840d6b860",
+      "similarMatch": "",
+      "proxy": "0",
+      "constructorArgumentsMatch": true,
+      "sourceCodePresent": true
+    },
+    {
+      "name": "flagship",
+      "address": "0x237eFeB9Db74341ebb3Ba207e991D8aeAc536b91",
+      "similarMatch": "",
+      "proxy": "0",
+      "constructorArgumentsMatch": true,
+      "sourceCodePresent": true
+    }
+  ]
+}

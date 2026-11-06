@@ -1,0 +1,12 @@
+✔ factory-funded seed deposit must identify the factory payer and owner recipient separately (0.305542ms)
+✔ rejects reverted receipts and disagreements in canonical logs or gas (0.330375ms)
+✔ binds the live transaction to every reviewed plan input and sender (0.308792ms)
+✔ checks runtime instructions and metadata, masking only repeated compiler immutable spans (0.265375ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 106.617

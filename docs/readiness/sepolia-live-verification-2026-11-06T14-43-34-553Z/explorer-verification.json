@@ -1,0 +1,242 @@
+{
+  "scope": "Real Etherscan source verification, not transaction or CRE/privacy evidence",
+  "startedAt": "2026-11-06T14:58:54.146Z",
+  "contracts": [
+    {
+      "name": "usdc",
+      "address": "0x33297104581Dd29347d9Ed37936e4F16621D59aE",
+      "source": "src/mocks/DemoAssets.sol:DemoToken",
+      "constructorArgsSha256": "b74c5a4c520fe03da81ad3f9b2572ca24c20bfb4026313179756077ef80ba85a",
+      "verified": true,
+      "explorer": {
+        "name": "DemoToken",
+        "compiler": "v0.8.26+commit.8a97fa7a",
+        "optimizer": "1",
+        "runs": "200",
+        "evmVersion": "cancun",
+        "similarMatch": "",
+        "proxy": "0",
+        "constructorArgsSha256": "b74c5a4c520fe03da81ad3f9b2572ca24c20bfb4026313179756077ef80ba85a",
+        "sourceSha256": "a28f77ab65b3cb977f6a9941e7a712ecfd2af1c030d4e96d07f4b363512cd1b6",
+        "abiSha256": "888eeac9dd52484949a7417b0880b6920f94c937d8fa0b750966ef9b60891c56"
+      }
+    },
+    {
+      "name": "eth",
+      "address": "0x7B178cB5e0776E769BE44919889D5A57D8BB1742",
+      "source": "src/mocks/DemoAssets.sol:DemoToken",
+      "constructorArgsSha256": "e6df44c7baa5cbfa5b76fe5d3051163adaa96e8d11359e5a0748392dc00c2471",
+      "verified": true,
+      "commandExitCode": 0,
+      "log": "source-eth.log",
+      "explorer": {
+        "name": "DemoToken",
+        "compiler": "v0.8.26+commit.8a97fa7a",
+        "optimizer": "1",
+        "runs": "200",
+        "evmVersion": "cancun",
+        "similarMatch": "",
+        "proxy": "0",
+        "constructorArgsSha256": "e6df44c7baa5cbfa5b76fe5d3051163adaa96e8d11359e5a0748392dc00c2471",
+        "sourceSha256": "a28f77ab65b3cb977f6a9941e7a712ecfd2af1c030d4e96d07f4b363512cd1b6",
+        "abiSha256": "888eeac9dd52484949a7417b0880b6920f94c937d8fa0b750966ef9b60891c56"
+      }
+    },
+    {
+      "name": "btc",
+      "address": "0xBe28019380A99649579B7E9fa7F1979e6f203F79",
+      "source": "src/mocks/DemoAssets.sol:DemoToken",
+      "constructorArgsSha256": "581fd38e4358892db3995a3f486904ed07746f904c81e673f42e6cf2737b628f",
+      "verified": true,
+      "commandExitCode": 0,
+      "log": "source-btc.log",
+      "explorer": {
+        "name": "DemoToken",
+        "compiler": "v0.8.26+commit.8a97fa7a",
+        "optimizer": "1",
+        "runs": "200",
+        "evmVersion": "cancun",
+        "similarMatch": "",
+        "proxy": "0",
+        "constructorArgsSha256": "581fd38e4358892db3995a3f486904ed07746f904c81e673f42e6cf2737b628f",
+        "sourceSha256": "a28f77ab65b3cb977f6a9941e7a712ecfd2af1c030d4e96d07f4b363512cd1b6",
+        "abiSha256": "888eeac9dd52484949a7417b0880b6920f94c937d8fa0b750966ef9b60891c56"
+      }
+    },
+    {
+      "name": "link",
+      "address": "0xDd71a1BF041dcdb68AD70A6e0766996557759525",
+      "source": "src/mocks/DemoAssets.sol:DemoToken",
+      "constructorArgsSha256": "ddd68b36c3c5fa54122363a2575c1eefb9a49d12a0409906b8b0f9a6fa505137",
+      "verified": true,
+      "commandExitCode": 0,
+      "log": "source-link.log",
+      "explorer": {
+        "name": "DemoToken",
+        "compiler": "v0.8.26+commit.8a97fa7a",
+        "optimizer": "1",
+        "runs": "200",
+        "evmVersion": "cancun",
+        "similarMatch": "",
+        "proxy": "0",
+        "constructorArgsSha256": "ddd68b36c3c5fa54122363a2575c1eefb9a49d12a0409906b8b0f9a6fa505137",
+        "sourceSha256": "a28f77ab65b3cb977f6a9941e7a712ecfd2af1c030d4e96d07f4b363512cd1b6",
+        "abiSha256": "888eeac9dd52484949a7417b0880b6920f94c937d8fa0b750966ef9b60891c56"
+      }
+    },
+    {
+      "name": "registry",
+      "address": "0x97946eFDC076af3069C624dB65859Ba775aADbB4",
+      "source": "src/AssetRegistry.sol:AssetRegistry",
+      "constructorArgsSha256": "aea979480f8a7d18d63df381d1f1381c7b67ac5fe64aa2cab38d1ced02570d51",
+      "verified": true,
+      "explorer": {
+        "name": "AssetRegistry",
+        "compiler": "v0.8.26+commit.8a97fa7a",
+        "optimizer": "1",
+        "runs": "200",
+        "evmVersion": "cancun",
+        "similarMatch": "",
+        "proxy": "0",
+        "constructorArgsSha256": "aea979480f8a7d18d63df381d1f1381c7b67ac5fe64aa2cab38d1ced02570d51",
+        "sourceSha256": "c90ae131cc2b9290d4dc246d438ab3b13331f1da0bbd945a016039a50a776f81",
+        "abiSha256": "48f73b68607dc4687b20a0ac1b7e4093273826808019fe572418171956408d2f"
+      }
+    },
+    {
+      "name": "adapter",
+      "address": "0x7cbe10AA965Edc8414ad0a4C68192f8ef117f21D",
+      "source": "src/WaveSwapAdapter.sol:WaveSwapAdapter",
+      "constructorArgsSha256": "311e57161a75a253f41d9f5b1989d1d8f2ef0845ae0997164995e1bbf6e44c10",
+      "verified": true,
+      "explorer": {
+        "name": "WaveSwapAdapter",
+        "compiler": "v0.8.26+commit.8a97fa7a",
+        "optimizer": "1",
+        "runs": "200",
+        "evmVersion": "cancun",
+        "similarMatch": "",
+        "proxy": "0",
+        "constructorArgsSha256": "311e57161a75a253f41d9f5b1989d1d8f2ef0845ae0997164995e1bbf6e44c10",
+        "sourceSha256": "36d88596140d050c2875dadd0b57ea4a042f364c12df2b8a93156b5e83b6ba3d",
+        "abiSha256": "285bd6b8ddbf58997f39d5eee76be0ff6292d4dfe0909f10290d569576de421c"
+      }
+    },
+    {
+      "name": "seeder",
+      "address": "0x2A9aD8D9406d768ebBF19Eb45Ae023E5664EE02f",
+      "source": "src/mocks/DemoLiquiditySeeder.sol:DemoLiquiditySeeder",
+      "constructorArgsSha256": "311e57161a75a253f41d9f5b1989d1d8f2ef0845ae0997164995e1bbf6e44c10",
+      "verified": true,
+      "explorer": {
+        "name": "DemoLiquiditySeeder",
+        "compiler": "v0.8.26+commit.8a97fa7a",
+        "optimizer": "1",
+        "runs": "200",
+        "evmVersion": "cancun",
+        "similarMatch": "",
+        "proxy": "0",
+        "constructorArgsSha256": "311e57161a75a253f41d9f5b1989d1d8f2ef0845ae0997164995e1bbf6e44c10",
+        "sourceSha256": "be69c502e46121bc347e5b1ea625faf3ef3d64a94e1320544ab0477a55f399ee",
+        "abiSha256": "823e280935c07eae90900735e7732519e100d0e5a9d88c9ecacc1299a84bfa98"
+      }
+    },
+    {
+      "name": "factory",
+      "address": "0x6871Eb32a280498c8668139f812f41c8389f5999",
+      "source": "src/WaveFactory.sol:WaveFactory",
+      "constructorArgsSha256": "a9c0dd7fc030774bb55c8399e4128c8fc1704ca1f92850753a5e29b06f2f086b",
+      "verified": true,
+      "explorer": {
+        "name": "WaveFactory",
+        "compiler": "v0.8.26+commit.8a97fa7a",
+        "optimizer": "1",
+        "runs": "200",
+        "evmVersion": "cancun",
+        "similarMatch": "",
+        "proxy": "0",
+        "constructorArgsSha256": "a9c0dd7fc030774bb55c8399e4128c8fc1704ca1f92850753a5e29b06f2f086b",
+        "sourceSha256": "256ec84f98dd933345915d58b6fa31c80b645aef68005d5acdd565df3ac8ad50",
+        "abiSha256": "017dfdfcdf5ee3fc08465e58324f975a9f44beb77940552b33138eedca7ef9a3"
+      }
+    },
+    {
+      "name": "hook",
+      "address": "0x536a446ca6462522c5668A20a62f1503ca4d2080",
+      "source": "src/NavGuardHook.sol:NavGuardHook",
+      "constructorArgsSha256": "311e57161a75a253f41d9f5b1989d1d8f2ef0845ae0997164995e1bbf6e44c10",
+      "verified": true,
+      "explorer": {
+        "name": "NavGuardHook",
+        "compiler": "v0.8.26+commit.8a97fa7a",
+        "optimizer": "1",
+        "runs": "200",
+        "evmVersion": "cancun",
+        "similarMatch": "",
+        "proxy": "0",
+        "constructorArgsSha256": "311e57161a75a253f41d9f5b1989d1d8f2ef0845ae0997164995e1bbf6e44c10",
+        "sourceSha256": "5b2eb112acb8095016d114bdb33047b38160b69eae48912819db42a794598a59",
+        "abiSha256": "9d188a80c05071f9b6e0e58aba4b9321fb5edd3aa5b72e4a3be1945dac9c3ef1"
+      }
+    },
+    {
+      "name": "receiver",
+      "address": "0xF9abD7a62311bA1BF1259ea3b1ADeF4d3456372F",
+      "source": "src/WaveRebalanceReceiver.sol:WaveRebalanceReceiver",
+      "constructorArgsSha256": "e155176bd0d578d33cf0a276d94c762b473a7b0e3557db7caff5ace71b1b8a88",
+      "verified": true,
+      "explorer": {
+        "name": "WaveRebalanceReceiver",
+        "compiler": "v0.8.26+commit.8a97fa7a",
+        "optimizer": "1",
+        "runs": "200",
+        "evmVersion": "cancun",
+        "similarMatch": "",
+        "proxy": "0",
+        "constructorArgsSha256": "e155176bd0d578d33cf0a276d94c762b473a7b0e3557db7caff5ace71b1b8a88",
+        "sourceSha256": "3fd64c984e2ac9907b94f376b0bbb8f22fd7a87f77fcc1986ba5c55bd3692d84",
+        "abiSha256": "7bd3f33f2dd80fa08a4a0c0a3d29d1119e5ec79151fd8407c9111f0a323106b5"
+      }
+    },
+    {
+      "name": "vaultDeployer",
+      "address": "0x55fd77c9B780e5B9c8c806f926B2386840d6b860",
+      "source": "src/WaveFactory.sol:WaveVaultDeployer",
+      "constructorArgsSha256": "a54942c8e365f3784f38b8d437f9d708290db60738b00cdcfb934c32d1be97f3",
+      "verified": true,
+      "explorer": {
+        "name": "WaveVaultDeployer",
+        "compiler": "v0.8.26+commit.8a97fa7a",
+        "optimizer": "1",
+        "runs": "200",
+        "evmVersion": "cancun",
+        "similarMatch": "",
+        "proxy": "0",
+        "constructorArgsSha256": "a54942c8e365f3784f38b8d437f9d708290db60738b00cdcfb934c32d1be97f3",
+        "sourceSha256": "256ec84f98dd933345915d58b6fa31c80b645aef68005d5acdd565df3ac8ad50",
+        "abiSha256": "e7fb43d4fbd0eeb3cb2cb31c7c96392995473685a3a69385bde7fd6f9525d66b"
+      }
+    },
+    {
+      "name": "flagship",
+      "address": "0x237eFeB9Db74341ebb3Ba207e991D8aeAc536b91",
+      "source": "src/WaveVault.sol:WaveVault",
+      "constructorArgsSha256": "32c626ec3cb1b9e9bccf04e23ab0610d26fd395fbb467b58cf41ae9351980e75",
+      "verified": true,
+      "explorer": {
+        "name": "WaveVault",
+        "compiler": "v0.8.26+commit.8a97fa7a",
+        "optimizer": "1",
+        "runs": "200",
+        "evmVersion": "cancun",
+        "similarMatch": "",
+        "proxy": "0",
+        "constructorArgsSha256": "32c626ec3cb1b9e9bccf04e23ab0610d26fd395fbb467b58cf41ae9351980e75",
+        "sourceSha256": "339ef46093cb1e0646a98b2e5b201f398a8e528b10640490ac33ea2f27898976",
+        "abiSha256": "f004e0471543dd19d96d62509413408f0016f14b1a171feefdecf59d5c194a67"
+      }
+    }
+  ],
+  "allVerified": true,
+  "finishedAt": "2026-11-06T14:59:51.676Z"
+}

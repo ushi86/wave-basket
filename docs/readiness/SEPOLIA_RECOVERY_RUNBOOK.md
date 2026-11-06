@@ -1,3 +1,5 @@
+**Historical nonce-1 review. Execution is now complete; account nonce is 43. Do not rerun the owner command below. Use the [verified live deployment record](SEPOLIA_DEPLOYMENT.md) and live manifest. Phase 2 is paused.**
+
 # Reviewed Sepolia recovery — ready for owner execution, not broadcast
 
 Status: **full Forge dry run passed; all 42 exact planned operations passed strict unsigned execution on a disposable local fork**. No Sepolia transaction was sent, no real wallet was unlocked, and no live Wave address is claimed. Phase 2 remains paused.

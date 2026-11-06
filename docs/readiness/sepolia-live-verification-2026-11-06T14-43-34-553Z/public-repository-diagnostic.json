@@ -1,0 +1,9 @@
+{
+  "scope": "Unauthenticated public repository availability diagnostic; checker policy unchanged",
+  "observedAt": "2026-11-06T14:54:47.945Z",
+  "apiStatus": 403,
+  "apiMessage": "API rate limit exceeded for [REDACTED-CLIENT-IP]. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)",
+  "rateLimitRemaining": "0",
+  "rateLimitReset": "1793978398",
+  "publicHtmlStatus": 200
+}

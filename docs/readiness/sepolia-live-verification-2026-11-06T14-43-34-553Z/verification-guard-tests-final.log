@@ -1,0 +1,20 @@
+✔ continuation requires the exact unused nonce 20 on both Sepolia providers (0.495833ms)
+✔ only permits 23 unsigned zero-value operations with consecutive nonces 20–42 (0.17425ms)
+✔ defaults to dry run and requires owner terminal, explicit mode and a review path (0.417375ms)
+✔ noninteractive broadcast stops in the executable before RPC, backup or keystore work (88.201375ms)
+✔ requires both providers to agree on failed nonce-0 receipt and unused nonce 1 (0.301458ms)
+✔ unhealthy feeds, missing code and provider state disagreement stop recovery (0.102542ms)
+✔ only accepts a fresh complete sequence from nonce 1 with no paid native value (0.226334ms)
+✔ source verification requires an exact constructor match and rejects similar-code associations (0.321542ms)
+✔ factory-funded seed deposit must identify the factory payer and owner recipient separately (0.073458ms)
+✔ rejects reverted receipts and disagreements in canonical logs or gas (0.293292ms)
+✔ binds the live transaction to every reviewed plan input and sender (0.304708ms)
+✔ checks runtime instructions and metadata, masking only repeated compiler immutable spans (0.274709ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 241.718041

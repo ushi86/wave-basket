@@ -123,6 +123,27 @@ export function requireRuntime(code, artifact) {
   return { bytes: actual.length, codeHash: keccak256(code), immutableValues };
 }
 
+export function isFactorySeedDeposit(args, factory, recipient, amount) {
+  return (
+    lower(args.user) === lower(factory) &&
+    lower(args.receiver) === lower(recipient) &&
+    args.usdcIn === amount &&
+    args.shares > 0n
+  );
+}
+
+export function isExactExplorerSource(status, name, version, constructorHash) {
+  return Boolean(
+    status?.name === name &&
+    status.compiler.replace(/^v/, "") === version &&
+    status.optimizer === "1" &&
+    status.runs === "200" &&
+    status.proxy === "0" &&
+    !status.similarMatch &&
+    status.constructorArgsSha256 === constructorHash,
+  );
+}
+
 async function main() {
   need(
     process.argv.length === 3,
@@ -555,12 +576,8 @@ async function main() {
               same(x.targetBps, args[3]) &&
               x.perfFeeBps === args[4],
           );
-          event(
-            receipt,
-            d.flagship,
-            "Deposited",
-            (x) =>
-              lower(x.user) === OWNER && x.usdcIn === args[5] && x.shares > 0n,
+          event(receipt, d.flagship, "Deposited", (x) =>
+            isFactorySeedDeposit(x, d.factory, OWNER, args[5]),
           );
           break;
         case "registerPool":

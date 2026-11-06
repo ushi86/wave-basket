@@ -1,0 +1,30 @@
+Start verifying contract `0x97946eFDC076af3069C624dB65859Ba775aADbB4` deployed on sepolia
+EVM version: cancun
+Compiler version: 0.8.26+commit.8a97fa7a
+Optimizations:    200
+Constructor args: 0x000000000000000000000000de25d83481c0c2a711397c44ee3317dd826952d5
+
+Verifying on etherscan...
+Submitting verification for [src/AssetRegistry.sol:AssetRegistry] 0x97946eFDC076af3069C624dB65859Ba775aADbB4.
+Submitted contract for verification:
+	Response: `OK`
+	GUID: `wxsh2davgts1ye2inhfhnic97hpnxcklyupkuqqvsk3amkkvyx`
+	URL: https://sepolia.etherscan.io/address/0x97946efdc076af3069c624db65859ba775aadbb4
+
+Verifying on sourcify...
+wxsh2davgts1ye2inhfhnic97hpnxcklyupkuqqvsk3amkkvyx	https://sepolia.etherscan.io/address/0x97946efdc076af3069c624db65859ba775aadbb4
+Submitting verification for [AssetRegistry] 0x97946eFDC076af3069C624dB65859Ba775aADbB4.
+Submitted contract for verification:
+	Verification Job ID: `ae94b376-9ed9-45cd-9f3e-4155db918528`
+	URL: https://sourcify.dev/server/verify-ui/jobs/ae94b376-9ed9-45cd-9f3e-4155db918528
+ae94b376-9ed9-45cd-9f3e-4155db918528	https://sourcify.dev/server/verify-ui/jobs/ae94b376-9ed9-45cd-9f3e-4155db918528
+
+Waiting for etherscan verification result...
+Contract verification status:
+Response: `NOTOK`
+Details: `Pending in queue`
+Warning: Verification is still pending...; waiting 5 seconds before trying again (9 tries remaining)
+Contract verification status:
+Response: `OK`
+Details: `Pass - Verified`
+Contract successfully verified

@@ -1,0 +1,34 @@
+✖ source verification requires an exact constructor match and rejects similar-code associations (0.643375ms)
+✔ factory-funded seed deposit must identify the factory payer and owner recipient separately (0.085542ms)
+✔ rejects reverted receipts and disagreements in canonical logs or gas (0.283666ms)
+✔ binds the live transaction to every reviewed plan input and sender (0.299458ms)
+✔ checks runtime instructions and metadata, masking only repeated compiler immutable spans (0.245042ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 4
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 186.6265
+
+✖ failing tests:
+
+test at scripts/verify-sepolia-deployment.test.mjs:16:1
+✖ source verification requires an exact constructor match and rejects similar-code associations (0.643375ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  true !== false
+  
+      at TestContext.<anonymous> (file:///Users/hano/Projects/Wave%20Eth/scripts/verify-sepolia-deployment.test.mjs:19:137)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

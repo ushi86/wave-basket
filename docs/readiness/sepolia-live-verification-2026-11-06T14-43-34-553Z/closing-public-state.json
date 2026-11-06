@@ -1,0 +1,19 @@
+{
+  "scope": "Closing read-only public state after explorer-only verification; no additional chain transactions",
+  "observedAt": "2026-11-06T15:00:37.338Z",
+  "exactSourceAndConstructorMatches": 12,
+  "rows": [
+    {
+      "endpoint": "https://ethereum-sepolia-rpc.publicnode.com",
+      "latestNonce": 43,
+      "pendingNonce": 43,
+      "balanceWei": "199039967448225827"
+    },
+    {
+      "endpoint": "https://sepolia.gateway.tenderly.co",
+      "latestNonce": 43,
+      "pendingNonce": 43,
+      "balanceWei": "199039967448225827"
+    }
+  ]
+}

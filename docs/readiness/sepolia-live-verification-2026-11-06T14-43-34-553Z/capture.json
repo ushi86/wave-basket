@@ -1,0 +1,493 @@
+{
+  "scope": "Derived verification input for real Sepolia operations across two preserved attempts; NOT a new broadcast or fabricated result",
+  "mode": "broadcast",
+  "isDerivedVerificationIndex": true,
+  "parents": [
+    "/Users/hano/Projects/Wave Eth/docs/readiness/sepolia-recovery-2026-11-06T13-47-51-397Z/capture.json",
+    "/Users/hano/Projects/Wave Eth/docs/readiness/sepolia-continuation-nonce20-2026-11-06T14-18-21-841Z/capture.json"
+  ],
+  "sources": {
+    "contracts/foundry.toml": "44e5b1d985e352285ec9a65d28ef8e3c9c1f0623ed3f620f4864fd69abe05833",
+    "contracts/script/CompleteDeployment.s.sol": "82da239774c7c9723cf7b6ccffefbf9718863fbf5bce8279beb73de6f97d3f8a",
+    "contracts/script/DeployDemo.s.sol": "3184614065e6466747bb84730f3135274bb9d9fa49ac3944c8d8cc98fd3dfae7",
+    "contracts/src/AssetRegistry.sol": "b31c6d9917145fd411462999b84eecc637186e20456256787f10b88b4c14eb75",
+    "contracts/src/IWaveSwapAdapter.sol": "321b3679834bad9108183e23f586d6aea59b22bdeb5ee988c523755041233b92",
+    "contracts/src/NavGuardHook.sol": "7e8df09698ad5dfb236be101b3faf36330d2d8208d0b31bcc53fc1f8d525f4b6",
+    "contracts/src/WaveFactory.sol": "8a01e5c2dad3fdbc66feabd6568f954a4fb061f65d438e8601b594f366fcf24f",
+    "contracts/src/WaveRebalanceReceiver.sol": "1529f8aa44b11f061bf32f3f76193999340d9df88df0bb04a8db07e35df66f7b",
+    "contracts/src/WaveSwapAdapter.sol": "2e2a3c3f7cbf0b7520519ef5f98049e2adf476ab45560ad0673d89fe7ae03901",
+    "contracts/src/WaveVault.sol": "6d65e1a400c1f78660d85618dcb91162eec93c476709fc6bec26006859f7da84",
+    "contracts/src/mocks/DemoAssets.sol": "4c9ce655f833cef24c250f9972e767aa97f9a5a866d2ccd6c0694f33541a6452",
+    "contracts/src/mocks/DemoLiquiditySeeder.sol": "41ffb6ae4200288c27c803ff7f52175b2e190a5e302fde877084223e1c69aa52",
+    "deployments/nonce20-operations-NOT-DEPLOYED.json": "a425596532ccca2edbcae7b54def38ed9a451ebd6c0ed4628d735a2fa825ac42",
+    "package-lock.json": "b981003d63bbb9b84c2518fd623a831ae411681fe38414440fd4f551d759d34b",
+    "scripts/continuation-primitives.mjs": "42dbc9073b419227ecfe637650ade75b43727070a58db3bb83845ac65f45be2e",
+    "scripts/recover-sepolia.mjs": "d06f2fb552ba274ace1e8bf09a24bf429594b8bd413175ed99e2759a9543c175",
+    "scripts/prepare-sepolia-continuation.mjs": "fd78292ea4ca482792bd024b68b9a7f16595919d6aa20ac04262b853eb4c43cb",
+    "scripts/index-sepolia-deployment.mjs": "51ee30a93d5dcc394255b87f09e766665835f34965d47b120d5f6456feec76d0"
+  },
+  "broadcastRecord": "docs/readiness/sepolia-live-verification-2026-11-06T14-43-34-553Z/verification-index.json",
+  "creations": [
+    {
+      "name": "DemoToken",
+      "index": 0,
+      "nonce": 1,
+      "type": "CREATE",
+      "predictedAddress": "0x33297104581Dd29347d9Ed37936e4F16621D59aE",
+      "gasLimit": 4567330,
+      "creationInputHash": "d24452f4d39fe694a8b5d9c8ed7b9e604ee3597056df247dcac5b7281f68cfa0"
+    },
+    {
+      "name": "DemoToken",
+      "index": 1,
+      "nonce": 2,
+      "type": "CREATE",
+      "predictedAddress": "0x7B178cB5e0776E769BE44919889D5A57D8BB1742",
+      "gasLimit": 4567345,
+      "creationInputHash": "21122715ac0618b0fabf1acfa82b01f3ec98bed801f4fac8207665f896549538"
+    },
+    {
+      "name": "DemoToken",
+      "index": 2,
+      "nonce": 3,
+      "type": "CREATE",
+      "predictedAddress": "0xBe28019380A99649579B7E9fa7F1979e6f203F79",
+      "gasLimit": 4567314,
+      "creationInputHash": "5a6d5ec28c6d331cbbc20da52790792655072957c6f4d02d6ebac8616c90e832"
+    },
+    {
+      "name": "DemoToken",
+      "index": 3,
+      "nonce": 4,
+      "type": "CREATE",
+      "predictedAddress": "0xDd71a1BF041dcdb68AD70A6e0766996557759525",
+      "gasLimit": 4567361,
+      "creationInputHash": "397a87f561f3c7f87ace607a4c15b0c23cc3408229895ee3cb710c3a2af9d0f8"
+    },
+    {
+      "name": "AssetRegistry",
+      "index": 4,
+      "nonce": 5,
+      "type": "CREATE",
+      "predictedAddress": "0x97946eFDC076af3069C624dB65859Ba775aADbB4",
+      "gasLimit": 5466761,
+      "creationInputHash": "e3ec8fcbc1f3ef13f356f89339f7710a7bff3ca35a25d990a4529a970d44cbe7"
+    },
+    {
+      "name": "WaveSwapAdapter",
+      "index": 9,
+      "nonce": 10,
+      "type": "CREATE",
+      "predictedAddress": "0x7cbe10AA965Edc8414ad0a4C68192f8ef117f21D",
+      "gasLimit": 8899387,
+      "creationInputHash": "518e022a3b351bed2f13b1d4b1fe5298a3305b72324d555f2edea649a194e1cf"
+    },
+    {
+      "name": "DemoLiquiditySeeder",
+      "index": 10,
+      "nonce": 11,
+      "type": "CREATE",
+      "predictedAddress": "0x2A9aD8D9406d768ebBF19Eb45Ae023E5664EE02f",
+      "gasLimit": 5426937,
+      "creationInputHash": "556d0b8cfad3eafae5a937ab3842f38e4d5983410bdf52f58c5ea5e860abadd3"
+    },
+    {
+      "name": "WaveFactory",
+      "index": 30,
+      "nonce": 31,
+      "type": "CREATE",
+      "predictedAddress": "0x6871Eb32a280498c8668139f812f41c8389f5999",
+      "gasLimit": 56566914,
+      "creationInputHash": "6bf25c3685607626d327a8428d0d25273001c1a012a9bbff1bf3f10e87cbc039"
+    },
+    {
+      "name": "NavGuardHook",
+      "index": 33,
+      "nonce": 34,
+      "type": "CREATE2",
+      "predictedAddress": "0x536a446ca6462522c5668A20a62f1503ca4d2080",
+      "gasLimit": 13224126,
+      "creationInputHash": "82db1ffca05dd646bcb18c2f959b7f5401b6b89288c288bfaa5853f2169a7f2d"
+    },
+    {
+      "name": "WaveRebalanceReceiver",
+      "index": 40,
+      "nonce": 41,
+      "type": "CREATE",
+      "predictedAddress": "0xF9abD7a62311bA1BF1259ea3b1ADeF4d3456372F",
+      "gasLimit": 5418888,
+      "creationInputHash": "341070725f13dc837bd99ea8beeb9c42ebd52faeca03b77133ebe1dce60039a3"
+    },
+    {
+      "name": "WaveVaultDeployer",
+      "type": "internal CREATE",
+      "creator": "0x6871Eb32a280498c8668139f812f41c8389f5999",
+      "creatorNonce": 1,
+      "predictedAddress": "0x55fd77c9B780e5B9c8c806f926B2386840d6b860"
+    },
+    {
+      "name": "WaveVault (flagship)",
+      "type": "internal CREATE",
+      "creator": "0x55fd77c9B780e5B9c8c806f926B2386840d6b860",
+      "creatorNonce": 1,
+      "predictedAddress": "0x237eFeB9Db74341ebb3Ba207e991D8aeAc536b91"
+    }
+  ],
+  "planSummary": [
+    {
+      "index": 0,
+      "name": "DemoToken",
+      "function": null,
+      "nonce": 1,
+      "gasLimit": 4567330,
+      "to": null,
+      "inputHash": "d24452f4d39fe694a8b5d9c8ed7b9e604ee3597056df247dcac5b7281f68cfa0"
+    },
+    {
+      "index": 1,
+      "name": "DemoToken",
+      "function": null,
+      "nonce": 2,
+      "gasLimit": 4567345,
+      "to": null,
+      "inputHash": "21122715ac0618b0fabf1acfa82b01f3ec98bed801f4fac8207665f896549538"
+    },
+    {
+      "index": 2,
+      "name": "DemoToken",
+      "function": null,
+      "nonce": 3,
+      "gasLimit": 4567314,
+      "to": null,
+      "inputHash": "5a6d5ec28c6d331cbbc20da52790792655072957c6f4d02d6ebac8616c90e832"
+    },
+    {
+      "index": 3,
+      "name": "DemoToken",
+      "function": null,
+      "nonce": 4,
+      "gasLimit": 4567361,
+      "to": null,
+      "inputHash": "397a87f561f3c7f87ace607a4c15b0c23cc3408229895ee3cb710c3a2af9d0f8"
+    },
+    {
+      "index": 4,
+      "name": "AssetRegistry",
+      "function": null,
+      "nonce": 5,
+      "gasLimit": 5466761,
+      "to": null,
+      "inputHash": "e3ec8fcbc1f3ef13f356f89339f7710a7bff3ca35a25d990a4529a970d44cbe7"
+    },
+    {
+      "index": 5,
+      "name": "AssetRegistry",
+      "function": "setAsset(address,address,uint32,int256,int256,bool)",
+      "nonce": 6,
+      "gasLimit": 656840,
+      "to": "0x97946efdc076af3069c624db65859ba775aadbb4",
+      "inputHash": "c53b3f6862a9472aece365d2b4bf5991f439078b61ddcab9043f7122bfc4d78e"
+    },
+    {
+      "index": 6,
+      "name": "AssetRegistry",
+      "function": "setAsset(address,address,uint32,int256,int256,bool)",
+      "nonce": 7,
+      "gasLimit": 695461,
+      "to": "0x97946efdc076af3069c624db65859ba775aadbb4",
+      "inputHash": "0f560cb4ba7a959c47fa7e2edbb300bc25183b9cb8ea7a4afc2802a292178735"
+    },
+    {
+      "index": 7,
+      "name": "AssetRegistry",
+      "function": "setAsset(address,address,uint32,int256,int256,bool)",
+      "nonce": 8,
+      "gasLimit": 695461,
+      "to": "0x97946efdc076af3069c624db65859ba775aadbb4",
+      "inputHash": "1d1135fd27757d314efc85750c88c5d33078038ed3df48f2714dbf1d5956b6c8"
+    },
+    {
+      "index": 8,
+      "name": "AssetRegistry",
+      "function": "setAsset(address,address,uint32,int256,int256,bool)",
+      "nonce": 9,
+      "gasLimit": 695461,
+      "to": "0x97946efdc076af3069c624db65859ba775aadbb4",
+      "inputHash": "2ebbe6279805c1d728b7b7629d52068d978ef1668249dcc76c862c7219dbe92f"
+    },
+    {
+      "index": 9,
+      "name": "WaveSwapAdapter",
+      "function": null,
+      "nonce": 10,
+      "gasLimit": 8899387,
+      "to": null,
+      "inputHash": "518e022a3b351bed2f13b1d4b1fe5298a3305b72324d555f2edea649a194e1cf"
+    },
+    {
+      "index": 10,
+      "name": "DemoLiquiditySeeder",
+      "function": null,
+      "nonce": 11,
+      "gasLimit": 5426937,
+      "to": null,
+      "inputHash": "556d0b8cfad3eafae5a937ab3842f38e4d5983410bdf52f58c5ea5e860abadd3"
+    },
+    {
+      "index": 11,
+      "name": "DemoToken",
+      "function": "faucet()",
+      "nonce": 12,
+      "gasLimit": 480517,
+      "to": "0x33297104581dd29347d9ed37936e4f16621d59ae",
+      "inputHash": "749679f0957e3546a7965a82c00aa843557df3f1159bbd6a40b730aa31157ec8"
+    },
+    {
+      "index": 12,
+      "name": "DemoToken",
+      "function": "faucet()",
+      "nonce": 13,
+      "gasLimit": 480517,
+      "to": "0x7b178cb5e0776e769be44919889d5a57d8bb1742",
+      "inputHash": "749679f0957e3546a7965a82c00aa843557df3f1159bbd6a40b730aa31157ec8"
+    },
+    {
+      "index": 13,
+      "name": "DemoToken",
+      "function": "faucet()",
+      "nonce": 14,
+      "gasLimit": 480517,
+      "to": "0xbe28019380a99649579b7e9fa7f1979e6f203f79",
+      "inputHash": "749679f0957e3546a7965a82c00aa843557df3f1159bbd6a40b730aa31157ec8"
+    },
+    {
+      "index": 14,
+      "name": "DemoToken",
+      "function": "faucet()",
+      "nonce": 15,
+      "gasLimit": 480517,
+      "to": "0xdd71a1bf041dcdb68ad70a6e0766996557759525",
+      "inputHash": "749679f0957e3546a7965a82c00aa843557df3f1159bbd6a40b730aa31157ec8"
+    },
+    {
+      "index": 15,
+      "name": null,
+      "function": "initialize((address,address,uint24,int24,address),uint160)",
+      "nonce": 16,
+      "gasLimit": 184954,
+      "to": "0xe03a1074c86cfedd5c142c4f04f1a1536e203543",
+      "inputHash": "ad33d3ee270fbd63b46b5170e7cde735b63a1f16b4e198dc68fb3d1b63ea74e5"
+    },
+    {
+      "index": 16,
+      "name": "WaveSwapAdapter",
+      "function": "setPool((address,address,uint24,int24,address))",
+      "nonce": 17,
+      "gasLimit": 357882,
+      "to": "0x7cbe10aa965edc8414ad0a4c68192f8ef117f21d",
+      "inputHash": "85a08112dc2a2c99c6fd8e35b937457d3c4ac400d8bdb718f4abb3fb91a9c591"
+    },
+    {
+      "index": 17,
+      "name": "DemoToken",
+      "function": "approve(address,uint256)",
+      "nonce": 18,
+      "gasLimit": 177060,
+      "to": "0x33297104581dd29347d9ed37936e4f16621d59ae",
+      "inputHash": "4e5b85f62927b835836311ebccff40fdc21e8ecc42e8af57abee766188624f13"
+    },
+    {
+      "index": 18,
+      "name": "DemoToken",
+      "function": "approve(address,uint256)",
+      "nonce": 19,
+      "gasLimit": 177060,
+      "to": "0x7b178cb5e0776e769be44919889d5a57d8bb1742",
+      "inputHash": "4e5b85f62927b835836311ebccff40fdc21e8ecc42e8af57abee766188624f13"
+    },
+    {
+      "nonce": 20,
+      "to": "0x2a9ad8d9406d768ebbf19eb45ae023e5664ee02f",
+      "name": "DemoLiquiditySeeder",
+      "function": "seed((address,address,uint24,int24,address),int256)",
+      "gasLimit": 1453834,
+      "inputHash": "e8d970574a2aa4b733e0fff76ff7e60c434a21e71de125248b021525b30483fb"
+    },
+    {
+      "nonce": 21,
+      "to": "0xe03a1074c86cfedd5c142c4f04f1a1536e203543",
+      "name": null,
+      "function": "initialize((address,address,uint24,int24,address),uint160)",
+      "gasLimit": 195744,
+      "inputHash": "36aa9c3ef24506f0c65635f048c2230f90f55fb4f69b61baedf427eb516233ee"
+    },
+    {
+      "nonce": 22,
+      "to": "0x7cbe10aa965edc8414ad0a4c68192f8ef117f21d",
+      "name": "WaveSwapAdapter",
+      "function": "setPool((address,address,uint24,int24,address))",
+      "gasLimit": 357882,
+      "inputHash": "2d4d96c5c7b57966987c76797e26db304d39f1447eed1153a4775f92bef6acdb"
+    },
+    {
+      "nonce": 23,
+      "to": "0x33297104581dd29347d9ed37936e4f16621d59ae",
+      "name": "DemoToken",
+      "function": "approve(address,uint256)",
+      "gasLimit": 27995,
+      "inputHash": "4e5b85f62927b835836311ebccff40fdc21e8ecc42e8af57abee766188624f13"
+    },
+    {
+      "nonce": 24,
+      "to": "0xbe28019380a99649579b7e9fa7f1979e6f203f79",
+      "name": "DemoToken",
+      "function": "approve(address,uint256)",
+      "gasLimit": 177060,
+      "inputHash": "4e5b85f62927b835836311ebccff40fdc21e8ecc42e8af57abee766188624f13"
+    },
+    {
+      "nonce": 25,
+      "to": "0x2a9ad8d9406d768ebbf19eb45ae023e5664ee02f",
+      "name": "DemoLiquiditySeeder",
+      "function": "seed((address,address,uint24,int24,address),int256)",
+      "gasLimit": 1310591,
+      "inputHash": "4a77a88803716410475e3d35c83cb87206f8a4e71271025e047e9cd6a5c639d4"
+    },
+    {
+      "nonce": 26,
+      "to": "0xe03a1074c86cfedd5c142c4f04f1a1536e203543",
+      "name": null,
+      "function": "initialize((address,address,uint24,int24,address),uint160)",
+      "gasLimit": 185065,
+      "inputHash": "8d63e475f74ea408521842d23e727d90091b4fc8d57b9863c0e618b0d88116f6"
+    },
+    {
+      "nonce": 27,
+      "to": "0x7cbe10aa965edc8414ad0a4c68192f8ef117f21d",
+      "name": "WaveSwapAdapter",
+      "function": "setPool((address,address,uint24,int24,address))",
+      "gasLimit": 357882,
+      "inputHash": "59859f2adfe3c631c17a47aa1b2535fe72e5c1f1f11cea685eb0a1826a353856"
+    },
+    {
+      "nonce": 28,
+      "to": "0x33297104581dd29347d9ed37936e4f16621d59ae",
+      "name": "DemoToken",
+      "function": "approve(address,uint256)",
+      "gasLimit": 27995,
+      "inputHash": "4e5b85f62927b835836311ebccff40fdc21e8ecc42e8af57abee766188624f13"
+    },
+    {
+      "nonce": 29,
+      "to": "0xdd71a1bf041dcdb68ad70a6e0766996557759525",
+      "name": "DemoToken",
+      "function": "approve(address,uint256)",
+      "gasLimit": 177060,
+      "inputHash": "4e5b85f62927b835836311ebccff40fdc21e8ecc42e8af57abee766188624f13"
+    },
+    {
+      "nonce": 30,
+      "to": "0x2a9ad8d9406d768ebbf19eb45ae023e5664ee02f",
+      "name": "DemoLiquiditySeeder",
+      "function": "seed((address,address,uint24,int24,address),int256)",
+      "gasLimit": 1237830,
+      "inputHash": "fec975bb24f8c65fafccd222a3bb61847b867f130f1f11d4f02d5bd65a34a051"
+    },
+    {
+      "nonce": 31,
+      "to": null,
+      "name": "WaveFactory",
+      "function": null,
+      "gasLimit": 56566914,
+      "inputHash": "6bf25c3685607626d327a8428d0d25273001c1a012a9bbff1bf3f10e87cbc039"
+    },
+    {
+      "nonce": 32,
+      "to": "0x33297104581dd29347d9ed37936e4f16621d59ae",
+      "name": "DemoToken",
+      "function": "approve(address,uint256)",
+      "gasLimit": 176595,
+      "inputHash": "f5d31f283e61c920c4ed303a5dc725668644ced6854f5dc3c62ab98f6bb672ce"
+    },
+    {
+      "nonce": 33,
+      "to": "0x6871eb32a280498c8668139f812f41c8389f5999",
+      "name": "WaveFactory",
+      "function": "createBasket(string,string,address[],uint16[],uint16,uint256)",
+      "gasLimit": 47363690,
+      "inputHash": "4ca3a6e16cb4750969dfd874329465d7cfa1d085e164ef9d695dc6c532cf390b"
+    },
+    {
+      "nonce": 34,
+      "to": "0x4e59b44847b379578588920ca78fbf26c0b4956c",
+      "name": "NavGuardHook",
+      "function": null,
+      "gasLimit": 13224126,
+      "inputHash": "82db1ffca05dd646bcb18c2f959b7f5401b6b89288c288bfaa5853f2169a7f2d"
+    },
+    {
+      "nonce": 35,
+      "to": "0x536a446ca6462522c5668a20a62f1503ca4d2080",
+      "name": "NavGuardHook",
+      "function": "registerPool((address,address,uint24,int24,address),address)",
+      "gasLimit": 950926,
+      "inputHash": "1df308d21315edf8a5051d5cf64f08eee1f1cf4cb1ffaee079d5f93fba29ddeb"
+    },
+    {
+      "nonce": 36,
+      "to": "0xe03a1074c86cfedd5c142c4f04f1a1536e203543",
+      "name": null,
+      "function": "initialize((address,address,uint24,int24,address),uint160)",
+      "gasLimit": 195015,
+      "inputHash": "dae8a01dfa9ce53c6f0fc727d525f99e599d6f574795ec177add8a0a227c38b4"
+    },
+    {
+      "nonce": 37,
+      "to": "0x7cbe10aa965edc8414ad0a4c68192f8ef117f21d",
+      "name": "WaveSwapAdapter",
+      "function": "setPool((address,address,uint24,int24,address))",
+      "gasLimit": 487379,
+      "inputHash": "34852fe29ded1995013d7f45107b604c76e7e0f747268f8f9c5d9e74e176b481"
+    },
+    {
+      "nonce": 38,
+      "to": "0x237efeb9db74341ebb3ba207e991d8aeac536b91",
+      "name": "WaveVault",
+      "function": "approve(address,uint256)",
+      "gasLimit": 177182,
+      "inputHash": "4e5b85f62927b835836311ebccff40fdc21e8ecc42e8af57abee766188624f13"
+    },
+    {
+      "nonce": 39,
+      "to": "0x33297104581dd29347d9ed37936e4f16621d59ae",
+      "name": "DemoToken",
+      "function": "approve(address,uint256)",
+      "gasLimit": 27995,
+      "inputHash": "4e5b85f62927b835836311ebccff40fdc21e8ecc42e8af57abee766188624f13"
+    },
+    {
+      "nonce": 40,
+      "to": "0x2a9ad8d9406d768ebbf19eb45ae023e5664ee02f",
+      "name": "DemoLiquiditySeeder",
+      "function": "seed((address,address,uint24,int24,address),int256)",
+      "gasLimit": 1239296,
+      "inputHash": "85b26b6feda1d790423a675df4d04b3c51b5644cc6f6aac2c781119e3ca6a20c"
+    },
+    {
+      "nonce": 41,
+      "to": null,
+      "name": "WaveRebalanceReceiver",
+      "function": null,
+      "gasLimit": 5418888,
+      "inputHash": "341070725f13dc837bd99ea8beeb9c42ebd52faeca03b77133ebe1dce60039a3"
+    },
+    {
+      "nonce": 42,
+      "to": "0x6871eb32a280498c8668139f812f41c8389f5999",
+      "name": "WaveFactory",
+      "function": "setRebalancer(address)",
+      "gasLimit": 193521,
+      "inputHash": "084b875bceab6428094feb0f36785d6ae89646e0be9b8e0db2976ecd111e1044"
+    }
+  ]
+}

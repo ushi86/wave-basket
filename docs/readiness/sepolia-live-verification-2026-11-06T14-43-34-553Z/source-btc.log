@@ -1,0 +1,26 @@
+Start verifying contract `0xBe28019380A99649579B7E9fa7F1979e6f203F79` deployed on sepolia
+EVM version: cancun
+Compiler version: 0.8.26+commit.8a97fa7a
+Optimizations:    200
+Constructor args: 0x000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000000000c0000000000000000000000000000000000000000000000000000000000000000800000000000000000000000000000000000000000000000000005af3107a4000000000000000000000000000000000000000000000000000000000000000000e576176652054657374205742544300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000056d57425443000000000000000000000000000000000000000000000000000000
+
+Verifying on etherscan...
+Submitting verification for [src/mocks/DemoAssets.sol:DemoToken] 0xBe28019380A99649579B7E9fa7F1979e6f203F79.
+Submitted contract for verification:
+	Response: `OK`
+	GUID: `m4kmvytg9txuq7tz4w6r3cinuvmjkms63ppa6zpfcam3zm8fry`
+	URL: https://sepolia.etherscan.io/address/0xbe28019380a99649579b7e9fa7f1979e6f203f79
+
+Verifying on sourcify...
+m4kmvytg9txuq7tz4w6r3cinuvmjkms63ppa6zpfcam3zm8fry	https://sepolia.etherscan.io/address/0xbe28019380a99649579b7e9fa7f1979e6f203f79
+Submitting verification for [DemoToken] 0xBe28019380A99649579B7E9fa7F1979e6f203F79.
+Submitted contract for verification:
+	Verification Job ID: `0ed53c5d-9a5d-49cd-8c59-c497556ca17f`
+	URL: https://sourcify.dev/server/verify-ui/jobs/0ed53c5d-9a5d-49cd-8c59-c497556ca17f
+
+Waiting for etherscan verification result...
+0ed53c5d-9a5d-49cd-8c59-c497556ca17f	https://sourcify.dev/server/verify-ui/jobs/0ed53c5d-9a5d-49cd-8c59-c497556ca17f
+Contract verification status:
+Response: `OK`
+Details: `Pass - Verified`
+Contract successfully verified

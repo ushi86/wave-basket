@@ -1,0 +1,30 @@
+Start verifying contract `0x7B178cB5e0776E769BE44919889D5A57D8BB1742` deployed on sepolia
+EVM version: cancun
+Compiler version: 0.8.26+commit.8a97fa7a
+Optimizations:    200
+Constructor args: 0x000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000000000c0000000000000000000000000000000000000000000000000000000000000001200000000000000000000000000000000000000000000d3c21bcecceda1000000000000000000000000000000000000000000000000000000000000000000000e576176652054657374205745544800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000056d57455448000000000000000000000000000000000000000000000000000000
+
+Verifying on etherscan...
+Submitting verification for [src/mocks/DemoAssets.sol:DemoToken] 0x7B178cB5e0776E769BE44919889D5A57D8BB1742.
+Submitted contract for verification:
+	Response: `OK`
+	GUID: `8vxdr7y7rxqqnjwigeka494gwx95hkerlieegwwxfymjxh642s`
+	URL: https://sepolia.etherscan.io/address/0x7b178cb5e0776e769be44919889d5a57d8bb1742
+8vxdr7y7rxqqnjwigeka494gwx95hkerlieegwwxfymjxh642s	https://sepolia.etherscan.io/address/0x7b178cb5e0776e769be44919889d5a57d8bb1742
+
+Verifying on sourcify...
+Submitting verification for [DemoToken] 0x7B178cB5e0776E769BE44919889D5A57D8BB1742.
+Submitted contract for verification:
+	Verification Job ID: `8c10aa70-897c-47ad-8267-f44edc425f36`
+	URL: https://sourcify.dev/server/verify-ui/jobs/8c10aa70-897c-47ad-8267-f44edc425f36
+8c10aa70-897c-47ad-8267-f44edc425f36	https://sourcify.dev/server/verify-ui/jobs/8c10aa70-897c-47ad-8267-f44edc425f36
+
+Waiting for etherscan verification result...
+Contract verification status:
+Response: `NOTOK`
+Details: `Pending in queue`
+Warning: Verification is still pending...; waiting 5 seconds before trying again (9 tries remaining)
+Contract verification status:
+Response: `OK`
+Details: `Pass - Verified`
+Contract successfully verified

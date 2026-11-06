@@ -1,0 +1,13 @@
+✔ source verification requires an exact constructor match and rejects similar-code associations (0.308542ms)
+✔ factory-funded seed deposit must identify the factory payer and owner recipient separately (0.070791ms)
+✔ rejects reverted receipts and disagreements in canonical logs or gas (0.287666ms)
+✔ binds the live transaction to every reviewed plan input and sender (0.288666ms)
+✔ checks runtime instructions and metadata, masking only repeated compiler immutable spans (0.258958ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 102.009208

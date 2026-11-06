@@ -2,11 +2,42 @@
   "schemaVersion": 1,
   "release": {
     "repository": "https://github.com/ushi86/wave-basket",
-    "commit": null
+    "commit": "1a59e233874e79fab7f70828addd535fce7b287f"
   },
   "deployment": "deployments/sepolia.json",
-  "contractLinks": [],
-  "transactions": [],
+  "contractLinks": [
+    {
+      "symbol": "_beforeInitialize",
+      "url": "https://github.com/ushi86/wave-basket/blob/1a59e233874e79fab7f70828addd535fce7b287f/contracts/src/NavGuardHook.sol#L51"
+    },
+    {
+      "symbol": "_beforeSwap",
+      "url": "https://github.com/ushi86/wave-basket/blob/1a59e233874e79fab7f70828addd535fce7b287f/contracts/src/NavGuardHook.sol#L92"
+    },
+    {
+      "symbol": "unlockCallback",
+      "url": "https://github.com/ushi86/wave-basket/blob/1a59e233874e79fab7f70828addd535fce7b287f/contracts/src/WaveSwapAdapter.sol#L64"
+    },
+    {
+      "symbol": "onReport",
+      "url": "https://github.com/ushi86/wave-basket/blob/1a59e233874e79fab7f70828addd535fce7b287f/contracts/src/WaveRebalanceReceiver.sol#L54"
+    },
+    {
+      "symbol": "runRebalance",
+      "url": "https://github.com/ushi86/wave-basket/blob/1a59e233874e79fab7f70828addd535fce7b287f/cre/src/workflow.ts#L39"
+    },
+    {
+      "symbol": "createChainSession",
+      "url": "https://github.com/ushi86/wave-basket/blob/1a59e233874e79fab7f70828addd535fce7b287f/web/src/lib/chain.ts#L31"
+    }
+  ],
+  "transactions": [
+    {
+      "kind": "createBasket",
+      "hash": "0xbca179a2c9327f5e46219e74c30db1bbb5f037d68e2d5f7418ca8455aa62a971",
+      "environment": "sepolia"
+    }
+  ],
   "cre": null,
   "privacy": null,
   "gates": {
@@ -40,311 +71,254 @@
       "id": "claim-e4f3e7a6f36f",
       "quote": "**Token baskets, in balance.**",
       "status": "Partial",
-      "artifacts": [
-        "docs/READINESS.md",
-        "docs/SUBMISSION.md"
-      ],
+      "artifacts": ["docs/READINESS.md", "docs/SUBMISSION.md"],
       "observedAtIST": "2026-11-06T15:04:08.511+05:30"
     },
     {
       "id": "claim-3995cf96ddcb",
       "quote": "Managing a token portfolio usually means many swaps, constant rebalancing, and exposing what you hold to an RPC provider. Wave Protocol turns a basket into one ERC-20 token and keeps three things in balance:",
       "status": "Partial",
-      "artifacts": [
-        "docs/READINESS.md",
-        "docs/SUBMISSION.md"
-      ],
+      "artifacts": ["docs/READINESS.md", "docs/SUBMISSION.md"],
       "observedAtIST": "2026-11-06T15:04:08.511+05:30"
     },
     {
       "id": "claim-484858c07431",
       "quote": "- **Fair value - Uniswap Foundation integration:** Uniswap v4 executes swaps. NavGuardHook adjusts flagship-pool fees according to pool price relative to the Chainlink-based net asset value (NAV); it does not guarantee price convergence.\n- **Target allocation - Chainlink integration:** a CRE workflow reads market data and proposes or submits a bounded rebalance. The vault enforces allocation, turnover, timing and execution limits on-chain; a run may correctly skip or fail.\n- **Private visibility - Ethereum Foundation / Anon-RPC integration:** Anon-RPC is the default for Sepolia app reads, reducing exposure to the RPC provider. On-chain holdings and transactions stay public. Wallet RPC and broadcast remain outside the app meter; local demo reads are direct.",
       "status": "Partial",
-      "artifacts": [
-        "docs/READINESS.md",
-        "docs/SUBMISSION.md"
-      ],
+      "artifacts": ["docs/READINESS.md", "docs/SUBMISSION.md"],
       "observedAtIST": "2026-11-06T15:04:08.511+05:30"
     },
     {
-      "id": "claim-90600b9f4fc5",
-      "quote": "This is an unaudited testnet demo with mock tokens and an explicitly labeled CRE simulation receiver. Real Sepolia deployment, CRE CLI broadcast and full-session privacy acceptance remain unverified. No returns, safety or production readiness are promised. Healthy-feed exits crystallize pending creator fees; stale-feed in-kind exits remain immediate and pro-rata after the withdrawal fee, but can avoid uncrystallized creator fees. No reserve is withheld.",
+      "id": "claim-a31e710d54e9",
+      "quote": "This is an unaudited testnet demo with mock tokens and an explicitly labeled CRE simulation receiver. Sepolia deployment receipts and configuration are corroborated on PublicNode and Tenderly; all 12 contracts are source-verified on Etherscan. Real CRE CLI broadcast and full-session privacy acceptance remain unverified. [Live addresses and transaction records](docs/readiness/SEPOLIA_DEPLOYMENT.md). No returns, safety or production readiness are promised. Healthy-feed exits crystallize pending creator fees; stale-feed in-kind exits remain immediate and pro-rata after the withdrawal fee, but can avoid uncrystallized creator fees. No reserve is withheld.",
       "status": "Partial",
       "artifacts": [
-        "docs/READINESS.md",
-        "docs/SUBMISSION.md"
+        "docs/readiness/SEPOLIA_DEPLOYMENT.md",
+        "docs/READINESS.md"
       ],
-      "observedAtIST": "2026-11-06T15:04:08.511+05:30"
+      "observedAtIST": "2026-11-06T20:29:51.676+05:30"
     },
     {
       "id": "claim-90c97fc534fb",
       "quote": "Requirements: Node 22.12+ or Node 24, npm, and network access for the first Solidity/Javy compiler downloads. Foundry binaries and Bun are installed as project dependencies.",
       "status": "Partial",
-      "artifacts": [
-        "docs/READINESS.md"
-      ],
+      "artifacts": ["docs/READINESS.md"],
       "observedAtIST": "2026-11-06T14:12:30.843+05:30"
     },
     {
       "id": "claim-7fe693522cda",
       "quote": "Open **http://127.0.0.1:5173**. The runner starts a fresh Anvil chain on port 8545, deploys the contracts, seeds three asset pools plus a flagship hook pool, writes a local deployment manifest, and starts Vite. Connect the demo wallet to use Anvil's unlocked test account when no injected wallet is installed. With an injected wallet, connect it to the displayed local network using an Anvil test account. Ctrl-C stops the owned node and dashboard. The chain is disposable; restarting discards previous demo positions. The runner refuses to take over an occupied port 8545.",
       "status": "Partial",
-      "artifacts": [
-        "docs/READINESS.md"
-      ],
+      "artifacts": ["docs/READINESS.md"],
       "observedAtIST": "2026-11-06T14:12:30.843+05:30"
     },
     {
       "id": "claim-f25887983133",
       "quote": "The local network uses **direct, counted loopback reads**, a public Anvil test key, mock tokens, mock price feeds, and a mock forwarder. None of this is presented as a private or production deployment. The deployer initially receives faucet tokens and funds the flagship basket and pools; its hourly faucet claim will already be used.",
       "status": "Partial",
-      "artifacts": [
-        "docs/READINESS.md"
-      ],
+      "artifacts": ["docs/READINESS.md"],
       "observedAtIST": "2026-11-06T14:12:30.843+05:30"
     },
     {
       "id": "claim-f4b39bf6864b",
       "quote": "In a second terminal, exercise the local forwarder/receiver path:",
       "status": "Partial",
-      "artifacts": [
-        "docs/READINESS.md"
-      ],
+      "artifacts": ["docs/READINESS.md"],
       "observedAtIST": "2026-11-06T14:12:30.843+05:30"
     },
     {
       "id": "claim-dbbda92a056c",
       "quote": "This submits a bounded, deterministic report fixture and creates an on-chain history record. **It is not a Chainlink CRE simulation.** Repeated execution is subject to report freshness, per-vault sequential nonces, monotonic observations, and the five-minute rebalance interval.",
       "status": "Partial",
-      "artifacts": [
-        "docs/READINESS.md"
-      ],
+      "artifacts": ["docs/READINESS.md"],
       "observedAtIST": "2026-11-06T14:12:30.843+05:30"
     },
     {
       "id": "claim-048996d452af",
       "quote": "Tests cover the public create/deposit/redeem lifecycle, real local v4 PoolManager settlement, fees, stale/invalid feeds, timelocks, allocation and turnover guards, receiver authentication/replay, deterministic strategy bounds, and fail-closed privacy routing. Production contract bytecode is checked against EIP-170. Foundry's larger script/test harness size allowance does not relax deployed contract limits.",
       "status": "Partial",
-      "artifacts": [
-        "docs/READINESS.md"
-      ],
+      "artifacts": ["docs/READINESS.md"],
       "observedAtIST": "2026-11-06T14:12:30.843+05:30"
     },
     {
       "id": "claim-fe2319c0a870",
       "quote": "`npm run build` builds the static dashboard. `npm run build:workflow` compiles the CRE entry point to WASM using Bun/Javy. `npm run dev` starts only the dashboard. Without a deployment manifest, the UI shows an unconfigured state and offers no transactions. Build and test artifacts are ignored by Git.",
       "status": "Partial",
-      "artifacts": [
-        "docs/READINESS.md"
-      ],
+      "artifacts": ["docs/READINESS.md"],
       "observedAtIST": "2026-11-06T14:12:30.843+05:30"
     },
     {
       "id": "claim-a5afdf03ea25",
       "quote": "The dashboard uses React and a single viem public client with injected-wallet support, rather than adding a second wallet/read-client layer. WalletConnect is not included.",
       "status": "Partial",
-      "artifacts": [
-        "docs/READINESS.md"
-      ],
+      "artifacts": ["docs/READINESS.md"],
       "observedAtIST": "2026-11-06T14:12:30.843+05:30"
     },
     {
       "id": "claim-e15cb976e13f",
       "quote": "The factory uses a dedicated, factory-only deployer to keep both factory and vault deployment bytecode within Ethereum limits. Vaults are ordinary contracts, not proxies. No backend, indexer, database, or server-side wallet is used by the app.",
       "status": "Partial",
-      "artifacts": [
-        "docs/READINESS.md"
-      ],
+      "artifacts": ["docs/READINESS.md"],
       "observedAtIST": "2026-11-06T14:12:30.843+05:30"
     },
     {
       "id": "claim-2d7ade9a7896",
       "quote": "- Contracts: [vault](contracts/src/WaveVault.sol), [factory/deployer](contracts/src/WaveFactory.sol), [registry](contracts/src/AssetRegistry.sol).\n- Uniswap: [swap settlement](contracts/src/WaveSwapAdapter.sol#L64), [NAV guard](contracts/src/NavGuardHook.sol#L56), [pool deployment](contracts/script/DeployDemo.s.sol).\n- Chainlink: [workflow](cre/src/workflow.ts#L39), [bounded strategy](cre/src/strategy.ts), [receiver](contracts/src/WaveRebalanceReceiver.sol#L49).\n- Privacy: [worker and public client](web/src/lib/chain.ts#L54), [traffic accounting](web/src/lib/privacy.ts#L16).\n- Product contract: [Wave Protocol specification](WAVE_PROTOCOL_SPEC.md).",
       "status": "Partial",
-      "artifacts": [
-        "docs/READINESS.md"
-      ],
+      "artifacts": ["docs/READINESS.md"],
       "observedAtIST": "2026-11-06T14:12:30.843+05:30"
     },
     {
       "id": "claim-3ae21887748b",
       "quote": "- Up to four distinct allowlisted assets; positive target weights total 10,000 bps, at most 5,000 bps each. A settlement-token component is supported without self-swapping.\n- Six-decimal mock USDC settlement, eighteen-decimal shares, normalized eighteen-decimal USD prices; WBTC uses eight token decimals. USDC/USD is valued through its feed rather than assumed to be a permanent dollar peg.\n- Initial share price is one settlement token per share. Minimum seed is 10 mUSDC; 1,000 smallest share units are permanently locked from the seed entitlement. Later deposits use measured value added and crystallize pre-existing gains before participation. Settlement redemptions use a fresh on-chain preview that includes pending performance-fee dilution before the UI applies execution tolerance.\n- A 10 bps withdrawal fee applies to both exits. Settlement exits pay treasury in mUSDC. In-kind exits transfer fee shares to the treasury and burn only net shares against pre-burn supply.\n- Creator performance fees range from 0–2,000 bps. They mint dilution-adjusted shares only above a fund-level high-water mark. **Healthy-feed in-kind exits crystallize the same outstanding performance fees as settlement exits. Stale-feed exits remain immediate and fully pro-rata after the unchanged withdrawal fee, with no withheld assets.** A holder exiting during stale feeds can avoid uncrystallized creator fees. This is an explicit submission limitation; no deferred reserve is implemented.\n- Manual proposals replace previous pending proposals and may be cancelled by the creator. Automation pauses while a proposal exists. Permissionless execution after ten minutes activates target weights without trading and starts a five-minute cooldown. Later CRE reports may change those targets again within vault bounds.\n- Turnover is half the absolute difference between actual and proposed weights, including residual mUSDC as a cash leg; odd basis points round up. Actual weights use current oracle-valued holdings. Rebalances cap turnover at 20%, require a five-minute interval, cap per-swap and total NAV loss at 1%, and enforce the asset rules again on-chain.\n- Strategy: tilt current target weights using external 24-hour market changes clipped to ±50%, normalize under 50% asset caps, interpolate toward the result to respect turnover, and skip changes below 300 bps turnover. A proposal that cannot meet all bounds is skipped. No LLM dependency is included. At most the first three registered baskets are inspected per run.\n- Hook fees: 500 v4 fee units (0.05%) within a ±1% NAV band; outside it, 500 toward NAV and 10,000 (1%) away. Direction and deviation are evaluated before the trade, including trades that cross NAV. Pool spot measures deviation; underlying holdings and feeds supply reference NAV. Only the flagship pool is hooked.\n- Recent history retains 32 records with monotonic IDs. Expired IDs revert; older events remain queryable from the deployment block with adaptive log pagination.\n- Registry, pool configuration, and factory rebalancer are administered through two-step ownership. These are trusted demo administration roles and can affect valuation and trading. Mock-token faucets are public and hourly limited; mock feeds are owner-controlled. This software is unaudited and testnet-only.",
       "status": "Partial",
+      "artifacts": ["docs/READINESS.md"],
+      "observedAtIST": "2026-11-06T14:12:30.843+05:30"
+    },
+    {
+      "id": "claim-640014277773",
+      "quote": "**The current Sepolia stack is deployed and verified.** Use [the live manifest](deployments/sepolia.json) and [receipt record](docs/readiness/SEPOLIA_DEPLOYMENT.md). The initial-deployment commands below are historical setup notes: do not rerun the initial helper or resume it against this account, whose nonce is now 43.",
+      "status": "Partial",
       "artifacts": [
+        "docs/readiness/SEPOLIA_DEPLOYMENT.md",
         "docs/READINESS.md"
       ],
-      "observedAtIST": "2026-11-06T14:12:30.843+05:30"
+      "observedAtIST": "2026-11-06T20:29:51.676+05:30"
     },
     {
       "id": "claim-3834002999e9",
       "quote": "A funded Sepolia deployer and a CRE account are external prerequisites. No live deployment, verification transaction, or CLI broadcast is claimed by the local demo.",
       "status": "Partial",
-      "artifacts": [
-        "docs/READINESS.md"
-      ],
+      "artifacts": ["docs/READINESS.md"],
       "observedAtIST": "2026-11-06T14:12:30.843+05:30"
     },
     {
       "id": "claim-0551b22ba7cb",
       "quote": "1. Create a Foundry keystore with the official Foundry tooling. Keep keys out of source and frontend environment files. Populate the deployment environment from the names in `contracts/.env.example`, using current official contract/feed/forwarder addresses. The script reads feed metadata and refuses unhealthy feed values before pool creation. Verify heartbeats/bounds and adequate gas before broadcasting.\n2. From the repository root, run the guarded deployment helper in dry-run mode first:",
       "status": "Partial",
-      "artifacts": [
-        "docs/readiness/RPC_TIP_DIAGNOSIS.md"
-      ],
+      "artifacts": ["docs/readiness/RPC_TIP_DIAGNOSIS.md"],
       "observedAtIST": "2026-11-06T16:22:26.754+05:30"
     },
     {
       "id": "claim-f58b162e773b",
       "quote": "Inspect the successful dry run before broadcasting. In your own interactive terminal with the explorer API key already configured, run separately:",
       "status": "Partial",
-      "artifacts": [
-        "docs/readiness/RPC_TIP_DIAGNOSIS.md"
-      ],
+      "artifacts": ["docs/readiness/RPC_TIP_DIAGNOSIS.md"],
       "observedAtIST": "2026-11-06T16:22:26.754+05:30"
     },
     {
       "id": "claim-3f4edeabf56a",
       "quote": "The helper checks both providers, selects a recent common fixed block to avoid the observed PublicNode tip/state lookup error, and defaults to no broadcast. It refuses a changed deployer nonce or an existing broadcast record until reviewed. Tenderly stays read-only. It is configured for the current `wave-sepolia` initial deployment; the owner enters the keystore password locally. `DEPLOYER_ADDRESS` must match the keystore. No raw deployer key is needed for Sepolia. The script writes `deployments/sepolia.json`; archive addresses, transaction receipts, and explorer verification results. The local deployment path also uses this script, but uses only the public disposable Anvil key.\n3. Convert the generated manifest and configure the browser and CRE addresses:",
       "status": "Partial",
-      "artifacts": [
-        "docs/readiness/RPC_TIP_DIAGNOSIS.md"
-      ],
+      "artifacts": ["docs/readiness/RPC_TIP_DIAGNOSIS.md"],
       "observedAtIST": "2026-11-06T16:22:26.754+05:30"
     },
     {
       "id": "claim-d6b1770ee286",
       "quote": "The converter also populates CRE factory/receiver addresses and token-to-market-ID mappings for Sepolia. A missing real feed fails deployment; a test-only exception requires the corresponding explicit `USE_MOCK_USDC_FEED`, `USE_MOCK_ETH_FEED`, `USE_MOCK_BTC_FEED`, or `USE_MOCK_LINK_FEED` flag. Mixed/mock feeds remain labeled. The public browser RPC must not contain private credentials. Configure an independently checked worker specifier/bootstrap URL when overriding defaults.\n4. Install/login to the official CRE CLI, configure its funded simulation wallet using its supported secret mechanism, and run from the workflow directory:",
       "status": "Partial",
-      "artifacts": [
-        "docs/READINESS.md"
-      ],
+      "artifacts": ["docs/READINESS.md"],
       "observedAtIST": "2026-11-06T14:12:30.843+05:30"
     },
     {
       "id": "claim-ff09b60a5d8c",
       "quote": "Check the current CLI configuration conventions against the installed version. Observe a successful, nonzero broadcast transaction addressed to the forwarder, a successful receiver execution, and a new vault history entry. If market drift is below threshold, the workflow correctly skips; do not lower bounds or invent market data to claim a successful automated trade.",
       "status": "Partial",
-      "artifacts": [
-        "docs/READINESS.md"
-      ],
+      "artifacts": ["docs/READINESS.md"],
       "observedAtIST": "2026-11-06T14:12:30.843+05:30"
     },
     {
       "id": "claim-b4977509bc0c",
       "quote": "**CRE modes:** current simulation mock forwarders omit workflow metadata. Set `CRE_SIMULATION=true` for a disposable Sepolia simulation receiver. It authenticates the caller and keeps all vault/report bounds but does not claim workflow identity authentication. The immutable flag only permits Sepolia/local deployment. For an authenticated workflow receiver, deploy a new instance with simulation disabled, the correct forwarder, and actual workflow ID/author/encoded name; do not promote a simulation contract as production-ready. Workflow name encoding follows the CRE engine: take the first ten lowercase hex characters of SHA256(name), encode those characters as bytes10, then pad the environment value to bytes32.",
       "status": "Partial",
-      "artifacts": [
-        "docs/READINESS.md"
-      ],
+      "artifacts": ["docs/READINESS.md"],
       "observedAtIST": "2026-11-06T14:12:30.843+05:30"
     },
     {
       "id": "claim-f5783cad8488",
       "quote": "On Sepolia, app-originated contract reads, logs, blocks, balances, simulations, and receipt polling use one Anon-RPC worker through the public client's transport. The default immutable Nox specifier comes from the source plan and is configurable. The harness verifies worker bytes by hash and supplies its sandbox; fonts are self-hosted.",
       "status": "Partial",
-      "artifacts": [
-        "docs/READINESS.md"
-      ],
+      "artifacts": ["docs/READINESS.md"],
       "observedAtIST": "2026-11-06T14:12:30.843+05:30"
     },
     {
       "id": "claim-ead66315f1de",
       "quote": "**Submission worker decision:** retain Nox 0.4.0 at `0xDf5Db854BA75B52a4bF1a250a93D8d25cB982b2d`, with fixed worker hash `0xd8bef626ec8511d7a468bca5137880680ca2da20d2ea4d9c981a2a3d0c86ba1e`. The per-release immutable specifier gives us known bytes. The officially listed stable address can be updated by its owner and currently serves different 0.4.1 bytes. We will not switch automatically. If 0.4.0 fails the full Sepolia browser session, stop, preserve the actual error and present options for owner approval. Fixed bytes do not establish anonymity, code safety or infrastructure availability. See the [specifier review](docs/NOX_SPECIFIER_REVIEW.md).",
       "status": "Partial",
-      "artifacts": [
-        "docs/NOX_SPECIFIER_REVIEW.md"
-      ],
+      "artifacts": ["docs/NOX_SPECIFIER_REVIEW.md"],
       "observedAtIST": "2026-11-06T15:27:38.978+05:30"
     },
     {
       "id": "claim-33c219e01432",
       "quote": "Receipt verification uses PublicNode and the approved accountless, read-only Tenderly endpoint (`https://sepolia.gateway.tenderly.co`). This provides **provider diversity**, not proof of fully independent infrastructure. Chain identity, canonical block, receipt/log and state checks remain enforced. If Tenderly requires an account, API key or payment, stop and ask the owner; do not silently substitute or downgrade verification.",
       "status": "Partial",
-      "artifacts": [
-        "docs/RPC_SOURCE_REVIEW.md"
-      ],
+      "artifacts": ["docs/RPC_SOURCE_REVIEW.md"],
       "observedAtIST": "2026-11-06T15:27:38.978+05:30"
     },
     {
       "id": "claim-35bfbcaa86cd",
       "quote": "The meter counts individual JSON-RPC methods, including batch members. Successful coverage is `anon / (anon + bootstrap + explicit-direct)`. Attempts/errors are shown separately. It never inflates success counts using failed requests. Bootstrap is direct and metered. Wallet-side RPC and transaction broadcasts are separate and outside this meter; CRE is off-browser. Local Anvil reads are explicitly direct and counted. Page reloads reset session counters.",
       "status": "Partial",
-      "artifacts": [
-        "docs/READINESS.md"
-      ],
+      "artifacts": ["docs/READINESS.md"],
       "observedAtIST": "2026-11-06T14:12:30.843+05:30"
     },
     {
       "id": "claim-fd6350056369",
       "quote": "A failed private read never silently uses a public fallback. The single-read direct action authorizes only its specific block request and makes the badge amber. The private worker has a sixty-second startup deadline. A full Sepolia lifecycle must still be measured against the spec's <10s startup and ≥95% coverage targets; a successful worker-only probe is not full-session acceptance evidence.",
       "status": "Partial",
-      "artifacts": [
-        "docs/READINESS.md"
-      ],
+      "artifacts": ["docs/READINESS.md"],
       "observedAtIST": "2026-11-06T14:12:30.843+05:30"
     },
     {
       "id": "claim-98eb09886b36",
       "quote": "A holder exiting in kind during stale feeds can avoid uncrystallized creator performance fees. The exit pays the complete net pro-rata slice immediately; no assets are withheld. Healthy feeds crystallize the same pending fees as settlement redemption. Stale-period fee conservation remains blocked by the owner’s explicit decision. [A post-event reserve option](docs/STALE_EXIT_DESIGN.md) requires an enforceable expiry and a new reviewed design.",
       "status": "Partial",
-      "artifacts": [
-        "docs/READINESS.md"
-      ],
+      "artifacts": ["docs/READINESS.md"],
       "observedAtIST": "2026-11-06T14:12:30.843+05:30"
     },
     {
       "id": "claim-2b38acf76c2a",
       "quote": "This increment changes immutable vault/hook/receiver code and report encoding to v2 (`vault, nonce, weights, observedAt, reason`). Redeploy the complete stack and update both clients; existing deployments cannot be upgraded in place. For rollback, restore the previous manifest and matching workflow version together; preserve exits and do not send v2 reports to an older receiver.",
       "status": "Partial",
-      "artifacts": [
-        "docs/READINESS.md"
-      ],
+      "artifacts": ["docs/READINESS.md"],
       "observedAtIST": "2026-11-06T14:12:30.843+05:30"
     },
     {
       "id": "claim-2e9fa776de90",
       "quote": "Submission is **not ready**. `npm run check:evidence` is read-only and intentionally exits nonzero until genuine public-source, Sepolia, CRE, privacy, eligibility, and security artifacts satisfy its checks. See [claim matrix](EVIDENCE.md), [readiness record](docs/READINESS.md), [privacy procedure](docs/PRIVACY.md), and [owner submission kit](docs/SUBMISSION.md). `npm run check:secrets` checks working source and reachable history with a location-only heuristic; it is not a professional audit.",
       "status": "Partial",
-      "artifacts": [
-        "docs/READINESS.md"
-      ],
+      "artifacts": ["docs/READINESS.md"],
       "observedAtIST": "2026-11-06T14:12:30.843+05:30"
     },
     {
-      "id": "claim-6281ac452932",
-      "quote": "The local chain and browser flows have been exercised. See [verification notes](docs/VERIFICATION.md) for actual evidence and limitations. The [public repository](https://github.com/ushi86/wave-basket) contains the preserved Git history. Sepolia deployment/fork checks, real CRE CLI broadcast, event eligibility, partner forms, a demo video, and submission remain external delivery steps. No tracker is configured. No form, issue or hackathon submission has been published.",
+      "id": "claim-0d9c5e2a727a",
+      "quote": "The local chain and browser flows have been exercised. See [verification notes](docs/VERIFICATION.md) for actual evidence and limitations. The [public repository](https://github.com/ushi86/wave-basket) contains the preserved Git history. Sepolia deployment and two-provider receipt/state verification are complete. Real CRE CLI broadcast, full privacy/lifecycle acceptance, event eligibility, partner forms, a demo video, and submission remain external delivery steps. The product tracker is docs/PRODUCT_PROGRESS.md; no external issue tracker is configured. No form, issue or hackathon submission has been published.",
       "status": "Partial",
       "artifacts": [
-        "docs/READINESS.md",
-        "docs/SUBMISSION.md"
+        "docs/readiness/SEPOLIA_DEPLOYMENT.md",
+        "docs/READINESS.md"
       ],
-      "observedAtIST": "2026-11-06T15:04:08.511+05:30"
+      "observedAtIST": "2026-11-06T20:29:51.676+05:30"
     },
     {
       "id": "claim-d3c9434685dc",
       "quote": "The SDK currently pins a Zod 3 dependency with a reported high-severity collection-size advisory. Vitest was upgraded to remove the critical test-runner advisories found during setup. `npm audit` should be revisited before any production use; do not force-upgrade SDK internals across major versions without compatibility verification.",
       "status": "Partial",
-      "artifacts": [
-        "docs/READINESS.md"
-      ],
+      "artifacts": ["docs/READINESS.md"],
       "observedAtIST": "2026-11-06T14:12:30.843+05:30"
     },
     {
       "id": "claim-70c3a1d9ffda",
       "quote": "Own application source is MIT licensed. Third-party dependencies retain their licenses, including Uniswap's published licenses. See [AI attribution](AI_ATTRIBUTION.md) and [Uniswap feedback](FEEDBACK.md).",
       "status": "Partial",
-      "artifacts": [
-        "docs/READINESS.md"
-      ],
+      "artifacts": ["docs/READINESS.md"],
       "observedAtIST": "2026-11-06T14:12:30.843+05:30"
     },
     {
       "id": "claim-444e1653f821",
       "quote": "- [Uniswap unlock callbacks and settlement](https://developers.uniswap.org/docs/protocols/v4/guides/unlock-callback-and-deltas)\n- [Chainlink consumer contracts, metadata, and simulation limitations](https://docs.chain.link/cre/guides/workflow/using-evm-client/onchain-write/building-consumer-contracts)\n- [CRE TypeScript SDK](https://github.com/smartcontractkit/cre-sdk-typescript)\n- [Anon-RPC specification](https://ethereum.github.io/anon-rpc/spec/)",
       "status": "Partial",
-      "artifacts": [
-        "docs/READINESS.md"
-      ],
+      "artifacts": ["docs/READINESS.md"],
       "observedAtIST": "2026-11-06T14:12:30.843+05:30"
     }
   ]

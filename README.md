@@ -8,7 +8,7 @@ Managing a token portfolio usually means many swaps, constant rebalancing, and e
 - **Target allocation - Chainlink integration:** a CRE workflow reads market data and proposes or submits a bounded rebalance. The vault enforces allocation, turnover, timing and execution limits on-chain; a run may correctly skip or fail.
 - **Private visibility - Ethereum Foundation / Anon-RPC integration:** Anon-RPC is the default for Sepolia app reads, reducing exposure to the RPC provider. On-chain holdings and transactions stay public. Wallet RPC and broadcast remain outside the app meter; local demo reads are direct.
 
-This is an unaudited testnet demo with mock tokens and an explicitly labeled CRE simulation receiver. Real Sepolia deployment, CRE CLI broadcast and full-session privacy acceptance remain unverified. No returns, safety or production readiness are promised. Healthy-feed exits crystallize pending creator fees; stale-feed in-kind exits remain immediate and pro-rata after the withdrawal fee, but can avoid uncrystallized creator fees. No reserve is withheld.
+This is an unaudited testnet demo with mock tokens and an explicitly labeled CRE simulation receiver. Sepolia deployment receipts and configuration are corroborated on PublicNode and Tenderly; all 12 contracts are source-verified on Etherscan. Real CRE CLI broadcast and full-session privacy acceptance remain unverified. [Live addresses and transaction records](docs/readiness/SEPOLIA_DEPLOYMENT.md). No returns, safety or production readiness are promised. Healthy-feed exits crystallize pending creator fees; stale-feed in-kind exits remain immediate and pro-rata after the withdrawal fee, but can avoid uncrystallized creator fees. No reserve is withheld.
 
 ## Run the complete local demo
 
@@ -90,6 +90,8 @@ The factory uses a dedicated, factory-only deployer to keep both factory and vau
 
 ## Configure Sepolia
 
+**The current Sepolia stack is deployed and verified.** Use [the live manifest](deployments/sepolia.json) and [receipt record](docs/readiness/SEPOLIA_DEPLOYMENT.md). The initial-deployment commands below are historical setup notes: do not rerun the initial helper or resume it against this account, whose nonce is now 43.
+
 A funded Sepolia deployer and a CRE account are external prerequisites. No live deployment, verification transaction, or CLI broadcast is claimed by the local demo.
 
 1. Create a Foundry keystore with the official Foundry tooling. Keep keys out of source and frontend environment files. Populate the deployment environment from the names in `contracts/.env.example`, using current official contract/feed/forwarder addresses. The script reads feed metadata and refuses unhealthy feed values before pool creation. Verify heartbeats/bounds and adequate gas before broadcasting.
@@ -147,7 +149,7 @@ This increment changes immutable vault/hook/receiver code and report encoding to
 
 Submission is **not ready**. `npm run check:evidence` is read-only and intentionally exits nonzero until genuine public-source, Sepolia, CRE, privacy, eligibility, and security artifacts satisfy its checks. See [claim matrix](EVIDENCE.md), [readiness record](docs/READINESS.md), [privacy procedure](docs/PRIVACY.md), and [owner submission kit](docs/SUBMISSION.md). `npm run check:secrets` checks working source and reachable history with a location-only heuristic; it is not a professional audit.
 
-The local chain and browser flows have been exercised. See [verification notes](docs/VERIFICATION.md) for actual evidence and limitations. The [public repository](https://github.com/ushi86/wave-basket) contains the preserved Git history. Sepolia deployment/fork checks, real CRE CLI broadcast, event eligibility, partner forms, a demo video, and submission remain external delivery steps. No tracker is configured. No form, issue or hackathon submission has been published.
+The local chain and browser flows have been exercised. See [verification notes](docs/VERIFICATION.md) for actual evidence and limitations. The [public repository](https://github.com/ushi86/wave-basket) contains the preserved Git history. Sepolia deployment and two-provider receipt/state verification are complete. Real CRE CLI broadcast, full privacy/lifecycle acceptance, event eligibility, partner forms, a demo video, and submission remain external delivery steps. The product tracker is docs/PRODUCT_PROGRESS.md; no external issue tracker is configured. No form, issue or hackathon submission has been published.
 
 The SDK currently pins a Zod 3 dependency with a reported high-severity collection-size advisory. Vitest was upgraded to remove the critical test-runner advisories found during setup. `npm audit` should be revisited before any production use; do not force-upgrade SDK internals across major versions without compatibility verification.
 

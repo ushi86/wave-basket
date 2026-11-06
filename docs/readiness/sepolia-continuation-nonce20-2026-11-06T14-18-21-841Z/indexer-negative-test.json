@@ -1,0 +1,5 @@
+{
+  "scope": "Guard test against actual incomplete broadcast records, NOT full Sepolia deployment evidence",
+  "observedAt": "2026-11-06T14:33:03.630Z",
+  "incompleteBroadcastRejected": true
+}

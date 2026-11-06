@@ -1,0 +1,6 @@
+{
+  "scope": "Public provider-error log masks client network address; original preserved privately in ignored cache. Transaction data and outcomes unchanged.",
+  "redactions": 1,
+  "originalSha256": "a73ee79ab3d1401f5b3733b5937c279ed7c82ec081a72e6c0dd0f98465e8c26f",
+  "publishedSha256": "2d61ad48486ad097b8c75be1a8d4e85c238c6322a73b1710b812a97cfefc81aa"
+}

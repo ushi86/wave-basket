@@ -1,0 +1,30 @@
+Start verifying contract `0x7cbe10AA965Edc8414ad0a4C68192f8ef117f21D` deployed on sepolia
+EVM version: cancun
+Compiler version: 0.8.26+commit.8a97fa7a
+Optimizations:    200
+Constructor args: 0x000000000000000000000000e03a1074c86cfedd5c142c4f04f1a1536e203543000000000000000000000000de25d83481c0c2a711397c44ee3317dd826952d5
+
+Verifying on etherscan...
+Submitting verification for [src/WaveSwapAdapter.sol:WaveSwapAdapter] 0x7cbe10AA965Edc8414ad0a4C68192f8ef117f21D.
+Submitted contract for verification:
+	Response: `OK`
+	GUID: `hg5hhjw3br5tweyv6893hn5cqfinemr8r845pzj2awvbzyhz6z`
+	URL: https://sepolia.etherscan.io/address/0x7cbe10aa965edc8414ad0a4c68192f8ef117f21d
+
+Verifying on sourcify...
+hg5hhjw3br5tweyv6893hn5cqfinemr8r845pzj2awvbzyhz6z	https://sepolia.etherscan.io/address/0x7cbe10aa965edc8414ad0a4c68192f8ef117f21d
+Submitting verification for [WaveSwapAdapter] 0x7cbe10AA965Edc8414ad0a4C68192f8ef117f21D.
+Submitted contract for verification:
+	Verification Job ID: `c0b9119c-67a1-498b-85e1-ae2503d0ced3`
+	URL: https://sourcify.dev/server/verify-ui/jobs/c0b9119c-67a1-498b-85e1-ae2503d0ced3
+c0b9119c-67a1-498b-85e1-ae2503d0ced3	https://sourcify.dev/server/verify-ui/jobs/c0b9119c-67a1-498b-85e1-ae2503d0ced3
+
+Waiting for etherscan verification result...
+Contract verification status:
+Response: `NOTOK`
+Details: `Pending in queue`
+Warning: Verification is still pending...; waiting 5 seconds before trying again (9 tries remaining)
+Contract verification status:
+Response: `OK`
+Details: `Pass - Verified`
+Contract successfully verified

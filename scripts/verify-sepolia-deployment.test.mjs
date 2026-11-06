@@ -3,6 +3,8 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
 import {
+  isExactExplorerSource,
+  isFactorySeedDeposit,
   requireReceiptPair,
   requireRuntime,
   requireTransaction,
@@ -11,6 +13,59 @@ const txHash = "0x" + "a".repeat(64);
 const blockHash = "0x" + "b".repeat(64);
 const owner = "0xde25d83481c0c2a711397c44ee3317dd826952d5";
 const address = "0x" + "c".repeat(40);
+test("source verification requires an exact constructor match and rejects similar-code associations", () => {
+  const exact = {
+    name: "DemoToken",
+    compiler: "v0.8.26+commit.8a97fa7a",
+    optimizer: "1",
+    runs: "200",
+    proxy: "0",
+    similarMatch: "",
+    constructorArgsSha256: "expected",
+  };
+  assert.equal(
+    isExactExplorerSource(
+      exact,
+      "DemoToken",
+      "0.8.26+commit.8a97fa7a",
+      "expected",
+    ),
+    true,
+  );
+  for (const changed of [
+    { ...exact, similarMatch: address },
+    { ...exact, constructorArgsSha256: "wrong" },
+    { ...exact, proxy: "1" },
+  ])
+    assert.equal(
+      isExactExplorerSource(
+        changed,
+        "DemoToken",
+        "0.8.26+commit.8a97fa7a",
+        "expected",
+      ),
+      false,
+    );
+});
+test("factory-funded seed deposit must identify the factory payer and owner recipient separately", () => {
+  const seed = {
+    user: address,
+    receiver: owner,
+    usdcIn: 100000000000n,
+    shares: 99292712649999999999000n,
+  };
+  assert.equal(isFactorySeedDeposit(seed, address, owner, seed.usdcIn), true);
+  for (const changed of [
+    { ...seed, user: owner },
+    { ...seed, receiver: address },
+    { ...seed, usdcIn: 1n },
+    { ...seed, shares: 0n },
+  ])
+    assert.equal(
+      isFactorySeedDeposit(changed, address, owner, seed.usdcIn),
+      false,
+    );
+});
 const receipt = () => ({
   transactionHash: txHash,
   status: "0x1",
