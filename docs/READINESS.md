@@ -8,7 +8,7 @@ Status: **Partial; submission gate failing**. This record concerns the increment
 | A1 public source | Not done | No public remote supplied, no publication claimed. Preserve history without force/squash/backdating. |
 | A2 Wave naming | Proven | Product source uses Wave Protocol. Historical source-plan title is retained only as provenance. |
 | A3 contracts | Partial | Healthy exit accounting, approved hook key, nonce/freshness receiver and rollback regressions implemented. Stale-fee conservation is explicitly blocked; no reserve. |
-| A4 Sepolia | Not done | No funded deployer or actual deployment/verification receipts. Deployment script rejects a replacement Sepolia manager and silent feed fallbacks. |
+| A4 Sepolia | Partial | Funded deployer; 19 real successful recovery receipts corroborated on PublicNode and Tenderly. Seven contracts created; full core deployment remains incomplete after the nonce synchronization guard stopped before nonce 20. See EVIDENCE.md. No complete live manifest or lifecycle acceptance claimed. |
 | A5 CRE CLI broadcast | Not done | WASM compilation and local fixtures do not establish CRE execution. No installed/logged-in CLI or actual broadcast evidence. |
 | A6 privacy session | Partial | Fail-closed transport tests and session export/control implemented. Historical worker-only probe is not a full Sepolia measurement. |
 | A7 dashboard | Partial | Mode labels, live hook snapshot, history references and measurement controls implemented; browser recheck recorded in `VERIFICATION.md`. |

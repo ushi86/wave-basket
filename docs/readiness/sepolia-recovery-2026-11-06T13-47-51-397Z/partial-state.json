@@ -1,0 +1,95 @@
+{
+  "scope": "Live PARTIAL Sepolia deployment state after 19 canonical successful operations. No full deployment or live basket claimed.",
+  "startedAt": "2026-11-06T14:17:45.114Z",
+  "contracts": [
+    {
+      "name": "usdc",
+      "address": "0x33297104581Dd29347d9Ed37936e4F16621D59aE",
+      "transactionHash": "0xd4edc8dbcca9761b87d5c4eafb89a0df235bb73320b44bb6aed32bddf976fb3c",
+      "blockNumber": 12076977,
+      "bytes": 1984,
+      "codeHash": "0xe1838d682341b6e2e036ea7afc463ce14a41095cffb32d7b954eda0e7498cd4a",
+      "immutableValues": [
+        "0x0000000000000000000000000000000000000000000000000000000000000006",
+        "0x00000000000000000000000000000000000000000000000000038d7ea4c68000"
+      ]
+    },
+    {
+      "name": "eth",
+      "address": "0x7B178cB5e0776E769BE44919889D5A57D8BB1742",
+      "transactionHash": "0x5234c897226abb53b57624f73e93a2c6fa6f0b01c4a9664b7a819ca6a72deda5",
+      "blockNumber": 12076978,
+      "bytes": 1984,
+      "codeHash": "0xf8186d92881a49b4b1c31cb382416c5111ae6c0e346cd2d8aa4ec123a77883e7",
+      "immutableValues": [
+        "0x0000000000000000000000000000000000000000000000000000000000000012",
+        "0x00000000000000000000000000000000000000000000d3c21bcecceda1000000"
+      ]
+    },
+    {
+      "name": "btc",
+      "address": "0xBe28019380A99649579B7E9fa7F1979e6f203F79",
+      "transactionHash": "0xf133c85ade8df32aa22c7c06be2aa574b16b0cca501e632b7e2df1284fdb36de",
+      "blockNumber": 12076979,
+      "bytes": 1984,
+      "codeHash": "0xe4373ec3ae96a63d0fcda538d07a496c891fdac8d2c7518af7836dda95102911",
+      "immutableValues": [
+        "0x0000000000000000000000000000000000000000000000000000000000000008",
+        "0x00000000000000000000000000000000000000000000000000005af3107a4000"
+      ]
+    },
+    {
+      "name": "link",
+      "address": "0xDd71a1BF041dcdb68AD70A6e0766996557759525",
+      "transactionHash": "0x73993772c2698a5925b0b457980ab538a5a7b9709a8e141611873ae1e5898bac",
+      "blockNumber": 12076980,
+      "bytes": 1984,
+      "codeHash": "0xcbd22de5d4920a0e7a1b3fa40594d35cab37cec01ec80e68a169f58019917b7c",
+      "immutableValues": [
+        "0x0000000000000000000000000000000000000000000000000000000000000012",
+        "0x00000000000000000000000000000000000000000052b7d2dcc80cd2e4000000"
+      ]
+    },
+    {
+      "name": "registry",
+      "address": "0x97946eFDC076af3069C624dB65859Ba775aADbB4",
+      "transactionHash": "0xa3f11d7a536830f308d2cb7700d62acef8e6fdba4d340c0548046649787c39bc",
+      "blockNumber": 12076981,
+      "bytes": 2509,
+      "codeHash": "0xbd45b927a09ab5d4ce783202da3557cbfb7c118a6f5c1f37deee7a4d1979d48f",
+      "immutableValues": []
+    },
+    {
+      "name": "adapter",
+      "address": "0x7cbe10AA965Edc8414ad0a4C68192f8ef117f21D",
+      "transactionHash": "0xcb6e20d2d712513cfe6c17cb6d0eb6406b4e9b7a4149ae4043ed3a25dabb44ea",
+      "blockNumber": 12076986,
+      "bytes": 4145,
+      "codeHash": "0x383c9b42c0da8e798b9fdae163fc588876b409a1922682d606830ea52e6dda86",
+      "immutableValues": [
+        "0x000000000000000000000000e03a1074c86cfedd5c142c4f04f1a1536e203543"
+      ]
+    },
+    {
+      "name": "seeder",
+      "address": "0x2A9aD8D9406d768ebBF19Eb45Ae023E5664EE02f",
+      "transactionHash": "0x2250ced9dbf5dc0843614f246915f365a4177960b0acfa51fb31a5903d04a274",
+      "blockNumber": 12076987,
+      "bytes": 2491,
+      "codeHash": "0xebea311e67f2ae60e599941db0e7ad103581fe3f13e3b69158be998d05c8c591",
+      "immutableValues": [
+        "0x000000000000000000000000e03a1074c86cfedd5c142c4f04f1a1536e203543"
+      ]
+    }
+  ],
+  "state": [],
+  "missing": [],
+  "verified": false,
+  "blockNumber": 12077096,
+  "blockHash": "0xb79685746c8b13e5d8ecf999dea4622fe5fc85249b86f32e1b81809d2582932c",
+  "latestNonce": 20,
+  "pendingNonce": 20,
+  "balanceWei": "199039969419247520",
+  "error": "Cannot read properties of undefined (reading 'toLowerCase')",
+  "finishedAt": "2026-11-06T14:18:05.753Z"
+}

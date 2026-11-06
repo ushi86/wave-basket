@@ -1,0 +1,60 @@
+No files changed, compilation skipped
+2026-11-06T13:52:50.062398Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body for url (https://sourcify.dev/server/v2/contract/11155111/0x719E22E3D4b690E5d96cCb40619180B5427F14AE?fields=abi,compilation)")
+2026-11-06T13:52:50.062659Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body for url (https://sourcify.dev/server/v2/contract/11155111/0x0524b20f305e2e2F7990B9AfE28B4D5e4a76eA0C?fields=abi,compilation)")
+2026-11-06T13:52:50.094915Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body for url (https://sourcify.dev/server/v2/contract/11155111/0x5A2734CC0341ea6564dF3D00171cc99C63B1A7d3?fields=abi,compilation)")
+2026-11-06T13:52:50.465905Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body for url (https://sourcify.dev/server/v2/contract/11155111/0x17Dac87b07EAC97De4E182Fc51C925ebB7E723e2?fields=abi,compilation)")
+2026-11-06T13:52:50.498073Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body for url (https://sourcify.dev/server/v2/contract/11155111/0x694AA1769357215DE4FAC081bf1f309aDC325306?fields=abi,compilation)")
+2026-11-06T13:52:50.933714Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body for url (https://sourcify.dev/server/v2/contract/11155111/0xc59E3633BAAC79493d908e63626716e204A45EdF?fields=abi,compilation)")
+2026-11-06T13:52:51.335844Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body for url (https://sourcify.dev/server/v2/contract/11155111/0x1b44F3514812d835EB1BDB0acB33d3fA3351Ee43?fields=abi,compilation)")
+2026-11-06T13:52:51.732547Z  WARN evm::traces::external: could not get info err=ErrorResponse { status: "0", message: "NOTOK", result: Some("Max calls per sec rate limit reached (3/sec)") }
+2026-11-06T13:52:51.732668Z  WARN evm::traces::external: could not get info err=ErrorResponse { status: "0", message: "NOTOK", result: Some("Max calls per sec rate limit reached (3/sec)") }
+2026-11-06T13:52:51.732711Z  WARN evm::traces::external: could not get info err=ErrorResponse { status: "0", message: "NOTOK", result: Some("Max calls per sec rate limit reached (3/sec)") }
+2026-11-06T13:52:51.732744Z  WARN evm::traces::external: could not get info err=ErrorResponse { status: "0", message: "NOTOK", result: Some("Max calls per sec rate limit reached (3/sec)") }
+2026-11-06T13:52:52.015399Z  WARN evm::traces::external: could not get info err=ErrorResponse { status: "0", message: "NOTOK", result: Some("Max calls per sec rate limit reached (3/sec)") }
+2026-11-06T13:52:52.018403Z  WARN evm::traces::external: could not get info err=ErrorResponse { status: "0", message: "NOTOK", result: Some("Max calls per sec rate limit reached (3/sec)") }
+2026-11-06T13:52:52.247636Z  WARN evm::traces::external: could not get info err=ErrorResponse { status: "0", message: "NOTOK", result: Some("Max calls per sec rate limit reached (3/sec)") }
+Script ran successfully.
+
+## Setting up 1 EVM.
+2026-11-06T13:52:52.611802Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body for url (https://sourcify.dev/server/v2/contract/11155111/0xc59E3633BAAC79493d908e63626716e204A45EdF?fields=abi,compilation)")
+2026-11-06T13:52:52.614711Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body for url (https://sourcify.dev/server/v2/contract/11155111/0x17Dac87b07EAC97De4E182Fc51C925ebB7E723e2?fields=abi,compilation)")
+2026-11-06T13:52:52.614877Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body for url (https://sourcify.dev/server/v2/contract/11155111/0x694AA1769357215DE4FAC081bf1f309aDC325306?fields=abi,compilation)")
+2026-11-06T13:52:52.662045Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body for url (https://sourcify.dev/server/v2/contract/11155111/0x5A2734CC0341ea6564dF3D00171cc99C63B1A7d3?fields=abi,compilation)")
+2026-11-06T13:52:52.662379Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body for url (https://sourcify.dev/server/v2/contract/11155111/0x0524b20f305e2e2F7990B9AfE28B4D5e4a76eA0C?fields=abi,compilation)")
+2026-11-06T13:52:52.699569Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body for url (https://sourcify.dev/server/v2/contract/11155111/0x1b44F3514812d835EB1BDB0acB33d3fA3351Ee43?fields=abi,compilation)")
+2026-11-06T13:52:53.777635Z  WARN evm::traces::external: could not get info err=ErrorResponse { status: "0", message: "NOTOK", result: Some("Max calls per sec rate limit reached (3/sec)") }
+2026-11-06T13:52:53.777689Z  WARN evm::traces::external: could not get info err=ErrorResponse { status: "0", message: "NOTOK", result: Some("Max calls per sec rate limit reached (3/sec)") }
+2026-11-06T13:52:53.777722Z  WARN evm::traces::external: could not get info err=ErrorResponse { status: "0", message: "NOTOK", result: Some("Max calls per sec rate limit reached (3/sec)") }
+2026-11-06T13:52:54.082121Z  WARN evm::traces::external: could not get info err=ErrorResponse { status: "0", message: "NOTOK", result: Some("Max calls per sec rate limit reached (3/sec)") }
+2026-11-06T13:52:54.214898Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body for url (https://sourcify.dev/server/v2/contract/11155111/0x719E22E3D4b690E5d96cCb40619180B5427F14AE?fields=abi,compilation)")
+
+==========================
+
+Chain 11155111
+
+Estimated gas price: 0.00000004 gwei
+
+Estimated total gas used for script: 175155147
+
+Estimated amount required: 0.00000000700620588 ETH
+
+==========================
+2026-11-06T13:53:25.595975Z  WARN forge_script::broadcast: Expected nonce (3) is ahead of provider nonce (2). Retrying in 1 second...
+2026-11-06T13:53:38.853677Z  WARN forge_script::broadcast: Expected nonce (4) is ahead of provider nonce (3). Retrying in 1 second...
+2026-11-06T13:54:14.529521Z  WARN forge_script::broadcast: Expected nonce (7) is ahead of provider nonce (5). Retrying in 1 second...
+2026-11-06T13:54:15.963115Z  WARN forge_script::broadcast: Expected nonce (7) is ahead of provider nonce (6). Retrying in 1 second...
+2026-11-06T13:54:51.473731Z  WARN forge_script::broadcast: Expected nonce (10) is ahead of provider nonce (9). Retrying in 1 second...
+2026-11-06T13:54:52.658373Z  WARN forge_script::broadcast: Expected nonce (10) is ahead of provider nonce (9). Retrying in 1 second...
+2026-11-06T13:55:01.631590Z  WARN forge_script::broadcast: Expected nonce (11) is ahead of provider nonce (9). Retrying in 1 second...
+2026-11-06T13:55:50.026970Z  WARN forge_script::broadcast: Expected nonce (15) is ahead of provider nonce (14). Retrying in 1 second...
+2026-11-06T13:56:37.721897Z  WARN forge_script::broadcast: Expected nonce (18) is ahead of provider nonce (17). Retrying in 1 second...
+2026-11-06T13:57:02.504144Z  WARN forge_script::broadcast: Expected nonce (20) is ahead of provider nonce (19). Retrying in 1 second...
+2026-11-06T13:57:03.733545Z  WARN forge_script::broadcast: Expected nonce (20) is ahead of provider nonce (19). Retrying in 1 second...
+2026-11-06T13:57:05.064026Z  WARN forge_script::broadcast: Expected nonce (20) is ahead of provider nonce (19). Retrying in 1 second...
+2026-11-06T13:57:06.292887Z  WARN forge_script::broadcast: Expected nonce (20) is ahead of provider nonce (19). Retrying in 1 second...
+
+Transactions saved to: /Users/hano/Projects/Wave Eth/contracts/broadcast/recovery-nonce1/2026-11-06T13-47-51-397Z/DeployDemo.s.sol/11155111/run-latest.json
+
+Sensitive values saved to: /Users/hano/Projects/Wave Eth/contracts/cache/recovery-nonce1/2026-11-06T13-47-51-397Z/DeployDemo.s.sol/11155111/run-latest.json
+
+Error: After 5 attempts, provider nonce (19) is still behind expected nonce (20).

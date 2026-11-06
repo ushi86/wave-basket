@@ -1,0 +1,69 @@
+2026-11-06T13:48:41.003462Z  WARN foundry_fork_db::cache: Failed to read cache file err=Os { code: 2, kind: NotFound, message: "No such file or directory" } path="/Users/hano/.foundry/cache/rpc/sepolia/12076947"
+Compiling 111 files with Solc 0.8.26
+Solc 0.8.26 finished in 13.41s
+Compiler run successful!
+2026-11-06T13:50:06.565902Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body for url (https://sourcify.dev/server/v2/contract/11155111/0x719E22E3D4b690E5d96cCb40619180B5427F14AE?fields=abi,compilation)")
+2026-11-06T13:50:06.566324Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body for url (https://sourcify.dev/server/v2/contract/11155111/0x0524b20f305e2e2F7990B9AfE28B4D5e4a76eA0C?fields=abi,compilation)")
+2026-11-06T13:50:07.289446Z  WARN evm::traces::external: could not get info err=ErrorResponse { status: "0", message: "NOTOK", result: Some("Max calls per sec rate limit reached (3/sec)") }
+2026-11-06T13:50:07.289545Z  WARN evm::traces::external: could not get info err=ErrorResponse { status: "0", message: "NOTOK", result: Some("Max calls per sec rate limit reached (3/sec)") }
+2026-11-06T13:50:07.307527Z  WARN evm::traces::external: could not get info err=ErrorResponse { status: "0", message: "NOTOK", result: Some("Max calls per sec rate limit reached (3/sec)") }
+2026-11-06T13:50:07.318799Z  WARN evm::traces::external: could not get info err=ErrorResponse { status: "0", message: "NOTOK", result: Some("Max calls per sec rate limit reached (3/sec)") }
+2026-11-06T13:50:07.536929Z  WARN evm::traces::external: could not get info err=ErrorResponse { status: "0", message: "NOTOK", result: Some("Max calls per sec rate limit reached (3/sec)") }
+2026-11-06T13:50:07.547071Z  WARN evm::traces::external: could not get info err=ErrorResponse { status: "0", message: "NOTOK", result: Some("Max calls per sec rate limit reached (3/sec)") }
+2026-11-06T13:50:07.556886Z  WARN evm::traces::external: could not get info err=ErrorResponse { status: "0", message: "NOTOK", result: Some("Max calls per sec rate limit reached (3/sec)") }
+2026-11-06T13:50:07.566525Z  WARN evm::traces::external: could not get info err=ErrorResponse { status: "0", message: "NOTOK", result: Some("Max calls per sec rate limit reached (3/sec)") }
+2026-11-06T13:50:07.581047Z  WARN evm::traces::external: could not get info err=ErrorResponse { status: "0", message: "NOTOK", result: Some("Max calls per sec rate limit reached (3/sec)") }
+2026-11-06T13:50:07.783361Z  WARN evm::traces::external: could not get info err=ErrorResponse { status: "0", message: "NOTOK", result: Some("Max calls per sec rate limit reached (3/sec)") }
+2026-11-06T13:50:07.793407Z  WARN evm::traces::external: could not get info err=ErrorResponse { status: "0", message: "NOTOK", result: Some("Max calls per sec rate limit reached (3/sec)") }
+2026-11-06T13:50:07.846822Z  WARN evm::traces::external: could not get info err=ErrorResponse { status: "0", message: "NOTOK", result: Some("Max calls per sec rate limit reached (3/sec)") }
+2026-11-06T13:50:07.848839Z  WARN evm::traces::external: could not get info err=ErrorResponse { status: "0", message: "NOTOK", result: Some("Max calls per sec rate limit reached (3/sec)") }
+2026-11-06T13:50:07.848910Z  WARN evm::traces::external: could not get info err=ErrorResponse { status: "0", message: "NOTOK", result: Some("Max calls per sec rate limit reached (3/sec)") }
+2026-11-06T13:50:08.010841Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body for url (https://sourcify.dev/server/v2/contract/11155111/0xc59E3633BAAC79493d908e63626716e204A45EdF?fields=abi,compilation)")
+2026-11-06T13:50:08.039650Z  WARN evm::traces::external: could not get info err=ErrorResponse { status: "0", message: "NOTOK", result: Some("Max calls per sec rate limit reached (3/sec)") }
+2026-11-06T13:50:08.039743Z  WARN evm::traces::external: could not get info err=ErrorResponse { status: "0", message: "NOTOK", result: Some("Max calls per sec rate limit reached (3/sec)") }
+2026-11-06T13:50:08.057831Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body for url (https://sourcify.dev/server/v2/contract/11155111/0x5A2734CC0341ea6564dF3D00171cc99C63B1A7d3?fields=abi,compilation)")
+2026-11-06T13:50:08.512055Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body for url (https://sourcify.dev/server/v2/contract/11155111/0x1b44F3514812d835EB1BDB0acB33d3fA3351Ee43?fields=abi,compilation)")
+2026-11-06T13:50:08.553744Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body for url (https://sourcify.dev/server/v2/contract/11155111/0x17Dac87b07EAC97De4E182Fc51C925ebB7E723e2?fields=abi,compilation)")
+2026-11-06T13:50:08.898515Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body for url (https://sourcify.dev/server/v2/contract/11155111/0x694AA1769357215DE4FAC081bf1f309aDC325306?fields=abi,compilation)")
+Script ran successfully.
+
+## Setting up 1 EVM.
+2026-11-06T13:50:10.777069Z  WARN evm::traces::external: could not get info err=ErrorResponse { status: "0", message: "NOTOK", result: Some("Max calls per sec rate limit reached (3/sec)") }
+2026-11-06T13:50:10.788418Z  WARN evm::traces::external: could not get info err=ErrorResponse { status: "0", message: "NOTOK", result: Some("Max calls per sec rate limit reached (3/sec)") }
+2026-11-06T13:50:10.985492Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body for url (https://sourcify.dev/server/v2/contract/11155111/0x1b44F3514812d835EB1BDB0acB33d3fA3351Ee43?fields=abi,compilation)")
+2026-11-06T13:50:10.996833Z  WARN evm::traces::external: could not get info err=ErrorResponse { status: "0", message: "NOTOK", result: Some("Max calls per sec rate limit reached (3/sec)") }
+2026-11-06T13:50:11.002957Z  WARN evm::traces::external: could not get info err=ErrorResponse { status: "0", message: "NOTOK", result: Some("Max calls per sec rate limit reached (3/sec)") }
+2026-11-06T13:50:11.020205Z  WARN evm::traces::external: could not get info err=ErrorResponse { status: "0", message: "NOTOK", result: Some("Max calls per sec rate limit reached (3/sec)") }
+2026-11-06T13:50:11.023157Z  WARN evm::traces::external: could not get info err=ErrorResponse { status: "0", message: "NOTOK", result: Some("Max calls per sec rate limit reached (3/sec)") }
+2026-11-06T13:50:11.042029Z  WARN evm::traces::external: could not get info err=ErrorResponse { status: "0", message: "NOTOK", result: Some("Max calls per sec rate limit reached (3/sec)") }
+2026-11-06T13:50:11.042476Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body for url (https://sourcify.dev/server/v2/contract/11155111/0x5A2734CC0341ea6564dF3D00171cc99C63B1A7d3?fields=abi,compilation)")
+2026-11-06T13:50:11.233164Z  WARN evm::traces::external: could not get info err=ErrorResponse { status: "0", message: "NOTOK", result: Some("Max calls per sec rate limit reached (3/sec)") }
+2026-11-06T13:50:11.247078Z  WARN evm::traces::external: could not get info err=ErrorResponse { status: "0", message: "NOTOK", result: Some("Max calls per sec rate limit reached (3/sec)") }
+2026-11-06T13:50:11.257062Z  WARN evm::traces::external: could not get info err=ErrorResponse { status: "0", message: "NOTOK", result: Some("Max calls per sec rate limit reached (3/sec)") }
+2026-11-06T13:50:11.266913Z  WARN evm::traces::external: could not get info err=ErrorResponse { status: "0", message: "NOTOK", result: Some("Max calls per sec rate limit reached (3/sec)") }
+2026-11-06T13:50:11.292065Z  WARN evm::traces::external: could not get info err=ErrorResponse { status: "0", message: "NOTOK", result: Some("Max calls per sec rate limit reached (3/sec)") }
+2026-11-06T13:50:11.485048Z  WARN evm::traces::external: could not get info err=ErrorResponse { status: "0", message: "NOTOK", result: Some("Max calls per sec rate limit reached (3/sec)") }
+2026-11-06T13:50:11.856791Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body for url (https://sourcify.dev/server/v2/contract/11155111/0x0524b20f305e2e2F7990B9AfE28B4D5e4a76eA0C?fields=abi,compilation)")
+2026-11-06T13:50:11.900427Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body for url (https://sourcify.dev/server/v2/contract/11155111/0x17Dac87b07EAC97De4E182Fc51C925ebB7E723e2?fields=abi,compilation)")
+2026-11-06T13:50:11.954619Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body for url (https://sourcify.dev/server/v2/contract/11155111/0x719E22E3D4b690E5d96cCb40619180B5427F14AE?fields=abi,compilation)")
+2026-11-06T13:50:12.030550Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body for url (https://sourcify.dev/server/v2/contract/11155111/0x694AA1769357215DE4FAC081bf1f309aDC325306?fields=abi,compilation)")
+2026-11-06T13:50:12.030714Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body for url (https://sourcify.dev/server/v2/contract/11155111/0xc59E3633BAAC79493d908e63626716e204A45EdF?fields=abi,compilation)")
+
+==========================
+
+Chain 11155111
+
+Estimated gas price: 0.00000004 gwei
+
+Estimated total gas used for script: 175155147
+
+Estimated amount required: 0.00000000700620588 ETH
+
+==========================
+
+SIMULATION COMPLETE. To broadcast these transactions, add --broadcast and wallet configuration(s) to the previous command. See forge script --help for more.
+
+Transactions saved to: /Users/hano/Projects/Wave Eth/contracts/broadcast/recovery-nonce1/2026-11-06T13-47-51-397Z/DeployDemo.s.sol/11155111/dry-run/run-latest.json
+
+Sensitive values saved to: /Users/hano/Projects/Wave Eth/contracts/cache/recovery-nonce1/2026-11-06T13-47-51-397Z/DeployDemo.s.sol/11155111/dry-run/run-latest.json
+

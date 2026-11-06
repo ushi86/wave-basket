@@ -1,0 +1,89 @@
+{
+  "phase": "sepolia-prebroadcast",
+  "scope": "local-check-only",
+  "startedAt": "2026-11-06T13:47:32.370Z",
+  "finishedAt": "2026-11-06T13:47:42.082Z",
+  "checks": [
+    {
+      "name": "typecheck",
+      "argv": [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      "startedAt": "2026-11-06T13:47:32.370Z",
+      "finishedAt": "2026-11-06T13:47:35.039Z",
+      "exitCode": 0,
+      "log": "docs/readiness/sepolia-prebroadcast-20261106T134732Z/typecheck.log",
+      "sha256": "38cb13f0ce3941278a4182d9bee7176ef41cabee0bf3a8ac6577e563de68c223"
+    },
+    {
+      "name": "tests",
+      "argv": [
+        "npm",
+        "test"
+      ],
+      "startedAt": "2026-11-06T13:47:35.040Z",
+      "finishedAt": "2026-11-06T13:47:36.313Z",
+      "exitCode": 0,
+      "log": "docs/readiness/sepolia-prebroadcast-20261106T134732Z/tests.log",
+      "sha256": "56497f785920829d36ba6c271b46dca47ab972539130b79d4def96e6b0243df2"
+    },
+    {
+      "name": "web-build",
+      "argv": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "startedAt": "2026-11-06T13:47:36.313Z",
+      "finishedAt": "2026-11-06T13:47:38.725Z",
+      "exitCode": 0,
+      "log": "docs/readiness/sepolia-prebroadcast-20261106T134732Z/web-build.log",
+      "sha256": "a5003a3c8ad244d1b88d2fd250da6cf32998a57a071cd9e2d0072a41ace7d952"
+    },
+    {
+      "name": "workflow-build",
+      "argv": [
+        "npm",
+        "run",
+        "build:workflow"
+      ],
+      "startedAt": "2026-11-06T13:47:38.725Z",
+      "finishedAt": "2026-11-06T13:47:41.565Z",
+      "exitCode": 0,
+      "log": "docs/readiness/sepolia-prebroadcast-20261106T134732Z/workflow-build.log",
+      "sha256": "c01ecbad7c32f6881e7e261bfeacd782df241a70ba984f7b4101b0c2ec994163"
+    },
+    {
+      "name": "contract-size",
+      "argv": [
+        "npm",
+        "run",
+        "check:contracts"
+      ],
+      "startedAt": "2026-11-06T13:47:41.565Z",
+      "finishedAt": "2026-11-06T13:47:41.822Z",
+      "exitCode": 0,
+      "log": "docs/readiness/sepolia-prebroadcast-20261106T134732Z/contract-size.log",
+      "sha256": "c785b806e672710011c9de22e45dec06e81100b46a6eed7c97312184171dd148"
+    },
+    {
+      "name": "foundry-verbose",
+      "argv": [
+        "/opt/homebrew/Cellar/node@24/24.22.1/bin/node",
+        "scripts/foundry.mjs",
+        "forge",
+        "test",
+        "--root",
+        "contracts",
+        "-vvv"
+      ],
+      "startedAt": "2026-11-06T13:47:41.823Z",
+      "finishedAt": "2026-11-06T13:47:42.082Z",
+      "exitCode": 0,
+      "log": "docs/readiness/sepolia-prebroadcast-20261106T134732Z/foundry-verbose.log",
+      "sha256": "7fced8d3089ac4f403e5594d8e87ded75849cfb523f29e57c445ae80831a2790"
+    }
+  ]
+}

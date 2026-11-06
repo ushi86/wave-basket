@@ -1,0 +1,104 @@
+
+> wave-protocol@0.1.0 test
+> npm run test --workspaces && npm run test:contracts
+
+
+> @wave/web@0.1.0 test
+> vitest run
+
+
+ RUN  v5.1.0 /Users/hano/Projects/Wave Eth/web
+
+
+ Test Files  1 passed (1)
+      Tests  2 passed (2)
+   Start at  19:17:35
+   Duration  77ms (tests 59%, import 20%, transform 12%, worker 9%)
+
+
+> @wave/cre@0.1.0 test
+> vitest run
+
+
+ RUN  v5.1.0 /Users/hano/Projects/Wave Eth/cre
+
+
+ Test Files  1 passed (1)
+      Tests  3 passed (3)
+   Start at  19:17:35
+   Duration  64ms (transform 38%, import 34%, tests 16%, worker 12%)
+
+
+> @wave/readiness@0.1.0 test
+> vitest run
+
+
+ RUN  v5.1.0 /Users/hano/Projects/Wave Eth/tools
+
+
+ Test Files  2 passed (2)
+      Tests  30 passed (30)
+   Start at  19:17:35
+   Duration  166ms (import 55%, tests 31%, transform 11%, worker 2%)
+
+
+> wave-protocol@0.1.0 test:contracts
+> node scripts/foundry.mjs forge test --root contracts
+
+No files changed, compilation skipped
+
+Ran 1 test for test/Lifecycle.t.sol:LifecycleTest
+[PASS] testCreateDepositAndExitInKind() (gas: 5224601)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 7.19ms (1.74ms CPU time)
+
+Ran 2 tests for test/Hook.t.sol:HookTest
+[PASS] testFeeEncouragesConvergenceOutsideBand() (gas: 1202236)
+[PASS] testOnlyOneApprovedPoolKeyCanUseHook() (gas: 6219365)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 7.73ms (1.83ms CPU time)
+
+Ran 6 tests for test/Guards.t.sol:GuardsTest
+[PASS] testDonationCannotStealNextDepositorsPrincipal() (gas: 5348870)
+[PASS] testExcessTurnoverAndPendingManualProposalBlockReports() (gas: 5790709)
+[PASS] testFactoryRejectsDuplicateAssetsAndConcentratedWeights() (gas: 531860)
+[PASS] testImpossibleMinimumDoesNotMoveAssets() (gas: 5251321)
+[PASS] testNegativeAndFutureOracleAnswersFailClosed() (gas: 4945098)
+[PASS] testReceiverRejectsStaleFutureAndUnknownVaultReports() (gas: 5999630)
+Suite result: ok. 6 passed; 0 failed; 0 skipped; finished in 11.88ms (7.50ms CPU time)
+
+Ran 4 tests for test/Receiver.t.sol:ReceiverTest
+[PASS] testHistoryRetainsLast32AndExpiresEarlierRecords() (gas: 20699603)
+[PASS] testNonceMustBeNextAndFailedExecutionRemainsRetryable() (gas: 6085899)
+[PASS] testOnlyFreshAuthenticatedReportCanRebalanceOnce() (gas: 6001688)
+[PASS] testSimulationModeAcceptsEmptyMetadataButKeepsVaultBounds() (gas: 5993728)
+Suite result: ok. 4 passed; 0 failed; 0 skipped; finished in 19.70ms (19.13ms CPU time)
+
+Ran 9 tests for test/Accounting.t.sol:AccountingTest
+[PASS] testFuzzHealthyExitChoiceDoesNotReduceCreatorFee(uint96) (runs: 64, μ: 5340772, ~: 5345188)
+[PASS] testFuzzInKindExitNeverExceedsProRata(uint96) (runs: 64, μ: 5012787, ~: 5013215)
+[PASS] testHealthyInKindCannotAvoidCreatorPerformanceFees() (gas: 5341907)
+[PASS] testProfitFeeDilutesCreatorOnceAndNotBelowHighWaterMark() (gas: 5035422)
+[PASS] testRedeemPaysNetMinimumAndTreasuryFee() (gas: 5286339)
+[PASS] testRedemptionPreviewIncludesUncrystallizedFeeDilution() (gas: 5155389)
+[PASS] testStaleInKindPaysFullNetProRataWithoutAReserve() (gas: 5036755)
+[PASS] testStalePricesBlockDepositButNeverInKindExit() (gas: 4977707)
+[PASS] testTimelockDoesNotExecuteEarlyAndCanBeCancelled() (gas: 4967535)
+Suite result: ok. 9 passed; 0 failed; 0 skipped; finished in 76.76ms (130.60ms CPU time)
+
+Ran 5 tests for test/V4Integration.t.sol:V4IntegrationTest
+[PASS] testAdapterRejectsUnsolicitedCallbackAndImpossibleMinimum() (gas: 145146)
+[PASS] testDepositAndBothExitsThroughRealV4PoolManager() (gas: 5893973)
+[PASS] testFuzzValidRebalanceHonorsNavAndTurnoverLimits(uint16) (runs: 64, μ: 5779349, ~: 5779390)
+[PASS] testLaterRebalanceSwapFailureRollsBackEarlierTrades() (gas: 5605422)
+[PASS] testLaunchSeedLeavesPoolsUsableForNextDepositor() (gas: 5361151)
+Suite result: ok. 5 passed; 0 failed; 0 skipped; finished in 99.71ms (95.87ms CPU time)
+
+Ran 6 tests for test/RecoveryCompatibility.t.sol:RecoveryCompatibilityTest
+[PASS] testAdapterRejectsUnsolicitedCallbackAndImpossibleMinimum() (gas: 145168)
+[PASS] testAdditionalBasketsAndExternalAssetReuseCoreAndReceiver() (gas: 18418619)
+[PASS] testDepositAndBothExitsThroughRealV4PoolManager() (gas: 5893995)
+[PASS] testFuzzValidRebalanceHonorsNavAndTurnoverLimits(uint16) (runs: 64, μ: 5779398, ~: 5779439)
+[PASS] testLaterRebalanceSwapFailureRollsBackEarlierTrades() (gas: 5605444)
+[PASS] testLaunchSeedLeavesPoolsUsableForNextDepositor() (gas: 5361150)
+Suite result: ok. 6 passed; 0 failed; 0 skipped; finished in 102.92ms (108.78ms CPU time)
+
+Ran 7 test suites in 107.25ms (325.88ms CPU time): 33 tests passed, 0 failed, 0 skipped (33 total tests)
