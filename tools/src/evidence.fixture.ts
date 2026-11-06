@@ -53,7 +53,7 @@ export function syntheticFixture() {
     }),
     data: encodeAbiParameters(parseAbiParameters(parameters), values),
   });
-  const logs: Record<string, unknown[]> = {
+  const logs: Record<string, ReturnType<typeof event>[]> = {
     createBasket: [
       event(
         "BasketCreated",

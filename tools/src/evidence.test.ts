@@ -308,6 +308,6 @@ it("rejects creation evidence for an undeclared basket", async () => {
     (tx) => tx.kind === "createBasket",
   )!.hash;
   fixture.receipts[hash].logs[0].topics[1] =
-    "0x" + "0".repeat(24) + "f".repeat(40);
+    `0x${"0".repeat(24)}${"f".repeat(40)}`;
   expect((await validateEvidence(fixture.manifest, fixture.io)).ok).toBe(false);
 });
