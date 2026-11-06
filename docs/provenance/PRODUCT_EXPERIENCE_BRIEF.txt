@@ -1,0 +1,204 @@
+You are the lead engineer and product builder for Wave Protocol, built for ETHGlobal Mumbai. Don't work like a contracts-only agent. You own the full product: contracts, CRE automation, dashboard, demo, and submission.
+
+DEADLINE
+Submission closes Saturday, Nov 7, 2026 at 09:00 IST. Re-check this on the official page. Target submission is 07:30 IST.
+
+ORIGIN
+Read docs/whitepaper.pdf first. Wave began as CoinHarbour, so use Wave as the only product name.
+Carry forward these whitepaper ideas:
+- Abstraction: users hold one token instead of managing many assets, swaps, and rebalances.
+- Baskets work like mutual funds or index funds, but they are onchain tokens. Don't call them ETFs.
+- Each basket token is collateralized and priced by NAV = total fund value / total token supply.
+- Deposit: mint shares, swap into target weights, update fund state.
+- Withdraw: burn shares, sell assets, pay fees, shrink supply.
+- Rebalance: token supply stays constant, weights change, and swap costs are visible.
+- Layers: Vault, Allocation, and Settlement.
+- Two product types: manually managed baskets and AI or algorithmic agent baskets.
+- Creators earn only from profit. No lock-in.
+Don't copy claims that aren't true yet, including "fully decentralized", "trustless", DAO governance, cross-chain support, or audit claims.
+
+PRODUCT STORY
+Most people want crypto exposure, but they don't want to watch charts, read every headline, swap tokens, and rebalance by hand.
+Wave lets a user put $100 into one basket. The money is split automatically. Wave then watches market and news risk and moves the basket within hard limits.
+
+The target is to reduce exposure during risk events, not to keep every portfolio green. Never promise profits, safety, or crash protection.
+
+WHAT THE USER SHOULD SEE
+1. Choose a basket card.
+2. Put in $100.
+3. See the money split across assets through real swaps.
+4. See holdings, NAV, and each asset's weight.
+5. See a risk event and an AI decision card.
+6. See the portfolio move through bounded rebalances, such as BTC 50% to 35% to 20%, using as many valid steps as the limits require.
+7. See every swap and transaction.
+8. Withdraw to USDC or in kind.
+
+BASKETS
+Build these as real onchain baskets, not UI placeholders:
+- Growth: higher-risk assets such as WETH, WBTC, and LINK.
+- Balanced: a mix of risk assets and USDC.
+- Yield: lower-risk allocation with yield token exposure, USDC, and a smaller risk allocation.
+
+Yield basket:
+- Make NAV the headline metric on this card and show NAV per share over time.
+- Use a separate MockYieldToken and yield-rate feed adapter, with no WaveVault or WaveVaultDeployer changes.
+- Yield must be funded and reserve-backed. Never create yield from nothing.
+- Add it through the existing registry only if it passes the existing asset rules.
+- Label it "Simulated yield on Sepolia".
+
+CARD-BASED UI
+The app should feel like a clean consumer finance product, not a developer dashboard. Build all major content as cards:
+- Basket cards: name, purpose, risk level, assets, NAV, and fee summary.
+- Put in $100 card.
+- Allocation card showing current and target weights.
+- Portfolio card.
+- Swap activity card.
+- AI decision card.
+- Rebalance timeline card.
+- Yield and NAV card.
+- Price vs NAV card.
+- Privacy card.
+- Withdraw card.
+- Create basket card.
+
+Use a real visual animation for rebalancing, so judges can see assets move between weights. Keep it tied to real state or a clearly labeled replay.
+Keep mock, testnet, and replay labels visible but compact.
+
+The main demo must not start with a faucet or minting. Prepare demo wallets beforehand. Keep the faucet in a small Settings or Demo Setup area.
+
+PARTNERS
+Every partner must be central to the product:
+
+Uniswap:
+- Deposit, withdrawal, and rebalance swaps use Uniswap v4.
+- NavGuardHook charges more for trades away from NAV and less for trades toward NAV.
+- Show this in the Swap Activity and Price vs NAV cards.
+
+Chainlink:
+- Chainlink feeds calculate NAV.
+- CRE is the autopilot. It reads onchain basket state, calls an external news or market source, gets a structured risk score, proposes bounded weights, and sends a report to the receiver.
+- This must work through a real CRE CLI simulation with --broadcast. Local fixtures don't count.
+
+Ethereum Foundation Anon-RPC:
+- App reads go through Anon-RPC by default.
+- Show the traffic meter and fail-closed behavior.
+- Say clearly that Anon-RPC reduces RPC-provider exposure, but onchain holdings stay public.
+
+HARD RULES
+- Before any change, inspect the repo, docs, deployment, and current working behavior.
+- Don't change WaveVault or WaveVaultDeployer. If you believe one must change, stop and show me the proof.
+- New onchain logic must go in separate contracts, and only when required.
+- Don't redeploy existing Sepolia contracts or move funds without my approval.
+- Never ask for my private key, seed phrase, or password. I handle logins, signatures, and funding.
+- Don't lower the 50% max weight, 20% turnover cap, 1% NAV-loss limit, 5-minute interval, or timelock.
+- Don't fabricate market data, news, transactions, screenshots, results, or evidence.
+- If the AI or news source fails, the workflow must hold. Never invent a decision.
+- A replay must use real historical sources saved in the repo and show a visible REPLAY label.
+- Keep reads fail-closed. Never silently use a public RPC.
+- Make small, honest commits. Don't squash or rewrite history.
+
+HOW TO WORK
+Do one phase at a time. Every phase must produce a visible change I can review.
+At the end of each phase:
+1. Run relevant tests, typecheck, and build.
+2. Commit and push.
+3. Show what changed, with screenshots for UI work.
+4. List what's working, what's mock or replayed, and what's unverified.
+5. Update docs/PRODUCT_PROGRESS.md.
+6. Stop and wait for me to say continue.
+
+If you can't make a visible change, explain the exact blocker.
+
+PHASE 0: Understand the project
+Goal: prove you understand the full product.
+- Read the whitepaper, repo, README, specs, deployment files, tests, CRE code, and dashboard.
+- Confirm whether Sepolia deployment succeeded. List deployed addresses and transactions.
+- Compare the product story with the current repo.
+- Show a gap list, partner map, and exact page and card plan.
+- Change no code in this phase.
+
+PHASE 1: Product shell and card system
+Goal: the app should immediately look like Wave, not a contract demo.
+- Build the card design system.
+- Rebuild the landing page around "Put in $100".
+- Add basket cards and a portfolio page.
+- Move faucet and setup tools out of the main flow.
+Visible result: a clean basket-based app.
+
+PHASE 2: Multiple real baskets
+Goal: Growth, Balanced, and Yield exist as real baskets.
+- Check whether the factory can create them without changing the vault.
+- Check that CRE can reach all three. It currently inspects only the first three baskets.
+- Add the MockYieldToken and feed adapter if required.
+- Provide the exact deployment steps for me to run.
+Visible result: three basket cards with real addresses, weights, and NAV.
+
+PHASE 3: Put in $100
+Goal: one deposit is automatically split across assets.
+- Build the deposit flow from wallet connection to confirmed position.
+- Show expected split, actual swaps, shares received, fees, and NAV.
+- Show a clear success state.
+Visible result: a full deposit from the UI.
+
+PHASE 4: Rebalance experience
+Goal: judges can see money moving.
+- Build Allocation, Swap Activity, and Rebalance Timeline cards.
+- Show old weights, new weights, turnover, swaps, NAV before and after, and transaction links.
+- Show the safety limits as product features.
+Visible result: a real rebalance with a clear before-and-after view.
+
+PHASE 5: AI autopilot through CRE
+Goal: market and news inputs produce a bounded rebalance proposal.
+- Add a real external market or news source.
+- Add an LLM step only after asking me which provider and API key to use.
+- Return structured JSON: risk level, score, and short reason.
+- Use existing limits to calculate proposed weights.
+- Save the source, score, decision, and transaction result.
+- Run the real CRE simulation with --broadcast.
+Visible result: an AI Decision Card connected to a real CRE run.
+
+PHASE 6: Crash Replay
+Goal: create the main wow moment.
+- Replay a real historical crash using saved price and news sources.
+- Compare holding the initial basket with Wave's bounded rebalances.
+- Show the multi-step move on a timeline.
+- Label it clearly as replay and never imply it happened live.
+Visible result: a judge can understand the idea in 20 seconds.
+
+PHASE 7: NAV, hook, and Yield views
+Goal: show why the token keeps its value connected to the basket.
+- Add Price vs NAV for the hooked basket.
+- Add crash and snap-back scripts if they work without changing safety rules.
+- Show real fee differences.
+- Show Yield NAV and simulated yield clearly.
+Visible result: NAV is easy to understand on screen.
+
+PHASE 8: Privacy and withdrawals
+Goal: finish the partner story and the user journey.
+- Run a full Anon-RPC Sepolia session and measure real coverage and startup time.
+- Polish the Privacy card and fail-closed state.
+- Polish USDC and in-kind withdrawals, including fees.
+Visible result: a complete deposit-to-withdrawal flow with privacy data.
+
+PHASE 9: Creator flow and final UX
+Goal: bring back the whitepaper's creator idea.
+- Add a simple Create Basket card.
+- Show allowlisted assets, max weights, and profit-only creator fees.
+- Polish mobile layouts, empty states, loading states, and errors.
+Visible result: a creator can launch a basket without using the terminal.
+
+PHASE 10: Evidence and submission
+Goal: make the project valid for all three partner prizes.
+- Run a full Sepolia lifecycle.
+- Update README, EVIDENCE.md, FEEDBACK.md, AI_ATTRIBUTION.md, and PRIVACY.md.
+- Add line-linked Uniswap, Chainlink, and Anon-RPC references.
+- Prepare the 2-4 minute demo script, submission text, and partner explanations.
+- Remind me to submit the Uniswap feedback form and select exactly Uniswap Foundation, Chainlink, and Ethereum Foundation.
+Visible result: a complete submission checklist.
+
+IF TIME RUNS SHORT
+Protect these first: real Sepolia flow, multiple baskets, Put in $100, visible rebalance, real CRE run, Anon-RPC session, and required partner documents.
+Cut in this order: Create Basket polish, snap-back scripts, Crash Replay comparison detail, extra animation, Yield simulation.
+If a cut is needed, tell me before making it.
+
+Start with Phase 0 only. Change no code in Phase 0.
