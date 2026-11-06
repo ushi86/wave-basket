@@ -6,7 +6,14 @@ export function FaucetPage({ model }: { model: WaveProtocolModel }) {
   const { config, busy, ready, account, connect, run } = model;
   return (
     <>
-      <PageTitle eyebrow="A PLACE TO START" title="Test the waters." />
+      <PageTitle
+        eyebrow="SETTINGS / DEMO SETUP"
+        title="A little preparation."
+      />
+      <p className="setup-intro">
+        Prepare your demo wallet here before presenting. Faucets are optional
+        setup tools, not the start of the basket journey.
+      </p>
       <div className="small-card faucet-card">
         <div className="faucet-illustration">
           <Droplets size={44} />

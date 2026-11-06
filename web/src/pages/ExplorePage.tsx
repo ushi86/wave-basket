@@ -10,6 +10,7 @@ import {
   Waves,
 } from "lucide-react";
 import { useState } from "react";
+import { BasketCard, PlannedCollections } from "../components/BasketCard";
 import { formatUnits, parseUnits, type Address } from "viem";
 import { adapterAbi, tokenAbi, vaultAbi } from "../../../shared/abi";
 import {
@@ -60,7 +61,7 @@ export function ExplorePage({
   const [action, setAction] = useState<"deposit" | "redeem" | "kind">(
     "deposit",
   );
-  const [amount, setAmount] = useState("");
+  const [amount, setAmount] = useState("100");
   const [older, setOlder] = useState<
     Awaited<ReturnType<typeof loadOlderHistory>>
   >([]);
@@ -135,79 +136,131 @@ export function ExplorePage({
   };
   return (
     <>
-      <PageTitle eyebrow="WAVE PROTOCOL" title="Token baskets, in balance.">
-        <button className="button secondary" onClick={() => navigate("create")}>
-          <Plus size={16} />
-          Create a basket
+      <PageTitle
+        eyebrow="A LITTLE LESS TO MANAGE"
+        title="Token baskets, in balance."
+      >
+        <button className="text-button" onClick={() => navigate("portfolio")}>
+          My portfolio <ArrowUpRight size={16} />
         </button>
       </PageTitle>
-      <section className="hero">
-        <div className="hero-copy">
-          <span className="hero-tag">
-            <span className="tiny-dot" /> FAIR VALUE. TARGET ALLOCATION. PRIVATE
-            VISIBILITY.
-          </span>
+      <section className="wave-hero">
+        <div className="wave-hero-copy">
+          <span className="eyebrow">ONE TOKEN. A WHOLE BASKET.</span>
           <h2>
-            One basket token.
+            Put in $100.
             <br />
-            Three things in balance.
+            Find your balance.
           </h2>
           <p>
-            Fair value: Uniswap v4 and NavGuardHook respond to Chainlink-based
-            NAV.
-            <br />
-            Target allocation: CRE proposes or submits bounded rebalances.
-            <br />
-            Private visibility: Anon-RPC reduces exposure from app reads.
+            Choose a basket. Your deposit is split across its assets through
+            Uniswap v4. See what you own, how it’s valued, and when its
+            allocation changes.
           </p>
+          <div className="hero-cta-row">
+            <button
+              className="button primary"
+              disabled={!basket || !ready}
+              onClick={() => {
+                setAction("deposit");
+                setAmount("100");
+                document
+                  .getElementById("basket-detail")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              Put in $100 <ArrowRight size={17} />
+            </button>
+            <span>100 test mUSDC · You confirm every transaction</span>
+          </div>
+          <small>
+            Testnet demo · Mock assets · Unaudited · No promised returns
+          </small>
+        </div>
+        <div className="wave-hero-visual">
+          <div className="visual-wave" aria-hidden="true">
+            <Waves size={44} strokeWidth={1.25} />
+          </div>
+          <span className="eyebrow">MANY ASSETS. ONE POSITION.</span>
+          <h3>
+            A portfolio,
+            <br />
+            with a little more flow.
+          </h3>
+          <div className="journey-step">
+            <span>01</span>
+            <div>
+              <b>Choose your basket</b>
+              <small>Know the assets and the fees</small>
+            </div>
+            <Layers size={18} />
+          </div>
+          <div className="journey-step">
+            <span>02</span>
+            <div>
+              <b>Let the allocation happen</b>
+              <small>Onchain swaps, visible holdings</small>
+            </div>
+            <ArrowRight size={18} />
+          </div>
+          <div className="journey-step">
+            <span>03</span>
+            <div>
+              <b>Stay in the picture</b>
+              <small>Watch NAV, weights and activity</small>
+            </div>
+            <Activity size={18} />
+          </div>
+        </div>
+      </section>
+      <section className="partner-cards" aria-label="Three things in balance">
+        <article>
+          <span>01 / FAIR VALUE</span>
+          <h3>Every swap has a reference.</h3>
           <p>
-            On-chain holdings stay public. Local demo reads are direct.
-            <br />
-            Testnet demo - Mock tokens - Unaudited - No promised returns.
+            Uniswap v4 executes swaps. NavGuardHook adjusts the approved pool’s
+            fee relative to Chainlink-based NAV.
           </p>
-          <button
-            className="hero-link"
-            onClick={() =>
-              document
-                .getElementById("basket-detail")
-                ?.scrollIntoView({ behavior: "smooth" })
-            }
-          >
-            Explore the flagship basket <ArrowRight size={17} />
-          </button>
-        </div>
-        <div className="hero-art" aria-hidden="true">
-          <div className="orbit orbit-one" />
-          <div className="orbit orbit-two" />
-          <div className="orbit orbit-three" />
-          <div className="art-label label-eth">
-            Ξ <span>ETH</span>
-          </div>
-          <div className="art-label label-btc">
-            ₿ <span>BTC</span>
-          </div>
-          <div className="art-label label-link">
-            ⬡ <span>LINK</span>
-          </div>
-          <div className="art-core">
-            <Waves size={38} />
-          </div>
-        </div>
+          <b>Uniswap Foundation</b>
+        </article>
+        <article>
+          <span>02 / TARGET ALLOCATION</span>
+          <h3>A clear direction. Hard limits.</h3>
+          <p>
+            Chainlink feeds value the basket. CRE proposes bounded rebalances; a
+            run can correctly hold or fail.
+          </p>
+          <b>Chainlink</b>
+        </article>
+        <article>
+          <span>03 / PRIVATE VISIBILITY</span>
+          <h3>Less exposure while you look.</h3>
+          <p>
+            Anon-RPC is the default for Sepolia app reads. Onchain holdings stay
+            public. Local demo reads are direct.
+          </p>
+          <b>Ethereum Foundation / Anon-RPC</b>
+        </article>
       </section>
       <div className="metrics-row">
         <div>
           <span>Total basket value</span>
           <strong>
-            {ready && baskets.every((b) => b.healthy) ? money(totalNav) : "—"}
+            {ready &&
+            !loading &&
+            baskets.length > 0 &&
+            baskets.every((b) => b.healthy)
+              ? money(totalNav)
+              : "—"}
           </strong>
           <small>Oracle-valued underlying assets</small>
         </div>
         <div>
-          <span>Live baskets</span>
+          <span>Onchain baskets</span>
           <strong>
             {ready ? String(baskets.length).padStart(2, "0") : "—"}
           </strong>
-          <small>Independently deployed vaults</small>
+          <small>Loaded from the configured factory</small>
         </div>
         <div>
           <span>Your position</span>
@@ -237,7 +290,9 @@ export function ExplorePage({
             Explore baskets{" "}
             <span className="count-badge">{baskets.length}</span>
           </h2>
-          <p>A considered mix. Clear rules. Yours to hold.</p>
+          <p>
+            Your available baskets. Actual holdings, clear fees, onchain state.
+          </p>
         </div>
         <button
           className="text-button"
@@ -248,23 +303,38 @@ export function ExplorePage({
           {loading ? "Refreshing" : "Refresh"}
         </button>
       </div>
-      {baskets.length > 1 && (
-        <div className="basket-selector">
-          {baskets.map((b) => (
-            <button
-              className={basket?.address === b.address ? "selected" : ""}
-              key={b.address}
-              onClick={() => {
-                setSelected(b.address);
-                setOlder([]);
-              }}
-            >
-              {b.name}
-              <span>{b.symbol}</span>
-            </button>
-          ))}
-        </div>
-      )}
+      <div className="collection-grid">
+        {baskets.map((b) => (
+          <BasketCard
+            key={b.address}
+            basket={b}
+            chainId={config?.chainId ?? 0}
+            symbol={(a) => token(a)?.symbol || short(a)}
+            selected={basket?.address === b.address}
+            onSelect={() => {
+              setSelected(b.address);
+              setOlder([]);
+              document
+                .getElementById("basket-detail")
+                ?.scrollIntoView({ behavior: "smooth" });
+            }}
+          />
+        ))}
+        {!baskets.length && (
+          <div className="empty-collection">
+            <Layers size={28} />
+            <h3>
+              {loading ? "Reading your baskets…" : "No baskets available"}
+            </h3>
+            <p>
+              {loading
+                ? "Loading holdings and NAV from the configured chain."
+                : "A verified deployment is needed before a basket can accept deposits. No example balances are shown."}
+            </p>
+          </div>
+        )}
+      </div>
+      <PlannedCollections />
       <section id="basket-detail" className="basket-layout">
         <div className="basket-panel">
           <div className="basket-heading">
@@ -272,10 +342,10 @@ export function ExplorePage({
               <Layers size={22} />
             </div>
             <div>
-              <h2>{basket?.name || "Wave Blue Chip"}</h2>
+              <h2>{basket?.name || "Choose an available basket"}</h2>
               <span>
-                {basket?.symbol || "FUND"} <span className="separator">·</span>{" "}
-                {basket?.assets.length || 3} underlying assets
+                {basket?.symbol || "—"} <span className="separator">·</span>{" "}
+                {basket?.assets.length ?? 0} underlying assets
               </span>
             </div>
             <span
@@ -302,7 +372,7 @@ export function ExplorePage({
                 {basket?.healthy ? money(number(basket.nav)) : "—"}
               </strong>
               <span>
-                Performance fee <b>{basket ? percent(basket.fee) : "10%"}</b>
+                Performance fee <b>{basket ? percent(basket.fee) : "—"}</b>
               </span>
             </div>
           </div>
@@ -310,20 +380,20 @@ export function ExplorePage({
             <div
               className="allocation-chart"
               role="img"
-              aria-label={`Target allocation: ${(basket?.targets || [4000, 3500, 2500]).map((w, i) => `${basket ? token(basket.assets[i])?.symbol : ["WETH", "WBTC", "LINK"][i]} ${percent(w)}`).join(", ")}`}
+              aria-label={`Target allocation: ${(basket?.targets || []).map((w, i) => `${basket ? token(basket.assets[i])?.symbol : ["WETH", "WBTC", "LINK"][i]} ${percent(w)}`).join(", ")}`}
               style={{
-                background: `conic-gradient(${(basket?.targets || [4000, 3500, 2500]).map((_, i, arr) => `${colors[i]} ${arr.slice(0, i).reduce((a, b) => a + b, 0) / 100}% ${arr.slice(0, i + 1).reduce((a, b) => a + b, 0) / 100}%`).join(",")})`,
+                background: `conic-gradient(${(basket?.targets || []).map((_, i, arr) => `${colors[i]} ${arr.slice(0, i).reduce((a, b) => a + b, 0) / 100}% ${arr.slice(0, i + 1).reduce((a, b) => a + b, 0) / 100}%`).join(",")})`,
               }}
             >
               <div>
                 <Layers size={20} />
-                <strong>{basket?.assets.length || 3}</strong>
+                <strong>{basket?.assets.length ?? 0}</strong>
                 <span>ASSETS</span>
               </div>
             </div>
             <div className="allocation-legend">
               <div className="eyebrow">TARGET ALLOCATION</div>
-              {(basket?.assets || ["ETH", "BTC", "LINK"]).map((a, i) => (
+              {(basket?.assets || []).map((a, i) => (
                 <div className="legend-row" key={a}>
                   <span
                     className="legend-dot"
@@ -334,7 +404,7 @@ export function ExplorePage({
                       ? token(a)?.symbol || short(a)
                       : ["WETH", "WBTC", "LINK"][i]}
                   </span>
-                  <b>{percent(basket?.targets[i] || [4000, 3500, 2500][i])}</b>
+                  <b>{percent(basket?.targets[i] ?? 0)}</b>
                 </div>
               ))}
             </div>
@@ -383,14 +453,14 @@ export function ExplorePage({
           <div className="action-body">
             <h3>
               {action === "deposit"
-                ? "Make a little room for more."
+                ? "Put your basket in motion."
                 : action === "kind"
                   ? "Take the assets with you."
                   : "Your basket, your exit."}
             </h3>
             <p>
               {action === "deposit"
-                ? "Deposit mUSDC. Receive your share of the basket."
+                ? "Start with 100 test mUSDC, or choose your own amount. Review before you confirm."
                 : action === "kind"
                   ? "Receive underlying tokens without swaps, even when feeds are stale."
                   : "Sell your proportional assets into mUSDC."}
@@ -407,7 +477,7 @@ export function ExplorePage({
                 onChange={(e) => setAmount(e.target.value)}
               />
               <span>
-                {action === "deposit" ? "mUSDC" : basket?.symbol || "FUND"}
+                {action === "deposit" ? "mUSDC" : basket?.symbol || "—"}
               </span>
             </div>
             <div className="balance-line">
@@ -489,7 +559,7 @@ export function ExplorePage({
             <p className="action-disclosure">
               <ShieldCheck size={13} />
               {action === "kind"
-                ? "Healthy feeds: creator fees crystallize. Stale feeds: full net pro-rata exit; pending creator fees are waived."
+                ? "Healthy feeds: creator fees crystallize. Stale feeds: full net pro-rata exit, no reserve withheld; uncrystallized creator fees can be avoided."
                 : "Performance fees apply only above the high-water mark."}
             </p>
           </div>

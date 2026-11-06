@@ -1,0 +1,19 @@
+{
+  "observedAt": "2026-11-06T12:08:11.603Z",
+  "scope": "Read-only LOCAL ANVIL state comparison for the UI, not Sepolia evidence",
+  "chainId": 31337,
+  "basket": "0xe77C9Df4E3f6A29c53367f219C39d7faD906a967",
+  "navUsdc": "99665718687",
+  "healthy": true,
+  "displayedNav": "99665.718687",
+  "targets": [
+    4000,
+    3500,
+    2500
+  ],
+  "actualWeights": [
+    3999,
+    3499,
+    2500
+  ]
+}

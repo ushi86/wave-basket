@@ -1,0 +1,14 @@
+{
+  "scope": "Local Anvil UI verification only; not Sepolia, CRE or Anon-RPC live acceptance",
+  "checkedAt": "2026-11-06T12:06:22.739Z",
+  "checks": {
+    "heroPrepares100WithoutSigning": true,
+    "depositTabSelected": true,
+    "plannedCollectionsExplicitlyNotDeployed": 3,
+    "portfolioDisconnectedStateVerified": true,
+    "faucetOnlyInDemoSetup": true,
+    "desktop1440NoHorizontalOverflow": true,
+    "mobile390NoHorizontalOverflow": true,
+    "consoleErrors": []
+  }
+}

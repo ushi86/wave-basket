@@ -2,9 +2,9 @@
 
 Updated 6 November 2026. Source baseline: commit 1213bf0. Product spec: [Basket Product Experience and Submission](../specs/WAVE_PRODUCT_EXPERIENCE_SPEC.md). The owner confirmed the testing boundaries and all added negative/regression conditions. The original [product brief](provenance/PRODUCT_EXPERIENCE_BRIEF.txt) is preserved as planning provenance.
 
-**Current phase: Phase 0 complete; Phase 1 authorized and in progress.** Phase 0 changed no product code and sent no transactions. The owner explicitly authorized Phase 1 next, revoked setup/implement-spec, and designated the spec and this document as the source of truth and tracker. Stop after Phase 1.
+**Current phase: Phase 1 complete. Stopped for owner review before Phase 2.** Phase 0 changed no product code and sent no transactions. The owner explicitly authorized Phase 1 next, revoked setup/implement-spec, and designated the spec and this document as the source of truth and tracker. Stop after Phase 1.
 
-## Blockers
+## Resolved prerequisites and remaining live-integration gates
 
 - Resolved: the original whitepaper was supplied at the repository root. All 15 pages were read and its NAV formula/diagram visually reviewed. An identical documentation copy is preserved as [whitepaper.pdf](whitepaper.pdf); the original is untouched.
 - Removed by explicit owner instruction: external tracker, ticket graph, setup skill and implement-spec are not project requirements. Track phases here.
@@ -50,7 +50,7 @@ The [local baseline logs](readiness/product-phase0-20261106/) are local verifica
 
 No UI product change was made, so no new product screenshots are claimed. Existing local/mock/replay/live distinctions remain intact. The official [submission rules](https://ethglobal.com/events/mumbai/info/details) confirm 7 November 2026 at 09:00 IST; the owner's target remains 07:30 IST.
 
-**Next:** implement the authorized Phase 1 UI only, run checks and unchanged contract regressions, capture actual local-app screenshots, commit/push, and stop. Phase 2 and all deployment activity require their respective owner approval.
+**Next:** owner review of Phase 1. Phase 2 requires “continue”; all deployment/broadcast activity still requires separate approval. No automatic progression is authorized.
 
 ## Phase 0 completion — whitepaper and deployment answer
 
@@ -59,3 +59,21 @@ All 15 whitepaper pages were read. Pages 3–11 describe asset-management abstra
 **Did deployment succeed? No.** The [fresh two-provider observation](readiness/product-phase0-20261106/deployment-recheck.json) at 12:01 UTC confirms transaction `0x5eb42ec1baaeb837ca64021bd561ca05bb3596ff42ceb9b42eca3e621d18765f` reverted at block 12,076,125, consumed all 706,678 gas and created no code. Latest/pending nonces remain 1/1. There are no verified successful Wave Sepolia addresses to list; predicted addresses are not deployed contracts.
 
 **What the owner needs to do:** do not retry the old helper or use resume. No new funding, login or secret is requested now. A new recovery plan must start from freshly verified nonce 1, preserve the failed plan/cache, use native Foundry 1.8.3 Amsterdam runtime with the existing compiler target, recheck feeds/balance/gas/receiver settings and pass its deployment checks. The full Foundry fork run passes; the optional full remote RPC batch remains incomplete and must be disclosed. Once a reviewed exact recovery command is ready, separately approve broadcast and run it locally, entering the encrypted keystore password yourself. The agent will then verify every receipt before publishing any address as deployed. This work is not silently folded into Phase 1.
+
+## Phase 1 complete — consumer product shell
+
+**Visible change:** the landing page now starts with “Put in $100. Find your balance.” and prepares a 100-test-mUSDC deposit without signing. A three-step introduction and three partner cards explain the journey. Reusable basket cards read the actual configured factory/vault state, with assets, NAV/share, fee, target allocation and address. A single available basket uses a wider layout rather than an empty three-column grid. Growth/Balanced/Yield remain separate PLANNED / NOT DEPLOYED cards with no fabricated NAV, weights, addresses, deposit controls or yield. Their real deployment remains Phase 2.
+
+Portfolio now has position cards, actual-value summary, wallet/empty states and a route back to available baskets. Faucets are retained only under Demo setup in the secondary tools navigation. Route changes scroll back to the start. Missing/loading basket data no longer shows the previous hard-coded allocation, default fund name or 10% fee as if loaded from a contract.
+
+**Working:** local contract-backed basket discovery and valuation; $100 preparation; existing deposit/withdrawal controls; portfolio rendering from account/basket state; navigation, setup access and responsive card layouts. No contracts, receiver, workflow, shared ABI, limits, worker pin or privacy-routing logic changed. React review kept pure display components and the existing shared protocol model; no extra fetching layer, wallet package or dependency was introduced.
+
+**Mock/local:** screenshots show the existing chain-31337 Anvil deployment, mock assets, mock feeds, fixture receiver and direct loopback reads. They are UI verification only. No screenshot, balance, decision or transaction result was fabricated. The separate [local state observation](readiness/product-phase1-20261106/local-state.json) returned NAV 99,665.718687 test USDC and target weights 4,000/3,500/2,500 bps, consistent with the rendered local basket. No replay is shown.
+
+**Unverified/not performed:** a new UI deposit/withdrawal transaction, a connected-owner-wallet portfolio session, three real new baskets, funded Yield, news/LLM decisions, live CRE broadcast, full Sepolia private-read acceptance and successful Wave Sepolia deployment. These are later phases or separately approved owner operations. Existing local integration tests do not establish live Sepolia execution.
+
+**Validation:** [captured checks](readiness/product-phase1-20261106/) pass: 35 TypeScript tests, 27 Foundry tests including all unchanged accounting/stale-exit/fee/hook/receiver/guard regressions, workspace typecheck, dashboard build, CRE WASM build and formatting. The existing over-500-kB bundle warning remains; no threshold was raised. Secret scanning returned no heuristic findings. Browser checks verified the $100 CTA resets a changed amount to 100 and selects Deposit without signing; portfolio navigation/empty state; Demo setup with no primary Testnet faucet button; all three planned labels; no console errors; and no horizontal overflow at 1440- and 390-pixel test widths. The temporary viewport override was reset.
+
+**Screenshots:** [landing desktop](screenshots/phase1/landing-desktop.jpg), [complete basket view](screenshots/phase1/baskets-desktop.jpg), [portfolio desktop](screenshots/phase1/portfolio-desktop.jpg), [landing mobile](screenshots/phase1/landing-mobile.jpg). These capture the actual updated local app, not a design mockup. The app remains available at http://127.0.0.1:5173.
+
+**Stop:** Phase 1 is the end of this authorized increment. No Phase 2 work, Sepolia redeployment, broadcast, wallet unlock or fund movement occurred.

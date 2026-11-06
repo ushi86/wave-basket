@@ -3,7 +3,7 @@ import {
   Check,
   ChevronDown,
   Copy,
-  Droplets,
+  Settings2,
   ExternalLink,
   LayoutGrid,
   Plus,
@@ -63,6 +63,7 @@ export function App() {
   const navigate = (p: Page) => {
     location.hash = p;
     setPage(p);
+    window.scrollTo(0, 0);
     setError("");
   };
   const copy = async (text: string) => {
@@ -116,8 +117,8 @@ export function App() {
             className={`nav-item ${page === "faucet" ? "active" : ""}`}
             onClick={() => navigate("faucet")}
           >
-            <Droplets size={18} />
-            Testnet faucet
+            <Settings2 size={18} />
+            Demo setup
           </button>
         </nav>
         <div className="sidebar-bottom">
@@ -134,15 +135,17 @@ export function App() {
       <div className="workspace">
         <header className="topbar">
           <div className="breadcrumb">
-            Protocol <span>/</span>{" "}
+            Wave <span>/</span>{" "}
             {page === "baskets"
               ? "Explore"
-              : page.charAt(0).toUpperCase() + page.slice(1)}
+              : page === "faucet"
+                ? "Demo setup"
+                : page.charAt(0).toUpperCase() + page.slice(1)}
           </div>
           <div className="top-actions">
             <span className="network-pill">
               <span className="tiny-dot" />
-              {config?.name || "Sepolia"}
+              {config?.name || "Not connected"}
               <ChevronDown size={12} />
             </span>
             <button
@@ -168,8 +171,8 @@ export function App() {
             <div className="notice">
               <AlertCircle size={16} />
               <span>
-                Deployment not configured. Run <code>npm run demo</code> for the
-                local chain, or configure a Sepolia manifest.
+                No basket deployment is connected. You can explore the product,
+                but deposits remain unavailable.
               </span>
             </div>
           )}
@@ -231,7 +234,7 @@ export function App() {
               Wave Protocol <span className="separator">·</span> Token baskets,
               in balance.
             </span>
-            <span>Sepolia demo · No real assets or promised returns</span>
+            <span>Testnet only · No real assets or promised returns</span>
           </footer>
         </main>
       </div>
