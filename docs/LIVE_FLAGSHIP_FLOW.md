@@ -1,6 +1,6 @@
 # Phase 2A — existing live Growth basket
 
-Status: preparation only; no new user-flow transaction has been sent or claimed. The owner signs every transaction. Stop between wallet actions and verify each completed hash before treating it as success.
+Status: the owner’s real Sepolia approval and mock-token faucet are verified; deposit, hook swaps and exits remain pending. The owner signs every transaction. Stop between wallet actions and verify each completed hash before treating it as success.
 
 ## Fixed deployment, real data
 
@@ -12,11 +12,13 @@ Status: preparation only; no new user-flow transaction has been sent or claimed.
 - Default app reads: immutable Nox 0.4.0. No silent direct fallback. Wallet RPC/broadcast is outside the app meter; on-chain holdings stay public.
 - Testnet, mock assets, unaudited, real Chainlink feeds, CRE simulation receiver. No returns or production readiness claimed. Stale in-kind exits remain immediate and net pro-rata, with no reserve; they may avoid uncrystallized creator fees.
 
-## Current owner action — claim mock mUSDC only
+## Current owner action — deposit confirmation only
 
-The owner reported connected address **0x0051F2113BB7b760AE761E63D027BecF271DC0ac**. Both approved providers confirm 0.1 Sepolia ETH, zero mUSDC and zero FUND at block 12,079,785. The hourly mUSDC claim is unused. This records the owner's reported connection and public chain state; it is not a wallet-authentication attestation.
+Connected address reported by owner: **0x0051F2113BB7b760AE761E63D027BecF271DC0ac**. Both approved providers verify the exact 100 mUSDC vault approval (nonce 0, block 12,079,808, [transaction](https://sepolia.etherscan.io/tx/0x07db17fdcb77e65eb91094093c3cc4cd19e295281b92f0084c96eba0f9d422a2)) and the mock-token faucet (nonce 1, block 12,079,818, [transaction](https://sepolia.etherscan.io/tx/0x1c8e9d6bc49081b42e0547e2832861cfc26725b3bdee4366152b587616f8bf3f)). The faucet minted 1,000,000,000 mock mUSDC, with matching balance delta and one-hour cooldown. This is not deposit evidence. [Faucet proof](readiness/phase2a-faucet-1c8e9d6b.json); [approval proof and deposit preparation](readiness/phase2a-approval-07db17fd.json).
 
-In the existing app, open **Demo setup**, then choose **Claim tokens** on the **mUSDC** row. Confirm only the Sepolia `faucet()` transaction to **0x33297104581Dd29347d9Ed37936e4F16621D59aE**, calldata `0xde5f72fd`, native value **0 ETH** apart from gas. Both providers' read-only simulations succeeded and estimated 253,118 gas. The immutable claim amount is 1,000,000,000 mock mUSDC with no real value. Send the resulting transaction hash before continuing to deposit or approval.
+Fresh preparation at canonical block **12,079,843** on both providers confirms healthy NAV, zero owned FUND and exact remaining allowance of 100 mUSDC. The unchanged app calculation gives `minShares=98755336083230176801`; both read-only simulations return `99282890172451972585` shares and estimate **1,140,176 gas**. These are block-specific simulations, not guaranteed future results or live deposit proof.
+
+The next owner action is only the pending **deposit** wallet confirmation, if it is still open: chain **11155111**, target **0x237eFeB9Db74341ebb3Ba207e991D8aeAc536b91**, `deposit(100000000, positive minimum shares, 0x0051F2113BB7b760AE761E63D027BecF271DC0ac)`, native value **0 ETH** apart from gas. Keep the app’s unchanged 1% tolerance; do not set the minimum to zero. If there is no pending deposit confirmation, report that before restarting the app flow: the current UI always requests approval again when restarted. No duplicate approval is needed. Send the deposit hash for verification before any next action.
 
 ## Subsequent actions, presented one at a time
 

@@ -1,0 +1,184 @@
+{
+  "scope": "Real Sepolia mock-mUSDC spending approval, not deposit evidence. Deposit preparation is read-only; owner must sign.",
+  "verifiedAt": "2026-11-06T23:35:24.234Z",
+  "hash": "0x07db17fdcb77e65eb91094093c3cc4cd19e295281b92f0084c96eba0f9d422a2",
+  "blockNumber": "12079808",
+  "blockHash": "0x9ed1fee3d99e6817af5c3d77e8d7bd775fb5385e590168d7466434a65403f5e6",
+  "providers": [
+    {
+      "endpoint": "https://ethereum-sepolia-rpc.publicnode.com",
+      "transaction": {
+        "type": "eip1559",
+        "chainId": 11155111,
+        "nonce": 0,
+        "gas": "193396",
+        "maxFeePerGas": "1500000022",
+        "maxPriorityFeePerGas": "1500000000",
+        "to": "0x33297104581dd29347d9ed37936e4f16621d59ae",
+        "value": "0",
+        "accessList": [],
+        "input": "0x095ea7b3000000000000000000000000237efeb9db74341ebb3ba207e991d8aeac536b910000000000000000000000000000000000000000000000000000000005f5e100",
+        "r": "0xb7b29d64a54efabfcc6a32010529045cd222eda062975b39c9639defd50ce38a",
+        "s": "0x5ce2ebc13cf2f72b9b36e02f6e68f454f5c15a4be7d29bfc22eb3a7bac960ca0",
+        "yParity": 0,
+        "v": "0",
+        "hash": "0x07db17fdcb77e65eb91094093c3cc4cd19e295281b92f0084c96eba0f9d422a2",
+        "blockHash": "0x9ed1fee3d99e6817af5c3d77e8d7bd775fb5385e590168d7466434a65403f5e6",
+        "blockNumber": "12079808",
+        "transactionIndex": 2,
+        "from": "0x0051f2113bb7b760ae761e63d027becf271dc0ac",
+        "gasPrice": "1500000016",
+        "blockTimestamp": "1794007668",
+        "typeHex": "0x2"
+      },
+      "receipt": {
+        "type": "eip1559",
+        "status": "success",
+        "cumulativeGasUsed": "4722501",
+        "logs": [
+          {
+            "address": "0x33297104581dd29347d9ed37936e4f16621d59ae",
+            "topics": [
+              "0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925",
+              "0x0000000000000000000000000051f2113bb7b760ae761e63d027becf271dc0ac",
+              "0x000000000000000000000000237efeb9db74341ebb3ba207e991d8aeac536b91"
+            ],
+            "data": "0x0000000000000000000000000000000000000000000000000000000005f5e100",
+            "blockHash": "0x9ed1fee3d99e6817af5c3d77e8d7bd775fb5385e590168d7466434a65403f5e6",
+            "blockNumber": "12079808",
+            "blockTimestamp": "1794007668",
+            "transactionHash": "0x07db17fdcb77e65eb91094093c3cc4cd19e295281b92f0084c96eba0f9d422a2",
+            "transactionIndex": 2,
+            "logIndex": 3,
+            "removed": false
+          }
+        ],
+        "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000800000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000008000000000000100000020000000000000000000000002000000000020000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000001000200000000000000000000000000",
+        "transactionHash": "0x07db17fdcb77e65eb91094093c3cc4cd19e295281b92f0084c96eba0f9d422a2",
+        "transactionIndex": 2,
+        "blockHash": "0x9ed1fee3d99e6817af5c3d77e8d7bd775fb5385e590168d7466434a65403f5e6",
+        "blockNumber": "12079808",
+        "gasUsed": "127841",
+        "effectiveGasPrice": "1500000016",
+        "from": "0x0051f2113bb7b760ae761e63d027becf271dc0ac",
+        "to": "0x33297104581dd29347d9ed37936e4f16621d59ae",
+        "contractAddress": null
+      },
+      "allowance": "100000000"
+    },
+    {
+      "endpoint": "https://sepolia.gateway.tenderly.co",
+      "transaction": {
+        "blockHash": "0x9ed1fee3d99e6817af5c3d77e8d7bd775fb5385e590168d7466434a65403f5e6",
+        "blockNumber": "12079808",
+        "transactionIndex": 2,
+        "hash": "0x07db17fdcb77e65eb91094093c3cc4cd19e295281b92f0084c96eba0f9d422a2",
+        "from": "0x0051f2113bb7b760ae761e63d027becf271dc0ac",
+        "to": "0x33297104581dd29347d9ed37936e4f16621d59ae",
+        "input": "0x095ea7b3000000000000000000000000237efeb9db74341ebb3ba207e991d8aeac536b910000000000000000000000000000000000000000000000000000000005f5e100",
+        "nonce": 0,
+        "value": "0",
+        "gas": "193396",
+        "gasPrice": "1500000016",
+        "maxPriorityFeePerGas": "1500000000",
+        "maxFeePerGas": "1500000022",
+        "accessList": [],
+        "chainId": 11155111,
+        "type": "eip1559",
+        "v": "0",
+        "r": "0xb7b29d64a54efabfcc6a32010529045cd222eda062975b39c9639defd50ce38a",
+        "s": "0x5ce2ebc13cf2f72b9b36e02f6e68f454f5c15a4be7d29bfc22eb3a7bac960ca0",
+        "yParity": 0,
+        "typeHex": "0x2"
+      },
+      "receipt": {
+        "type": "eip1559",
+        "status": "success",
+        "cumulativeGasUsed": "4722501",
+        "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000800000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000008000000000000100000020000000000000000000000002000000000020000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000001000200000000000000000000000000",
+        "logs": [
+          {
+            "address": "0x33297104581dd29347d9ed37936e4f16621d59ae",
+            "topics": [
+              "0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925",
+              "0x0000000000000000000000000051f2113bb7b760ae761e63d027becf271dc0ac",
+              "0x000000000000000000000000237efeb9db74341ebb3ba207e991d8aeac536b91"
+            ],
+            "data": "0x0000000000000000000000000000000000000000000000000000000005f5e100",
+            "blockNumber": "12079808",
+            "transactionHash": "0x07db17fdcb77e65eb91094093c3cc4cd19e295281b92f0084c96eba0f9d422a2",
+            "transactionIndex": 2,
+            "blockHash": "0x9ed1fee3d99e6817af5c3d77e8d7bd775fb5385e590168d7466434a65403f5e6",
+            "logIndex": 3,
+            "blockTimestamp": "1794007668",
+            "removed": false
+          }
+        ],
+        "transactionHash": "0x07db17fdcb77e65eb91094093c3cc4cd19e295281b92f0084c96eba0f9d422a2",
+        "from": "0x0051f2113bb7b760ae761e63d027becf271dc0ac",
+        "to": "0x33297104581dd29347d9ed37936e4f16621d59ae",
+        "contractAddress": null,
+        "gasUsed": "127841",
+        "effectiveGasPrice": "1500000016",
+        "blockHash": "0x9ed1fee3d99e6817af5c3d77e8d7bd775fb5385e590168d7466434a65403f5e6",
+        "blockNumber": "12079808",
+        "transactionIndex": 2,
+        "blobGasUsed": "0"
+      },
+      "allowance": "100000000"
+    }
+  ],
+  "depositPreparation": [
+    {
+      "endpoint": "https://ethereum-sepolia-rpc.publicnode.com",
+      "blockNumber": "12079843",
+      "blockHash": "0xcb152b5694f9f5e28ad056d63c3d605599e868c7922bc4e712ef35d3367357d1",
+      "timestamp": "1794008088",
+      "navUsdc": "99538707904",
+      "healthy": true,
+      "supply": "99292712650000000000000",
+      "navPerShare": "1002477475410175532",
+      "usdcBalance": "1000000000000000",
+      "allowance": "100000000",
+      "fundBalance": "0",
+      "deposit": {
+        "from": "0x0051F2113BB7b760AE761E63D027BecF271DC0ac",
+        "to": "0x237eFeB9Db74341ebb3Ba207e991D8aeAc536b91",
+        "amountUnits": "100000000",
+        "minShares": "98755336083230176801",
+        "receiver": "0x0051F2113BB7b760AE761E63D027BecF271DC0ac",
+        "valueWei": "0",
+        "data": "0x8dbdbe6d0000000000000000000000000000000000000000000000000000000005f5e1000000000000000000000000000000000000000000000000055a816ef0834036210000000000000000000000000051f2113bb7b760ae761e63d027becf271dc0ac",
+        "simulationSucceeded": true,
+        "simulatedShares": "99282890172451972585",
+        "estimatedGas": "1140176"
+      }
+    },
+    {
+      "endpoint": "https://sepolia.gateway.tenderly.co",
+      "blockNumber": "12079843",
+      "blockHash": "0xcb152b5694f9f5e28ad056d63c3d605599e868c7922bc4e712ef35d3367357d1",
+      "timestamp": "1794008088",
+      "navUsdc": "99538707904",
+      "healthy": true,
+      "supply": "99292712650000000000000",
+      "navPerShare": "1002477475410175532",
+      "usdcBalance": "1000000000000000",
+      "allowance": "100000000",
+      "fundBalance": "0",
+      "deposit": {
+        "from": "0x0051F2113BB7b760AE761E63D027BecF271DC0ac",
+        "to": "0x237eFeB9Db74341ebb3Ba207e991D8aeAc536b91",
+        "amountUnits": "100000000",
+        "minShares": "98755336083230176801",
+        "receiver": "0x0051F2113BB7b760AE761E63D027BecF271DC0ac",
+        "valueWei": "0",
+        "data": "0x8dbdbe6d0000000000000000000000000000000000000000000000000000000005f5e1000000000000000000000000000000000000000000000000055a816ef0834036210000000000000000000000000051f2113bb7b760ae761e63d027becf271dc0ac",
+        "simulationSucceeded": true,
+        "simulatedShares": "99282890172451972585",
+        "estimatedGas": "1140176"
+      }
+    }
+  ],
+  "providerDisclosure": "Provider diversity, not proof of fully independent infrastructure."
+}
