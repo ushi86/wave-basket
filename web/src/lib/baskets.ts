@@ -13,6 +13,9 @@ export type Basket = {
   creator: Address;
   fee: number;
   hwm: bigint;
+  treasury: Address;
+  feeSharesMinted: bigint;
+  pendingFeeShares: bigint;
   assets: readonly Address[];
   balances: readonly bigint[];
   values: readonly bigint[];
@@ -99,6 +102,28 @@ export async function loadBaskets(
         })
       : 0n;
     const price = healthy && supply > 0n ? (nav * 10n ** 30n) / supply : 0n;
+    const [treasury, feeSharesMinted, [, pendingFeeShares]] = await Promise.all(
+      [
+        client.readContract({
+          address,
+          abi: vaultAbi,
+          functionName: "treasury",
+        }),
+        client.readContract({
+          address,
+          abi: vaultAbi,
+          functionName: "performanceFeeSharesMinted",
+        }),
+        healthy
+          ? client.readContract({
+              address,
+              abi: vaultAbi,
+              functionName: "previewRedeem",
+              args: [0n],
+            })
+          : Promise.resolve([0n, 0n] as const),
+      ],
+    );
     const history: HistoryRow[] = [];
     for (
       let id = historyCount > 32n ? historyCount - 32n : 0n;
@@ -125,6 +150,9 @@ export async function loadBaskets(
       creator,
       fee,
       hwm,
+      treasury,
+      feeSharesMinted,
+      pendingFeeShares,
       assets,
       balances,
       values,

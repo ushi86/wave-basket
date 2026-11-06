@@ -48,7 +48,7 @@ contract NavGuardHook is BaseHook, Ownable2Step {
     function quoteFee(uint256 spot, uint256 nav, bool sellingFund) public pure returns (uint24) {
         if (nav == 0 || spot == 0) revert InvalidPool();
         uint256 deviation = spot > nav ? spot - nav : nav - spot;
-        if (Math.mulDiv(deviation, 10_000, nav) <= 100) return 500;
+        if (deviation <= nav / 100) return 500;
         bool toward = spot > nav ? sellingFund : !sellingFund;
         return toward ? 500 : 10_000;
     }

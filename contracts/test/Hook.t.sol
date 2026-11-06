@@ -20,5 +20,6 @@ contract HookTest is WaveFixture {
         assertEq(hook.quoteFee(98e16, 1e18, true), 10000);
         assertEq(hook.quoteFee(101e16, 1e18, false), 500);
         assertEq(hook.quoteFee(99e16, 1e18, true), 500);
+        assertEq(hook.quoteFee(1.01005e18, 1e18, false), 10000);
     }
 }

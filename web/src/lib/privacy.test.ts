@@ -1,4 +1,4 @@
-import { describe, it, expect } from "vitest";
+import { describe, expect, it } from "vitest";
 import { PrivateRpc } from "./privacy";
 describe("application privacy boundary", () => {
   it("never falls back on worker failure and authorizes exactly one direct read", async () => {

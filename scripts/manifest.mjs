@@ -17,16 +17,16 @@ export function writeManifest(sourcePath, outputPath, rpcUrl) {
         .reduce((a, b) => (a < b ? a : b))
         .toString();
   }
-  const symbols = ["usdc", "eth", "btc", "link"];
-  const decimals = [6, 18, 8, 18];
-  const names = ["mUSDC", "mWETH", "mWBTC", "mLINK"];
-  const ids = ["usd-coin", "ethereum", "bitcoin", "chainlink"];
-  const tokens = symbols.map((key, i) => ({
+  const definitions = [
+    { key: "usdc", symbol: "mUSDC", decimals: 6, marketId: "usd-coin" },
+    { key: "eth", symbol: "mWETH", decimals: 18, marketId: "ethereum" },
+    { key: "btc", symbol: "mWBTC", decimals: 8, marketId: "bitcoin" },
+    { key: "link", symbol: "mLINK", decimals: 18, marketId: "chainlink" },
+  ];
+  const tokens = definitions.map(({ key, ...metadata }) => ({
     address: deployed[key],
     feed: deployed[`${key}Feed`],
-    symbol: names[i],
-    decimals: decimals[i],
-    marketId: ids[i],
+    ...metadata,
   }));
   const manifest = { ...deployed, rpcUrl, tokens };
   writeFileSync(outputPath, JSON.stringify(manifest, null, 2) + "\n");

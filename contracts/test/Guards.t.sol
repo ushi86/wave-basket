@@ -64,8 +64,7 @@ contract GuardsTest is WaveFixture {
 
     function testExcessTurnoverAndPendingManualProposalBlockReports() public {
         WaveVault v = createBasket();
-        WaveRebalanceReceiver r =
-            new WaveRebalanceReceiver(
+        WaveRebalanceReceiver r = new WaveRebalanceReceiver(
             address(0xF00), factory, false, bytes32(uint256(1)), address(this), bytes10("wave")
         );
         factory.setRebalancer(address(r));
@@ -92,8 +91,7 @@ contract GuardsTest is WaveFixture {
 
     function testReceiverRejectsStaleFutureAndUnknownVaultReports() public {
         WaveVault v = createBasket();
-        WaveRebalanceReceiver r =
-            new WaveRebalanceReceiver(
+        WaveRebalanceReceiver r = new WaveRebalanceReceiver(
             address(0xF00), factory, false, bytes32(uint256(1)), address(this), bytes10("wave")
         );
         factory.setRebalancer(address(r));

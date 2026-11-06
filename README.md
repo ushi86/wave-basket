@@ -56,19 +56,21 @@ flowchart LR
   Receiver --> Vault
 ```
 
+The dashboard uses React and a single viem public client with injected-wallet support, rather than adding a second wallet/read-client layer. WalletConnect is not included.
+
 The factory uses a dedicated, factory-only deployer to keep both factory and vault deployment bytecode within Ethereum limits. Vaults are ordinary contracts, not proxies. No backend, indexer, database, or server-side wallet is used by the app.
 
 - Contracts: [vault](contracts/src/WaveVault.sol), [factory/deployer](contracts/src/WaveFactory.sol), [registry](contracts/src/AssetRegistry.sol).
-- Uniswap: [swap settlement](contracts/src/WaveSwapAdapter.sol), [NAV guard](contracts/src/NavGuardHook.sol), [pool deployment](contracts/script/DeployDemo.s.sol).
-- Chainlink: [workflow](cre/src/workflow.ts), [bounded strategy](cre/src/strategy.ts), [receiver](contracts/src/WaveRebalanceReceiver.sol).
-- Privacy: [worker and public client](web/src/lib/chain.ts), [traffic accounting](web/src/lib/privacy.ts).
+- Uniswap: [swap settlement](contracts/src/WaveSwapAdapter.sol#L64), [NAV guard](contracts/src/NavGuardHook.sol#L56), [pool deployment](contracts/script/DeployDemo.s.sol).
+- Chainlink: [workflow](cre/src/workflow.ts#L39), [bounded strategy](cre/src/strategy.ts), [receiver](contracts/src/WaveRebalanceReceiver.sol#L49).
+- Privacy: [worker and public client](web/src/lib/chain.ts#L54), [traffic accounting](web/src/lib/privacy.ts#L16).
 - Product contract: [Wave Protocol specification](WAVE_PROTOCOL_SPEC.md).
 
 ## Economic and configuration decisions
 
 - Up to four distinct allowlisted assets; positive target weights total 10,000 bps, at most 5,000 bps each. A settlement-token component is supported without self-swapping.
 - Six-decimal mock USDC settlement, eighteen-decimal shares, normalized eighteen-decimal USD prices; WBTC uses eight token decimals. USDC/USD is valued through its feed rather than assumed to be a permanent dollar peg.
-- Initial share price is one settlement token per share. Minimum seed is 10 mUSDC; 1,000 smallest share units are permanently locked from the seed entitlement. Later deposits use measured value added and crystallize pre-existing gains before participation.
+- Initial share price is one settlement token per share. Minimum seed is 10 mUSDC; 1,000 smallest share units are permanently locked from the seed entitlement. Later deposits use measured value added and crystallize pre-existing gains before participation. Settlement redemptions use a fresh on-chain preview that includes pending performance-fee dilution before the UI applies execution tolerance.
 - A 10 bps withdrawal fee applies to both exits. Settlement exits pay treasury in mUSDC. In-kind exits transfer fee shares to the treasury and burn only net shares against pre-burn supply.
 - Creator performance fees range from 0–2,000 bps. They mint dilution-adjusted shares only above a fund-level high-water mark. **In-kind exits never crystallize outstanding performance fees**, even with healthy feeds, to preserve a price-independent exit. This can let a holder avoid uncrystallized creator fees; the demo does not implement per-investor equalization or production fee fairness.
 - Manual proposals replace previous pending proposals and may be cancelled by the creator. Automation pauses while a proposal exists. Permissionless execution after ten minutes activates target weights without trading and starts a five-minute cooldown. Later CRE reports may change those targets again within vault bounds.

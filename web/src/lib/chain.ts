@@ -5,13 +5,13 @@ import {
   custom,
   defineChain,
   http,
+  type Abi,
   type Address,
   type EIP1193Provider,
   type Hash,
-  type Abi,
 } from "viem";
-import { PrivateRpc } from "./privacy";
 import type { Deployment } from "./config";
+import { PrivateRpc } from "./privacy";
 export type PrivacyState = "booting" | "ready" | "failed" | "local";
 export type WalletProvider = EIP1193Provider & {
   on?: (event: string, listener: (...args: unknown[]) => void) => void;

@@ -157,10 +157,14 @@ contract DeployDemo is Script {
             25_000e6
         );
         address forwarder = block.chainid == 31337 ? address(new DemoForwarder()) : vm.envAddress("CRE_FORWARDER");
-        bytes32 workflowId = vm.envOr("WORKFLOW_ID", bytes32(uint256(1)));
-        address author = vm.envOr("WORKFLOW_AUTHOR", admin);
-        bytes10 workflowName = bytes10(vm.envOr("WORKFLOW_NAME", bytes32(bytes10("wave"))));
         bool simulation = block.chainid == 11155111 && vm.envOr("CRE_SIMULATION", true);
+        bool fixtureIdentity = block.chainid == 31337 || simulation;
+        bytes32 workflowId =
+            fixtureIdentity ? vm.envOr("WORKFLOW_ID", bytes32(uint256(1))) : vm.envBytes32("WORKFLOW_ID");
+        address author = fixtureIdentity ? vm.envOr("WORKFLOW_AUTHOR", admin) : vm.envAddress("WORKFLOW_AUTHOR");
+        bytes10 workflowName = bytes10(
+            fixtureIdentity ? vm.envOr("WORKFLOW_NAME", bytes32(bytes10("wave"))) : vm.envBytes32("WORKFLOW_NAME")
+        );
         WaveRebalanceReceiver receiver =
             new WaveRebalanceReceiver(forwarder, factory, simulation, workflowId, author, workflowName);
         factory.setRebalancer(address(receiver));

@@ -41,3 +41,19 @@ These are implementation-time observations, not production evidence or return pr
 ## Dependency finding
 
 The installed CRE SDK pins Zod 3.25.76, reported by npm audit under GHSA-mrhx-c7xc-m3w5 (collection-size memory exhaustion). A compatible upstream SDK fix is not available in the installed version. No forced major dependency override was applied. Test tooling was upgraded to Vitest 5.1.0 to remove the reported critical test-runner issues.
+
+## Review and final browser recheck
+
+Two independent reviewers found and verified fixes for fee-dilution quotation, public proposal visibility, exact hook fee bands, history details, fee disclosures, and module boundaries. The corrected local stack was redeployed and the browser deposit, post-fee settlement redemption, and in-kind exit passed again. A proposal remained readable after a reload without connecting a wallet. The refreshed local report history showed the 40/35/25 → 45/30/25 allocation change, 5% turnover, and measured -30.86 mUSDC NAV impact.
+
+The 390px mobile viewport had document width 390px (no page-level horizontal overflow). Tables scroll within their cards. A cold worker-only Sepolia probe measured startup at 4.44 seconds; this meets the startup target for that probe, while full-session Sepolia coverage is still unverified.
+
+## Final check results
+
+- Full suite: 20 Foundry tests passed across six suites (including 64 fuzz cases), plus 5 TypeScript tests across the web/strategy suites; no failures or skipped tests.
+- Both workspace TypeScript checks passed. The dashboard also passed a check with unused locals/parameters enabled.
+- Static dashboard build passed; its main bundle is approximately 193 kB gzipped and emits Vite's >500 kB uncompressed chunk-size notice.
+- CRE WASM compilation passed using the installed official SDK compiler.
+- EIP-170 sizes passed: WaveFactory 3,536 bytes, WaveVault 20,194 bytes, and WaveVaultDeployer 24,158 bytes (418 bytes below the runtime limit).
+- Final private probe: anonymous Sepolia block 12,074,624 returned with 2 counted bootstrap reads and no automatic direct reads. A subsequent explicit one-read action returned block 12,074,629, incremented direct successes to one, and changed the badge to amber.
+- [Verified desktop preview](wave-protocol-preview.jpg) captures the running local-chain dashboard. Local test servers are stopped after verification; use `npm run demo` to start a fresh chain/session.

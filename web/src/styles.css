@@ -1824,3 +1824,14 @@ input:focus {
     transition: none !important;
   }
 }
+.older-history article {
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+  line-height: 1.8;
+}
+.older-history article p {
+  margin: 6px 0;
+}
+.older-history article a {
+  color: var(--green);
+}

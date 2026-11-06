@@ -35,6 +35,7 @@ contract WaveVault is ERC20, Ownable2Step, ReentrancyGuard {
     uint16[] private proposed;
     uint256 public weightsEta;
     uint256 public hwm = 1e18;
+    uint256 public performanceFeeSharesMinted;
     uint256 public lastRebalance;
     uint256 public rebalanceCount;
 
@@ -299,17 +300,37 @@ contract WaveVault is ERC20, Ownable2Step, ReentrancyGuard {
         _crystallize();
     }
 
+    /// @notice Oracle-valued settlement entitlement after pending creator dilution and withdrawal fee.
+    /// Swap slippage is excluded; callers must apply their own execution tolerance.
+    function previewRedeem(uint256 shares) external view returns (uint256 netUsdc, uint256 pendingFeeShares) {
+        uint256 nav = _healthyNav();
+        uint256 supply = totalSupply();
+        if (supply == 0) return (0, 0);
+        pendingFeeShares = _pendingFeeShares(nav, supply);
+        uint256 gross = Math.mulDiv(nav, shares, supply + pendingFeeShares);
+        netUsdc = gross - Math.mulDiv(gross, WITHDRAWAL_FEE_BPS, 10_000);
+    }
+
+    function _pendingFeeShares(uint256 nav, uint256 supply) internal view returns (uint256) {
+        uint256 price = Math.mulDiv(nav, 1e30, supply);
+        if (price <= hwm) return 0;
+        uint256 gainValue = Math.mulDiv(price - hwm, supply, 1e30);
+        uint256 feeValue = Math.mulDiv(gainValue, perfFeeBps, 10_000);
+        return feeValue == 0 ? 0 : Math.mulDiv(feeValue, supply, nav - feeValue);
+    }
+
     function _crystallize() internal {
         if (totalSupply() == 0) return;
         uint256 nav = _healthyNav();
         uint256 supply = totalSupply();
         uint256 price = Math.mulDiv(nav, 1e30, supply);
         if (price <= hwm) return;
-        uint256 gainValue = Math.mulDiv(price - hwm, supply, 1e30);
-        uint256 feeValue = Math.mulDiv(gainValue, perfFeeBps, 10_000);
-        uint256 feeShares = feeValue == 0 ? 0 : Math.mulDiv(feeValue, supply, nav - feeValue);
+        uint256 feeShares = _pendingFeeShares(nav, supply);
         uint256 old = hwm;
-        if (feeShares > 0) _mint(owner(), feeShares);
+        if (feeShares > 0) {
+            performanceFeeSharesMinted += feeShares;
+            _mint(owner(), feeShares);
+        }
         hwm = Math.mulDiv(nav, 1e30, totalSupply());
         emit PerformanceFeeAccrued(feeShares, old, hwm);
     }

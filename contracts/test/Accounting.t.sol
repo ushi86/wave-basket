@@ -56,6 +56,7 @@ contract AccountingTest is WaveFixture {
         vm.expectRevert(WaveVault.Timelocked.selector);
         v.executeWeights();
         vm.warp(block.timestamp + 10 minutes);
+        vm.prank(address(0x123));
         v.executeWeights();
         assertEq(v.targetWeights()[0], 4500);
         v.proposeWeights(bps);
@@ -73,5 +74,18 @@ contract AccountingTest is WaveFixture {
         uint256 before = eth.balanceOf(address(this));
         v.redeemInKind(shares, address(this));
         assertLe(eth.balanceOf(address(this)) - before, held * shares / supply);
+    }
+
+    function testRedemptionPreviewIncludesUncrystallizedFeeDilution() public {
+        WaveVault v = createBasket();
+        ethFeed.setAnswer(4000e8);
+        uint256 shares = v.balanceOf(address(this));
+        (uint256 netQuote, uint256 pendingShares) = v.previewRedeem(shares);
+        assertApproxEqAbs(pendingShares, 294117647058823529, 2);
+        assertApproxEqAbs(netQuote, 13_586_400, 3);
+        uint256 received = v.redeem(shares, netQuote * 99 / 100, address(this));
+        // One WBTC base unit is 500 micro-USDC at this fixture price.
+        assertApproxEqAbs(received, netQuote, 1000);
+        assertEq(v.performanceFeeSharesMinted(), pendingShares);
     }
 }
