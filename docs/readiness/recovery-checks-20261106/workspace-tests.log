@@ -1,0 +1,38 @@
+
+> @wave/web@0.1.0 test
+> vitest run
+
+
+ RUN  v5.1.0 /Users/hano/Projects/Wave Eth/web
+
+
+ Test Files  1 passed (1)
+      Tests  2 passed (2)
+   Start at  18:18:02
+   Duration  82ms (tests 58%, import 21%, transform 13%, worker 8%)
+
+
+> @wave/cre@0.1.0 test
+> vitest run
+
+
+ RUN  v5.1.0 /Users/hano/Projects/Wave Eth/cre
+
+
+ Test Files  1 passed (1)
+      Tests  3 passed (3)
+   Start at  18:18:02
+   Duration  66ms (import 42%, transform 25%, tests 18%, worker 15%, environment 1%)
+
+
+> @wave/readiness@0.1.0 test
+> vitest run
+
+
+ RUN  v5.1.0 /Users/hano/Projects/Wave Eth/tools
+
+
+ Test Files  2 passed (2)
+      Tests  30 passed (30)
+   Start at  18:18:02
+   Duration  221ms (import 65%, tests 26%, transform 7%, worker 2%)

@@ -1,0 +1,6 @@
+2026-11-06T12:29:09.004200Z  WARN foundry_fork_db::cache: Failed to read cache file err=Os { code: 20, kind: NotADirectory, message: "Not a directory" } path="/Users/hano/.foundry/cache/rpc/sepolia/12076558/storage-d6dfa900d939f6140b88f1cfcb2ab571d4f17ab4f49b733574f55051d9fc812b.json"
+2026-11-06T12:29:09.080494Z  INFO node::user: eth_chainId
+2026-11-06T12:29:09.082808Z  INFO node::user: eth_getBlockByNumber
+2026-11-06T12:29:09.318707Z  INFO node::user: eth_getTransactionCount
+2026-11-06T12:29:09.502375Z  INFO node::user: eth_getBalance
+2026-11-06T12:29:09.503735Z  INFO node::user: evm_mine

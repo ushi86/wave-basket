@@ -1,0 +1,29 @@
+Compiling 111 files with Solc 0.8.26
+Solc 0.8.26 finished in 12.60s
+Compiler run successful!
+2026-11-06T12:17:18.180104Z  WARN foundry_fork_db::cache: Failed to read cache file err=Os { code: 2, kind: NotFound, message: "No such file or directory" } path="/Users/hano/.foundry/cache/rpc/sepolia/12076502"
+2026-11-06T12:17:20.429794Z  WARN evm::traces::external: etherscan config not found
+Traces:
+  [59637] → new DeployDemo@0x5b73C5498c1E3b4dbA84de0F1833c4a029d90519
+    └─ ← [Return] 87344 bytes of code
+
+  [16729122] DeployDemo::run()
+    ├─ [0] VM::envAddress("DEPLOYER_ADDRESS") [staticcall]
+    │   └─ ← [Return] <env var value>
+    ├─ [0] VM::startBroadcast(0xDe25D83481c0c2A711397c44eE3317dD826952D5)
+    │   └─ ← [Return]
+    ├─ [3644272] → new DemoToken@0x33297104581Dd29347d9Ed37936e4F16621D59aE
+    │   └─ ← [Return] 1984 bytes of code
+    ├─ [3460672] → new DemoToken@0x7B178cB5e0776E769BE44919889D5A57D8BB1742
+    │   └─ ← [Return] 1984 bytes of code
+    ├─ [3460672] → new DemoToken@0xBe28019380A99649579B7E9fa7F1979e6f203F79
+    │   └─ ← [Return] 1984 bytes of code
+    ├─ [3460672] → new DemoToken@0xDd71a1BF041dcdb68AD70A6e0766996557759525
+    │   └─ ← [Return] 1984 bytes of code
+    ├─ [0] → new <unknown>@0xC7f2Cf4845C6db0e1a1e91ED41Bcd0FcC1b0E141
+    │   ├─ emit OwnershipTransferred(previousOwner: 0x0000000000000000000000000000000000000000, newOwner: 0xDe25D83481c0c2A711397c44eE3317dD826952D5)
+    │   └─ ← [OutOfGas]
+    └─ ← [Revert] EvmError: Revert
+
+
+Error: script failed: EvmError: Revert

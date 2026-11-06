@@ -1,0 +1,470 @@
+{
+  "scope": "LOCAL FORK read-only simulation diagnostic, not deployment evidence",
+  "args": [
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "18546",
+    "--accounts",
+    "0",
+    "--chain-id",
+    "11155111",
+    "--fork-url",
+    "https://ethereum-sepolia-rpc.publicnode.com",
+    "--fork-block-number",
+    "12076531",
+    "--hardfork",
+    "amsterdam",
+    "--enable-tx-gas-limit",
+    "--gas-limit",
+    "199414260",
+    "--silent"
+  ],
+  "rows": [
+    {
+      "prefix": 1,
+      "error": null,
+      "calls": [
+        {
+          "i": 0,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x359bf3"
+        }
+      ]
+    },
+    {
+      "prefix": 5,
+      "error": null,
+      "calls": [
+        {
+          "i": 0,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x359bf3"
+        },
+        {
+          "i": 1,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x359bff"
+        },
+        {
+          "i": 2,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x359be7"
+        },
+        {
+          "i": 3,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x359c0b"
+        },
+        {
+          "i": 4,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x402a91"
+        }
+      ]
+    },
+    {
+      "prefix": 30,
+      "error": null,
+      "calls": [
+        {
+          "i": 0,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x359bf3"
+        },
+        {
+          "i": 1,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x359bff"
+        },
+        {
+          "i": 2,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x359be7"
+        },
+        {
+          "i": 3,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x359c0b"
+        },
+        {
+          "i": 4,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x402a91"
+        },
+        {
+          "i": 5,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x74195"
+        },
+        {
+          "i": 6,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x74189"
+        },
+        {
+          "i": 7,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x74189"
+        },
+        {
+          "i": 8,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x74189"
+        },
+        {
+          "i": 9,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x6874f3"
+        },
+        {
+          "i": 10,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x3fb2e7"
+        },
+        {
+          "i": 11,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x54eef"
+        },
+        {
+          "i": 12,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x54eef"
+        },
+        {
+          "i": 13,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x54eef"
+        },
+        {
+          "i": 14,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x54eef"
+        },
+        {
+          "i": 15,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x20ad0"
+        },
+        {
+          "i": 16,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x3bbe2"
+        },
+        {
+          "i": 17,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x1f4bd"
+        },
+        {
+          "i": 18,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x1f4bd"
+        },
+        {
+          "i": 19,
+          "status": "0x1",
+          "error": null,
+          "gas": "0xf2b1b"
+        },
+        {
+          "i": 20,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x207b6"
+        },
+        {
+          "i": 21,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x3bbe2"
+        },
+        {
+          "i": 22,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x4f2d"
+        },
+        {
+          "i": 23,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x1f4bd"
+        },
+        {
+          "i": 24,
+          "status": "0x1",
+          "error": null,
+          "gas": "0xdac83"
+        },
+        {
+          "i": 25,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x20ba0"
+        },
+        {
+          "i": 26,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x3bbe2"
+        },
+        {
+          "i": 27,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x4f2d"
+        },
+        {
+          "i": 28,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x1f4bd"
+        },
+        {
+          "i": 29,
+          "status": "0x1",
+          "error": null,
+          "gas": "0xdaca7"
+        }
+      ]
+    },
+    {
+      "prefix": 31,
+      "error": null,
+      "calls": [
+        {
+          "i": 0,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x359bf3"
+        },
+        {
+          "i": 1,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x359bff"
+        },
+        {
+          "i": 2,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x359be7"
+        },
+        {
+          "i": 3,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x359c0b"
+        },
+        {
+          "i": 4,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x402a91"
+        },
+        {
+          "i": 5,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x74195"
+        },
+        {
+          "i": 6,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x74189"
+        },
+        {
+          "i": 7,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x74189"
+        },
+        {
+          "i": 8,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x74189"
+        },
+        {
+          "i": 9,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x6874f3"
+        },
+        {
+          "i": 10,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x3fb2e7"
+        },
+        {
+          "i": 11,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x54eef"
+        },
+        {
+          "i": 12,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x54eef"
+        },
+        {
+          "i": 13,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x54eef"
+        },
+        {
+          "i": 14,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x54eef"
+        },
+        {
+          "i": 15,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x20ad0"
+        },
+        {
+          "i": 16,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x3bbe2"
+        },
+        {
+          "i": 17,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x1f4bd"
+        },
+        {
+          "i": 18,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x1f4bd"
+        },
+        {
+          "i": 19,
+          "status": "0x1",
+          "error": null,
+          "gas": "0xf2b1b"
+        },
+        {
+          "i": 20,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x207b6"
+        },
+        {
+          "i": 21,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x3bbe2"
+        },
+        {
+          "i": 22,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x4f2d"
+        },
+        {
+          "i": 23,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x1f4bd"
+        },
+        {
+          "i": 24,
+          "status": "0x1",
+          "error": null,
+          "gas": "0xdac83"
+        },
+        {
+          "i": 25,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x20ba0"
+        },
+        {
+          "i": 26,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x3bbe2"
+        },
+        {
+          "i": 27,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x4f2d"
+        },
+        {
+          "i": 28,
+          "status": "0x1",
+          "error": null,
+          "gas": "0x1f4bd"
+        },
+        {
+          "i": 29,
+          "status": "0x1",
+          "error": null,
+          "gas": "0xdaca7"
+        },
+        {
+          "i": 30,
+          "status": "0x0",
+          "error": {
+            "code": 3,
+            "message": "execution reverted",
+            "data": "0x"
+          },
+          "gas": "0xba3972"
+        }
+      ]
+    },
+    {
+      "prefix": 42,
+      "error": {
+        "code": -38013,
+        "message": "err: intrinsic gas too high -- CallGasCostMoreThanGasLimit"
+      }
+    },
+    {
+      "mode": "one per synthetic block",
+      "error": {
+        "code": -38013,
+        "message": "err: intrinsic gas too high -- CallGasCostMoreThanGasLimit"
+      }
+    }
+  ],
+  "executionRoutingDisclosure": "This failed diagnostic was forwarded to PublicNode by Anvil at the fork boundary. It is NOT a successful local-engine check or deployment evidence."
+}

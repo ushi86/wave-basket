@@ -1,0 +1,14 @@
+Compiling 1 files with Solc 0.8.26
+Solc 0.8.26 finished in 16.08s
+Compiler run successful!
+
+Ran 6 tests for test/RecoveryCompatibility.t.sol:RecoveryCompatibilityTest
+[PASS] testAdapterRejectsUnsolicitedCallbackAndImpossibleMinimum() (gas: 145168)
+[PASS] testAdditionalBasketsAndExternalAssetReuseCoreAndReceiver() (gas: 18418619)
+[PASS] testDepositAndBothExitsThroughRealV4PoolManager() (gas: 5893995)
+[PASS] testFuzzValidRebalanceHonorsNavAndTurnoverLimits(uint16) (runs: 64, μ: 5779395, ~: 5779439)
+[PASS] testLaterRebalanceSwapFailureRollsBackEarlierTrades() (gas: 5605444)
+[PASS] testLaunchSeedLeavesPoolsUsableForNextDepositor() (gas: 5361150)
+Suite result: ok. 6 passed; 0 failed; 0 skipped; finished in 85.79ms (93.10ms CPU time)
+
+Ran 1 test suite in 86.47ms (85.79ms CPU time): 6 tests passed, 0 failed, 0 skipped (6 total tests)

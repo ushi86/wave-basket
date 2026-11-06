@@ -1,0 +1,41 @@
+Compiling 111 files with Solc 0.8.26
+Solc 0.8.26 finished in 12.36s
+Compiler run successful!
+2026-11-06T12:31:17.389415Z  WARN foundry_fork_db::cache: Failed to read cache file err=Os { code: 2, kind: NotFound, message: "No such file or directory" } path="/Users/hano/.foundry/cache/rpc/sepolia/12076571"
+2026-11-06T12:31:55.788268Z  WARN evm::traces::external: etherscan config not found
+2026-11-06T12:31:56.165394Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body for url (https://sourcify.dev/server/v2/contract/11155111/0xc59E3633BAAC79493d908e63626716e204A45EdF?fields=abi,compilation)")
+2026-11-06T12:31:56.563179Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body for url (https://sourcify.dev/server/v2/contract/11155111/0x694AA1769357215DE4FAC081bf1f309aDC325306?fields=abi,compilation)")
+2026-11-06T12:31:56.953818Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body for url (https://sourcify.dev/server/v2/contract/11155111/0x0524b20f305e2e2F7990B9AfE28B4D5e4a76eA0C?fields=abi,compilation)")
+2026-11-06T12:31:56.953909Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body for url (https://sourcify.dev/server/v2/contract/11155111/0x719E22E3D4b690E5d96cCb40619180B5427F14AE?fields=abi,compilation)")
+2026-11-06T12:31:56.989700Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body for url (https://sourcify.dev/server/v2/contract/11155111/0x1b44F3514812d835EB1BDB0acB33d3fA3351Ee43?fields=abi,compilation)")
+2026-11-06T12:31:56.996049Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body for url (https://sourcify.dev/server/v2/contract/11155111/0x5A2734CC0341ea6564dF3D00171cc99C63B1A7d3?fields=abi,compilation)")
+2026-11-06T12:31:57.412227Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body for url (https://sourcify.dev/server/v2/contract/11155111/0x17Dac87b07EAC97De4E182Fc51C925ebB7E723e2?fields=abi,compilation)")
+Script ran successfully.
+
+## Setting up 1 EVM.
+2026-11-06T12:32:00.886456Z  WARN evm::traces::external: etherscan config not found
+2026-11-06T12:32:01.300586Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body for url (https://sourcify.dev/server/v2/contract/11155111/0x1b44F3514812d835EB1BDB0acB33d3fA3351Ee43?fields=abi,compilation)")
+2026-11-06T12:32:01.432139Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body for url (https://sourcify.dev/server/v2/contract/11155111/0x5A2734CC0341ea6564dF3D00171cc99C63B1A7d3?fields=abi,compilation)")
+2026-11-06T12:32:02.248681Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body for url (https://sourcify.dev/server/v2/contract/11155111/0x17Dac87b07EAC97De4E182Fc51C925ebB7E723e2?fields=abi,compilation)")
+2026-11-06T12:32:02.496929Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body for url (https://sourcify.dev/server/v2/contract/11155111/0x719E22E3D4b690E5d96cCb40619180B5427F14AE?fields=abi,compilation)")
+2026-11-06T12:32:02.531080Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body for url (https://sourcify.dev/server/v2/contract/11155111/0xc59E3633BAAC79493d908e63626716e204A45EdF?fields=abi,compilation)")
+2026-11-06T12:32:02.934634Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body for url (https://sourcify.dev/server/v2/contract/11155111/0x0524b20f305e2e2F7990B9AfE28B4D5e4a76eA0C?fields=abi,compilation)")
+2026-11-06T12:32:02.980004Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body for url (https://sourcify.dev/server/v2/contract/11155111/0x694AA1769357215DE4FAC081bf1f309aDC325306?fields=abi,compilation)")
+
+==========================
+
+Chain 11155111
+
+Estimated gas price: 0.00000004 gwei
+
+Estimated total gas used for script: 173239297
+
+Estimated amount required: 0.00000000692957188 ETH
+
+==========================
+
+SIMULATION COMPLETE. To broadcast these transactions, add --broadcast and wallet configuration(s) to the previous command. See forge script --help for more.
+
+Transactions saved to: /Users/hano/Projects/Wave Eth/contracts/broadcast/recovery-nonce1/2026-11-06T12-30-07-879Z/DeployDemo.s.sol/11155111/dry-run/run-latest.json
+
+Sensitive values saved to: /Users/hano/Projects/Wave Eth/contracts/cache/recovery-nonce1/2026-11-06T12-30-07-879Z/DeployDemo.s.sol/11155111/dry-run/run-latest.json

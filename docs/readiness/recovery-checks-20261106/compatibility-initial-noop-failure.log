@@ -1,0 +1,22 @@
+Compiling 1 files with Solc 0.8.26
+Solc 0.8.26 finished in 15.75s
+Compiler run successful!
+
+Ran 6 tests for test/RecoveryCompatibility.t.sol:RecoveryCompatibilityTest
+[PASS] testAdapterRejectsUnsolicitedCallbackAndImpossibleMinimum() (gas: 145168)
+[FAIL: Slippage()] testAdditionalBasketsAndExternalAssetReuseCoreAndReceiver() (gas: 17643579)
+[PASS] testDepositAndBothExitsThroughRealV4PoolManager() (gas: 5893995)
+[PASS] testFuzzValidRebalanceHonorsNavAndTurnoverLimits(uint16) (runs: 64, μ: 5779375, ~: 5779439)
+[PASS] testLaterRebalanceSwapFailureRollsBackEarlierTrades() (gas: 5605459)
+[PASS] testLaunchSeedLeavesPoolsUsableForNextDepositor() (gas: 5361150)
+Suite result: FAILED. 5 passed; 1 failed; 0 skipped; finished in 91.07ms (95.75ms CPU time)
+
+Ran 1 test suite in 95.73ms (91.07ms CPU time): 5 tests passed, 1 failed, 0 skipped (6 total tests)
+
+Failing tests:
+Encountered 1 failing test in test/RecoveryCompatibility.t.sol:RecoveryCompatibilityTest
+[FAIL: Slippage()] testAdditionalBasketsAndExternalAssetReuseCoreAndReceiver() (gas: 17643579)
+
+Encountered a total of 1 failing tests, 5 tests succeeded
+
+Tip: Run `forge test --rerun` to retry only the 1 failed test

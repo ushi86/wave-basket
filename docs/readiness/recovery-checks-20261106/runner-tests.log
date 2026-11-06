@@ -1,0 +1,13 @@
+✔ defaults to dry run and requires owner terminal, explicit mode and a review path (0.411667ms)
+✔ noninteractive broadcast stops in the executable before RPC, backup or keystore work (90.100958ms)
+✔ requires both providers to agree on failed nonce-0 receipt and unused nonce 1 (0.298333ms)
+✔ unhealthy feeds, missing code and provider state disagreement stop recovery (0.102542ms)
+✔ only accepts a fresh complete sequence from nonce 1 with no paid native value (0.226125ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 237.270833

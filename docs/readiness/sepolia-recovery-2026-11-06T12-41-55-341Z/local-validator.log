@@ -1,0 +1,656 @@
+2026-11-06T12:43:34.140485Z  WARN foundry_fork_db::cache: Failed to read cache file err=Os { code: 20, kind: NotADirectory, message: "Not a directory" } path="/Users/hano/.foundry/cache/rpc/sepolia/12076628/storage-d6dfa900d939f6140b88f1cfcb2ab571d4f17ab4f49b733574f55051d9fc812b.json"
+2026-11-06T12:43:34.784457Z  INFO node::user: eth_chainId
+2026-11-06T12:43:34.787982Z  INFO node::user: eth_getBlockByNumber
+2026-11-06T12:43:35.173413Z  INFO node::user: eth_getTransactionCount
+2026-11-06T12:43:35.539096Z  INFO node::user: eth_getBalance
+2026-11-06T12:43:35.540816Z  INFO node::user: eth_sendUnsignedTransaction
+2026-11-06T12:43:35.541335Z  INFO node::user: eth_accounts
+2026-11-06T12:43:35.543695Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:36.083412Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:36.590258Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:37.085353Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:37.587332Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:38.076614Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:38.570638Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:39.072822Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:39.569172Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:40.082701Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:40.578410Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:41.074529Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:41.574862Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:42.061243Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:42.557085Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:43.057825Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:43.561639Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:44.054565Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:44.297480Z  INFO node::user:
+2026-11-06T12:43:44.297493Z  INFO node::user:     Transaction: 0x658861124a3597541c5ec34d319e4f88d8d9e441f9b209ae10805caefc450950
+2026-11-06T12:43:44.297769Z  INFO node::user:     Contract created: 0x33297104581Dd29347d9Ed37936e4F16621D59aE
+2026-11-06T12:43:44.297931Z  INFO node::user:     Gas used: 3513331
+2026-11-06T12:43:44.297935Z  INFO node::user:
+2026-11-06T12:43:44.297940Z  INFO node::user:     Block Number: 12076629
+2026-11-06T12:43:44.297942Z  INFO node::user:     Block Hash: 0xd2d1c0d5c153c23dc473994ed73f3169abad2b5a94e2ee83977b49107cb20a6f
+2026-11-06T12:43:44.297964Z  INFO node::user:     Block Time: "Fri, 6 Nov 2026 12:41:13 +0000"
+
+2026-11-06T12:43:44.562519Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:44.563346Z  INFO node::user: eth_sendUnsignedTransaction
+2026-11-06T12:43:44.563359Z  INFO node::user: eth_accounts
+2026-11-06T12:43:44.563687Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:45.092689Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:45.615591Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:45.767375Z  INFO node::user:
+2026-11-06T12:43:45.767413Z  INFO node::user:     Transaction: 0xaded406e08d4baf850c6c9fb6286e0af2d862e2ffe2667f64281e23ec1c2e2ec
+2026-11-06T12:43:45.767422Z  INFO node::user:     Contract created: 0x7B178cB5e0776E769BE44919889D5A57D8BB1742
+2026-11-06T12:43:45.767430Z  INFO node::user:     Gas used: 3513343
+2026-11-06T12:43:45.767435Z  INFO node::user:
+2026-11-06T12:43:45.767444Z  INFO node::user:     Block Number: 12076630
+2026-11-06T12:43:45.767449Z  INFO node::user:     Block Hash: 0xad82b48fca305609cd46f6c1d9880bc259d65f99cd66acb521a0ccffeebb2349
+2026-11-06T12:43:45.767455Z  INFO node::user:     Block Time: "Fri, 6 Nov 2026 12:41:22 +0000"
+
+2026-11-06T12:43:46.119674Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:46.120738Z  INFO node::user: eth_sendUnsignedTransaction
+2026-11-06T12:43:46.120752Z  INFO node::user: eth_accounts
+2026-11-06T12:43:46.121435Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:46.692492Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:47.214187Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:47.451703Z  INFO node::user:
+2026-11-06T12:43:47.451741Z  INFO node::user:     Transaction: 0x4fcd32b39684e21f363f0656b5db91eb0550e5fdb08e3625849624089573efb8
+2026-11-06T12:43:47.451750Z  INFO node::user:     Contract created: 0xBe28019380A99649579B7E9fa7F1979e6f203F79
+2026-11-06T12:43:47.451757Z  INFO node::user:     Gas used: 3513319
+2026-11-06T12:43:47.451762Z  INFO node::user:
+2026-11-06T12:43:47.451772Z  INFO node::user:     Block Number: 12076631
+2026-11-06T12:43:47.451777Z  INFO node::user:     Block Hash: 0x0a00615d0516f56105faac066c8bc07378206bdd1cec1d2f60a34543193b9108
+2026-11-06T12:43:47.451783Z  INFO node::user:     Block Time: "Fri, 6 Nov 2026 12:41:24 +0000"
+
+2026-11-06T12:43:47.701360Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:47.702999Z  INFO node::user: eth_sendUnsignedTransaction
+2026-11-06T12:43:47.703023Z  INFO node::user: eth_accounts
+2026-11-06T12:43:47.704292Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:48.217260Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:48.726648Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:48.962244Z  INFO node::user:
+2026-11-06T12:43:48.962281Z  INFO node::user:     Transaction: 0xed85c0b05a128278be01fd513983fa5ae1372b0c627a060b6b6fcfe7f7736108
+2026-11-06T12:43:48.962297Z  INFO node::user:     Contract created: 0xDd71a1BF041dcdb68AD70A6e0766996557759525
+2026-11-06T12:43:48.962305Z  INFO node::user:     Gas used: 3513355
+2026-11-06T12:43:48.962310Z  INFO node::user:
+2026-11-06T12:43:48.962320Z  INFO node::user:     Block Number: 12076632
+2026-11-06T12:43:48.962324Z  INFO node::user:     Block Hash: 0xbb355b13507b4b5ced2d669d436b6cf761cd16afd6e7769fce6b6961c47bd791
+2026-11-06T12:43:48.962332Z  INFO node::user:     Block Time: "Fri, 6 Nov 2026 12:41:25 +0000"
+
+2026-11-06T12:43:49.226114Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:49.227649Z  INFO node::user: eth_sendUnsignedTransaction
+2026-11-06T12:43:49.227665Z  INFO node::user: eth_accounts
+2026-11-06T12:43:49.228792Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:49.731139Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:50.247584Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:50.523249Z  INFO node::user:
+2026-11-06T12:43:50.523281Z  INFO node::user:     Transaction: 0x06b6bbb7fa5588ca73142f55159488c94ea69ed45fc5cbe66bfad2959ebe64b7
+2026-11-06T12:43:50.523289Z  INFO node::user:     Contract created: 0x97946eFDC076af3069C624dB65859Ba775aADbB4
+2026-11-06T12:43:50.523296Z  INFO node::user:     Gas used: 4205201
+2026-11-06T12:43:50.523301Z  INFO node::user:
+2026-11-06T12:43:50.523308Z  INFO node::user:     Block Number: 12076633
+2026-11-06T12:43:50.523313Z  INFO node::user:     Block Hash: 0xad313fbbbf7d6a6cfce9f27c7ccada9da02cf8a3ea7cf86ec46879588ecb02b6
+2026-11-06T12:43:50.523320Z  INFO node::user:     Block Time: "Fri, 6 Nov 2026 12:41:27 +0000"
+
+2026-11-06T12:43:50.743119Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:50.745092Z  INFO node::user: eth_sendUnsignedTransaction
+2026-11-06T12:43:50.745121Z  INFO node::user: eth_accounts
+2026-11-06T12:43:50.746299Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:51.339552Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:51.853310Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:52.347167Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:52.846295Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:52.924263Z  INFO node::user:
+2026-11-06T12:43:52.924297Z  INFO node::user:     Transaction: 0x7e77fb6efe1171a6d804ebcde72eff4057c41241858c70004e48c35a92ae50f3
+2026-11-06T12:43:52.924306Z  INFO node::user:     Gas used: 475541
+2026-11-06T12:43:52.924311Z  INFO node::user:
+2026-11-06T12:43:52.924320Z  INFO node::user:     Block Number: 12076634
+2026-11-06T12:43:52.924325Z  INFO node::user:     Block Hash: 0x0a0a940cf07398e63c7b709b19765a51c30bdcd7af412646406cae766566b19f
+2026-11-06T12:43:52.924332Z  INFO node::user:     Block Time: "Fri, 6 Nov 2026 12:41:28 +0000"
+
+2026-11-06T12:43:53.386478Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:53.388256Z  INFO node::user: eth_sendUnsignedTransaction
+2026-11-06T12:43:53.388278Z  INFO node::user: eth_accounts
+2026-11-06T12:43:53.389292Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:54.001203Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:54.510870Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:55.018161Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:55.439150Z  INFO node::user:
+2026-11-06T12:43:55.439179Z  INFO node::user:     Transaction: 0x7bb7847e5c2913a036896f5d5460604013cadf7249da43d54c3314c42f4f5d4f
+2026-11-06T12:43:55.439187Z  INFO node::user:     Gas used: 475529
+2026-11-06T12:43:55.439193Z  INFO node::user:
+2026-11-06T12:43:55.439200Z  INFO node::user:     Block Number: 12076635
+2026-11-06T12:43:55.439205Z  INFO node::user:     Block Hash: 0x324ad07ef6221553da8d026dead60994841093693ae68a2dea835499a1d42293
+2026-11-06T12:43:55.439211Z  INFO node::user:     Block Time: "Fri, 6 Nov 2026 12:41:31 +0000"
+
+2026-11-06T12:43:55.514110Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:55.515839Z  INFO node::user: eth_sendUnsignedTransaction
+2026-11-06T12:43:55.515861Z  INFO node::user: eth_accounts
+2026-11-06T12:43:55.516851Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:56.049916Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:56.613136Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:57.099626Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:57.381784Z  INFO node::user:
+2026-11-06T12:43:57.381817Z  INFO node::user:     Transaction: 0x736e0e09e303537e1a447fbbbf9426fdf53fea15f4226de4d3f73786b180aa97
+2026-11-06T12:43:57.381825Z  INFO node::user:     Gas used: 475529
+2026-11-06T12:43:57.381830Z  INFO node::user:
+2026-11-06T12:43:57.381853Z  INFO node::user:     Block Number: 12076636
+2026-11-06T12:43:57.381860Z  INFO node::user:     Block Hash: 0xbe9dd675faf63a60f49a98e2f9e30397e495c8a65160ce475e4e7ff07d033c27
+2026-11-06T12:43:57.381867Z  INFO node::user:     Block Time: "Fri, 6 Nov 2026 12:41:33 +0000"
+
+2026-11-06T12:43:57.598836Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:57.600109Z  INFO node::user: eth_sendUnsignedTransaction
+2026-11-06T12:43:57.600127Z  INFO node::user: eth_accounts
+2026-11-06T12:43:57.600975Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:58.099380Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:58.603860Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:59.094241Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:59.418174Z  INFO node::user:
+2026-11-06T12:43:59.418204Z  INFO node::user:     Transaction: 0x8295bc728a1cb85c276810b7c637740af89fe8d26442d28832907ceb0d973584
+2026-11-06T12:43:59.418209Z  INFO node::user:     Gas used: 475529
+2026-11-06T12:43:59.418213Z  INFO node::user:
+2026-11-06T12:43:59.418218Z  INFO node::user:     Block Number: 12076637
+2026-11-06T12:43:59.418221Z  INFO node::user:     Block Hash: 0xcf008942609d50b2b70dc30f2d346da2854dd263af3c306863094724580c1179
+2026-11-06T12:43:59.418225Z  INFO node::user:     Block Time: "Fri, 6 Nov 2026 12:41:35 +0000"
+
+2026-11-06T12:43:59.589606Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:43:59.592027Z  INFO node::user: eth_sendUnsignedTransaction
+2026-11-06T12:43:59.592046Z  INFO node::user: eth_accounts
+2026-11-06T12:43:59.592864Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:00.149041Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:00.636262Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:00.975626Z  INFO node::user:
+2026-11-06T12:44:00.975656Z  INFO node::user:     Transaction: 0x3486bcac92e7a57d444019aac33e4be4bc661271b2bb69d0d0ece432757ee55a
+2026-11-06T12:44:00.975665Z  INFO node::user:     Contract created: 0x7cbe10AA965Edc8414ad0a4C68192f8ef117f21D
+2026-11-06T12:44:00.975674Z  INFO node::user:     Gas used: 6845683
+2026-11-06T12:44:00.975679Z  INFO node::user:
+2026-11-06T12:44:00.975686Z  INFO node::user:     Block Number: 12076638
+2026-11-06T12:44:00.975691Z  INFO node::user:     Block Hash: 0xd677449f22cd6b025799dff4c4f05b6903efbbefc20f5d1cde3735b454f0bcfc
+2026-11-06T12:44:00.975697Z  INFO node::user:     Block Time: "Fri, 6 Nov 2026 12:41:37 +0000"
+
+2026-11-06T12:44:01.177435Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:01.179246Z  INFO node::user: eth_sendUnsignedTransaction
+2026-11-06T12:44:01.179264Z  INFO node::user: eth_accounts
+2026-11-06T12:44:01.180026Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:01.683727Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:02.177445Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:02.500774Z  INFO node::user:
+2026-11-06T12:44:02.500789Z  INFO node::user:     Transaction: 0xf544e94115d78a04f405799ae1a4791492a47b56e24053fb582a1592ad072187
+2026-11-06T12:44:02.500792Z  INFO node::user:     Contract created: 0x2A9aD8D9406d768ebBF19Eb45Ae023E5664EE02f
+2026-11-06T12:44:02.500795Z  INFO node::user:     Gas used: 4174567
+2026-11-06T12:44:02.500798Z  INFO node::user:
+2026-11-06T12:44:02.500802Z  INFO node::user:     Block Number: 12076639
+2026-11-06T12:44:02.500804Z  INFO node::user:     Block Hash: 0xebcf52a2740d29ac6e80c276a268088d93127f6daec3e8b2a64392602c977795
+2026-11-06T12:44:02.500807Z  INFO node::user:     Block Time: "Fri, 6 Nov 2026 12:41:39 +0000"
+
+2026-11-06T12:44:02.699534Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:02.701114Z  INFO node::user: eth_sendUnsignedTransaction
+2026-11-06T12:44:02.701140Z  INFO node::user: eth_accounts
+2026-11-06T12:44:02.702130Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:03.201633Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:03.694848Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:03.707719Z  INFO node::user:
+2026-11-06T12:44:03.707734Z  INFO node::user:     Transaction: 0xde4d848ecee2d20279465def1fbc30966cf503454483073257c60a842464dc8e
+2026-11-06T12:44:03.707741Z  INFO node::user:     Gas used: 347887
+2026-11-06T12:44:03.707746Z  INFO node::user:
+2026-11-06T12:44:03.707752Z  INFO node::user:     Block Number: 12076640
+2026-11-06T12:44:03.707757Z  INFO node::user:     Block Hash: 0x3533cff1d10fa97f5aa3d0646b34f137dbaa0f5860e54d3e5e6320b743d86d24
+2026-11-06T12:44:03.707763Z  INFO node::user:     Block Time: "Fri, 6 Nov 2026 12:41:40 +0000"
+
+2026-11-06T12:44:04.202343Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:04.203897Z  INFO node::user: eth_sendUnsignedTransaction
+2026-11-06T12:44:04.203917Z  INFO node::user: eth_accounts
+2026-11-06T12:44:04.204831Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:04.727729Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:05.160005Z  INFO node::user:
+2026-11-06T12:44:05.160041Z  INFO node::user:     Transaction: 0xe218009fc407671fd68e27ab138d03b3ce951af2d16675a1f1e855345f1521b3
+2026-11-06T12:44:05.160050Z  INFO node::user:     Gas used: 347887
+2026-11-06T12:44:05.160056Z  INFO node::user:
+2026-11-06T12:44:05.160064Z  INFO node::user:     Block Number: 12076641
+2026-11-06T12:44:05.160069Z  INFO node::user:     Block Hash: 0x4dc33750d48263d105337f1d8e14ac3d2b219259131e340310eed3235bc60ceb
+2026-11-06T12:44:05.160078Z  INFO node::user:     Block Time: "Fri, 6 Nov 2026 12:41:42 +0000"
+
+2026-11-06T12:44:05.231862Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:05.232641Z  INFO node::user: eth_sendUnsignedTransaction
+2026-11-06T12:44:05.232654Z  INFO node::user: eth_accounts
+2026-11-06T12:44:05.233224Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:05.778603Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:06.173434Z  INFO node::user:
+2026-11-06T12:44:06.173468Z  INFO node::user:     Transaction: 0xfeeb1e98cac4f689ae26a3d2b08d192144dd1a0ef931246157fd54fcf59c3bba
+2026-11-06T12:44:06.173476Z  INFO node::user:     Gas used: 347887
+2026-11-06T12:44:06.173482Z  INFO node::user:
+2026-11-06T12:44:06.173490Z  INFO node::user:     Block Number: 12076642
+2026-11-06T12:44:06.173497Z  INFO node::user:     Block Hash: 0x86c864871f3c03bfb695c7272df91e30056e03ee6f833f38d1ad1637becc3cd7
+2026-11-06T12:44:06.173503Z  INFO node::user:     Block Time: "Fri, 6 Nov 2026 12:41:43 +0000"
+
+2026-11-06T12:44:06.267668Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:06.269151Z  INFO node::user: eth_sendUnsignedTransaction
+2026-11-06T12:44:06.269174Z  INFO node::user: eth_accounts
+2026-11-06T12:44:06.270146Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:06.778436Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:07.175949Z  INFO node::user:
+2026-11-06T12:44:07.175982Z  INFO node::user:     Transaction: 0x6a92bad8b72b0f111bd39567da0aa59b0343326e5fccd3c56bd0338a3ae2128f
+2026-11-06T12:44:07.175990Z  INFO node::user:     Gas used: 347887
+2026-11-06T12:44:07.175996Z  INFO node::user:
+2026-11-06T12:44:07.176020Z  INFO node::user:     Block Number: 12076643
+2026-11-06T12:44:07.176026Z  INFO node::user:     Block Hash: 0xac543ed1da055415f9c8b2646c6dcb4481047597365fc93201755c0399f94330
+2026-11-06T12:44:07.176033Z  INFO node::user:     Block Time: "Fri, 6 Nov 2026 12:41:44 +0000"
+
+2026-11-06T12:44:07.280765Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:07.282265Z  INFO node::user: eth_sendUnsignedTransaction
+2026-11-06T12:44:07.282294Z  INFO node::user: eth_accounts
+2026-11-06T12:44:07.283559Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:07.826727Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:08.336597Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:08.834938Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:08.953330Z  INFO node::user:
+2026-11-06T12:44:08.953368Z  INFO node::user:     Transaction: 0x9519723a7c7026a831f4f0ef3efdf37b61da23b537e7527899b424b1f9f706f5
+2026-11-06T12:44:08.953378Z  INFO node::user:     Gas used: 133840
+2026-11-06T12:44:08.953384Z  INFO node::user:
+2026-11-06T12:44:08.953393Z  INFO node::user:     Block Number: 12076644
+2026-11-06T12:44:08.953398Z  INFO node::user:     Block Hash: 0x8043361d908c66d7638eefc784465b5b175e5a552269eb50894216632c31d3b0
+2026-11-06T12:44:08.953405Z  INFO node::user:     Block Time: "Fri, 6 Nov 2026 12:41:45 +0000"
+
+2026-11-06T12:44:09.336796Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:09.338242Z  INFO node::user: eth_sendUnsignedTransaction
+2026-11-06T12:44:09.338260Z  INFO node::user: eth_accounts
+2026-11-06T12:44:09.339080Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:09.849470Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:10.285915Z  INFO node::user:
+2026-11-06T12:44:10.286020Z  INFO node::user:     Transaction: 0xc07fdf44b1cd574ca9f43c23dc34f1c2f59e7a68aed2a313c8033339c76ab50c
+2026-11-06T12:44:10.286035Z  INFO node::user:     Gas used: 244706
+2026-11-06T12:44:10.286043Z  INFO node::user:
+2026-11-06T12:44:10.286051Z  INFO node::user:     Block Number: 12076645
+2026-11-06T12:44:10.286056Z  INFO node::user:     Block Hash: 0x1c45f36651030da2feaa2b1a6c714be71d07bfe99bab577e410dcad1c5c45124
+2026-11-06T12:44:10.286063Z  INFO node::user:     Block Time: "Fri, 6 Nov 2026 12:41:47 +0000"
+
+2026-11-06T12:44:10.340744Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:10.342369Z  INFO node::user: eth_sendUnsignedTransaction
+2026-11-06T12:44:10.342391Z  INFO node::user: eth_accounts
+2026-11-06T12:44:10.343121Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:10.842610Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:11.319399Z  INFO node::user:
+2026-11-06T12:44:11.319433Z  INFO node::user:     Transaction: 0x65e80d1bcbf9fc42b97005bbb72e1c485f17d84a9f8d33dad0ff7d161895eb1f
+2026-11-06T12:44:11.319503Z  INFO node::user:     Gas used: 128189
+2026-11-06T12:44:11.319519Z  INFO node::user:
+2026-11-06T12:44:11.319531Z  INFO node::user:     Block Number: 12076646
+2026-11-06T12:44:11.319536Z  INFO node::user:     Block Hash: 0xd8dfc28c0ca82da5e49b2779ca94fa2c368b41f7d41e90f76a46dd91a7cf0bf1
+2026-11-06T12:44:11.319543Z  INFO node::user:     Block Time: "Fri, 6 Nov 2026 12:41:48 +0000"
+
+2026-11-06T12:44:11.342139Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:11.343796Z  INFO node::user: eth_sendUnsignedTransaction
+2026-11-06T12:44:11.343815Z  INFO node::user: eth_accounts
+2026-11-06T12:44:11.344654Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:11.848512Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:12.336070Z  INFO node::user:
+2026-11-06T12:44:12.336102Z  INFO node::user:     Transaction: 0xb3117cc46fb44a5e708d1d136b1a0d4e121ecb13b3f7bbfdd20e94e6344a3827
+2026-11-06T12:44:12.336111Z  INFO node::user:     Gas used: 128189
+2026-11-06T12:44:12.336117Z  INFO node::user:
+2026-11-06T12:44:12.336124Z  INFO node::user:     Block Number: 12076647
+2026-11-06T12:44:12.336128Z  INFO node::user:     Block Hash: 0xa8152c8aea4469b8ab23f3cc586700bfa1bafe736d371e3b67f124eb3fb2d3d1
+2026-11-06T12:44:12.336135Z  INFO node::user:     Block Time: "Fri, 6 Nov 2026 12:41:49 +0000"
+
+2026-11-06T12:44:12.343942Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:12.345385Z  INFO node::user: eth_sendUnsignedTransaction
+2026-11-06T12:44:12.345403Z  INFO node::user: eth_accounts
+2026-11-06T12:44:12.346306Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:12.949190Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:13.440541Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:13.976289Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:14.487091Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:14.978755Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:15.488296Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:15.994649Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:16.490230Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:16.984342Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:17.498947Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:17.966475Z  INFO node::user:
+2026-11-06T12:44:17.966510Z  INFO node::user:     Transaction: 0xcc09e187e470bae1ac08800ff700f61125c489b1701e02d4820449948132e50c
+2026-11-06T12:44:17.966518Z  INFO node::user:     Gas used: 994075
+2026-11-06T12:44:17.966524Z  INFO node::user:
+2026-11-06T12:44:17.966532Z  INFO node::user:     Block Number: 12076648
+2026-11-06T12:44:17.966537Z  INFO node::user:     Block Hash: 0x0b4b71e3aaa22c2dd61120d70d8f4ea8c7da846857d47489a2c4edf38df75447
+2026-11-06T12:44:17.966545Z  INFO node::user:     Block Time: "Fri, 6 Nov 2026 12:41:50 +0000"
+
+2026-11-06T12:44:18.008196Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:18.010717Z  INFO node::user: eth_sendUnsignedTransaction
+2026-11-06T12:44:18.010740Z  INFO node::user: eth_accounts
+2026-11-06T12:44:18.011459Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:18.503722Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:19.039110Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:19.603601Z  INFO node::user:
+2026-11-06T12:44:19.603628Z  INFO node::user:     Transaction: 0xb5b63d5faebfe53a2d3bd44846b2161ccf3f77d22d4a04dbb53d7a8a728ca29c
+2026-11-06T12:44:19.603635Z  INFO node::user:     Gas used: 133046
+2026-11-06T12:44:19.603641Z  INFO node::user:
+2026-11-06T12:44:19.603648Z  INFO node::user:     Block Number: 12076649
+2026-11-06T12:44:19.603654Z  INFO node::user:     Block Hash: 0x1b96cffa7bfe80082e883f5eea6561bc61682e65256d756372439ac02d027a52
+2026-11-06T12:44:19.603660Z  INFO node::user:     Block Time: "Fri, 6 Nov 2026 12:41:56 +0000"
+
+2026-11-06T12:44:19.807103Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:19.808572Z  INFO node::user: eth_sendUnsignedTransaction
+2026-11-06T12:44:19.808591Z  INFO node::user: eth_accounts
+2026-11-06T12:44:19.809367Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:20.317733Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:20.679136Z  INFO node::user:
+2026-11-06T12:44:20.679170Z  INFO node::user:     Transaction: 0x3077fbc59a2b72a3ada6d5f97bf42e93139ff3899168546af6b87031cdac4aaa
+2026-11-06T12:44:20.679178Z  INFO node::user:     Gas used: 244706
+2026-11-06T12:44:20.679184Z  INFO node::user:
+2026-11-06T12:44:20.679192Z  INFO node::user:     Block Number: 12076650
+2026-11-06T12:44:20.679197Z  INFO node::user:     Block Hash: 0xcac66e05a0e85a4f51582bb8be89c411905aac022d8ab0c062e431efb12a91a9
+2026-11-06T12:44:20.679204Z  INFO node::user:     Block Time: "Fri, 6 Nov 2026 12:41:57 +0000"
+
+2026-11-06T12:44:20.827867Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:20.829488Z  INFO node::user: eth_sendUnsignedTransaction
+2026-11-06T12:44:20.829505Z  INFO node::user: eth_accounts
+2026-11-06T12:44:20.830714Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:21.445200Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:21.843054Z  INFO node::user:
+2026-11-06T12:44:21.843089Z  INFO node::user:     Transaction: 0xb532f05c0b4169aaf5eec45c01bd7b6a73a4b736c2054dd6e1adb403f84999a0
+2026-11-06T12:44:21.843097Z  INFO node::user:     Gas used: 20269
+2026-11-06T12:44:21.843103Z  INFO node::user:
+2026-11-06T12:44:21.843110Z  INFO node::user:     Block Number: 12076651
+2026-11-06T12:44:21.843117Z  INFO node::user:     Block Hash: 0x231203b2b6ce9b8a37ffb4562aad1cf5f88bd1f7d3cfbd6e5623b4a7a9b5d5a5
+2026-11-06T12:44:21.843124Z  INFO node::user:     Block Time: "Fri, 6 Nov 2026 12:41:58 +0000"
+
+2026-11-06T12:44:21.964510Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:21.965839Z  INFO node::user: eth_sendUnsignedTransaction
+2026-11-06T12:44:21.965860Z  INFO node::user: eth_accounts
+2026-11-06T12:44:21.966587Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:22.467822Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:22.879394Z  INFO node::user:
+2026-11-06T12:44:22.879428Z  INFO node::user:     Transaction: 0x32ad37acaf6520e6025225d789e1aea04c0f332668dd292c0431125bfbec15b8
+2026-11-06T12:44:22.879438Z  INFO node::user:     Gas used: 128189
+2026-11-06T12:44:22.879443Z  INFO node::user:
+2026-11-06T12:44:22.879451Z  INFO node::user:     Block Number: 12076652
+2026-11-06T12:44:22.879459Z  INFO node::user:     Block Hash: 0x832b9758944726676a768ef57cd7fd6660887a5ef448e553026ec3a8acfd2b32
+2026-11-06T12:44:22.879465Z  INFO node::user:     Block Time: "Fri, 6 Nov 2026 12:41:59 +0000"
+
+2026-11-06T12:44:22.974154Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:22.975314Z  INFO node::user: eth_sendUnsignedTransaction
+2026-11-06T12:44:22.975332Z  INFO node::user: eth_accounts
+2026-11-06T12:44:22.976032Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:23.490750Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:23.992730Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:24.490408Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:25.031899Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:25.543317Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:26.188467Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:26.695086Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:27.198532Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:27.692920Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:28.308247Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:28.386797Z  INFO node::user:
+2026-11-06T12:44:28.386833Z  INFO node::user:     Transaction: 0x90b7e53af774394c967b724e3b69c3946f2a3ccce5234ae519ad92a2d9b67e34
+2026-11-06T12:44:28.386842Z  INFO node::user:     Gas used: 896131
+2026-11-06T12:44:28.386848Z  INFO node::user:
+2026-11-06T12:44:28.386856Z  INFO node::user:     Block Number: 12076653
+2026-11-06T12:44:28.386861Z  INFO node::user:     Block Hash: 0xdbdc7598a9605a5d4ecd519372d4ba158368899afca11aab8d667256bca72812
+2026-11-06T12:44:28.386869Z  INFO node::user:     Block Time: "Fri, 6 Nov 2026 12:42:00 +0000"
+
+2026-11-06T12:44:28.825559Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:28.827589Z  INFO node::user: eth_sendUnsignedTransaction
+2026-11-06T12:44:28.827607Z  INFO node::user: eth_accounts
+2026-11-06T12:44:28.828300Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:29.416242Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:29.913426Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:30.128556Z  INFO node::user:
+2026-11-06T12:44:30.128592Z  INFO node::user:     Transaction: 0x04081e86001c6df89102687cd8a71ff6f2f86418dd9142891a2dc6bc570c62c1
+2026-11-06T12:44:30.128601Z  INFO node::user:     Gas used: 133067
+2026-11-06T12:44:30.128607Z  INFO node::user:
+2026-11-06T12:44:30.128614Z  INFO node::user:     Block Number: 12076654
+2026-11-06T12:44:30.128619Z  INFO node::user:     Block Hash: 0x14eaf4a02c837c719ce15fb8bb3b02c38105107014c028fbad5ceb9c5385b644
+2026-11-06T12:44:30.128626Z  INFO node::user:     Block Time: "Fri, 6 Nov 2026 12:42:06 +0000"
+
+2026-11-06T12:44:30.457273Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:30.458629Z  INFO node::user: eth_sendUnsignedTransaction
+2026-11-06T12:44:30.458650Z  INFO node::user: eth_accounts
+2026-11-06T12:44:30.459430Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:31.071263Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:31.567116Z  INFO node::user:
+2026-11-06T12:44:31.567150Z  INFO node::user:     Transaction: 0x5edfd320eb3d9cd47220fbe4e054aef47ca7d08fb1bce0fe041309ed76737e0b
+2026-11-06T12:44:31.567158Z  INFO node::user:     Gas used: 244706
+2026-11-06T12:44:31.567164Z  INFO node::user:
+2026-11-06T12:44:31.567172Z  INFO node::user:     Block Number: 12076655
+2026-11-06T12:44:31.567176Z  INFO node::user:     Block Hash: 0x0e6155552fcdc39e57094bfcb50d653412da2ab7a8b3d6c12dfce96bc857b02a
+2026-11-06T12:44:31.567185Z  INFO node::user:     Block Time: "Fri, 6 Nov 2026 12:42:08 +0000"
+
+2026-11-06T12:44:31.582042Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:31.583434Z  INFO node::user: eth_sendUnsignedTransaction
+2026-11-06T12:44:31.583455Z  INFO node::user: eth_accounts
+2026-11-06T12:44:31.584290Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:32.095935Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:32.504562Z  INFO node::user:
+2026-11-06T12:44:32.504582Z  INFO node::user:     Transaction: 0x22d05f797d38b1ab89badcb595fa8152cc7593f64de9e74777a5cf490ad5a6d2
+2026-11-06T12:44:32.504586Z  INFO node::user:     Gas used: 20269
+2026-11-06T12:44:32.504589Z  INFO node::user:
+2026-11-06T12:44:32.504594Z  INFO node::user:     Block Number: 12076656
+2026-11-06T12:44:32.504597Z  INFO node::user:     Block Hash: 0x537cb41e75ed279f2030a2fbc81413aa84aa2be498849daabc24a896499bc79d
+2026-11-06T12:44:32.504601Z  INFO node::user:     Block Time: "Fri, 6 Nov 2026 12:42:09 +0000"
+
+2026-11-06T12:44:32.598898Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:32.600291Z  INFO node::user: eth_sendUnsignedTransaction
+2026-11-06T12:44:32.600311Z  INFO node::user: eth_accounts
+2026-11-06T12:44:32.601109Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:33.119522Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:33.627120Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:33.639993Z  INFO node::user:
+2026-11-06T12:44:33.640014Z  INFO node::user:     Transaction: 0xa42345bbcfe396f6478cbe3638b538e61f878e1e85a281abcd1de2aace4a295c
+2026-11-06T12:44:33.640022Z  INFO node::user:     Gas used: 128189
+2026-11-06T12:44:33.640027Z  INFO node::user:
+2026-11-06T12:44:33.640064Z  INFO node::user:     Block Number: 12076657
+2026-11-06T12:44:33.640071Z  INFO node::user:     Block Hash: 0x48bd9b848ea5b53a362a1090d0a4abbe0be1339cdb2a78db44e180a81c19b91c
+2026-11-06T12:44:33.640077Z  INFO node::user:     Block Time: "Fri, 6 Nov 2026 12:42:10 +0000"
+
+2026-11-06T12:44:34.142990Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:34.144285Z  INFO node::user: eth_sendUnsignedTransaction
+2026-11-06T12:44:34.144300Z  INFO node::user: eth_accounts
+2026-11-06T12:44:34.144834Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:34.656210Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:35.157231Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:35.679850Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:36.190919Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:36.698859Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:37.188367Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:37.700074Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:38.239277Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:38.751442Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:39.256149Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:39.573256Z  INFO node::user:
+2026-11-06T12:44:39.573282Z  INFO node::user:     Transaction: 0xd4e3d4da51d5d9a0d51a6ab9b7e147e40f7702bf5bf7b589600759aaaa4365f3
+2026-11-06T12:44:39.573290Z  INFO node::user:     Gas used: 896167
+2026-11-06T12:44:39.573296Z  INFO node::user:
+2026-11-06T12:44:39.573304Z  INFO node::user:     Block Number: 12076658
+2026-11-06T12:44:39.573309Z  INFO node::user:     Block Hash: 0x9c14101206a1bda1e15eb0d187a1adad5764cc73cb690df7e1ac930c9396f0f3
+2026-11-06T12:44:39.573315Z  INFO node::user:     Block Time: "Fri, 6 Nov 2026 12:42:12 +0000"
+
+2026-11-06T12:44:39.775278Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:39.777442Z  INFO node::user: eth_sendUnsignedTransaction
+2026-11-06T12:44:39.777460Z  INFO node::user: eth_accounts
+2026-11-06T12:44:39.778245Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:40.388974Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:40.884846Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:41.390641Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:41.395861Z  INFO node::user:
+2026-11-06T12:44:41.395876Z  INFO node::user:     Transaction: 0x7f721440efd7f9e049a16860872aeab65dd70eee98d7f366c161a828f09e2674
+2026-11-06T12:44:41.395882Z  INFO node::user:     Contract created: 0x6871Eb32a280498c8668139f812f41c8389f5999
+2026-11-06T12:44:41.395889Z  INFO node::user:     Gas used: 43513011
+2026-11-06T12:44:41.395893Z  INFO node::user:
+2026-11-06T12:44:41.395900Z  INFO node::user:     Block Number: 12076659
+2026-11-06T12:44:41.395903Z  INFO node::user:     Block Hash: 0xe193b13b3cf24f26a8c794533b5e60c41a99817b280e5dbd19eb362f726e9d8e
+2026-11-06T12:44:41.395909Z  INFO node::user:     Block Time: "Fri, 6 Nov 2026 12:42:17 +0000"
+
+2026-11-06T12:44:41.894666Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:41.896140Z  INFO node::user: eth_sendUnsignedTransaction
+2026-11-06T12:44:41.896162Z  INFO node::user: eth_accounts
+2026-11-06T12:44:41.897157Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:42.436637Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:42.847078Z  INFO node::user:
+2026-11-06T12:44:42.847110Z  INFO node::user:     Transaction: 0x797010d71a9ecf48af78e893959d360b8d505f1503d659b99a9d3e0e325c94a5
+2026-11-06T12:44:42.847118Z  INFO node::user:     Gas used: 127853
+2026-11-06T12:44:42.847123Z  INFO node::user:
+2026-11-06T12:44:42.847131Z  INFO node::user:     Block Number: 12076660
+2026-11-06T12:44:42.847138Z  INFO node::user:     Block Hash: 0xbf12c98e6f159e6c369c21f93271ad73178fddd5ab28f020250bae8e22f6bdd7
+2026-11-06T12:44:42.847145Z  INFO node::user:     Block Time: "Fri, 6 Nov 2026 12:42:19 +0000"
+
+2026-11-06T12:44:42.937196Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:42.938118Z  INFO node::user: eth_sendUnsignedTransaction
+2026-11-06T12:44:42.938135Z  INFO node::user: eth_accounts
+2026-11-06T12:44:42.938897Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:43.462858Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:43.966319Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:44.489811Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:44.990779Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:45.496160Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:46.022137Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:46.517679Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:47.020087Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:47.557072Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:48.056294Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:48.582714Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:49.078350Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:49.575103Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:50.082900Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:50.327262Z  INFO node::user:
+2026-11-06T12:44:50.327291Z  INFO node::user:     Transaction: 0x6621880aa0407562751f074eb2de9d7529364c4d14b067a50a9d7ab6a0410012
+2026-11-06T12:44:50.327296Z  INFO node::user:     Gas used: 34290367
+2026-11-06T12:44:50.327301Z  INFO node::user:
+2026-11-06T12:44:50.327307Z  INFO node::user:     Block Number: 12076661
+2026-11-06T12:44:50.327310Z  INFO node::user:     Block Hash: 0x89337ead1a4766c4f455c5f69772c673aa1bbe4154ecd78f660dbd6270fc813d
+2026-11-06T12:44:50.327318Z  INFO node::user:     Block Time: "Fri, 6 Nov 2026 12:42:20 +0000"
+
+2026-11-06T12:44:50.588614Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:50.591529Z  INFO node::user: eth_sendUnsignedTransaction
+2026-11-06T12:44:50.591550Z  INFO node::user: eth_accounts
+2026-11-06T12:44:50.592416Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:51.142547Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:51.656396Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:52.126129Z  INFO node::user:
+2026-11-06T12:44:52.126167Z  INFO node::user:     Transaction: 0x738dffdde60815f30d2a0b4c55a6b5ee5d9f2af27e3e19e6e355f33e5225159d
+2026-11-06T12:44:52.126177Z  INFO node::user:     Gas used: 9042138
+2026-11-06T12:44:52.126183Z  INFO node::user:
+2026-11-06T12:44:52.126192Z  INFO node::user:     Block Number: 12076662
+2026-11-06T12:44:52.126200Z  INFO node::user:     Block Hash: 0x322a85a4329e6e6a5244bb9829be551db0c0986e810d908c62b271b2d0053355
+2026-11-06T12:44:52.126207Z  INFO node::user:     Block Time: "Fri, 6 Nov 2026 12:42:28 +0000"
+
+2026-11-06T12:44:52.158585Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:52.159992Z  INFO node::user: eth_sendUnsignedTransaction
+2026-11-06T12:44:52.160018Z  INFO node::user: eth_accounts
+2026-11-06T12:44:52.160883Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:52.670075Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:53.092064Z  INFO node::user:
+2026-11-06T12:44:53.092090Z  INFO node::user:     Transaction: 0xb6f915b9ca3ac614ec21b91bf6ee342386fecb8f6b4f99f6e56289a1e5513469
+2026-11-06T12:44:53.092097Z  INFO node::user:     Gas used: 688454
+2026-11-06T12:44:53.092103Z  INFO node::user:
+2026-11-06T12:44:53.092110Z  INFO node::user:     Block Number: 12076663
+2026-11-06T12:44:53.092116Z  INFO node::user:     Block Hash: 0x473dcdadcad317ec9042a824990a80dba82ac8165573f425f2e9eeae82c15340
+2026-11-06T12:44:53.092122Z  INFO node::user:     Block Time: "Fri, 6 Nov 2026 12:42:30 +0000"
+
+2026-11-06T12:44:53.296184Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:53.297499Z  INFO node::user: eth_sendUnsignedTransaction
+2026-11-06T12:44:53.297519Z  INFO node::user: eth_accounts
+2026-11-06T12:44:53.299057Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:53.804093Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:54.292129Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:54.625586Z  INFO node::user:
+2026-11-06T12:44:54.625606Z  INFO node::user:     Transaction: 0x61f4019cdc74e2a63f717ca575f8f7ceb810f85f6919ae6069743652b461d7fe
+2026-11-06T12:44:54.625612Z  INFO node::user:     Gas used: 141188
+2026-11-06T12:44:54.625617Z  INFO node::user:
+2026-11-06T12:44:54.625623Z  INFO node::user:     Block Number: 12076664
+2026-11-06T12:44:54.625628Z  INFO node::user:     Block Hash: 0x324b8a7f5d334071f5e083a4dac0b9279416ef1bead38276ab9abd9cd290dd6e
+2026-11-06T12:44:54.625634Z  INFO node::user:     Block Time: "Fri, 6 Nov 2026 12:42:31 +0000"
+
+2026-11-06T12:44:54.829001Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:54.830320Z  INFO node::user: eth_sendUnsignedTransaction
+2026-11-06T12:44:54.830339Z  INFO node::user: eth_accounts
+2026-11-06T12:44:54.831053Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:55.338915Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:55.822904Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:55.834237Z  INFO node::user:
+2026-11-06T12:44:55.834258Z  INFO node::user:     Transaction: 0x741d44c5b39cb9f23dbdb6b1d99145c20e0ed45d449a622b94e93e51e7e3b252
+2026-11-06T12:44:55.834266Z  INFO node::user:     Gas used: 352854
+2026-11-06T12:44:55.834271Z  INFO node::user:
+2026-11-06T12:44:55.834278Z  INFO node::user:     Block Number: 12076665
+2026-11-06T12:44:55.834283Z  INFO node::user:     Block Hash: 0x46687f738d30f63c0306dcb92da7d977d919794b456114eaeb4c8f160ef22b4c
+2026-11-06T12:44:55.834289Z  INFO node::user:     Block Time: "Fri, 6 Nov 2026 12:42:32 +0000"
+
+2026-11-06T12:44:56.363179Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:56.364427Z  INFO node::user: eth_sendUnsignedTransaction
+2026-11-06T12:44:56.364445Z  INFO node::user: eth_accounts
+2026-11-06T12:44:56.365855Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:56.843365Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:57.290120Z  INFO node::user:
+2026-11-06T12:44:57.290153Z  INFO node::user:     Transaction: 0xd1e4fcc2cb3190c26c2d5c6b49816c38d3352f1520a443ec54ce1b1b228f03e6
+2026-11-06T12:44:57.290161Z  INFO node::user:     Gas used: 128277
+2026-11-06T12:44:57.290167Z  INFO node::user:
+2026-11-06T12:44:57.290174Z  INFO node::user:     Block Number: 12076666
+2026-11-06T12:44:57.290178Z  INFO node::user:     Block Hash: 0x7865916db91a4ec06ba85bb13243cf161c551b139970861ffdbfd981dd3828a4
+2026-11-06T12:44:57.290187Z  INFO node::user:     Block Time: "Fri, 6 Nov 2026 12:42:34 +0000"
+
+2026-11-06T12:44:57.347184Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:57.348756Z  INFO node::user: eth_sendUnsignedTransaction
+2026-11-06T12:44:57.348784Z  INFO node::user: eth_accounts
+2026-11-06T12:44:57.349917Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:57.898082Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:58.279536Z  INFO node::user:
+2026-11-06T12:44:58.279565Z  INFO node::user:     Transaction: 0xc75a57a42cac1be552f0e59440e2bdd33db395dce1566f89494d2a0a3404f043
+2026-11-06T12:44:58.279574Z  INFO node::user:     Gas used: 20269
+2026-11-06T12:44:58.279579Z  INFO node::user:
+2026-11-06T12:44:58.279586Z  INFO node::user:     Block Number: 12076667
+2026-11-06T12:44:58.279590Z  INFO node::user:     Block Hash: 0x043810da48567df1da1f1e810e40bac583365ac31e241a8d29e10d1f21228ee9
+2026-11-06T12:44:58.279596Z  INFO node::user:     Block Time: "Fri, 6 Nov 2026 12:42:35 +0000"
+
+2026-11-06T12:44:58.386135Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:58.387414Z  INFO node::user: eth_sendUnsignedTransaction
+2026-11-06T12:44:58.387431Z  INFO node::user: eth_accounts
+2026-11-06T12:44:58.388085Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:58.924603Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:59.436781Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:44:59.932312Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:45:00.433982Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:45:00.972017Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:45:01.473087Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:45:01.997988Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:45:02.493100Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:45:02.997553Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:45:03.517844Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:45:04.043874Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:45:04.250408Z  INFO node::user:
+2026-11-06T12:45:04.250445Z  INFO node::user:     Transaction: 0x0257a2a60422c0756fa6d0366c311c7a8fedb3a94d4bccde062381a4d783d844
+2026-11-06T12:45:04.250454Z  INFO node::user:     Gas used: 897229
+2026-11-06T12:45:04.250459Z  INFO node::user:
+2026-11-06T12:45:04.250469Z  INFO node::user:     Block Number: 12076668
+2026-11-06T12:45:04.250474Z  INFO node::user:     Block Hash: 0xbef5d335cb9879679d8f2687661bd6261a84a2883f4a0e1487685a4353cfcd81
+2026-11-06T12:45:04.250481Z  INFO node::user:     Block Time: "Fri, 6 Nov 2026 12:42:36 +0000"
+
+2026-11-06T12:45:04.557121Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:45:04.558915Z  INFO node::user: eth_sendUnsignedTransaction
+2026-11-06T12:45:04.558930Z  INFO node::user: eth_accounts
+2026-11-06T12:45:04.559601Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:45:05.173079Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:45:05.676380Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:45:05.999130Z  INFO node::user:
+2026-11-06T12:45:05.999159Z  INFO node::user:     Transaction: 0x2b455622fee37e58c924a6b325b1a47c7225b1e15a0fa978b2f372ea43b85ec8
+2026-11-06T12:45:05.999167Z  INFO node::user:     Contract created: 0xF9abD7a62311bA1BF1259ea3b1ADeF4d3456372F
+2026-11-06T12:45:05.999174Z  INFO node::user:     Gas used: 4168376
+2026-11-06T12:45:05.999179Z  INFO node::user:
+2026-11-06T12:45:05.999186Z  INFO node::user:     Block Number: 12076669
+2026-11-06T12:45:05.999191Z  INFO node::user:     Block Hash: 0x91fd7f0ffd6e3f4c975a41fead6230ea8926dbbf65b23cd16b7c34a25a845839
+2026-11-06T12:45:05.999197Z  INFO node::user:     Block Time: "Fri, 6 Nov 2026 12:42:42 +0000"
+
+2026-11-06T12:45:06.200406Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:45:06.201628Z  INFO node::user: eth_sendUnsignedTransaction
+2026-11-06T12:45:06.201646Z  INFO node::user: eth_accounts
+2026-11-06T12:45:06.202544Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:45:06.696347Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:45:07.190100Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:45:07.214364Z  INFO node::user:
+2026-11-06T12:45:07.214382Z  INFO node::user:     Transaction: 0x50c618fd4846076bbc30c4620314bcc0a7c3db5e37122b5441a9285e399f7923
+2026-11-06T12:45:07.214391Z  INFO node::user:     Gas used: 132323
+2026-11-06T12:45:07.214397Z  INFO node::user:
+2026-11-06T12:45:07.214410Z  INFO node::user:     Block Number: 12076670
+2026-11-06T12:45:07.214414Z  INFO node::user:     Block Hash: 0x54529262c627e0b26007993f2729d00d1b3aa49ab1df30eada39e4341dc05763
+2026-11-06T12:45:07.214421Z  INFO node::user:     Block Time: "Fri, 6 Nov 2026 12:42:44 +0000"
+
+2026-11-06T12:45:07.729794Z  INFO node::user: eth_getTransactionReceipt
+2026-11-06T12:45:07.731121Z  INFO node::user: eth_getTransactionCount
+2026-11-06T12:45:07.731732Z  INFO node::user: eth_getBalance

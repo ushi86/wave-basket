@@ -2,7 +2,7 @@
 
 Updated 6 November 2026. Source baseline: commit 1213bf0. Product spec: [Basket Product Experience and Submission](../specs/WAVE_PRODUCT_EXPERIENCE_SPEC.md). The owner confirmed the testing boundaries and all added negative/regression conditions. The original [product brief](provenance/PRODUCT_EXPERIENCE_BRIEF.txt) is preserved as planning provenance.
 
-**Current phase: Phase 1 complete. Stopped for owner review before Phase 2.** Phase 0 changed no product code and sent no transactions. The owner explicitly authorized Phase 1 next, revoked setup/implement-spec, and designated the spec and this document as the source of truth and tracker. Stop after Phase 1.
+**Current phase: Phase 1 approved. Separate Sepolia recovery is prepared; Phase 2 remains paused pending verified deployment and explicit continue.** Phase 0 changed no product code and sent no transactions. The owner explicitly authorized Phase 1 next, revoked setup/implement-spec, and designated the spec and this document as the source of truth and tracker. Stop after Phase 1.
 
 ## Resolved prerequisites and remaining live-integration gates
 
@@ -77,3 +77,19 @@ Portfolio now has position cards, actual-value summary, wallet/empty states and 
 **Screenshots:** [landing desktop](screenshots/phase1/landing-desktop.jpg), [complete basket view](screenshots/phase1/baskets-desktop.jpg), [portfolio desktop](screenshots/phase1/portfolio-desktop.jpg), [landing mobile](screenshots/phase1/landing-mobile.jpg). These capture the actual updated local app, not a design mockup. The app remains available at http://127.0.0.1:5173.
 
 **Stop:** Phase 1 is the end of this authorized increment. No Phase 2 work, Sepolia redeployment, broadcast, wallet unlock or fund movement occurred.
+
+## Sepolia recovery prepared — separate owner operation
+
+The owner approved Phase 1 and explicitly kept Phase 2 paused. A [reviewed nonce-1 recovery runbook](readiness/SEPOLIA_RECOVERY_RUNBOOK.md) now explains the original out-of-gas cause, exact changes, fresh two-provider checks, all 12 predicted creations and the exact owner-only command. No production contract or Solidity deployment routine changed.
+
+Native Foundry was updated to signed/attested **1.9.0** after 1.8.3's strict admission path rejected a large Amsterdam transaction using the older total-gas cap. Its official source fixes the distinction between execution gas and state gas. All failed diagnostic attempts are retained. A short timeout, upstream forwarding at the fork boundary and the fixed 50M eth_simulateV1 budget are disclosed rather than called successful validation. The existing local UI demo was restored without changing its head hash or account state.
+
+The [accepted dry run](readiness/sepolia-recovery-2026-11-06T12-41-55-341Z/capture.json) completed all 42 planned operations from nonce 1, estimating **175,152,507 gas**, with conservative quoted deployment budget **0.000000007356405294 Sepolia ETH** at the observed fee settings. All 42 exact unsigned operations also passed the mandatory strict transaction path on a disposable localhost fork with the real forked balance and nonce, zero generated accounts and no signing keys. That fork is local only, was stopped afterward, and is not evidence of live Sepolia execution. The real account remains subject to fresh nonce-1 checks before signing.
+
+The original failed transaction, public broadcast file/hash and logs are unchanged. Its sensitive cache is preserved privately without inspection/publication. Recovery broadcast/cache directories are separate; no old helper, resume or start-fresh path is used. Generated manifests remain quarantined predictions until every real receipt is verified on PublicNode and Tenderly.
+
+Local compatibility checks show a single factory/registry/adapter and receiver support multiple baskets, settlement exposure and a newly registered standard asset. They do not implement or prove reserve-backed Yield. New basket instances are normal factory creations, not replacements of an existing core instance. The hook remains single-pool; CRE's three-entry coverage must be respected or adjusted offchain later. No Phase 2 implementation or plan is started here.
+
+Validation: 35 workspace tests, 33 Foundry tests (all 27 existing tests retained, one new compatibility test and five inherited integration reruns), five runner guard tests, typecheck, web/CRE builds, code sizes and secret scan pass. Largest new production runtime remains WaveVaultDeployer at 24,186 bytes. The initial no-op compatibility probe failed on a sub-unit swap quote; the corrected nontrivial bounded-proposal probe passes without changing any production check. Evidence validation still fails for missing live proof; production audit retains the known SDK/Zod high advisory (two affected package entries).
+
+**Next owner step:** review and run the exact guarded command in the runbook, enter the keystore password locally, and send the output. The agent has not signed or sent a Sepolia transaction. If the command fails, stop for receipt review. After output, verify every real receipt/state on both providers, update EVIDENCE/live addresses, then provide the Phase 2 plan and wait for continue.

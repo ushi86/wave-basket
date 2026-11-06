@@ -1,0 +1,38 @@
+
+.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx
+
+ ╔═╗ ╔═╗ ╦ ╦ ╔╗╔ ╔╦╗ ╦═╗ ╦ ╦         Portable and modular toolkit
+ ╠╣  ║ ║ ║ ║ ║║║  ║║ ╠╦╝ ╚╦╝    for Ethereum Application Development
+ ╚   ╚═╝ ╚═╝ ╝╚╝ ═╩╝ ╩╚═  ╩                 written in Rust.
+
+.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx
+
+Repo       : https://github.com/foundry-rs/foundry
+Book       : https://book.getfoundry.sh/
+Chat       : https://t.me/foundry_rs/
+Support    : https://t.me/foundry_support/
+Contribute : https://github.com/foundry-rs/foundry/blob/HEAD/CONTRIBUTING.md
+
+.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx
+
+foundryup: installing foundry (version v1.9.0, tag v1.9.0)
+foundryup: checking if forge, cast, anvil, chisel, solar for v1.9.0 version are already installed
+foundryup: found attestation for v1.9.0 version, downloading attestation artifact, checking...
+foundryup: Sigstore bundle verified ✓
+foundryup: version v1.9.0 is not installed, downloading binaries
+foundryup: downloading foundry_v1.9.0_darwin_arm64.tar.gz
+foundryup: foundry_v1.9.0_darwin_arm64.tar.gz verified ✓
+foundryup: verifying downloaded binaries against the attestation file
+foundryup: forge verified ✓
+foundryup: cast verified ✓
+foundryup: anvil verified ✓
+foundryup: chisel verified ✓
+foundryup: solar verified ✓
+foundryup: downloading manpages
+foundryup: use - forge 1.9.0 (6056c5845d 2026-11-02T20:16:54.701302000Z) (from forge 1.8.3 (cae51ad458 2026-09-15T10:34:23.361078000Z))
+foundryup: use - cast 1.9.0 (6056c5845d 2026-11-02T20:16:54.701302000Z) (from cast 1.8.3 (cae51ad458 2026-09-15T10:34:23.361078000Z))
+foundryup: use - anvil 1.9.0 (6056c5845d 2026-11-02T20:16:54.701302000Z) (from anvil 1.8.3 (cae51ad458 2026-09-15T10:34:23.361078000Z))
+foundryup: use - chisel 1.9.0 (6056c5845d 2026-11-02T20:16:54.701302000Z) (from chisel 1.8.3 (cae51ad458 2026-09-15T10:34:23.361078000Z))
+foundryup: use - solar 0.3.0-dev+commit.a2b44354 (from solar 0.2.0-dev (a4a2926 2026-09-15T10:32:29.907462000Z))
+foundryup: done!
+foundryup: foundryup is up to date.

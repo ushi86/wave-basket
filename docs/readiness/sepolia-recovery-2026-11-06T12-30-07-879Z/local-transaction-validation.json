@@ -1,0 +1,35 @@
+{
+  "scope": "LOCAL FORK unsigned eth_simulateV1 only, not live Sepolia or a broadcast; no balance, nonce, code or block overrides",
+  "binary": "/Users/hano/.foundry/bin/anvil",
+  "args": [
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "49858",
+    "--accounts",
+    "0",
+    "--chain-id",
+    "11155111",
+    "--fork-url",
+    "https://ethereum-sepolia-rpc.publicnode.com",
+    "--fork-block-number",
+    "12076571",
+    "--hardfork",
+    "amsterdam",
+    "--enable-tx-gas-limit",
+    "--gas-limit",
+    "199021365",
+    "--silent"
+  ],
+  "all42Successful": false,
+  "corroboratedForkBlock": {
+    "number": "0xb8461b",
+    "hash": "0x670dc30a4a20e41010cb3a9ccf714a6a269543dd1186a371553ea7f1b15bd747"
+  },
+  "emptyLocalBlock": {
+    "number": "0xb8461c",
+    "hash": "0x39cf235fdd9465ae69f83931fe231c923aa96b361bb39a8961f521635cbc477c",
+    "transactions": 0
+  },
+  "error": "{\"code\":-38013,\"message\":\"err: intrinsic gas too high -- CallGasCostMoreThanGasLimit\"}"
+}

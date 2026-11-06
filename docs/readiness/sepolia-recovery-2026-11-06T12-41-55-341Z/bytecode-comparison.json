@@ -1,0 +1,47 @@
+{
+  "scope": "Original failed-plan creation bytecodes versus reviewed 1.9.0 plan; constructor args excluded and only embedded Solidity IPFS hashes normalized",
+  "rows": [
+    {
+      "name": "DemoToken",
+      "oldCreationHash": "2d11d38e0a84474c876f713d3a7d2227f6ce002ba9bd1108354e7a6af23d95e4",
+      "newCreationHash": "61d476eca7c1e1b923c957552a4bc661240a1f49bfac8ae45ca0a0c1bbc34873",
+      "onlyCompilerMetadataHashesDiffer": true
+    },
+    {
+      "name": "AssetRegistry",
+      "oldCreationHash": "804afe01a87ec26072f18141ef9e8bb45ad4843efc8f305b3c70bf1d3672374e",
+      "newCreationHash": "84e386644d3c6c1a74c48a63a97acc265711848ddee11b232db7a5f63295281d",
+      "onlyCompilerMetadataHashesDiffer": true
+    },
+    {
+      "name": "WaveSwapAdapter",
+      "oldCreationHash": "2bbf72d0008db9db2af648f7b2a3413c163fda2a56f3fb2d6775c48622baa727",
+      "newCreationHash": "13f25a79dbbd28baf3b534018afdeacf093f64c325dd507df8aa4c997521bfcc",
+      "onlyCompilerMetadataHashesDiffer": true
+    },
+    {
+      "name": "DemoLiquiditySeeder",
+      "oldCreationHash": "473bcad78c6ee3fc1ae9f3b0ea4c752295c151d21098877ce51231c72e36b089",
+      "newCreationHash": "08215992e18030189baa4f93c8995ce6bcd4acc911132b976d6a236d94e24626",
+      "onlyCompilerMetadataHashesDiffer": true
+    },
+    {
+      "name": "WaveFactory",
+      "oldCreationHash": "fe725559950bb22f3cde9c764e53f17ac9fdfdb00c81802a9f7a44087c85c3b6",
+      "newCreationHash": "8b213b89c6f9fdb2a2f9a0f8e547c6f4f06dfa0db6e38b85ffe301a8970e50e8",
+      "onlyCompilerMetadataHashesDiffer": true
+    },
+    {
+      "name": "NavGuardHook",
+      "oldCreationHash": "992f6473b35c0cca1870fbe58d969d9e0642b2cc1c7e3f28380bf88774e31b82",
+      "newCreationHash": "ea7ba984df8a2e9df22dd151cd656efc7eb15db16019703e06043640467da5bf",
+      "onlyCompilerMetadataHashesDiffer": true
+    },
+    {
+      "name": "WaveRebalanceReceiver",
+      "oldCreationHash": "1c2dfca575fdef168cb21fc951962bd2667a1c36ff676a5df36288484bababa7",
+      "newCreationHash": "839454874a9ab3b7dd5f6c9d43f9886acaac2063b0a0297ef0bcb0d14df75544",
+      "onlyCompilerMetadataHashesDiffer": true
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "scope": "Nonce-1 recovery preparation; predictions are not deployed addresses",
+  "mode": "dry-run",
+  "startedAt": "2026-11-06T12:16:09.576Z",
+  "version": "forge Version: 1.8.3\nCommit SHA: cae51ad458f6abb64852b7709eb784352429825d\nBuild Timestamp: 2026-09-15T10:34:23.361078000Z (1789468463)\nBuild Profile: dist",
+  "originalBroadcastSha256": "33d6b702ab91e1a77047346fc17a04973e04f25d52aefbadf226efa0bea36b49",
+  "preservedFailedPlan": "/Users/hano/Projects/Wave Eth/contracts/broadcast/recovery-preserved/2026-11-06T12-16-09-572Z",
+  "sources": {
+    "contracts/foundry.toml": "44e5b1d985e352285ec9a65d28ef8e3c9c1f0623ed3f620f4864fd69abe05833",
+    "contracts/script/DeployDemo.s.sol": "3184614065e6466747bb84730f3135274bb9d9fa49ac3944c8d8cc98fd3dfae7",
+    "contracts/src/AssetRegistry.sol": "b31c6d9917145fd411462999b84eecc637186e20456256787f10b88b4c14eb75",
+    "contracts/src/IWaveSwapAdapter.sol": "321b3679834bad9108183e23f586d6aea59b22bdeb5ee988c523755041233b92",
+    "contracts/src/NavGuardHook.sol": "7e8df09698ad5dfb236be101b3faf36330d2d8208d0b31bcc53fc1f8d525f4b6",
+    "contracts/src/WaveFactory.sol": "8a01e5c2dad3fdbc66feabd6568f954a4fb061f65d438e8601b594f366fcf24f",
+    "contracts/src/WaveRebalanceReceiver.sol": "1529f8aa44b11f061bf32f3f76193999340d9df88df0bb04a8db07e35df66f7b",
+    "contracts/src/WaveSwapAdapter.sol": "2e2a3c3f7cbf0b7520519ef5f98049e2adf476ab45560ad0673d89fe7ae03901",
+    "contracts/src/WaveVault.sol": "6d65e1a400c1f78660d85618dcb91162eec93c476709fc6bec26006859f7da84",
+    "contracts/src/mocks/DemoAssets.sol": "4c9ce655f833cef24c250f9972e767aa97f9a5a866d2ccd6c0694f33541a6452",
+    "contracts/src/mocks/DemoLiquiditySeeder.sol": "41ffb6ae4200288c27c803ff7f52175b2e190a5e302fde877084223e1c69aa52",
+    "package-lock.json": "b981003d63bbb9b84c2518fd623a831ae411681fe38414440fd4f551d759d34b"
+  },
+  "broadcastRoot": "/Users/hano/Projects/Wave Eth/contracts/broadcast/recovery-nonce1/2026-11-06T12-16-09-572Z",
+  "cacheRoot": "/Users/hano/Projects/Wave Eth/contracts/cache/recovery-nonce1/2026-11-06T12-16-09-572Z",
+  "accepted": false,
+  "tenant": {
+    "chainName": "ethereum-testnet-sepolia",
+    "chainSelector": "16015286601757825753",
+    "mockAddress": "0x15fC6ae953E024d975e77382eEeC56A9101f9F88",
+    "address": "0xF8344CFd5c43616a4366C34E3EEE75af79a74482"
+  },
+  "feeCapWei": "38",
+  "priorityFeeWei": "2",
+  "args": [
+    "script",
+    "script/DeployDemo.s.sol:DeployDemo",
+    "--rpc-url",
+    "https://ethereum-sepolia-rpc.publicnode.com",
+    "--sender",
+    "0xDe25D83481c0c2A711397c44eE3317dD826952D5",
+    "--sender-nonce",
+    "1",
+    "--fork-block-number",
+    "12076502",
+    "--hardfork",
+    "amsterdam",
+    "--enable-tx-gas-limit",
+    "--gas-estimate-multiplier",
+    "130",
+    "--with-gas-price",
+    "38",
+    "--priority-gas-price",
+    "2",
+    "--slow"
+  ],
+  "blockHash": "0xa8eddfc407f8032c9532014af08c571948b98c902466cf1c985fef4489eba849",
+  "dryRun": {
+    "code": 1,
+    "signal": null
+  },
+  "error": "Full Amsterdam dry run failed. Stop before signing.",
+  "finishedAt": "2026-11-06T12:17:22.127Z",
+  "originalBroadcastUnchanged": true
+}

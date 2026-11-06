@@ -1,0 +1,57 @@
+No files changed, compilation skipped
+
+Ran 1 test for test/Lifecycle.t.sol:LifecycleTest
+[PASS] testCreateDepositAndExitInKind() (gas: 5224601)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 8.94ms (1.77ms CPU time)
+
+Ran 6 tests for test/Guards.t.sol:GuardsTest
+[PASS] testDonationCannotStealNextDepositorsPrincipal() (gas: 5348870)
+[PASS] testExcessTurnoverAndPendingManualProposalBlockReports() (gas: 5790709)
+[PASS] testFactoryRejectsDuplicateAssetsAndConcentratedWeights() (gas: 531860)
+[PASS] testImpossibleMinimumDoesNotMoveAssets() (gas: 5251321)
+[PASS] testNegativeAndFutureOracleAnswersFailClosed() (gas: 4945098)
+[PASS] testReceiverRejectsStaleFutureAndUnknownVaultReports() (gas: 5999630)
+Suite result: ok. 6 passed; 0 failed; 0 skipped; finished in 10.66ms (6.88ms CPU time)
+
+Ran 9 tests for test/Accounting.t.sol:AccountingTest
+[PASS] testFuzzHealthyExitChoiceDoesNotReduceCreatorFee(uint96) (runs: 64, μ: 5340780, ~: 5345188)
+[PASS] testFuzzInKindExitNeverExceedsProRata(uint96) (runs: 64, μ: 5012744, ~: 5013215)
+[PASS] testHealthyInKindCannotAvoidCreatorPerformanceFees() (gas: 5341907)
+[PASS] testProfitFeeDilutesCreatorOnceAndNotBelowHighWaterMark() (gas: 5035422)
+[PASS] testRedeemPaysNetMinimumAndTreasuryFee() (gas: 5286339)
+[PASS] testRedemptionPreviewIncludesUncrystallizedFeeDilution() (gas: 5155389)
+[PASS] testStaleInKindPaysFullNetProRataWithoutAReserve() (gas: 5036755)
+[PASS] testStalePricesBlockDepositButNeverInKindExit() (gas: 4977707)
+[PASS] testTimelockDoesNotExecuteEarlyAndCanBeCancelled() (gas: 4967535)
+Suite result: ok. 9 passed; 0 failed; 0 skipped; finished in 71.84ms (118.75ms CPU time)
+
+Ran 6 tests for test/RecoveryCompatibility.t.sol:RecoveryCompatibilityTest
+[PASS] testAdapterRejectsUnsolicitedCallbackAndImpossibleMinimum() (gas: 145168)
+[PASS] testAdditionalBasketsAndExternalAssetReuseCoreAndReceiver() (gas: 18418619)
+[PASS] testDepositAndBothExitsThroughRealV4PoolManager() (gas: 5893995)
+[PASS] testFuzzValidRebalanceHonorsNavAndTurnoverLimits(uint16) (runs: 64, μ: 5779403, ~: 5779439)
+[PASS] testLaterRebalanceSwapFailureRollsBackEarlierTrades() (gas: 5605444)
+[PASS] testLaunchSeedLeavesPoolsUsableForNextDepositor() (gas: 5361150)
+Suite result: ok. 6 passed; 0 failed; 0 skipped; finished in 100.96ms (100.37ms CPU time)
+
+Ran 2 tests for test/Hook.t.sol:HookTest
+[PASS] testFeeEncouragesConvergenceOutsideBand() (gas: 1202236)
+[PASS] testOnlyOneApprovedPoolKeyCanUseHook() (gas: 6219365)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 101.06ms (2.14ms CPU time)
+
+Ran 5 tests for test/V4Integration.t.sol:V4IntegrationTest
+[PASS] testAdapterRejectsUnsolicitedCallbackAndImpossibleMinimum() (gas: 145146)
+[PASS] testDepositAndBothExitsThroughRealV4PoolManager() (gas: 5893973)
+[PASS] testFuzzValidRebalanceHonorsNavAndTurnoverLimits(uint16) (runs: 64, μ: 5779354, ~: 5779390)
+[PASS] testLaterRebalanceSwapFailureRollsBackEarlierTrades() (gas: 5605422)
+[PASS] testLaunchSeedLeavesPoolsUsableForNextDepositor() (gas: 5361151)
+Suite result: ok. 5 passed; 0 failed; 0 skipped; finished in 101.07ms (97.56ms CPU time)
+
+Ran 4 tests for test/Receiver.t.sol:ReceiverTest
+[PASS] testHistoryRetainsLast32AndExpiresEarlierRecords() (gas: 20699603)
+[PASS] testNonceMustBeNextAndFailedExecutionRemainsRetryable() (gas: 6085899)
+[PASS] testOnlyFreshAuthenticatedReportCanRebalanceOnce() (gas: 6001688)
+[PASS] testSimulationModeAcceptsEmptyMetadataButKeepsVaultBounds() (gas: 5993728)
+Suite result: ok. 4 passed; 0 failed; 0 skipped; finished in 101.09ms (16.83ms CPU time)
+
+Ran 7 test suites in 106.66ms (495.61ms CPU time): 33 tests passed, 0 failed, 0 skipped (33 total tests)
