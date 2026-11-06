@@ -1,0 +1,148 @@
+{
+  "observedAt": "2026-11-06T11:20:14.287Z",
+  "scope": "read-only fixed-block recovery preflight, no broadcast",
+  "results": [
+    {
+      "endpoint": "https://ethereum-sepolia-rpc.publicnode.com",
+      "chainId": 11155111,
+      "block": "12076223",
+      "blockHash": "0x59902ceb855537d8c1bb8f377f9502be544e52201ef013a7cf2a216820c4ddf3",
+      "timestamp": "1793963928",
+      "latestNonce": 1,
+      "pendingNonce": 1,
+      "forkNonce": 1,
+      "balanceETH": "0.199039970082895696",
+      "forwarderCodeHash": "0x0a1b63dd9c5ee32c042a5124c96d3d344eea29c0daca30e54d2d91c09cc940b7",
+      "forwarderCodeBytes": 4579,
+      "poolManagerCodeHash": "0x09930125a49f5b95caf8052991cc14d1240dca8b43f42b899115b86867e4bce1",
+      "poolManagerCodeBytes": 24009,
+      "priorReceipt": {
+        "status": "reverted",
+        "block": "12076125",
+        "hash": "0x9e81d1cc51adb2a1309667a63f47f25c1efed688bd6ff260fa95d64c9ead7bff",
+        "canonical": true
+      },
+      "feeds": [
+        {
+          "symbol": "USDC",
+          "address": "0xA2F78ab2355fe2f984D808B5CeE7FD0A93D5270E",
+          "decimals": 8,
+          "roundId": "18446744073709553247",
+          "answer": "99978205",
+          "updatedAt": "1793956272",
+          "answeredInRound": "18446744073709553247",
+          "ageSeconds": "7656",
+          "maxAge": "108000",
+          "healthy": true
+        },
+        {
+          "symbol": "ETH",
+          "address": "0x694AA1769357215DE4FAC081bf1f309aDC325306",
+          "decimals": 8,
+          "roundId": "18446744073709588989",
+          "answer": "223323559155",
+          "updatedAt": "1793963448",
+          "answeredInRound": "18446744073709588989",
+          "ageSeconds": "480",
+          "maxAge": "4500",
+          "healthy": true
+        },
+        {
+          "symbol": "BTC",
+          "address": "0x1b44F3514812d835EB1BDB0acB33d3fA3351Ee43",
+          "decimals": 8,
+          "roundId": "18446744073709586706",
+          "answer": "7607462000000",
+          "updatedAt": "1793962248",
+          "answeredInRound": "18446744073709586706",
+          "ageSeconds": "1680",
+          "maxAge": "4500",
+          "healthy": true
+        },
+        {
+          "symbol": "LINK",
+          "address": "0xc59E3633BAAC79493d908e63626716e204A45EdF",
+          "decimals": 8,
+          "roundId": "18446744073709594405",
+          "answer": "1080689856",
+          "updatedAt": "1793960544",
+          "answeredInRound": "18446744073709594405",
+          "ageSeconds": "3384",
+          "maxAge": "4500",
+          "healthy": true
+        }
+      ]
+    },
+    {
+      "endpoint": "https://sepolia.gateway.tenderly.co",
+      "chainId": 11155111,
+      "block": "12076223",
+      "blockHash": "0x59902ceb855537d8c1bb8f377f9502be544e52201ef013a7cf2a216820c4ddf3",
+      "timestamp": "1793963928",
+      "latestNonce": 1,
+      "pendingNonce": 1,
+      "forkNonce": 1,
+      "balanceETH": "0.199039970082895696",
+      "forwarderCodeHash": "0x0a1b63dd9c5ee32c042a5124c96d3d344eea29c0daca30e54d2d91c09cc940b7",
+      "forwarderCodeBytes": 4579,
+      "poolManagerCodeHash": "0x09930125a49f5b95caf8052991cc14d1240dca8b43f42b899115b86867e4bce1",
+      "poolManagerCodeBytes": 24009,
+      "priorReceipt": {
+        "status": "reverted",
+        "block": "12076125",
+        "hash": "0x9e81d1cc51adb2a1309667a63f47f25c1efed688bd6ff260fa95d64c9ead7bff",
+        "canonical": true
+      },
+      "feeds": [
+        {
+          "symbol": "USDC",
+          "address": "0xA2F78ab2355fe2f984D808B5CeE7FD0A93D5270E",
+          "decimals": 8,
+          "roundId": "18446744073709553247",
+          "answer": "99978205",
+          "updatedAt": "1793956272",
+          "answeredInRound": "18446744073709553247",
+          "ageSeconds": "7656",
+          "maxAge": "108000",
+          "healthy": true
+        },
+        {
+          "symbol": "ETH",
+          "address": "0x694AA1769357215DE4FAC081bf1f309aDC325306",
+          "decimals": 8,
+          "roundId": "18446744073709588989",
+          "answer": "223323559155",
+          "updatedAt": "1793963448",
+          "answeredInRound": "18446744073709588989",
+          "ageSeconds": "480",
+          "maxAge": "4500",
+          "healthy": true
+        },
+        {
+          "symbol": "BTC",
+          "address": "0x1b44F3514812d835EB1BDB0acB33d3fA3351Ee43",
+          "decimals": 8,
+          "roundId": "18446744073709586706",
+          "answer": "7607462000000",
+          "updatedAt": "1793962248",
+          "answeredInRound": "18446744073709586706",
+          "ageSeconds": "1680",
+          "maxAge": "4500",
+          "healthy": true
+        },
+        {
+          "symbol": "LINK",
+          "address": "0xc59E3633BAAC79493d908e63626716e204A45EdF",
+          "decimals": 8,
+          "roundId": "18446744073709594405",
+          "answer": "1080689856",
+          "updatedAt": "1793960544",
+          "answeredInRound": "18446744073709594405",
+          "ageSeconds": "3384",
+          "maxAge": "4500",
+          "healthy": true
+        }
+      ]
+    }
+  ]
+}

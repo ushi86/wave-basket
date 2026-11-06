@@ -1,0 +1,46 @@
+{
+  "scope": "AMSTERDAM RUNTIME SEPOLIA FORK DRY RUN ONLY; no broadcast, CRE or browser evidence",
+  "startedAt": "2026-11-06T11:20:14.294Z",
+  "binary": "/Users/hano/.foundry/bin/forge",
+  "args": [
+    "script",
+    "script/DeployDemo.s.sol:DeployDemo",
+    "--rpc-url",
+    "https://ethereum-sepolia-rpc.publicnode.com",
+    "--sender",
+    "0xDe25D83481c0c2A711397c44eE3317dD826952D5",
+    "--fork-block-number",
+    "12076223",
+    "--hardfork",
+    "amsterdam",
+    "--slow",
+    "--non-interactive"
+  ],
+  "blockHash": "0x59902ceb855537d8c1bb8f377f9502be544e52201ef013a7cf2a216820c4ddf3",
+  "expectedNonce": 1,
+  "compilerTarget": "cancun",
+  "beforeBytecodes": {
+    "DemoAssets.sol/DemoToken.json": "5cc79e97c28d416e45f7f14808268726a999baa10e4bb4c7105738495f7b9c04",
+    "WaveFactory.sol/WaveFactory.json": "ed9c6a401422108089c1fc803e0d2e2b7b4edb65ad2670425eacc03fd100c026",
+    "NavGuardHook.sol/NavGuardHook.json": "b747b49e33eee912d6fbae539eb19b1bcd82bd95bd8a3ca0cb97e394ab928318",
+    "WaveRebalanceReceiver.sol/WaveRebalanceReceiver.json": "2efb32179a20e80e173be25dfba47bdcad97a65c235a38b2dfca3aced2e06cdf"
+  },
+  "oldBroadcastHash": "33d6b702ab91e1a77047346fc17a04973e04f25d52aefbadf226efa0bea36b49",
+  "code": 0,
+  "signal": null,
+  "finishedAt": "2026-11-06T11:21:03.875Z",
+  "afterBytecodes": {
+    "DemoAssets.sol/DemoToken.json": "838e0a2fa896ffc29b597b1961a067d79f8b6ba759f32f701b2ee25dd8f9b899",
+    "WaveFactory.sol/WaveFactory.json": "4f301a509f0b0b98254002daf6f98c96feba9139a39478f8b9875d86f18f74b5",
+    "NavGuardHook.sol/NavGuardHook.json": "c56e7f7fc987fc3b688353fb1a140505b11374271c77dd514c1817bb62dfddb8",
+    "WaveRebalanceReceiver.sol/WaveRebalanceReceiver.json": "8a32a188129660da1425d245ce017e3e1171ac49c115656a7a5043460f8ca1d5"
+  },
+  "bytecodeUnchanged": false,
+  "failedBroadcastRecordUnchanged": true,
+  "gasLines": [
+    "Estimated total gas used for script: 175154050",
+    "Estimated amount required: 0.0000000059552377 ETH"
+  ],
+  "bytecodeOnlyMetadataHashesChanged": true,
+  "metadataComparison": "bytecode-metadata-comparison.json"
+}

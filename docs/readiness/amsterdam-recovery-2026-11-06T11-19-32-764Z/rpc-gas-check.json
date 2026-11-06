@@ -1,0 +1,31 @@
+{
+  "observedAt": "2026-11-06T11:23:10.008Z",
+  "rows": [
+    {
+      "endpoint": "https://ethereum-sepolia-rpc.publicnode.com",
+      "scope": "READ-ONLY RPC SIMULATION; not transactions or deployed contracts",
+      "block": 12076223,
+      "blockHash": "0x59902ceb855537d8c1bb8f377f9502be544e52201ef013a7cf2a216820c4ddf3",
+      "baseFeeWei": "16",
+      "observedGasPriceWei": "18",
+      "forgeFirstGasLimit": 4567330,
+      "firstRpcEstimate": 3542382,
+      "firstCreationReadOnlyCallSuccess": true,
+      "firstGasLimitCoversRpcEstimate": true,
+      "fullSimulationError": "{\"code\":-38013,\"message\":\"intrinsic gas too low\"}"
+    },
+    {
+      "endpoint": "https://sepolia.gateway.tenderly.co",
+      "scope": "READ-ONLY RPC SIMULATION; not transactions or deployed contracts",
+      "block": 12076223,
+      "blockHash": "0x59902ceb855537d8c1bb8f377f9502be544e52201ef013a7cf2a216820c4ddf3",
+      "baseFeeWei": "16",
+      "observedGasPriceWei": "18",
+      "forgeFirstGasLimit": 4567330,
+      "firstRpcEstimate": 3542382,
+      "firstCreationReadOnlyCallSuccess": true,
+      "firstGasLimitCoversRpcEstimate": true,
+      "fullSimulationError": "{\"code\":-32005,\"message\":\"rate limit exceeded\"}"
+    }
+  ]
+}

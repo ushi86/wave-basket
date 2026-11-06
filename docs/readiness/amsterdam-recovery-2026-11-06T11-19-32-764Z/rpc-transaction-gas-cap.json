@@ -1,0 +1,19 @@
+{
+  "observedAt": "2026-11-06T11:26:13.613Z",
+  "results": [
+    {
+      "endpoint": "https://ethereum-sepolia-rpc.publicnode.com",
+      "error": {
+        "code": -32601,
+        "message": "the method eth_txGasLimitCap does not exist/is not available"
+      }
+    },
+    {
+      "endpoint": "https://sepolia.gateway.tenderly.co",
+      "error": {
+        "code": -32601,
+        "message": "method not found"
+      }
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "observedAt": "2026-11-06T11:25:53.441Z",
+  "rows": [
+    {
+      "endpoint": "https://ethereum-sepolia-rpc.publicnode.com",
+      "scope": "Read-only exact deployment calldata/nonces/gas, spread over synthetic blocks; no state or block overrides, no broadcast",
+      "error": {
+        "code": -38013,
+        "message": "intrinsic gas too low"
+      },
+      "all42Successful": false
+    },
+    {
+      "endpoint": "https://sepolia.gateway.tenderly.co",
+      "scope": "Read-only exact deployment calldata/nonces/gas, spread over synthetic blocks; no state or block overrides, no broadcast",
+      "error": {
+        "code": -32005,
+        "message": "rate limit exceeded"
+      },
+      "all42Successful": false
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "observedAt": "2026-11-06T11:25:35.995Z",
+  "results": [
+    {
+      "endpoint": "https://ethereum-sepolia-rpc.publicnode.com",
+      "scope": "ISOLATED DIAGNOSTIC ONLY: factory constructor arguments point to existing PoolManager code for its code-existence checks. NOT actual deployment configuration or deployment evidence.",
+      "rpcEstimate": 43853674,
+      "plannedGasLimit": 56566914,
+      "isolatedCallSuccess": true,
+      "runtimeBytes": 3536
+    },
+    {
+      "endpoint": "https://sepolia.gateway.tenderly.co",
+      "scope": "ISOLATED DIAGNOSTIC ONLY: factory constructor arguments point to existing PoolManager code for its code-existence checks. NOT actual deployment configuration or deployment evidence.",
+      "rpcEstimate": 43853674,
+      "plannedGasLimit": 56566914,
+      "isolatedCallSuccess": true,
+      "runtimeBytes": 3536
+    }
+  ]
+}

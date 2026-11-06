@@ -1,0 +1,421 @@
+{
+  "endpoint": "https://ethereum-sepolia-rpc.publicnode.com",
+  "block": "0xb844bf",
+  "scope": "read-only simulation diagnostic, not transactions",
+  "results": [
+    {
+      "prefixLength": 1,
+      "error": null,
+      "blocks": [
+        {
+          "gasUsed": "0x341bb0",
+          "calls": [
+            {
+              "index": 0,
+              "status": "0x1",
+              "gasUsed": "0x359bf3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "prefixLength": 11,
+      "error": null,
+      "blocks": [
+        {
+          "gasUsed": "0x1cc37fa",
+          "calls": [
+            {
+              "index": 0,
+              "status": "0x1",
+              "gasUsed": "0x359bf3"
+            },
+            {
+              "index": 1,
+              "status": "0x1",
+              "gasUsed": "0x359bff"
+            },
+            {
+              "index": 2,
+              "status": "0x1",
+              "gasUsed": "0x359be7"
+            },
+            {
+              "index": 3,
+              "status": "0x1",
+              "gasUsed": "0x359c0b"
+            },
+            {
+              "index": 4,
+              "status": "0x1",
+              "gasUsed": "0x402a91"
+            },
+            {
+              "index": 5,
+              "status": "0x1",
+              "gasUsed": "0x74195"
+            },
+            {
+              "index": 6,
+              "status": "0x1",
+              "gasUsed": "0x74189"
+            },
+            {
+              "index": 7,
+              "status": "0x1",
+              "gasUsed": "0x74189"
+            },
+            {
+              "index": 8,
+              "status": "0x1",
+              "gasUsed": "0x74189"
+            },
+            {
+              "index": 9,
+              "status": "0x1",
+              "gasUsed": "0x6874f3"
+            },
+            {
+              "index": 10,
+              "status": "0x1",
+              "gasUsed": "0x3fb2e7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "prefixLength": 30,
+      "error": null,
+      "blocks": [
+        {
+          "gasUsed": "0x212717a",
+          "calls": [
+            {
+              "index": 0,
+              "status": "0x1",
+              "gasUsed": "0x359bf3"
+            },
+            {
+              "index": 1,
+              "status": "0x1",
+              "gasUsed": "0x359bff"
+            },
+            {
+              "index": 2,
+              "status": "0x1",
+              "gasUsed": "0x359be7"
+            },
+            {
+              "index": 3,
+              "status": "0x1",
+              "gasUsed": "0x359c0b"
+            },
+            {
+              "index": 4,
+              "status": "0x1",
+              "gasUsed": "0x402a91"
+            },
+            {
+              "index": 5,
+              "status": "0x1",
+              "gasUsed": "0x74195"
+            },
+            {
+              "index": 6,
+              "status": "0x1",
+              "gasUsed": "0x74189"
+            },
+            {
+              "index": 7,
+              "status": "0x1",
+              "gasUsed": "0x74189"
+            },
+            {
+              "index": 8,
+              "status": "0x1",
+              "gasUsed": "0x74189"
+            },
+            {
+              "index": 9,
+              "status": "0x1",
+              "gasUsed": "0x6874f3"
+            },
+            {
+              "index": 10,
+              "status": "0x1",
+              "gasUsed": "0x3fb2e7"
+            },
+            {
+              "index": 11,
+              "status": "0x1",
+              "gasUsed": "0x54eef"
+            },
+            {
+              "index": 12,
+              "status": "0x1",
+              "gasUsed": "0x54eef"
+            },
+            {
+              "index": 13,
+              "status": "0x1",
+              "gasUsed": "0x54eef"
+            },
+            {
+              "index": 14,
+              "status": "0x1",
+              "gasUsed": "0x54eef"
+            },
+            {
+              "index": 15,
+              "status": "0x1",
+              "gasUsed": "0x20b14"
+            },
+            {
+              "index": 16,
+              "status": "0x1",
+              "gasUsed": "0x3bbe2"
+            },
+            {
+              "index": 17,
+              "status": "0x1",
+              "gasUsed": "0x1f4bd"
+            },
+            {
+              "index": 18,
+              "status": "0x1",
+              "gasUsed": "0x1f4bd"
+            },
+            {
+              "index": 19,
+              "status": "0x1",
+              "gasUsed": "0xf2b1b"
+            },
+            {
+              "index": 20,
+              "status": "0x1",
+              "gasUsed": "0x207b6"
+            },
+            {
+              "index": 21,
+              "status": "0x1",
+              "gasUsed": "0x3bbe2"
+            },
+            {
+              "index": 22,
+              "status": "0x1",
+              "gasUsed": "0x4f2d"
+            },
+            {
+              "index": 23,
+              "status": "0x1",
+              "gasUsed": "0x1f4bd"
+            },
+            {
+              "index": 24,
+              "status": "0x1",
+              "gasUsed": "0xdac83"
+            },
+            {
+              "index": 25,
+              "status": "0x1",
+              "gasUsed": "0x207cb"
+            },
+            {
+              "index": 26,
+              "status": "0x1",
+              "gasUsed": "0x3bbe2"
+            },
+            {
+              "index": 27,
+              "status": "0x1",
+              "gasUsed": "0x4f2d"
+            },
+            {
+              "index": 28,
+              "status": "0x1",
+              "gasUsed": "0x1f4bd"
+            },
+            {
+              "index": 29,
+              "status": "0x1",
+              "gasUsed": "0xdaca7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "prefixLength": 31,
+      "error": null,
+      "blocks": [
+        {
+          "gasUsed": "0x212717a",
+          "calls": [
+            {
+              "index": 0,
+              "status": "0x1",
+              "gasUsed": "0x359bf3"
+            },
+            {
+              "index": 1,
+              "status": "0x1",
+              "gasUsed": "0x359bff"
+            },
+            {
+              "index": 2,
+              "status": "0x1",
+              "gasUsed": "0x359be7"
+            },
+            {
+              "index": 3,
+              "status": "0x1",
+              "gasUsed": "0x359c0b"
+            },
+            {
+              "index": 4,
+              "status": "0x1",
+              "gasUsed": "0x402a91"
+            },
+            {
+              "index": 5,
+              "status": "0x1",
+              "gasUsed": "0x74195"
+            },
+            {
+              "index": 6,
+              "status": "0x1",
+              "gasUsed": "0x74189"
+            },
+            {
+              "index": 7,
+              "status": "0x1",
+              "gasUsed": "0x74189"
+            },
+            {
+              "index": 8,
+              "status": "0x1",
+              "gasUsed": "0x74189"
+            },
+            {
+              "index": 9,
+              "status": "0x1",
+              "gasUsed": "0x6874f3"
+            },
+            {
+              "index": 10,
+              "status": "0x1",
+              "gasUsed": "0x3fb2e7"
+            },
+            {
+              "index": 11,
+              "status": "0x1",
+              "gasUsed": "0x54eef"
+            },
+            {
+              "index": 12,
+              "status": "0x1",
+              "gasUsed": "0x54eef"
+            },
+            {
+              "index": 13,
+              "status": "0x1",
+              "gasUsed": "0x54eef"
+            },
+            {
+              "index": 14,
+              "status": "0x1",
+              "gasUsed": "0x54eef"
+            },
+            {
+              "index": 15,
+              "status": "0x1",
+              "gasUsed": "0x20b14"
+            },
+            {
+              "index": 16,
+              "status": "0x1",
+              "gasUsed": "0x3bbe2"
+            },
+            {
+              "index": 17,
+              "status": "0x1",
+              "gasUsed": "0x1f4bd"
+            },
+            {
+              "index": 18,
+              "status": "0x1",
+              "gasUsed": "0x1f4bd"
+            },
+            {
+              "index": 19,
+              "status": "0x1",
+              "gasUsed": "0xf2b1b"
+            },
+            {
+              "index": 20,
+              "status": "0x1",
+              "gasUsed": "0x207b6"
+            },
+            {
+              "index": 21,
+              "status": "0x1",
+              "gasUsed": "0x3bbe2"
+            },
+            {
+              "index": 22,
+              "status": "0x1",
+              "gasUsed": "0x4f2d"
+            },
+            {
+              "index": 23,
+              "status": "0x1",
+              "gasUsed": "0x1f4bd"
+            },
+            {
+              "index": 24,
+              "status": "0x1",
+              "gasUsed": "0xdac83"
+            },
+            {
+              "index": 25,
+              "status": "0x1",
+              "gasUsed": "0x207cb"
+            },
+            {
+              "index": 26,
+              "status": "0x1",
+              "gasUsed": "0x3bbe2"
+            },
+            {
+              "index": 27,
+              "status": "0x1",
+              "gasUsed": "0x4f2d"
+            },
+            {
+              "index": 28,
+              "status": "0x1",
+              "gasUsed": "0x1f4bd"
+            },
+            {
+              "index": 29,
+              "status": "0x1",
+              "gasUsed": "0xdaca7"
+            },
+            {
+              "index": 30,
+              "status": "0x0",
+              "error": {
+                "code": 3,
+                "message": "execution reverted",
+                "data": "0x"
+              },
+              "gasUsed": "0xba3cf5"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

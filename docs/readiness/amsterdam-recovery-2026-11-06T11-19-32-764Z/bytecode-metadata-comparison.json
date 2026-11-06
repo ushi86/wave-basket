@@ -1,0 +1,61 @@
+{
+  "scope": "All unique application creation bytecodes from original public broadcast plan. Only embedded Solidity IPFS metadata hashes normalized; constructor arguments excluded.",
+  "rows": [
+    {
+      "contract": "DemoAssets.sol/DemoToken.json",
+      "creationBytes": 2952,
+      "oldHash": "5cc79e97c28d416e45f7f14808268726a999baa10e4bb4c7105738495f7b9c04",
+      "newHash": "838e0a2fa896ffc29b597b1961a067d79f8b6ba759f32f701b2ee25dd8f9b899",
+      "embeddedMetadataHashCount": 1,
+      "onlyCompilerMetadataHashesChanged": true
+    },
+    {
+      "contract": "AssetRegistry.sol/AssetRegistry.json",
+      "creationBytes": 2727,
+      "oldHash": "f7b623cab513023d4602bc3358f9d2e13d7a9ea8367c01c8b90e86f33f1de478",
+      "newHash": "9490aed19499568c1a9bf2c860adcd25b4bc62fb65d067001cb3595e7c7c76a7",
+      "embeddedMetadataHashCount": 1,
+      "onlyCompilerMetadataHashesChanged": true
+    },
+    {
+      "contract": "WaveSwapAdapter.sol/WaveSwapAdapter.json",
+      "creationBytes": 4421,
+      "oldHash": "585465927c9df841c4f38efbed818e7f70c0f3f79358531cf7b496cfbb47ef05",
+      "newHash": "f4c029fa526a176a1592969d39629d2539d46dbb1dc22f5f3ecabdc529532e08",
+      "embeddedMetadataHashCount": 1,
+      "onlyCompilerMetadataHashesChanged": true
+    },
+    {
+      "contract": "DemoLiquiditySeeder.sol/DemoLiquiditySeeder.json",
+      "creationBytes": 2767,
+      "oldHash": "66f804d41e769cac4bc1a8af6a059f152a114d0356160f58dc31cb06261b09fd",
+      "newHash": "1ba93f9ec429f87ec28c8d907c219652f4bfd10902ee53d988d1c0a0d9bcb983",
+      "embeddedMetadataHashCount": 1,
+      "onlyCompilerMetadataHashesChanged": true
+    },
+    {
+      "contract": "WaveFactory.sol/WaveFactory.json",
+      "creationBytes": 28323,
+      "oldHash": "ed9c6a401422108089c1fc803e0d2e2b7b4edb65ad2670425eacc03fd100c026",
+      "newHash": "4f301a509f0b0b98254002daf6f98c96feba9139a39478f8b9875d86f18f74b5",
+      "embeddedMetadataHashCount": 3,
+      "onlyCompilerMetadataHashesChanged": true
+    },
+    {
+      "contract": "NavGuardHook.sol/NavGuardHook.json",
+      "creationBytes": 6356,
+      "oldHash": "b747b49e33eee912d6fbae539eb19b1bcd82bd95bd8a3ca0cb97e394ab928318",
+      "newHash": "c56e7f7fc987fc3b688353fb1a140505b11374271c77dd514c1817bb62dfddb8",
+      "embeddedMetadataHashCount": 1,
+      "onlyCompilerMetadataHashesChanged": true
+    },
+    {
+      "contract": "WaveRebalanceReceiver.sol/WaveRebalanceReceiver.json",
+      "creationBytes": 3133,
+      "oldHash": "2efb32179a20e80e173be25dfba47bdcad97a65c235a38b2dfca3aced2e06cdf",
+      "newHash": "8a32a188129660da1425d245ce017e3e1171ac49c115656a7a5043460f8ca1d5",
+      "embeddedMetadataHashCount": 1,
+      "onlyCompilerMetadataHashesChanged": true
+    }
+  ]
+}
