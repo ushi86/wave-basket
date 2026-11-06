@@ -1,0 +1,217 @@
+{
+  "scope": "PRIVATE LOCAL FORK unsigned execution only; NOT Sepolia receipts/evidence. No signing keys, balance/nonce/code/block overrides or relaxed protocol limits. Signature checks alone are bypassed by the documented local unsigned method.",
+  "binary": "/Users/hano/.foundry/bin/anvil",
+  "args": [
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "50970",
+    "--accounts",
+    "0",
+    "--chain-id",
+    "11155111",
+    "--fork-url",
+    "https://ethereum-sepolia-rpc.publicnode.com",
+    "--fork-block-number",
+    "12077110",
+    "--hardfork",
+    "amsterdam",
+    "--enable-tx-gas-limit",
+    "--gas-limit",
+    "200000000",
+    "--silent"
+  ],
+  "allOperationsSuccessful": true,
+  "localCalls": [
+    {
+      "index": 0,
+      "scope": "LOCAL ONLY; not a Sepolia receipt",
+      "status": "0x1",
+      "gasUsed": "0xf2b1b",
+      "gasLimit": "0x162f0a",
+      "createdAddress": null
+    },
+    {
+      "index": 1,
+      "scope": "LOCAL ONLY; not a Sepolia receipt",
+      "status": "0x1",
+      "gasUsed": "0x20ad3",
+      "gasLimit": "0x2fca0",
+      "createdAddress": null
+    },
+    {
+      "index": 2,
+      "scope": "LOCAL ONLY; not a Sepolia receipt",
+      "status": "0x1",
+      "gasUsed": "0x3bbe2",
+      "gasLimit": "0x575fa",
+      "createdAddress": null
+    },
+    {
+      "index": 3,
+      "scope": "LOCAL ONLY; not a Sepolia receipt",
+      "status": "0x1",
+      "gasUsed": "0x4f2d",
+      "gasLimit": "0x6d5b",
+      "createdAddress": null
+    },
+    {
+      "index": 4,
+      "scope": "LOCAL ONLY; not a Sepolia receipt",
+      "status": "0x1",
+      "gasUsed": "0x1f4bd",
+      "gasLimit": "0x2b3a4",
+      "createdAddress": null
+    },
+    {
+      "index": 5,
+      "scope": "LOCAL ONLY; not a Sepolia receipt",
+      "status": "0x1",
+      "gasUsed": "0xdac83",
+      "gasLimit": "0x13ff7f",
+      "createdAddress": null
+    },
+    {
+      "index": 6,
+      "scope": "LOCAL ONLY; not a Sepolia receipt",
+      "status": "0x1",
+      "gasUsed": "0x20b60",
+      "gasLimit": "0x2d2e9",
+      "createdAddress": null
+    },
+    {
+      "index": 7,
+      "scope": "LOCAL ONLY; not a Sepolia receipt",
+      "status": "0x1",
+      "gasUsed": "0x3bbe2",
+      "gasLimit": "0x575fa",
+      "createdAddress": null
+    },
+    {
+      "index": 8,
+      "scope": "LOCAL ONLY; not a Sepolia receipt",
+      "status": "0x1",
+      "gasUsed": "0x4f2d",
+      "gasLimit": "0x6d5b",
+      "createdAddress": null
+    },
+    {
+      "index": 9,
+      "scope": "LOCAL ONLY; not a Sepolia receipt",
+      "status": "0x1",
+      "gasUsed": "0x1f4bd",
+      "gasLimit": "0x2b3a4",
+      "createdAddress": null
+    },
+    {
+      "index": 10,
+      "scope": "LOCAL ONLY; not a Sepolia receipt",
+      "status": "0x1",
+      "gasUsed": "0xdaca7",
+      "gasLimit": "0x12e346",
+      "createdAddress": null
+    },
+    {
+      "index": 11,
+      "scope": "LOCAL ONLY; not a Sepolia receipt",
+      "status": "0x1",
+      "gasUsed": "0x297f4b3",
+      "gasLimit": "0x35f2482",
+      "createdAddress": "0x6871eb32a280498c8668139f812f41c8389f5999"
+    },
+    {
+      "index": 12,
+      "scope": "LOCAL ONLY; not a Sepolia receipt",
+      "status": "0x1",
+      "gasUsed": "0x1f36d",
+      "gasLimit": "0x2b1d3",
+      "createdAddress": null
+    },
+    {
+      "index": 13,
+      "scope": "LOCAL ONLY; not a Sepolia receipt",
+      "status": "0x1",
+      "gasUsed": "0x20b3b17",
+      "gasLimit": "0x2d2b66a",
+      "createdAddress": null
+    },
+    {
+      "index": 14,
+      "scope": "LOCAL ONLY; not a Sepolia receipt",
+      "status": "0x1",
+      "gasUsed": "0x89f8da",
+      "gasLimit": "0xc9c8be",
+      "createdAddress": null
+    },
+    {
+      "index": 15,
+      "scope": "LOCAL ONLY; not a Sepolia receipt",
+      "status": "0x1",
+      "gasUsed": "0xa8146",
+      "gasLimit": "0xe828e",
+      "createdAddress": null
+    },
+    {
+      "index": 16,
+      "scope": "LOCAL ONLY; not a Sepolia receipt",
+      "status": "0x1",
+      "gasUsed": "0x22784",
+      "gasLimit": "0x2f9c7",
+      "createdAddress": null
+    },
+    {
+      "index": 17,
+      "scope": "LOCAL ONLY; not a Sepolia receipt",
+      "status": "0x1",
+      "gasUsed": "0x56256",
+      "gasLimit": "0x76fd3",
+      "createdAddress": null
+    },
+    {
+      "index": 18,
+      "scope": "LOCAL ONLY; not a Sepolia receipt",
+      "status": "0x1",
+      "gasUsed": "0x1f515",
+      "gasLimit": "0x2b41e",
+      "createdAddress": null
+    },
+    {
+      "index": 19,
+      "scope": "LOCAL ONLY; not a Sepolia receipt",
+      "status": "0x1",
+      "gasUsed": "0x4f2d",
+      "gasLimit": "0x6d5b",
+      "createdAddress": null
+    },
+    {
+      "index": 20,
+      "scope": "LOCAL ONLY; not a Sepolia receipt",
+      "status": "0x1",
+      "gasUsed": "0xdb0cd",
+      "gasLimit": "0x12e900",
+      "createdAddress": null
+    },
+    {
+      "index": 21,
+      "scope": "LOCAL ONLY; not a Sepolia receipt",
+      "status": "0x1",
+      "gasUsed": "0x3f9ab8",
+      "gasLimit": "0x52af88",
+      "createdAddress": "0xf9abd7a62311ba1bf1259ea3b1adef4d3456372f"
+    },
+    {
+      "index": 22,
+      "scope": "LOCAL ONLY; not a Sepolia receipt",
+      "status": "0x1",
+      "gasUsed": "0x204e3",
+      "gasLimit": "0x2f3f1",
+      "createdAddress": null
+    }
+  ],
+  "corroboratedForkBlock": {
+    "number": "0xb84836",
+    "hash": "0x89c72a828f020abe619bee8e43efe15bd853f5894ee122b4850719fce3935167"
+  },
+  "localFinalNonce": 43,
+  "localFinalBalanceWei": "199039968431645065"
+}

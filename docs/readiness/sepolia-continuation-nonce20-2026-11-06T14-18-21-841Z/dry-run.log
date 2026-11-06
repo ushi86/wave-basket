@@ -1,0 +1,26 @@
+2026-11-06T14:22:13.288225Z  WARN foundry_fork_db::cache: Failed to read cache file err=Os { code: 2, kind: NotFound, message: "No such file or directory" } path="/Users/hano/.foundry/cache/rpc/sepolia/12077110"
+Compiling 88 files with Solc 0.8.26
+Solc 0.8.26 finished in 6.42s
+Compiler run successful!
+Script ran successfully.
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 11155111
+
+Estimated gas price: 0.000000038 gwei
+
+Estimated total gas used for script: 131530465
+
+Estimated amount required: 0.00000000499815767 ETH
+
+==========================
+
+SIMULATION COMPLETE. To broadcast these transactions, add --broadcast and wallet configuration(s) to the previous command. See forge script --help for more.
+
+Transactions saved to: /Users/hano/Projects/Wave Eth/contracts/broadcast/continuation-nonce20/2026-11-06T14-18-21-841Z/CompleteDeployment.s.sol/11155111/dry-run/run-latest.json
+
+Sensitive values saved to: /Users/hano/Projects/Wave Eth/contracts/cache/continuation-nonce20/2026-11-06T14-18-21-841Z/CompleteDeployment.s.sol/11155111/dry-run/run-latest.json
+

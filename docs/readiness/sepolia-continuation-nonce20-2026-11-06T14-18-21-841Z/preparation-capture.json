@@ -1,0 +1,478 @@
+{
+  "scope": "Reviewed fresh nonce-20 continuation, READ-ONLY preparation, no broadcast/signing performed",
+  "startedAt": "2026-11-06T14:18:21.843Z",
+  "parent": "docs/readiness/sepolia-recovery-2026-11-06T13-47-51-397Z",
+  "inputFile": "deployments/nonce20-operations-NOT-DEPLOYED.json",
+  "inputSha256": "a425596532ccca2edbcae7b54def38ed9a451ebd6c0ed4628d735a2fa825ac42",
+  "parentBroadcastSha256": "7dc0f16e2a844911a3132dffe8530fc58b4481e9a864995f49656e9677e054b9",
+  "startingNonce": 20,
+  "operations": 23,
+  "confirmations": 3,
+  "toolVersion": "1.9.0",
+  "productionContractChanges": false,
+  "accepted": true,
+  "sources": {
+    "contracts/foundry.toml": "44e5b1d985e352285ec9a65d28ef8e3c9c1f0623ed3f620f4864fd69abe05833",
+    "contracts/script/CompleteDeployment.s.sol": "82da239774c7c9723cf7b6ccffefbf9718863fbf5bce8279beb73de6f97d3f8a",
+    "contracts/script/DeployDemo.s.sol": "3184614065e6466747bb84730f3135274bb9d9fa49ac3944c8d8cc98fd3dfae7",
+    "contracts/src/AssetRegistry.sol": "b31c6d9917145fd411462999b84eecc637186e20456256787f10b88b4c14eb75",
+    "contracts/src/IWaveSwapAdapter.sol": "321b3679834bad9108183e23f586d6aea59b22bdeb5ee988c523755041233b92",
+    "contracts/src/NavGuardHook.sol": "7e8df09698ad5dfb236be101b3faf36330d2d8208d0b31bcc53fc1f8d525f4b6",
+    "contracts/src/WaveFactory.sol": "8a01e5c2dad3fdbc66feabd6568f954a4fb061f65d438e8601b594f366fcf24f",
+    "contracts/src/WaveRebalanceReceiver.sol": "1529f8aa44b11f061bf32f3f76193999340d9df88df0bb04a8db07e35df66f7b",
+    "contracts/src/WaveSwapAdapter.sol": "2e2a3c3f7cbf0b7520519ef5f98049e2adf476ab45560ad0673d89fe7ae03901",
+    "contracts/src/WaveVault.sol": "6d65e1a400c1f78660d85618dcb91162eec93c476709fc6bec26006859f7da84",
+    "contracts/src/mocks/DemoAssets.sol": "4c9ce655f833cef24c250f9972e767aa97f9a5a866d2ccd6c0694f33541a6452",
+    "contracts/src/mocks/DemoLiquiditySeeder.sol": "41ffb6ae4200288c27c803ff7f52175b2e190a5e302fde877084223e1c69aa52",
+    "deployments/nonce20-operations-NOT-DEPLOYED.json": "a425596532ccca2edbcae7b54def38ed9a451ebd6c0ed4628d735a2fa825ac42",
+    "package-lock.json": "b981003d63bbb9b84c2518fd623a831ae411681fe38414440fd4f551d759d34b",
+    "scripts/continuation-primitives.mjs": "42dbc9073b419227ecfe637650ade75b43727070a58db3bb83845ac65f45be2e",
+    "scripts/recover-sepolia.mjs": "d06f2fb552ba274ace1e8bf09a24bf429594b8bd413175ed99e2759a9543c175",
+    "scripts/prepare-sepolia-continuation.mjs": "fd78292ea4ca482792bd024b68b9a7f16595919d6aa20ac04262b853eb4c43cb"
+  },
+  "tenant": {
+    "chainName": "ethereum-testnet-sepolia",
+    "chainSelector": "16015286601757825753",
+    "mockAddress": "0x15fC6ae953E024d975e77382eEeC56A9101f9F88"
+  },
+  "feeCapWei": "38",
+  "priorityFeeWei": "2",
+  "args": [
+    "script",
+    "script/CompleteDeployment.s.sol:CompleteDeployment",
+    "--rpc-url",
+    "https://ethereum-sepolia-rpc.publicnode.com",
+    "--sender",
+    "0xDe25D83481c0c2A711397c44eE3317dD826952D5",
+    "--sender-nonce",
+    "20",
+    "--fork-block-number",
+    "12077110",
+    "--hardfork",
+    "amsterdam",
+    "--isolate",
+    "--gas-estimate-multiplier",
+    "130",
+    "--with-gas-price",
+    "38",
+    "--priority-gas-price",
+    "2",
+    "--slow",
+    "--confirmations",
+    "3",
+    "--disable-external-identification"
+  ],
+  "broadcastRoot": "/Users/hano/Projects/Wave Eth/contracts/broadcast/continuation-nonce20/2026-11-06T14-18-21-841Z",
+  "cacheRoot": "/Users/hano/Projects/Wave Eth/contracts/cache/continuation-nonce20/2026-11-06T14-18-21-841Z",
+  "dryRun": {
+    "code": 0,
+    "signal": null
+  },
+  "planSummary": [
+    {
+      "nonce": 20,
+      "to": "0x2a9ad8d9406d768ebbf19eb45ae023e5664ee02f",
+      "name": null,
+      "function": "seed((address,address,uint24,int24,address),int256)",
+      "gasLimit": 1453834,
+      "inputHash": "e8d970574a2aa4b733e0fff76ff7e60c434a21e71de125248b021525b30483fb"
+    },
+    {
+      "nonce": 21,
+      "to": "0xe03a1074c86cfedd5c142c4f04f1a1536e203543",
+      "name": null,
+      "function": "initialize((address,address,uint24,int24,address),uint160)",
+      "gasLimit": 195744,
+      "inputHash": "36aa9c3ef24506f0c65635f048c2230f90f55fb4f69b61baedf427eb516233ee"
+    },
+    {
+      "nonce": 22,
+      "to": "0x7cbe10aa965edc8414ad0a4c68192f8ef117f21d",
+      "name": null,
+      "function": "setPool((address,address,uint24,int24,address))",
+      "gasLimit": 357882,
+      "inputHash": "2d4d96c5c7b57966987c76797e26db304d39f1447eed1153a4775f92bef6acdb"
+    },
+    {
+      "nonce": 23,
+      "to": "0x33297104581dd29347d9ed37936e4f16621d59ae",
+      "name": null,
+      "function": "approve(address,uint256)",
+      "gasLimit": 27995,
+      "inputHash": "4e5b85f62927b835836311ebccff40fdc21e8ecc42e8af57abee766188624f13"
+    },
+    {
+      "nonce": 24,
+      "to": "0xbe28019380a99649579b7e9fa7f1979e6f203f79",
+      "name": null,
+      "function": "approve(address,uint256)",
+      "gasLimit": 177060,
+      "inputHash": "4e5b85f62927b835836311ebccff40fdc21e8ecc42e8af57abee766188624f13"
+    },
+    {
+      "nonce": 25,
+      "to": "0x2a9ad8d9406d768ebbf19eb45ae023e5664ee02f",
+      "name": null,
+      "function": "seed((address,address,uint24,int24,address),int256)",
+      "gasLimit": 1310591,
+      "inputHash": "4a77a88803716410475e3d35c83cb87206f8a4e71271025e047e9cd6a5c639d4"
+    },
+    {
+      "nonce": 26,
+      "to": "0xe03a1074c86cfedd5c142c4f04f1a1536e203543",
+      "name": null,
+      "function": "initialize((address,address,uint24,int24,address),uint160)",
+      "gasLimit": 185065,
+      "inputHash": "8d63e475f74ea408521842d23e727d90091b4fc8d57b9863c0e618b0d88116f6"
+    },
+    {
+      "nonce": 27,
+      "to": "0x7cbe10aa965edc8414ad0a4c68192f8ef117f21d",
+      "name": null,
+      "function": "setPool((address,address,uint24,int24,address))",
+      "gasLimit": 357882,
+      "inputHash": "59859f2adfe3c631c17a47aa1b2535fe72e5c1f1f11cea685eb0a1826a353856"
+    },
+    {
+      "nonce": 28,
+      "to": "0x33297104581dd29347d9ed37936e4f16621d59ae",
+      "name": null,
+      "function": "approve(address,uint256)",
+      "gasLimit": 27995,
+      "inputHash": "4e5b85f62927b835836311ebccff40fdc21e8ecc42e8af57abee766188624f13"
+    },
+    {
+      "nonce": 29,
+      "to": "0xdd71a1bf041dcdb68ad70a6e0766996557759525",
+      "name": null,
+      "function": "approve(address,uint256)",
+      "gasLimit": 177060,
+      "inputHash": "4e5b85f62927b835836311ebccff40fdc21e8ecc42e8af57abee766188624f13"
+    },
+    {
+      "nonce": 30,
+      "to": "0x2a9ad8d9406d768ebbf19eb45ae023e5664ee02f",
+      "name": null,
+      "function": "seed((address,address,uint24,int24,address),int256)",
+      "gasLimit": 1237830,
+      "inputHash": "fec975bb24f8c65fafccd222a3bb61847b867f130f1f11d4f02d5bd65a34a051"
+    },
+    {
+      "nonce": 31,
+      "to": null,
+      "name": "WaveFactory",
+      "function": null,
+      "gasLimit": 56566914,
+      "inputHash": "6bf25c3685607626d327a8428d0d25273001c1a012a9bbff1bf3f10e87cbc039"
+    },
+    {
+      "nonce": 32,
+      "to": "0x33297104581dd29347d9ed37936e4f16621d59ae",
+      "name": null,
+      "function": "approve(address,uint256)",
+      "gasLimit": 176595,
+      "inputHash": "f5d31f283e61c920c4ed303a5dc725668644ced6854f5dc3c62ab98f6bb672ce"
+    },
+    {
+      "nonce": 33,
+      "to": "0x6871eb32a280498c8668139f812f41c8389f5999",
+      "name": "WaveFactory",
+      "function": "createBasket(string,string,address[],uint16[],uint16,uint256)",
+      "gasLimit": 47363690,
+      "inputHash": "4ca3a6e16cb4750969dfd874329465d7cfa1d085e164ef9d695dc6c532cf390b"
+    },
+    {
+      "nonce": 34,
+      "to": "0x4e59b44847b379578588920ca78fbf26c0b4956c",
+      "name": "NavGuardHook",
+      "function": null,
+      "gasLimit": 13224126,
+      "inputHash": "82db1ffca05dd646bcb18c2f959b7f5401b6b89288c288bfaa5853f2169a7f2d"
+    },
+    {
+      "nonce": 35,
+      "to": "0x536a446ca6462522c5668a20a62f1503ca4d2080",
+      "name": "NavGuardHook",
+      "function": "registerPool((address,address,uint24,int24,address),address)",
+      "gasLimit": 950926,
+      "inputHash": "1df308d21315edf8a5051d5cf64f08eee1f1cf4cb1ffaee079d5f93fba29ddeb"
+    },
+    {
+      "nonce": 36,
+      "to": "0xe03a1074c86cfedd5c142c4f04f1a1536e203543",
+      "name": null,
+      "function": "initialize((address,address,uint24,int24,address),uint160)",
+      "gasLimit": 195015,
+      "inputHash": "dae8a01dfa9ce53c6f0fc727d525f99e599d6f574795ec177add8a0a227c38b4"
+    },
+    {
+      "nonce": 37,
+      "to": "0x7cbe10aa965edc8414ad0a4c68192f8ef117f21d",
+      "name": null,
+      "function": "setPool((address,address,uint24,int24,address))",
+      "gasLimit": 487379,
+      "inputHash": "34852fe29ded1995013d7f45107b604c76e7e0f747268f8f9c5d9e74e176b481"
+    },
+    {
+      "nonce": 38,
+      "to": "0x237efeb9db74341ebb3ba207e991d8aeac536b91",
+      "name": "WaveVault",
+      "function": "approve(address,uint256)",
+      "gasLimit": 177182,
+      "inputHash": "4e5b85f62927b835836311ebccff40fdc21e8ecc42e8af57abee766188624f13"
+    },
+    {
+      "nonce": 39,
+      "to": "0x33297104581dd29347d9ed37936e4f16621d59ae",
+      "name": null,
+      "function": "approve(address,uint256)",
+      "gasLimit": 27995,
+      "inputHash": "4e5b85f62927b835836311ebccff40fdc21e8ecc42e8af57abee766188624f13"
+    },
+    {
+      "nonce": 40,
+      "to": "0x2a9ad8d9406d768ebbf19eb45ae023e5664ee02f",
+      "name": null,
+      "function": "seed((address,address,uint24,int24,address),int256)",
+      "gasLimit": 1239296,
+      "inputHash": "85b26b6feda1d790423a675df4d04b3c51b5644cc6f6aac2c781119e3ca6a20c"
+    },
+    {
+      "nonce": 41,
+      "to": null,
+      "name": "WaveRebalanceReceiver",
+      "function": null,
+      "gasLimit": 5418888,
+      "inputHash": "341070725f13dc837bd99ea8beeb9c42ebd52faeca03b77133ebe1dce60039a3"
+    },
+    {
+      "nonce": 42,
+      "to": "0x6871eb32a280498c8668139f812f41c8389f5999",
+      "name": "WaveFactory",
+      "function": "setRebalancer(address)",
+      "gasLimit": 193521,
+      "inputHash": "084b875bceab6428094feb0f36785d6ae89646e0be9b8e0db2976ecd111e1044"
+    }
+  ],
+  "totalGasLimit": "131530465",
+  "maxFeeBudgetWei": "5261218600",
+  "maxFeeBudgetETH": "0.0000000052612186",
+  "transactionValidation": {
+    "scope": "PRIVATE LOCAL FORK unsigned execution only; NOT Sepolia receipts/evidence. No signing keys, balance/nonce/code/block overrides or relaxed protocol limits. Signature checks alone are bypassed by the documented local unsigned method.",
+    "binary": "/Users/hano/.foundry/bin/anvil",
+    "args": [
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "50970",
+      "--accounts",
+      "0",
+      "--chain-id",
+      "11155111",
+      "--fork-url",
+      "https://ethereum-sepolia-rpc.publicnode.com",
+      "--fork-block-number",
+      "12077110",
+      "--hardfork",
+      "amsterdam",
+      "--enable-tx-gas-limit",
+      "--gas-limit",
+      "200000000",
+      "--silent"
+    ],
+    "allOperationsSuccessful": true,
+    "localCalls": [
+      {
+        "index": 0,
+        "scope": "LOCAL ONLY; not a Sepolia receipt",
+        "status": "0x1",
+        "gasUsed": "0xf2b1b",
+        "gasLimit": "0x162f0a",
+        "createdAddress": null
+      },
+      {
+        "index": 1,
+        "scope": "LOCAL ONLY; not a Sepolia receipt",
+        "status": "0x1",
+        "gasUsed": "0x20ad3",
+        "gasLimit": "0x2fca0",
+        "createdAddress": null
+      },
+      {
+        "index": 2,
+        "scope": "LOCAL ONLY; not a Sepolia receipt",
+        "status": "0x1",
+        "gasUsed": "0x3bbe2",
+        "gasLimit": "0x575fa",
+        "createdAddress": null
+      },
+      {
+        "index": 3,
+        "scope": "LOCAL ONLY; not a Sepolia receipt",
+        "status": "0x1",
+        "gasUsed": "0x4f2d",
+        "gasLimit": "0x6d5b",
+        "createdAddress": null
+      },
+      {
+        "index": 4,
+        "scope": "LOCAL ONLY; not a Sepolia receipt",
+        "status": "0x1",
+        "gasUsed": "0x1f4bd",
+        "gasLimit": "0x2b3a4",
+        "createdAddress": null
+      },
+      {
+        "index": 5,
+        "scope": "LOCAL ONLY; not a Sepolia receipt",
+        "status": "0x1",
+        "gasUsed": "0xdac83",
+        "gasLimit": "0x13ff7f",
+        "createdAddress": null
+      },
+      {
+        "index": 6,
+        "scope": "LOCAL ONLY; not a Sepolia receipt",
+        "status": "0x1",
+        "gasUsed": "0x20b60",
+        "gasLimit": "0x2d2e9",
+        "createdAddress": null
+      },
+      {
+        "index": 7,
+        "scope": "LOCAL ONLY; not a Sepolia receipt",
+        "status": "0x1",
+        "gasUsed": "0x3bbe2",
+        "gasLimit": "0x575fa",
+        "createdAddress": null
+      },
+      {
+        "index": 8,
+        "scope": "LOCAL ONLY; not a Sepolia receipt",
+        "status": "0x1",
+        "gasUsed": "0x4f2d",
+        "gasLimit": "0x6d5b",
+        "createdAddress": null
+      },
+      {
+        "index": 9,
+        "scope": "LOCAL ONLY; not a Sepolia receipt",
+        "status": "0x1",
+        "gasUsed": "0x1f4bd",
+        "gasLimit": "0x2b3a4",
+        "createdAddress": null
+      },
+      {
+        "index": 10,
+        "scope": "LOCAL ONLY; not a Sepolia receipt",
+        "status": "0x1",
+        "gasUsed": "0xdaca7",
+        "gasLimit": "0x12e346",
+        "createdAddress": null
+      },
+      {
+        "index": 11,
+        "scope": "LOCAL ONLY; not a Sepolia receipt",
+        "status": "0x1",
+        "gasUsed": "0x297f4b3",
+        "gasLimit": "0x35f2482",
+        "createdAddress": "0x6871eb32a280498c8668139f812f41c8389f5999"
+      },
+      {
+        "index": 12,
+        "scope": "LOCAL ONLY; not a Sepolia receipt",
+        "status": "0x1",
+        "gasUsed": "0x1f36d",
+        "gasLimit": "0x2b1d3",
+        "createdAddress": null
+      },
+      {
+        "index": 13,
+        "scope": "LOCAL ONLY; not a Sepolia receipt",
+        "status": "0x1",
+        "gasUsed": "0x20b3b17",
+        "gasLimit": "0x2d2b66a",
+        "createdAddress": null
+      },
+      {
+        "index": 14,
+        "scope": "LOCAL ONLY; not a Sepolia receipt",
+        "status": "0x1",
+        "gasUsed": "0x89f8da",
+        "gasLimit": "0xc9c8be",
+        "createdAddress": null
+      },
+      {
+        "index": 15,
+        "scope": "LOCAL ONLY; not a Sepolia receipt",
+        "status": "0x1",
+        "gasUsed": "0xa8146",
+        "gasLimit": "0xe828e",
+        "createdAddress": null
+      },
+      {
+        "index": 16,
+        "scope": "LOCAL ONLY; not a Sepolia receipt",
+        "status": "0x1",
+        "gasUsed": "0x22784",
+        "gasLimit": "0x2f9c7",
+        "createdAddress": null
+      },
+      {
+        "index": 17,
+        "scope": "LOCAL ONLY; not a Sepolia receipt",
+        "status": "0x1",
+        "gasUsed": "0x56256",
+        "gasLimit": "0x76fd3",
+        "createdAddress": null
+      },
+      {
+        "index": 18,
+        "scope": "LOCAL ONLY; not a Sepolia receipt",
+        "status": "0x1",
+        "gasUsed": "0x1f515",
+        "gasLimit": "0x2b41e",
+        "createdAddress": null
+      },
+      {
+        "index": 19,
+        "scope": "LOCAL ONLY; not a Sepolia receipt",
+        "status": "0x1",
+        "gasUsed": "0x4f2d",
+        "gasLimit": "0x6d5b",
+        "createdAddress": null
+      },
+      {
+        "index": 20,
+        "scope": "LOCAL ONLY; not a Sepolia receipt",
+        "status": "0x1",
+        "gasUsed": "0xdb0cd",
+        "gasLimit": "0x12e900",
+        "createdAddress": null
+      },
+      {
+        "index": 21,
+        "scope": "LOCAL ONLY; not a Sepolia receipt",
+        "status": "0x1",
+        "gasUsed": "0x3f9ab8",
+        "gasLimit": "0x52af88",
+        "createdAddress": "0xf9abd7a62311ba1bf1259ea3b1adef4d3456372f"
+      },
+      {
+        "index": 22,
+        "scope": "LOCAL ONLY; not a Sepolia receipt",
+        "status": "0x1",
+        "gasUsed": "0x204e3",
+        "gasLimit": "0x2f3f1",
+        "createdAddress": null
+      }
+    ],
+    "corroboratedForkBlock": {
+      "number": "0xb84836",
+      "hash": "0x89c72a828f020abe619bee8e43efe15bd853f5894ee122b4850719fce3935167"
+    },
+    "localFinalNonce": 43,
+    "localFinalBalanceWei": "199039968431645065"
+  },
+  "finishedAt": "2026-11-06T14:23:59.117Z"
+}
