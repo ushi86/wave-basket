@@ -1,0 +1,75 @@
+
+> wave-protocol@0.1.0 test
+> npm run test --workspaces && npm run test:contracts
+
+
+> @wave/web@0.1.0 test
+> vitest run
+
+
+ RUN  v5.1.0 /Users/hano/Projects/Wave Eth/web
+
+
+ Test Files  1 passed (1)
+      Tests  2 passed (2)
+   Start at  12:01:18
+   Duration  75ms (tests 62%, import 19%, transform 11%, worker 8%)
+
+
+> @wave/cre@0.1.0 test
+> vitest run
+
+
+ RUN  v5.1.0 /Users/hano/Projects/Wave Eth/cre
+
+
+ Test Files  1 passed (1)
+      Tests  3 passed (3)
+   Start at  12:01:19
+   Duration  60ms (import 41%, transform 25%, tests 19%, worker 14%, environment 1%)
+
+
+> wave-protocol@0.1.0 test:contracts
+> node scripts/foundry.mjs forge test --root contracts
+
+No files changed, compilation skipped
+
+Ran 1 test for test/Hook.t.sol:HookTest
+[PASS] testFeeEncouragesConvergenceOutsideBand() (gas: 946088)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 5.75ms (765.38µs CPU time)
+
+Ran 1 test for test/Lifecycle.t.sol:LifecycleTest
+[PASS] testCreateDepositAndExitInKind() (gas: 5170501)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 6.54ms (1.42ms CPU time)
+
+Ran 6 tests for test/Guards.t.sol:GuardsTest
+[PASS] testDonationCannotStealNextDepositorsPrincipal() (gas: 5343259)
+[PASS] testExcessTurnoverAndPendingManualProposalBlockReports() (gas: 5662506)
+[PASS] testFactoryRejectsDuplicateAssetsAndConcentratedWeights() (gas: 531838)
+[PASS] testImpossibleMinimumDoesNotMoveAssets() (gas: 5245710)
+[PASS] testNegativeAndFutureOracleAnswersFailClosed() (gas: 4939487)
+[PASS] testReceiverRejectsStaleFutureAndUnknownVaultReports() (gas: 5888481)
+Suite result: ok. 6 passed; 0 failed; 0 skipped; finished in 8.22ms (6.27ms CPU time)
+
+Ran 3 tests for test/V4Integration.t.sol:V4IntegrationTest
+[PASS] testAdapterRejectsUnsolicitedCallbackAndImpossibleMinimum() (gas: 145121)
+[PASS] testDepositAndBothExitsThroughRealV4PoolManager() (gas: 5812025)
+[PASS] testLaunchSeedLeavesPoolsUsableForNextDepositor() (gas: 5355539)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 8.36ms (3.72ms CPU time)
+
+Ran 3 tests for test/Receiver.t.sol:ReceiverTest
+[PASS] testHistoryRetainsLast32AndExpiresEarlierRecords() (gas: 20549660)
+[PASS] testOnlyFreshAuthenticatedReportCanRebalanceOnce() (gas: 5895698)
+[PASS] testSimulationModeAcceptsEmptyMetadataButKeepsVaultBounds() (gas: 5888064)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 17.17ms (14.38ms CPU time)
+
+Ran 6 tests for test/Accounting.t.sol:AccountingTest
+[PASS] testFuzzInKindExitNeverExceedsProRata(uint96) (runs: 64, μ: 4958399, ~: 4958955)
+[PASS] testProfitFeeDilutesCreatorOnceAndNotBelowHighWaterMark() (gas: 5029789)
+[PASS] testRedeemPaysNetMinimumAndTreasuryFee() (gas: 5280706)
+[PASS] testRedemptionPreviewIncludesUncrystallizedFeeDilution() (gas: 5149756)
+[PASS] testStalePricesBlockDepositButNeverInKindExit() (gas: 4968582)
+[PASS] testTimelockDoesNotExecuteEarlyAndCanBeCancelled() (gas: 4961902)
+Suite result: ok. 6 passed; 0 failed; 0 skipped; finished in 43.86ms (45.16ms CPU time)
+
+Ran 6 test suites in 47.90ms (89.90ms CPU time): 20 tests passed, 0 failed, 0 skipped (20 total tests)

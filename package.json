@@ -5,7 +5,8 @@
   "type": "module",
   "workspaces": [
     "web",
-    "cre"
+    "cre",
+    "tools"
   ],
   "scripts": {
     "dev": "npm run dev -w web",
@@ -18,7 +19,10 @@
     "format": "prettier --write web/src web/vite.config.ts cre/src shared scripts && node scripts/foundry.mjs forge fmt --root contracts",
     "check:contracts": "node scripts/foundry.mjs forge build --root contracts --sizes",
     "build:workflow": "npm run build -w cre",
-    "rebalance:local": "node scripts/rebalance-local.mjs"
+    "rebalance:local": "node scripts/rebalance-local.mjs",
+    "verify:phase": "node scripts/verify-phase.mjs",
+    "check:evidence": "node --import tsx tools/src/check-evidence.ts",
+    "check:secrets": "node --import tsx tools/src/scan-secrets.ts"
   },
   "devDependencies": {
     "@foundry-rs/anvil": "1.7.1",

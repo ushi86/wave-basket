@@ -65,7 +65,7 @@ contract GuardsTest is WaveFixture {
     function testExcessTurnoverAndPendingManualProposalBlockReports() public {
         WaveVault v = createBasket();
         WaveRebalanceReceiver r = new WaveRebalanceReceiver(
-            address(0xF00), factory, false, bytes32(uint256(1)), address(this), bytes10("wave")
+            address(0xF00), factory, false, bytes32(uint256(1)), address(this), bytes10("wave"), 900
         );
         factory.setRebalancer(address(r));
         uint16[] memory bps = new uint16[](3);
@@ -73,7 +73,7 @@ contract GuardsTest is WaveFixture {
         bps[1] = 4500;
         bps[2] = 4500;
         bytes memory metadata = abi.encodePacked(bytes32(uint256(1)), bytes10("wave"), address(this));
-        bytes memory report = abi.encode(address(v), bps, uint64(block.timestamp), keccak256("bounds"));
+        bytes memory report = abi.encode(address(v), uint64(1), bps, uint64(block.timestamp), keccak256("bounds"));
         vm.prank(address(0xF00));
         vm.expectRevert(WaveVault.TurnoverExceeded.selector);
         r.onReport(metadata, report);
@@ -82,7 +82,7 @@ contract GuardsTest is WaveFixture {
         bps[1] = 3000;
         bps[2] = 2500;
         v.proposeWeights(bps);
-        report = abi.encode(address(v), bps, uint64(block.timestamp), keccak256("pending"));
+        report = abi.encode(address(v), uint64(1), bps, uint64(block.timestamp), keccak256("pending"));
         vm.prank(address(0xF00));
         vm.expectRevert(WaveVault.Timelocked.selector);
         r.onReport(metadata, report);
@@ -92,7 +92,7 @@ contract GuardsTest is WaveFixture {
     function testReceiverRejectsStaleFutureAndUnknownVaultReports() public {
         WaveVault v = createBasket();
         WaveRebalanceReceiver r = new WaveRebalanceReceiver(
-            address(0xF00), factory, false, bytes32(uint256(1)), address(this), bytes10("wave")
+            address(0xF00), factory, false, bytes32(uint256(1)), address(this), bytes10("wave"), 900
         );
         factory.setRebalancer(address(r));
         uint16[] memory bps = new uint16[](3);
@@ -100,19 +100,19 @@ contract GuardsTest is WaveFixture {
         bps[1] = 3000;
         bps[2] = 2500;
         bytes memory metadata = abi.encodePacked(bytes32(uint256(1)), bytes10("wave"), address(this), bytes2(0));
-        bytes memory report = abi.encode(address(v), bps, uint64(block.timestamp - 901), bytes32(0));
+        bytes memory report = abi.encode(address(v), uint64(1), bps, uint64(block.timestamp - 901), bytes32(0));
         vm.prank(address(0xF00));
         vm.expectRevert(WaveRebalanceReceiver.InvalidReport.selector);
         r.onReport(metadata, report);
-        report = abi.encode(address(v), bps, uint64(block.timestamp + 1), bytes32(0));
+        report = abi.encode(address(v), uint64(1), bps, uint64(block.timestamp + 1), bytes32(0));
         vm.prank(address(0xF00));
         vm.expectRevert(WaveRebalanceReceiver.InvalidReport.selector);
         r.onReport(metadata, report);
-        report = abi.encode(address(0xBAD), bps, uint64(block.timestamp), bytes32(0));
+        report = abi.encode(address(0xBAD), uint64(1), bps, uint64(block.timestamp), bytes32(0));
         vm.prank(address(0xF00));
         vm.expectRevert(WaveRebalanceReceiver.InvalidReport.selector);
         r.onReport(metadata, report);
-        report = abi.encode(address(v), bps, uint64(block.timestamp), bytes32(0));
+        report = abi.encode(address(v), uint64(1), bps, uint64(block.timestamp), bytes32(0));
         vm.prank(address(0xF00));
         r.onReport(metadata, report);
         assertEq(v.rebalanceCount(), 1);

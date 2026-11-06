@@ -21,7 +21,7 @@ In a second terminal, exercise the local forwarder/receiver path:
 npm run rebalance:local
 ```
 
-This submits a bounded, deterministic report fixture and creates an on-chain history record. **It is not a Chainlink CRE simulation.** Repeated execution is subject to report freshness, monotonic observations, and the five-minute rebalance interval.
+This submits a bounded, deterministic report fixture and creates an on-chain history record. **It is not a Chainlink CRE simulation.** Repeated execution is subject to report freshness, per-vault sequential nonces, monotonic observations, and the five-minute rebalance interval.
 
 ## Verify
 
@@ -72,7 +72,7 @@ The factory uses a dedicated, factory-only deployer to keep both factory and vau
 - Six-decimal mock USDC settlement, eighteen-decimal shares, normalized eighteen-decimal USD prices; WBTC uses eight token decimals. USDC/USD is valued through its feed rather than assumed to be a permanent dollar peg.
 - Initial share price is one settlement token per share. Minimum seed is 10 mUSDC; 1,000 smallest share units are permanently locked from the seed entitlement. Later deposits use measured value added and crystallize pre-existing gains before participation. Settlement redemptions use a fresh on-chain preview that includes pending performance-fee dilution before the UI applies execution tolerance.
 - A 10 bps withdrawal fee applies to both exits. Settlement exits pay treasury in mUSDC. In-kind exits transfer fee shares to the treasury and burn only net shares against pre-burn supply.
-- Creator performance fees range from 0–2,000 bps. They mint dilution-adjusted shares only above a fund-level high-water mark. **In-kind exits never crystallize outstanding performance fees**, even with healthy feeds, to preserve a price-independent exit. This can let a holder avoid uncrystallized creator fees; the demo does not implement per-investor equalization or production fee fairness.
+- Creator performance fees range from 0–2,000 bps. They mint dilution-adjusted shares only above a fund-level high-water mark. **Healthy-feed in-kind exits crystallize the same outstanding performance fees as settlement exits. Stale-feed exits remain immediate and fully pro-rata after the unchanged withdrawal fee, with no withheld assets.** A holder exiting during stale feeds can avoid uncrystallized creator fees. This is an explicit submission limitation; no deferred reserve is implemented.
 - Manual proposals replace previous pending proposals and may be cancelled by the creator. Automation pauses while a proposal exists. Permissionless execution after ten minutes activates target weights without trading and starts a five-minute cooldown. Later CRE reports may change those targets again within vault bounds.
 - Turnover is half the absolute difference between actual and proposed weights, including residual mUSDC as a cash leg; odd basis points round up. Actual weights use current oracle-valued holdings. Rebalances cap turnover at 20%, require a five-minute interval, cap per-swap and total NAV loss at 1%, and enforce the asset rules again on-chain.
 - Strategy: tilt current target weights using external 24-hour market changes clipped to ±50%, normalize under 50% asset caps, interpolate toward the result to respect turnover, and skip changes below 300 bps turnover. A proposal that cannot meet all bounds is skipped. No LLM dependency is included. At most the first three registered baskets are inspected per run.
@@ -91,15 +91,15 @@ A funded Sepolia deployer and a CRE account are external prerequisites. No live 
    forge script script/DeployDemo.s.sol:DeployDemo --rpc-url "$SEPOLIA_RPC_URL" --account deployer --broadcast --verify
    ```
 
-   `DEPLOYER_ADDRESS` must match the keystore. No raw deployer key is needed for Sepolia. The script writes the deployment manifest; archive addresses, transaction receipts, and explorer verification results. The local deployment path also uses this script, but uses only the public disposable Anvil key.
+   `DEPLOYER_ADDRESS` must match the keystore. No raw deployer key is needed for Sepolia. The script writes `deployments/sepolia.json`; archive addresses, transaction receipts, and explorer verification results. The local deployment path also uses this script, but uses only the public disposable Anvil key.
 3. Convert the generated manifest and configure the browser and CRE addresses:
 
    ```sh
-   node scripts/manifest.mjs deployments/demo.json web/public/deployment.sepolia.json https://ethereum-sepolia-rpc.publicnode.com
+   node scripts/manifest.mjs deployments/sepolia.json web/public/deployment.sepolia.json https://ethereum-sepolia-rpc.publicnode.com
    VITE_DEPLOYMENT_URL=/deployment.sepolia.json npm run build
    ```
 
-   The converter also populates CRE factory/receiver addresses and token-to-market-ID mappings for Sepolia. The public browser RPC must not contain private credentials. Configure an independently checked worker specifier/bootstrap URL when overriding defaults.
+   The converter also populates CRE factory/receiver addresses and token-to-market-ID mappings for Sepolia. A missing real feed fails deployment; a test-only exception requires the corresponding explicit `USE_MOCK_USDC_FEED`, `USE_MOCK_ETH_FEED`, `USE_MOCK_BTC_FEED`, or `USE_MOCK_LINK_FEED` flag. Mixed/mock feeds remain labeled. The public browser RPC must not contain private credentials. Configure an independently checked worker specifier/bootstrap URL when overriding defaults.
 4. Install/login to the official CRE CLI, configure its funded simulation wallet using its supported secret mechanism, and run from the workflow directory:
 
    ```sh
@@ -119,7 +119,15 @@ The meter counts individual JSON-RPC methods, including batch members. Successfu
 
 A failed private read never silently uses a public fallback. The single-read direct action authorizes only its specific block request and makes the badge amber. The private worker has a sixty-second startup deadline. A full Sepolia lifecycle must still be measured against the spec's <10s startup and ≥95% coverage targets; a successful worker-only probe is not full-session acceptance evidence.
 
+## Known Limitations
+
+A holder exiting in kind during stale feeds can avoid uncrystallized creator performance fees. The exit pays the complete net pro-rata slice immediately; no assets are withheld. Healthy feeds crystallize the same pending fees as settlement redemption. Stale-period fee conservation remains blocked by the owner’s explicit decision. [A post-event reserve option](docs/STALE_EXIT_DESIGN.md) requires an enforceable expiry and a new reviewed design.
+
+This increment changes immutable vault/hook/receiver code and report encoding to v2 (`vault, nonce, weights, observedAt, reason`). Redeploy the complete stack and update both clients; existing deployments cannot be upgraded in place. For rollback, restore the previous manifest and matching workflow version together; preserve exits and do not send v2 reports to an older receiver.
+
 ## Delivery status and remaining evidence
+
+Submission is **not ready**. `npm run check:evidence` is read-only and intentionally exits nonzero until genuine public-source, Sepolia, CRE, privacy, eligibility, and security artifacts satisfy its checks. See [claim matrix](EVIDENCE.md), [readiness record](docs/READINESS.md), [privacy procedure](docs/PRIVACY.md), and [owner submission kit](docs/SUBMISSION.md). `npm run check:secrets` checks working source and reachable history with a location-only heuristic; it is not a professional audit.
 
 The local chain and browser flows have been exercised. See [verification notes](docs/VERIFICATION.md) for actual evidence and limitations. Sepolia deployment/fork checks, real CRE CLI broadcast, event eligibility, partner forms, a public remote, a demo video, and submission are still external delivery steps. No tracker is configured. No form, issue, remote repository, or hackathon submission has been published.
 

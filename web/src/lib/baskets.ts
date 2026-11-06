@@ -26,7 +26,12 @@ export type Basket = {
   history: HistoryRow[];
   historyCount: bigint;
 };
+const referenceCache = new WeakMap<
+  ChainSession,
+  Map<string, { count: bigint; hashes: Map<string, `0x${string}`> }>
+>();
 export type HistoryRow = {
+  transactionHash?: `0x${string}`;
   id: bigint;
   timestamp: bigint;
   oldBps: readonly number[];
@@ -138,6 +143,37 @@ export async function loadBaskets(
           args: [id],
         }),
       );
+    if (historyCount > 0n) {
+      let cache = referenceCache.get(session);
+      if (!cache) {
+        cache = new Map();
+        referenceCache.set(session, cache);
+      }
+      let references = cache.get(address.toLowerCase());
+      if (references?.count !== historyCount) {
+        try {
+          const logs = await loadOlderHistory(session, { address });
+          references = {
+            count: historyCount,
+            hashes: new Map(
+              logs
+                .filter(
+                  (log) => log.transactionHash && log.args.id !== undefined,
+                )
+                .map((log) => [String(log.args.id), log.transactionHash!]),
+            ),
+          };
+          cache.set(address.toLowerCase(), references);
+        } catch {
+          /* Keep exits and on-chain records available if log references cannot be fetched. */
+        }
+      }
+      for (const row of history) {
+        row.transactionHash = references?.hashes.get(String(row.id));
+        if (row.transactionHash)
+          session.recordRebalance(row.transactionHash, row.timestamp);
+      }
+    }
     baskets.push({
       address,
       name,
@@ -166,7 +202,10 @@ export async function loadBaskets(
   }
   return baskets;
 }
-export async function loadOlderHistory(session: ChainSession, basket: Basket) {
+export async function loadOlderHistory(
+  session: ChainSession,
+  basket: Pick<Basket, "address">,
+) {
   let from = BigInt(session.config.deployBlock);
   const latest = await session.client.getBlockNumber();
   let size = 5000n;

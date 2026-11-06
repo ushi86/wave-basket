@@ -7,9 +7,15 @@ export type Token = {
   feed?: Address;
 };
 export type Deployment = {
+  codeCommit?: string;
+  workingTreeDirty?: boolean;
+  mockTokens?: boolean;
+  receiverMode?: string;
+  reportVersion?: number;
+  maxReportAge?: number;
   chainId: number;
   name: string;
-  oracleMode: "demo" | "chainlink" | "unconfigured";
+  oracleMode: "demo" | "chainlink" | "mixed" | "unconfigured";
   tokens: Token[];
   deployBlock: string;
   factory?: Address;

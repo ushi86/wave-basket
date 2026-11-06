@@ -1,0 +1,44 @@
+No files changed, compilation skipped
+
+Ran 1 test for test/Hook.t.sol:HookTest
+[PASS] testFeeEncouragesConvergenceOutsideBand() (gas: 946088)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 869.92µs (86.29µs CPU time)
+
+Ran 1 test for test/Lifecycle.t.sol:LifecycleTest
+[PASS] testCreateDepositAndExitInKind() (gas: 5170501)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 2.53ms (1.60ms CPU time)
+
+Ran 3 tests for test/V4Integration.t.sol:V4IntegrationTest
+[PASS] testAdapterRejectsUnsolicitedCallbackAndImpossibleMinimum() (gas: 145121)
+[PASS] testDepositAndBothExitsThroughRealV4PoolManager() (gas: 5812025)
+[PASS] testLaunchSeedLeavesPoolsUsableForNextDepositor() (gas: 5355539)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 4.16ms (4.50ms CPU time)
+
+Ran 6 tests for test/Guards.t.sol:GuardsTest
+[PASS] testDonationCannotStealNextDepositorsPrincipal() (gas: 5343259)
+[PASS] testExcessTurnoverAndPendingManualProposalBlockReports() (gas: 5662506)
+[PASS] testFactoryRejectsDuplicateAssetsAndConcentratedWeights() (gas: 531838)
+[PASS] testImpossibleMinimumDoesNotMoveAssets() (gas: 5245710)
+[PASS] testNegativeAndFutureOracleAnswersFailClosed() (gas: 4939487)
+[PASS] testReceiverRejectsStaleFutureAndUnknownVaultReports() (gas: 5888481)
+Suite result: ok. 6 passed; 0 failed; 0 skipped; finished in 4.53ms (7.20ms CPU time)
+
+Ran 3 tests for test/Receiver.t.sol:ReceiverTest
+[PASS] testHistoryRetainsLast32AndExpiresEarlierRecords() (gas: 20549660)
+[PASS] testOnlyFreshAuthenticatedReportCanRebalanceOnce() (gas: 5895698)
+[PASS] testSimulationModeAcceptsEmptyMetadataButKeepsVaultBounds() (gas: 5888064)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 15.65ms (16.92ms CPU time)
+
+Ran 6 tests for test/Accounting.t.sol:AccountingTest
+[PASS] testFuzzInKindExitNeverExceedsProRata(uint96) (runs: 64, μ: 4958439, ~: 4958955)
+Logs:
+  Bound result 203264161641025417
+
+[PASS] testProfitFeeDilutesCreatorOnceAndNotBelowHighWaterMark() (gas: 5029789)
+[PASS] testRedeemPaysNetMinimumAndTreasuryFee() (gas: 5280706)
+[PASS] testRedemptionPreviewIncludesUncrystallizedFeeDilution() (gas: 5149756)
+[PASS] testStalePricesBlockDepositButNeverInKindExit() (gas: 4968582)
+[PASS] testTimelockDoesNotExecuteEarlyAndCanBeCancelled() (gas: 4961902)
+Suite result: ok. 6 passed; 0 failed; 0 skipped; finished in 40.68ms (47.32ms CPU time)
+
+Ran 6 test suites in 41.89ms (68.42ms CPU time): 20 tests passed, 0 failed, 0 skipped (20 total tests)

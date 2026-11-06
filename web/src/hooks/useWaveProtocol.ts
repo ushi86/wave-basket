@@ -3,6 +3,7 @@ import type { Address, Hash } from "viem";
 import {
   adapterAbi,
   factoryAbi,
+  hookAbi,
   tokenAbi,
   vaultAbi,
 } from "../../../shared/abi";
@@ -43,6 +44,9 @@ export function useWaveProtocol() {
   const [tx, setTx] = useState<Transaction>();
   const [refreshKey, setRefreshKey] = useState(0);
   const [walletBalance, setWalletBalance] = useState<bigint>();
+  const [hookSnapshot, setHookSnapshot] =
+    useState<readonly [bigint, bigint, boolean, number, number]>();
+  const [hookError, setHookError] = useState("");
   useEffect(() => {
     let alive = true;
     let current: ChainSession | undefined;
@@ -98,6 +102,24 @@ export function useWaveProtocol() {
         if (alive) {
           setBaskets(data);
           setError("");
+        }
+        if (config.hook) {
+          try {
+            const snapshot = await session.client.readContract({
+              address: config.hook,
+              abi: hookAbi,
+              functionName: "poolSnapshot",
+            });
+            if (alive) {
+              setHookSnapshot(snapshot);
+              setHookError("");
+            }
+          } catch (e) {
+            if (alive) {
+              setHookSnapshot(undefined);
+              setHookError(errorText(e));
+            }
+          }
         }
         if (account) {
           const usdc = config.tokens.find((t) => t.symbol === "mUSDC");
@@ -168,6 +190,7 @@ export function useWaveProtocol() {
         });
         if (receipt.status !== "success")
           throw new Error("Transaction reverted");
+        session.recordTransaction(fn, receipt);
         setTx({ label, status: "confirmed", hash });
       });
       setRefreshKey((k) => k + 1);
@@ -207,6 +230,8 @@ export function useWaveProtocol() {
     setTx,
     setRefreshKey,
     walletBalance,
+    hookSnapshot,
+    hookError,
     connect,
     run,
     busy,

@@ -1,0 +1,12 @@
+Compiling 1 files with Solc 0.8.26
+Solc 0.8.26 finished in 8.14s
+Compiler run successful!
+
+Ran 1 test for test/Accounting.t.sol:AccountingTest
+[PASS] testFuzzHealthyExitChoiceDoesNotReduceCreatorFee(uint96) (runs: 64, μ: 5341589, ~: 5345188)
+Logs:
+  Bound result 1698979066755861792
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 55.35ms (54.24ms CPU time)
+
+Ran 1 test suite in 55.85ms (55.35ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)

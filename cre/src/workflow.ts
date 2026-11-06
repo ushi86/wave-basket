@@ -143,9 +143,17 @@ export function runRebalance(runtime: Runtime<Config>): string {
     );
     const payload = encodeAbiParameters(
       parseAbiParameters(
-        "address vault,uint16[] weights,uint64 asOf,bytes32 reasonHash",
+        "address vault,uint64 nonce,uint16[] weights,uint64 observedAt,bytes32 reasonHash",
       ),
-      [vault, proposed, BigInt(asOf), reason],
+      [
+        vault,
+        BigInt(
+          read(config.receiver, receiverAbi, "lastNonce", [vault]) as bigint,
+        ) + 1n,
+        proposed,
+        BigInt(asOf),
+        reason,
+      ],
     );
     const report = runtime.report(prepareReportRequest(payload)).result();
     const result = evm

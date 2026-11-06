@@ -1,0 +1,89 @@
+{
+  "phase": "readiness-final",
+  "scope": "local-check-only",
+  "startedAt": "2026-11-06T07:10:28.952Z",
+  "finishedAt": "2026-11-06T07:11:14.018Z",
+  "checks": [
+    {
+      "name": "typecheck",
+      "argv": [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      "startedAt": "2026-11-06T07:10:28.952Z",
+      "finishedAt": "2026-11-06T07:10:31.349Z",
+      "exitCode": 0,
+      "log": "docs/readiness/readiness-final-20261106T071028Z/typecheck.log",
+      "sha256": "38cb13f0ce3941278a4182d9bee7176ef41cabee0bf3a8ac6577e563de68c223"
+    },
+    {
+      "name": "tests",
+      "argv": [
+        "npm",
+        "test"
+      ],
+      "startedAt": "2026-11-06T07:10:31.350Z",
+      "finishedAt": "2026-11-06T07:10:55.882Z",
+      "exitCode": 0,
+      "log": "docs/readiness/readiness-final-20261106T071028Z/tests.log",
+      "sha256": "73e16fb149a30b26feeab5a11b428bf3f1af749ea00a9775f204d2621e2b7463"
+    },
+    {
+      "name": "web-build",
+      "argv": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "startedAt": "2026-11-06T07:10:55.882Z",
+      "finishedAt": "2026-11-06T07:10:58.348Z",
+      "exitCode": 0,
+      "log": "docs/readiness/readiness-final-20261106T071028Z/web-build.log",
+      "sha256": "52cab97c7692e912ed0cae66f787a0f4754c01809057f5cb2799ca9bc3e0869e"
+    },
+    {
+      "name": "workflow-build",
+      "argv": [
+        "npm",
+        "run",
+        "build:workflow"
+      ],
+      "startedAt": "2026-11-06T07:10:58.348Z",
+      "finishedAt": "2026-11-06T07:11:01.101Z",
+      "exitCode": 0,
+      "log": "docs/readiness/readiness-final-20261106T071028Z/workflow-build.log",
+      "sha256": "9d4e3608a9ce3c480ad69b657c0b7270e3d86135bc82c101e85bb866e378cbd1"
+    },
+    {
+      "name": "contract-size",
+      "argv": [
+        "npm",
+        "run",
+        "check:contracts"
+      ],
+      "startedAt": "2026-11-06T07:11:01.101Z",
+      "finishedAt": "2026-11-06T07:11:13.769Z",
+      "exitCode": 0,
+      "log": "docs/readiness/readiness-final-20261106T071028Z/contract-size.log",
+      "sha256": "f444dabc0581cf4fd7b85ce856fe2222f11fd97bcf5fd03558028ebacde1d845"
+    },
+    {
+      "name": "foundry-verbose",
+      "argv": [
+        "/opt/homebrew/Cellar/node@24/24.22.1/bin/node",
+        "scripts/foundry.mjs",
+        "forge",
+        "test",
+        "--root",
+        "contracts",
+        "-vvv"
+      ],
+      "startedAt": "2026-11-06T07:11:13.769Z",
+      "finishedAt": "2026-11-06T07:11:14.018Z",
+      "exitCode": 0,
+      "log": "docs/readiness/readiness-final-20261106T071028Z/foundry-verbose.log",
+      "sha256": "1efc4d8464539df5f4dc22e3416c4dbf8fc9ca1c3a1d13a80041fbd79a28cefb"
+    }
+  ]
+}

@@ -28,9 +28,15 @@ const abi = parseAbi([
 ]);
 const metadata = `0x${"1".padStart(64, "0")}${Buffer.from("wave").toString("hex").padEnd(20, "0")}${account.slice(2)}`;
 const report = encodeAbiParameters(
-  parseAbiParameters("address,uint16[],uint64,bytes32"),
+  parseAbiParameters("address,uint64,uint16[],uint64,bytes32"),
   [
     manifest.flagship,
+    (await client.readContract({
+      address: manifest.receiver,
+      abi: parseAbi(["function lastNonce(address) view returns(uint64)"]),
+      functionName: "lastNonce",
+      args: [manifest.flagship],
+    })) + 1n,
     [4500, 3000, 2500],
     asOf,
     keccak256(

@@ -87,4 +87,44 @@ contract V4IntegrationTest is WaveFixture {
         vm.expectRevert();
         adapter.swap(address(usdc), address(eth), 100e6, 1e18, address(this));
     }
+
+    function testLaterRebalanceSwapFailureRollsBackEarlierTrades() public {
+        WaveVault vault = createBasket();
+        factory.setRebalancer(address(this));
+        usdc.approve(address(adapter), 1_000_000e6);
+        adapter.swap(address(usdc), address(eth), 1_000_000e6, 0, address(this));
+        uint256 ethBefore = eth.balanceOf(address(vault));
+        uint256 btcBefore = btc.balanceOf(address(vault));
+        uint256 linkBefore = link.balanceOf(address(vault));
+        uint256 cashBefore = usdc.balanceOf(address(vault));
+        uint16[] memory weights = new uint16[](3);
+        weights[0] = 4500;
+        weights[1] = 3000;
+        weights[2] = 2500;
+        vm.expectRevert();
+        vault.applyRebalance(weights, 100, bytes32(0));
+        assertEq(eth.balanceOf(address(vault)), ethBefore);
+        assertEq(btc.balanceOf(address(vault)), btcBefore);
+        assertEq(link.balanceOf(address(vault)), linkBefore);
+        assertEq(usdc.balanceOf(address(vault)), cashBefore);
+        assertEq(vault.targetWeights()[0], 4000);
+        assertEq(vault.rebalanceCount(), 0);
+        assertEq(vault.lastRebalance(), 0);
+    }
+
+    function testFuzzValidRebalanceHonorsNavAndTurnoverLimits(uint16 raw) public {
+        WaveVault vault = createBasket();
+        factory.setRebalancer(address(this));
+        uint16 delta = uint16(bound(uint256(raw), 300, 1000));
+        uint16[] memory weights = new uint16[](3);
+        weights[0] = 4000 + delta;
+        weights[1] = 3500 - delta;
+        weights[2] = 2500;
+        (uint256 beforeNav,) = vault.navUsdc();
+        vault.applyRebalance(weights, 100, bytes32(0));
+        (uint256 afterNav, bool healthy) = vault.navUsdc();
+        assertTrue(healthy);
+        assertGe(afterNav, beforeNav * 99 / 100);
+        assertLe(vault.rebalanceAt(0).turnoverBps, 2000);
+    }
 }

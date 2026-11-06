@@ -1,5 +1,6 @@
 import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import { resolve } from "node:path";
+import { execFileSync } from "node:child_process";
 import { root } from "./foundry.mjs";
 export function writeManifest(sourcePath, outputPath, rpcUrl) {
   const deployed = JSON.parse(readFileSync(sourcePath, "utf8"));
@@ -26,9 +27,52 @@ export function writeManifest(sourcePath, outputPath, rpcUrl) {
   const tokens = definitions.map(({ key, ...metadata }) => ({
     address: deployed[key],
     feed: deployed[`${key}Feed`],
+    feedMode:
+      deployed[`${key}FeedMock`] === true
+        ? "mock"
+        : deployed[`${key}FeedMock`] === false
+          ? "chainlink"
+          : "unknown",
     ...metadata,
   }));
-  const manifest = { ...deployed, rpcUrl, tokens };
+  const codeCommit = execFileSync("git", ["rev-parse", "HEAD"], {
+    cwd: root,
+    encoding: "utf8",
+  }).trim();
+  const workingTreeDirty = Boolean(
+    execFileSync(
+      "git",
+      [
+        "status",
+        "--porcelain",
+        "--untracked-files=all",
+        "--",
+        "contracts/src",
+        "contracts/script",
+        "cre/src",
+        "shared",
+        "web/src",
+        "scripts",
+        "package.json",
+        "package-lock.json",
+      ],
+      { cwd: root, encoding: "utf8" },
+    ).trim(),
+  );
+  const transactionHashes = existsSync(broadcastPath)
+    ? (JSON.parse(readFileSync(broadcastPath, "utf8")).receipts || [])
+        .map((receipt) => receipt.transactionHash)
+        .filter(Boolean)
+    : [];
+  const manifest = {
+    ...deployed,
+    rpcUrl,
+    tokens,
+    codeCommit,
+    workingTreeDirty,
+    transactionHashes,
+    verification: "unverified-broadcast-manifest",
+  };
   writeFileSync(outputPath, JSON.stringify(manifest, null, 2) + "\n");
   return manifest;
 }

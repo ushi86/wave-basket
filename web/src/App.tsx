@@ -173,16 +173,22 @@ export function App() {
               </span>
             </div>
           )}
-          {config?.oracleMode === "demo" && (
+          {config?.factory && (
             <div className="demo-strip">
               <span>
-                <span className="tiny-dot" /> DEMO ORACLES
+                <span className="tiny-dot" />
+                {config.chainId === 31337 ? "LOCAL DEMO" : "SEPOLIA TESTNET"} ·
+                MOCK TOKENS · UNAUDITED
               </span>
               <span>
-                Mock assets and prices ·{" "}
-                {config.chainId === 31337
-                  ? "Local chain reads are direct and counted."
-                  : "Disposable Sepolia deployment."}
+                Feeds:{" "}
+                {config.oracleMode === "chainlink"
+                  ? "Chainlink"
+                  : config.oracleMode === "mixed"
+                    ? "MIXED — inspect asset provenance"
+                    : "MOCK"}{" "}
+                · Receiver: {config.receiverMode || "unconfigured"}
+                {config.chainId === 31337 ? " · Direct loopback reads" : ""}
               </span>
             </div>
           )}

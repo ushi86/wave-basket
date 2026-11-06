@@ -8,6 +8,7 @@ export function PrivacyPage({ model }: { model: WaveProtocolModel }) {
     model;
   const [directBlock, setDirectBlock] = useState("");
   const [privateBlock, setPrivateBlock] = useState("");
+  const [failureResult, setFailureResult] = useState("");
   return (
     <>
       <PageTitle
@@ -34,6 +35,56 @@ export function PrivacyPage({ model }: { model: WaveProtocolModel }) {
             </small>
           )}
         </div>
+      </div>
+      <div className="small-card">
+        <h3>Measurement and failure test</h3>
+        <p>
+          Export actual session observations. Local, partial, dirty-build, and
+          worker-only sessions are labeled and cannot satisfy the Sepolia
+          lifecycle gate. Screenshots and a genuine CRE CLI log must be
+          collected separately.
+        </p>
+        <div className="button-row">
+          <button
+            className="button secondary"
+            disabled={!session}
+            onClick={() => {
+              const filename = `session-${new Date().toISOString().replace(/[:.]/g, "-")}.json`;
+              const data = session!.exportMeasurement(
+                `docs/privacy/${filename}`,
+              );
+              const url = URL.createObjectURL(
+                new Blob([JSON.stringify(data, null, 2) + "\n"], {
+                  type: "application/json",
+                }),
+              );
+              const link = document.createElement("a");
+              link.href = url;
+              link.download = filename;
+              link.click();
+              setTimeout(() => URL.revokeObjectURL(url), 0);
+            }}
+          >
+            Export session measurement
+          </button>
+          <button
+            className="button secondary"
+            disabled={!session || privacy !== "ready"}
+            onClick={async () => {
+              try {
+                const result = await session!.testFailClosed();
+                setFailureResult(
+                  `Private read failed: ${result.privateReadFailed}. Direct successes: ${result.directBefore} → ${result.directAfter}. Reload to reconnect.`,
+                );
+              } catch (error) {
+                setError(errorText(error));
+              }
+            }}
+          >
+            Stop worker and test fail-closed
+          </button>
+        </div>
+        {failureResult && <p role="status">{failureResult}</p>}
       </div>
       <div className="metrics-row privacy-metrics">
         {[

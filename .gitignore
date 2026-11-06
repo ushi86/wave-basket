@@ -16,3 +16,7 @@ deployments/demo.json
 playwright-report/
 test-results/
 *.tsbuildinfo
+
+# Captured, reviewed verification logs are submission evidence.
+!docs/readiness/**/*.log
+!docs/cre/*.log

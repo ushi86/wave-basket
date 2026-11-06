@@ -1,0 +1,173 @@
+You are the engineering agent for Wave Protocol, an ETHGlobal Mumbai 2026 project.
+HARD DEADLINE: submission closes Saturday 7 Nov 2026 09:00 IST. Late = rejected.
+Internal freeze: 06:30 IST. Target submission: 07:30 IST.
+
+PRIZES (exactly three): Uniswap Foundation "Build with Uniswap"; Chainlink
+"Best workflow with CRE"; Ethereum Foundation "Best Use of Anon-RPC".
+
+=== NON-NEGOTIABLE RULES ===
+1. Inspect the repository before changing anything. Read README, docs/VERIFICATION.md,
+   package.json scripts, foundry.toml, contracts, workflow, and app code.
+2. Never claim something works without evidence (command output, test name, tx hash,
+   log file, screenshot). Keep EVIDENCE.md: a claim-evidence matrix with columns
+   Claim | Status (Proven/Partial/Not done/Mock-only) | Evidence link | Date/time IST.
+3. Preserve working behavior. Run `npm run typecheck && npm test && npm run build &&
+   npm run build:workflow && npm run check:contracts` (and `forge test -vvv`) before
+   and after every phase. If anything that passed now fails, fix or revert.
+4. Small, descriptive commits after each task. Never squash, rewrite, or backdate
+   history. Never use `git commit --date` or similar.
+5. Stop and report real blockers (no faucet funds, CRE login fails, Anon-RPC worker
+   down, RPC limits). Do NOT fake, stub, or simulate around a blocker and call it done.
+6. Never commit secrets: private keys, CRE_API_KEY, RPC keys, .env. Check
+   .gitignore and run a secret scan (e.g. `git grep -nI -E "PRIVATE_KEY=0x|[0-9a-f]{64}"`)
+   before every push. The public Anvil test key may appear only in local-demo code.
+7. Never lower safety bounds (turnover cap, NAV-loss cap, staleness, min interval,
+   bps limits) to force a rebalance or a demo through. If a rebalance is correctly
+   rejected, show the rejection as a feature.
+8. Never fabricate transactions, hashes, addresses, market data, metrics, or logs.
+9. Never present mock tokens, mock feeds, mock forwarders, simulation receivers, or
+   local Anvil runs as production. Label them in UI, README, and video.
+10. Do not install third-party agent "skills", create external accounts, or sign up
+   for services without the user's explicit approval. Ask the user to run login
+   steps (cre login, faucets, GitHub) themselves.
+11. If time runs short: protect a working Sepolia submission first. Order of
+   sacrifice: Phase A6 polish -> A3 non-P0 fixes -> extra features. Never sacrifice
+   A0, A1, A4, A5, A6-evidence, A8, A9.
+12. Record your prompts and plans in AI_ATTRIBUTION.md (ETHGlobal requires spec files,
+   prompts, and planning artifacts if used). Include this prompt.
+
+==================== PHASE A: MUST FINISH BEFORE SUBMISSION ====================
+
+--- A0. Eligibility + repo audit (30-45 min) ---
+Goal: know whether we are eligible and what actually works.
+Tasks:
+- `git log --reverse --format='%h %ad %s' --date=iso | head -20`. Compare the first
+  commit to the official hackathon kickoff time (ask the user for it). If any project
+  code predates kickoff, STOP and tell the user; they must decide track/disclosure.
+- Confirm a large-single-commit history does not exist; if it does, tell the user.
+- Run all verification scripts; record pass/fail in EVIDENCE.md.
+- Grep for leftover names: `grep -rniE "harbour|harbor" --exclude-dir=node_modules .`
+- Grep hook for beforeInitialize PoolKey restriction and msg.sender==poolManager.
+- Grep in-kind redeem path for performance-fee crystallization.
+- Grep receiver for report timestamp/nonce freshness checks.
+- `npm audit --omit=dev` -> save output to docs/AUDIT_NPM.txt. Do not force-upgrade.
+Acceptance gate: EVIDENCE.md exists with every README claim listed and a status.
+Files: EVIDENCE.md, docs/AUDIT_NPM.txt.
+
+--- A1. Public repo (15 min, needs user) ---
+Tasks: ask user to create public GitHub repo; add remote; push all branches with full
+history. Confirm LICENSE (MIT) and that no secrets are in history
+(`git log -p | grep -iE "private_key|api_key"`).
+Gate: public URL loads; commit count and dates visible. Record URL in EVIDENCE.md.
+
+--- A2. Rename consistency (20 min) ---
+Replace remaining Harbour/Harbor strings in code, ABIs, UI copy, docs, scripts,
+package names. Do not rename storage-layout-affecting things without tests.
+Gate: grep returns zero hits outside git history/changelog note. Tests pass.
+
+--- A3. P0 contract hardening (timebox 2h total; each fix needs a test) ---
+a) NavGuardHook: beforeInitialize reverts unless PoolKey == configured flagship key;
+   all callbacks require msg.sender == poolManager; fee bounded to [0.05%, 1%];
+   dynamic-fee flag verified in key; decide + test behavior when oracle is stale.
+b) In-kind redemption: crystallize pending performance fee (mint fee shares at oracle
+   NAV) before pro-rata payout; if oracle stale, allow exit and carry fee forward.
+   Invariant test: creator NAV share is identical across exit paths (fuzz).
+c) WaveRebalanceReceiver: report must include vault, nonce, observedAt; reject stale
+   (> configurable max age) and replayed reports; tests for each.
+d) Rebalance: confirm atomic revert on any swap below oracle minOut or total NAV loss
+   > cap; only registry PoolKeys; nonReentrant. Add fuzz test over weights.
+If a fix is not tested in time: revert it and add it to README "Known limitations".
+Gate: forge test passes incl. new tests; EIP-170 check passes; gas/size noted.
+
+--- A4. Sepolia deployment (1-2h, needs funded deployer key from user via env) ---
+- Use the official Uniswap v4 Sepolia PoolManager 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543
+  (re-verify on Uniswap deployments page). Do not deploy a private PoolManager.
+- Use real Chainlink Sepolia feeds where they exist (e.g. ETH/USD
+  0x694AA1769357215DE4FAC081bf1f309aDC325306, BTC/USD
+  0x1b44F3514812d835EB1BDB0acB33d3fA3351Ee43; re-verify on docs.chain.link). Any
+  asset without a real feed uses a mock feed that is clearly labeled MOCK everywhere.
+- Mine hook address with correct permission bits; deploy factory, registry, adapter,
+  hook, receiver(s); seed pools; create one flagship basket; deposit; swap through
+  hook pool both toward and away from NAV; redeem to USDC; redeem in kind.
+- Verify contracts on Etherscan if possible.
+- Write deployments/sepolia.json (addresses, block numbers, tx hashes).
+Gate: every lifecycle step has a Sepolia tx hash in EVIDENCE.md; hook fee difference
+visible in events or receipts.
+
+--- A5. Chainlink CRE real CLI run (1h, needs user `cre login`) ---
+- `cre workflow supported-chains` -> confirm Sepolia mock forwarder address for this
+  tenant (docs list 0x15fC6ae953E024d975e77382eEeC56A9101f9F88).
+- Deploy the simulation receiver (CRE_SIMULATION=true) trusting that mock forwarder.
+- `cre workflow simulate <workflow> --target <sepolia-target> --broadcast`
+  (non-interactive with --trigger-index 0 if needed). Save full terminal output to
+  docs/cre/simulate-YYYYMMDD-HHMM.log.
+- Confirm onchain: receiver event emitted AND vault state changed (or a bounded,
+  explained rejection). Note: a forwarder tx can succeed while the receiver reverts;
+  check receiver execution status.
+- If market API fails, report it; never substitute invented prices.
+Gate: real nonzero tx hash from the CLI broadcast + log file + receiver event.
+
+--- A6. Anon-RPC Sepolia measurement (1h) ---
+- Default transport = Anon-RPC worker (Nox specifier on Sepolia
+  0x35133267A8F7EC35046a83DCA0f4Ca8A6e1b7A9A unless configured otherwise; record the
+  specifier and harness version actually used).
+- Run full lifecycle in the browser against Sepolia. Export meter: per-method counts,
+  anon vs bootstrap vs explicit-direct, startup time, failures.
+- Write docs/PRIVACY.md: what goes through Anon-RPC, what does not (bootstrap
+  specifier read, wallet-signed writes via wallet RPC, worker bundle download), why.
+- Report real numbers even if <95% or >10s. Do not tune the meter to look better.
+Gate: docs/PRIVACY.md with measured numbers + screenshot; fail-closed demo works
+(kill worker -> reads error, no silent direct fallback).
+
+--- A7. UX polish (timebox 1.5h) ---
+- Network/mode badge: "Sepolia testnet · mock tokens · unaudited".
+- Hook panel: current pool price vs oracle NAV, band, fee toward/away.
+- Rebalance timeline with CRE tx links; privacy meter visible in header.
+- Clear empty/loading/error states; disable buttons with reason text.
+Gate: a stranger can create->deposit->see rebalance->redeem without help.
+
+--- A8. Docs + partner evidence (1h) ---
+- README: one-paragraph pitch; architecture diagram; Sepolia addresses + tx table;
+  "Uniswap integration" section with permalinks (commit-hash URLs with #Lx-Ly) to
+  hook callbacks, swap adapter unlock/settle, PoolKey restriction; "Chainlink CRE"
+  section linking workflow entry file, receiver onReport lines, log file, tx hash;
+  "Anon-RPC" section linking transport file + PRIVACY.md numbers; "Known limitations";
+  "What's mock vs real" table; AI attribution link; license.
+- FEEDBACK.md: specific, honest Uniswap v4 developer feedback.
+- Remind USER to submit the Uniswap Developer Feedback Form with FEEDBACK.md link.
+Gate: every README claim maps to an EVIDENCE.md row.
+
+--- A9. Security checks (30 min) ---
+`forge test`, fuzz/invariant runs, `slither .` if installed (report findings, fix only
+trivially safe ones), secret scan, npm audit file. Record outputs.
+
+--- A10. Recording + submission (user-led; agent prepares) ---
+- Prepare a 3:30 script: problem (10s) -> create basket -> deposit -> swap away from
+  NAV shows 1% fee -> CRE broadcast tx triggers rebalance -> privacy meter + kill-
+  switch -> redeem in kind -> limitations. No speed-up, no AI voice, >=720p, laptop.
+- Submission text, partner explanations, links. User submits; select exactly 3
+  partners. Confirm on dashboard. Freeze main branch after submission.
+
+==================== PHASE B: POST-EVENT PRODUCTION HARDENING ====================
+Do not start until Phase A is submitted. None of this makes the app "production
+ready" by itself; it prepares it for professional review.
+B1 Threat model + spec: invariants (share accounting, fee conservation, NAV bounds).
+B2 Testing: invariant/fuzz suites (Foundry), fork tests on target chain, mutation
+   testing, formal checks of core math where feasible.
+B3 Economic modeling: fee/HWM, turnover-window cap (e.g. per 24h), hook band
+   calibration, MEV/sandwich analysis, oracle-deviation scenarios.
+B4 Oracle design: per-feed heartbeat-based staleness, market-hours awareness,
+   L2 sequencer-uptime check + grace period on Base, circuit breakers.
+B5 Admin: multisig owner, timelock on registry/feeds longer than exit window,
+   guardian pause that never blocks in-kind exit, immutable vault asset sets.
+B6 CRE production: deploy workflow, receiver pinned to KeystoneForwarder + workflow
+   owner/name (or ID with update runbook), round-robin basket coverage.
+B7 External audit(s) + fix review; public bug bounty; staged mainnet with TVL caps.
+B8 Ops: monitoring/alerts (oracle staleness, rebalance failures, hook fee anomalies),
+   incident-response runbook, deployment checklists, key management.
+B9 Frontend supply chain: lockfile pinning, dependency audit, CSP, reproducible
+   builds, IPFS/ENS mirror; resolve Zod/SDK advisory.
+B10 Chain move: re-verify Uniswap v4, CRE forwarder, Chainlink feeds, and Anon-RPC
+   support on Base; test Anon-RPC against Base RPC before committing.
+B11 Legal/regulatory review of managed baskets and creator fees; risk disclosures,
+   terms, geofencing decisions. Get qualified counsel; do not self-certify.

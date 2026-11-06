@@ -46,7 +46,14 @@ export const tokenAbi = parseAbi([
 export const receiverAbi = parseAbi([
   "function onReport(bytes metadata,bytes report)",
   "function lastObservation(address vault) view returns (uint64)",
+  "function lastNonce(address vault) view returns (uint64)",
+  "function maxReportAge() view returns (uint64)",
 ]);
 export const adapterAbi = parseAbi([
   "function swap(address a,address b,uint256 amount,uint256 minOut,address recipient) returns(uint256)",
+]);
+export const hookAbi = parseAbi([
+  "function poolSnapshot() view returns(uint256 spot18,uint256 nav18,bool healthy,uint24 sellFee,uint24 buyFee)",
+  "function approvedPoolId() view returns(bytes32)",
+  "event HookFeeApplied(bytes32 indexed id,uint256 spot18,uint256 nav18,bool sellingFund,uint24 fee)",
 ]);

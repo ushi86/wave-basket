@@ -269,7 +269,10 @@ contract WaveVault is ERC20, Ownable2Step, ReentrancyGuard {
 
     function redeemInKind(uint256 shares, address receiver) external nonReentrant returns (uint256[] memory amounts) {
         _checkExit(shares, receiver);
-        // Deliberately price independent: outstanding performance fees are not crystallized on this exit.
+        // Healthy exits share the settlement path's fee accounting. Unhealthy feeds
+        // leave the full net pro-rata exit available: no reserve or deferred claim.
+        (, bool healthy) = navUsdc();
+        if (healthy) _crystallize();
         uint256 supply = totalSupply();
         uint256 feeShares = Math.mulDiv(shares, WITHDRAWAL_FEE_BPS, 10_000);
         _transfer(msg.sender, treasury, feeShares);

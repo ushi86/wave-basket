@@ -8,14 +8,14 @@ contract ReceiverTest is WaveFixture {
     function testOnlyFreshAuthenticatedReportCanRebalanceOnce() public {
         WaveVault vault = createBasket();
         WaveRebalanceReceiver receiver = new WaveRebalanceReceiver(
-            address(0xF00), factory, false, bytes32(uint256(1)), address(this), bytes10("wave")
+            address(0xF00), factory, false, bytes32(uint256(1)), address(this), bytes10("wave"), 900
         );
         factory.setRebalancer(address(receiver));
         uint16[] memory bps = new uint16[](3);
         bps[0] = 4500;
         bps[1] = 3000;
         bps[2] = 2500;
-        bytes memory report = abi.encode(address(vault), bps, uint64(block.timestamp), keccak256("market"));
+        bytes memory report = abi.encode(address(vault), uint64(1), bps, uint64(block.timestamp), keccak256("market"));
         bytes memory metadata = abi.encodePacked(bytes32(uint256(1)), bytes10("wave"), address(this));
         vm.expectRevert();
         receiver.onReport(metadata, report);
@@ -31,13 +31,14 @@ contract ReceiverTest is WaveFixture {
         vm.chainId(31337);
         WaveVault vault = createBasket();
         WaveRebalanceReceiver receiver =
-            new WaveRebalanceReceiver(address(0xF00), factory, true, bytes32(0), address(0), bytes10(0));
+            new WaveRebalanceReceiver(address(0xF00), factory, true, bytes32(0), address(0), bytes10(0), 900);
         factory.setRebalancer(address(receiver));
         uint16[] memory bps = new uint16[](3);
         bps[0] = 4500;
         bps[1] = 3000;
         bps[2] = 2500;
-        bytes memory report = abi.encode(address(vault), bps, uint64(block.timestamp), keccak256("simulation"));
+        bytes memory report =
+            abi.encode(address(vault), uint64(1), bps, uint64(block.timestamp), keccak256("simulation"));
         vm.prank(address(0xF00));
         receiver.onReport("", report);
         assertEq(vault.rebalanceCount(), 1);
@@ -46,7 +47,7 @@ contract ReceiverTest is WaveFixture {
     function testHistoryRetainsLast32AndExpiresEarlierRecords() public {
         WaveVault vault = createBasket();
         WaveRebalanceReceiver receiver = new WaveRebalanceReceiver(
-            address(0xF00), factory, false, bytes32(uint256(1)), address(this), bytes10("wave")
+            address(0xF00), factory, false, bytes32(uint256(1)), address(this), bytes10("wave"), 900
         );
         factory.setRebalancer(address(receiver));
         uint16[] memory bps = new uint16[](3);
@@ -58,7 +59,7 @@ contract ReceiverTest is WaveFixture {
             bps[2] = 2500;
             timestamp += 301;
             vm.warp(timestamp);
-            bytes memory report = abi.encode(address(vault), bps, uint64(timestamp), bytes32(i));
+            bytes memory report = abi.encode(address(vault), uint64(i + 1), bps, uint64(timestamp), bytes32(i));
             vm.prank(address(0xF00));
             receiver.onReport(metadata, report);
         }
@@ -67,5 +68,36 @@ contract ReceiverTest is WaveFixture {
         vault.rebalanceAt(0);
         assertEq(vault.rebalanceAt(1).id, 1);
         assertEq(vault.rebalanceAt(32).id, 32);
+    }
+
+    function testNonceMustBeNextAndFailedExecutionRemainsRetryable() public {
+        WaveVault vault = createBasket();
+        WaveRebalanceReceiver receiver = new WaveRebalanceReceiver(
+            address(0xF00), factory, false, bytes32(uint256(1)), address(this), bytes10("wave"), 900
+        );
+        factory.setRebalancer(address(receiver));
+        uint16[] memory bps = new uint16[](3);
+        bps[0] = 4500;
+        bps[1] = 3000;
+        bps[2] = 2500;
+        bytes memory metadata = abi.encodePacked(bytes32(uint256(1)), bytes10("wave"), address(this));
+        bytes memory report = abi.encode(address(vault), uint64(2), bps, uint64(block.timestamp), bytes32(0));
+        vm.prank(address(0xF00));
+        vm.expectRevert(WaveRebalanceReceiver.InvalidReport.selector);
+        receiver.onReport(metadata, report);
+        assertEq(receiver.lastNonce(address(vault)), 0);
+        vault.proposeWeights(bps);
+        report = abi.encode(address(vault), uint64(1), bps, uint64(block.timestamp), bytes32(0));
+        vm.prank(address(0xF00));
+        vm.expectRevert(WaveVault.Timelocked.selector);
+        receiver.onReport(metadata, report);
+        assertEq(receiver.lastNonce(address(vault)), 0);
+        vault.cancelWeights();
+        vm.prank(address(0xF00));
+        receiver.onReport(metadata, report);
+        assertEq(receiver.lastNonce(address(vault)), 1);
+        vm.prank(address(0xF00));
+        vm.expectRevert(WaveRebalanceReceiver.InvalidReport.selector);
+        receiver.onReport(metadata, report);
     }
 }

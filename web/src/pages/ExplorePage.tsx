@@ -65,6 +65,7 @@ export function ExplorePage({
     Awaited<ReturnType<typeof loadOlderHistory>>
   >([]);
   const [olderLoading, setOlderLoading] = useState(false);
+  const hookSnapshot = model.hookSnapshot;
   const basket =
     baskets.find((b) => b.address === selected) ||
     baskets.find((b) => b.address === config?.flagship) ||
@@ -478,7 +479,7 @@ export function ExplorePage({
             <p className="action-disclosure">
               <ShieldCheck size={13} />
               {action === "kind"
-                ? "No performance fee crystallization on in-kind exit."
+                ? "Healthy feeds: creator fees crystallize. Stale feeds: full net pro-rata exit; pending creator fees are waived."
                 : "Performance fees apply only above the high-water mark."}
             </p>
           </div>
@@ -553,6 +554,25 @@ export function ExplorePage({
                         <span title={row.reasonHash}>
                           {short(row.reasonHash)}
                         </span>
+                      </td>
+                      <td>
+                        {row.transactionHash ? (
+                          config?.chainId === 11155111 ? (
+                            <a
+                              href={`https://sepolia.etherscan.io/tx/${row.transactionHash}`}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              {short(row.transactionHash)} ↗
+                            </a>
+                          ) : (
+                            <span title={row.transactionHash}>
+                              {short(row.transactionHash)}
+                            </span>
+                          )
+                        ) : (
+                          "Reference unavailable"
+                        )}
                       </td>
                     </tr>
                   ))}
@@ -699,8 +719,10 @@ export function ExplorePage({
                 </div>
               </dl>
               <p>
-                Profit-only, fund-level high-water mark. In-kind exits do not
-                crystallize outstanding performance fees.
+                Profit-only, fund-level high-water mark. Healthy-feed in-kind
+                exits crystallize pending creator fees. Stale-feed exits pay the
+                full net pro-rata slice immediately and may avoid uncrystallized
+                creator fees.
               </p>
             </div>
             <div className="small-card">
@@ -742,26 +764,69 @@ export function ExplorePage({
             />
           )}
           {config?.adapter && basket.address === config.flagship && (
-            <HookTrading
-              basket={basket}
-              usdc={usdc!.address}
-              disabled={Boolean(busy || !account || !basket.healthy)}
-              run={(input, output, value, min) =>
-                run("Flagship pool swap", async (submit) => {
-                  await submit(input, tokenAbi, "approve", [
-                    config.adapter!,
-                    value,
-                  ]);
-                  await submit(config.adapter!, adapterAbi, "swap", [
-                    input,
-                    output,
-                    value,
-                    min,
-                    account!,
-                  ]);
-                })
-              }
-            />
+            <>
+              <div className="small-card">
+                <h3>Live flagship pool / oracle comparison</h3>
+                {hookSnapshot ? (
+                  <dl>
+                    <div>
+                      <dt>Pool price (mUSDC / FUND)</dt>
+                      <dd>{number(hookSnapshot[0], 18).toFixed(6)}</dd>
+                    </div>
+                    <div>
+                      <dt>Underlying NAV / FUND</dt>
+                      <dd>
+                        {hookSnapshot[2]
+                          ? number(hookSnapshot[1], 18).toFixed(6)
+                          : "Unhealthy oracle"}
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>Band around NAV</dt>
+                      <dd>±1%</dd>
+                    </div>
+                    <div>
+                      <dt>Sell FUND fee</dt>
+                      <dd>
+                        {hookSnapshot[2]
+                          ? `${(hookSnapshot[3] / 10000).toFixed(2)}%`
+                          : "Unavailable"}
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>Buy FUND fee</dt>
+                      <dd>
+                        {hookSnapshot[2]
+                          ? `${(hookSnapshot[4] / 10000).toFixed(2)}%`
+                          : "Unavailable"}
+                      </dd>
+                    </div>
+                  </dl>
+                ) : (
+                  <p>{model.hookError || "Pool data is loading."}</p>
+                )}
+              </div>
+              <HookTrading
+                basket={basket}
+                usdc={usdc!.address}
+                disabled={Boolean(busy || !account || !basket.healthy)}
+                run={(input, output, value, min) =>
+                  run("Flagship pool swap", async (submit) => {
+                    await submit(input, tokenAbi, "approve", [
+                      config.adapter!,
+                      value,
+                    ]);
+                    await submit(config.adapter!, adapterAbi, "swap", [
+                      input,
+                      output,
+                      value,
+                      min,
+                      account!,
+                    ]);
+                  })
+                }
+              />
+            </>
           )}
         </>
       )}

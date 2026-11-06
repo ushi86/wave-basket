@@ -1,0 +1,19 @@
+No files changed, compilation skipped
+
+Ran 6 tests for test/Guards.t.sol:GuardsTest
+[PASS] testDonationCannotStealNextDepositorsPrincipal() (gas: 5348870)
+[PASS] testExcessTurnoverAndPendingManualProposalBlockReports() (gas: 5790709)
+[PASS] testFactoryRejectsDuplicateAssetsAndConcentratedWeights() (gas: 531860)
+[PASS] testImpossibleMinimumDoesNotMoveAssets() (gas: 5251321)
+[PASS] testNegativeAndFutureOracleAnswersFailClosed() (gas: 4945098)
+[PASS] testReceiverRejectsStaleFutureAndUnknownVaultReports() (gas: 5999630)
+Suite result: ok. 6 passed; 0 failed; 0 skipped; finished in 2.40ms (6.68ms CPU time)
+
+Ran 4 tests for test/Receiver.t.sol:ReceiverTest
+[PASS] testHistoryRetainsLast32AndExpiresEarlierRecords() (gas: 20699603)
+[PASS] testNonceMustBeNextAndFailedExecutionRemainsRetryable() (gas: 6085899)
+[PASS] testOnlyFreshAuthenticatedReportCanRebalanceOnce() (gas: 6001688)
+[PASS] testSimulationModeAcceptsEmptyMetadataButKeepsVaultBounds() (gas: 5993728)
+Suite result: ok. 4 passed; 0 failed; 0 skipped; finished in 11.07ms (14.13ms CPU time)
+
+Ran 2 test suites in 11.39ms (13.47ms CPU time): 10 tests passed, 0 failed, 0 skipped (10 total tests)

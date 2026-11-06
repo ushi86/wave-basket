@@ -88,4 +88,60 @@ contract AccountingTest is WaveFixture {
         assertApproxEqAbs(received, netQuote, 1000);
         assertEq(v.performanceFeeSharesMinted(), pendingShares);
     }
+
+    function testHealthyInKindCannotAvoidCreatorPerformanceFees() public {
+        WaveVault v = createBasket();
+        address holder = address(0xABC);
+        v.transfer(holder, 4e18);
+        ethFeed.setAnswer(4000e8);
+        uint256 snapshot = vm.snapshotState();
+        vm.prank(holder);
+        v.redeem(4e18, 0, holder);
+        uint256 expectedCreatorShares = v.balanceOf(address(this));
+        assertApproxEqAbs(v.performanceFeeSharesMinted(), 294117647058823529, 2);
+        vm.revertToState(snapshot);
+        vm.prank(holder);
+        v.redeemInKind(4e18, holder);
+        assertEq(v.balanceOf(address(this)), expectedCreatorShares);
+        assertApproxEqAbs(v.performanceFeeSharesMinted(), 294117647058823529, 2);
+    }
+
+    function testStaleInKindPaysFullNetProRataWithoutAReserve() public {
+        WaveVault v = createBasket();
+        address holder = address(0xABC);
+        v.transfer(holder, 4e18);
+        uint256 ethHeld = eth.balanceOf(address(v));
+        uint256 btcHeld = btc.balanceOf(address(v));
+        uint256 linkHeld = link.balanceOf(address(v));
+        uint256 supply = v.totalSupply();
+        // Four shares, less the unchanged 0.1% withdrawal fee: 3.996 shares leave the vault.
+        uint256 netShares = 3_996_000_000_000_000_000;
+        vm.warp(block.timestamp + 2 days);
+        vm.prank(holder);
+        v.redeemInKind(4e18, holder);
+        assertEq(eth.balanceOf(holder), ethHeld * netShares / supply);
+        assertEq(btc.balanceOf(holder), btcHeld * netShares / supply);
+        assertEq(link.balanceOf(holder), linkHeld * netShares / supply);
+        assertEq(v.balanceOf(holder), 0);
+        assertEq(v.balanceOf(treasury), 4e15);
+        assertEq(v.performanceFeeSharesMinted(), 0);
+    }
+
+    function testFuzzHealthyExitChoiceDoesNotReduceCreatorFee(uint96 rawShares) public {
+        WaveVault v = createBasket();
+        address holder = address(0xABC);
+        uint256 shares = bound(uint256(rawShares), 1e15, 9e18);
+        v.transfer(holder, shares);
+        ethFeed.setAnswer(4000e8);
+        uint256 snapshot = vm.snapshotState();
+        vm.prank(holder);
+        v.redeem(shares, 0, holder);
+        uint256 creatorShares = v.balanceOf(address(this));
+        uint256 fee = v.performanceFeeSharesMinted();
+        vm.revertToState(snapshot);
+        vm.prank(holder);
+        v.redeemInKind(shares, holder);
+        assertEq(v.balanceOf(address(this)), creatorShares);
+        assertEq(v.performanceFeeSharesMinted(), fee);
+    }
 }

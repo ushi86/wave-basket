@@ -1,0 +1,89 @@
+{
+  "phase": "contract-hardening",
+  "scope": "local-check-only",
+  "startedAt": "2026-11-06T06:42:01.159Z",
+  "finishedAt": "2026-11-06T06:42:21.301Z",
+  "checks": [
+    {
+      "name": "typecheck",
+      "argv": [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      "startedAt": "2026-11-06T06:42:01.159Z",
+      "finishedAt": "2026-11-06T06:42:02.906Z",
+      "exitCode": 0,
+      "log": "docs/readiness/contract-hardening-20261106T064201Z/typecheck.log",
+      "sha256": "e39697a7abe175682393da1d6b2b94486648d6d450634f87bef32b3acce5faf0"
+    },
+    {
+      "name": "tests",
+      "argv": [
+        "npm",
+        "test"
+      ],
+      "startedAt": "2026-11-06T06:42:02.906Z",
+      "finishedAt": "2026-11-06T06:42:03.780Z",
+      "exitCode": 0,
+      "log": "docs/readiness/contract-hardening-20261106T064201Z/tests.log",
+      "sha256": "1a69a9bdd81cd5cd07d6e56b8aa77ca6e179e841eec065ade5c45f88f74aded7"
+    },
+    {
+      "name": "web-build",
+      "argv": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "startedAt": "2026-11-06T06:42:03.780Z",
+      "finishedAt": "2026-11-06T06:42:06.082Z",
+      "exitCode": 0,
+      "log": "docs/readiness/contract-hardening-20261106T064201Z/web-build.log",
+      "sha256": "83ec99177f43e891034e2cdbefb63c162e0a8bf1cfdf1cef7c5878dc2a655730"
+    },
+    {
+      "name": "workflow-build",
+      "argv": [
+        "npm",
+        "run",
+        "build:workflow"
+      ],
+      "startedAt": "2026-11-06T06:42:06.082Z",
+      "finishedAt": "2026-11-06T06:42:08.712Z",
+      "exitCode": 0,
+      "log": "docs/readiness/contract-hardening-20261106T064201Z/workflow-build.log",
+      "sha256": "9d4e3608a9ce3c480ad69b657c0b7270e3d86135bc82c101e85bb866e378cbd1"
+    },
+    {
+      "name": "contract-size",
+      "argv": [
+        "npm",
+        "run",
+        "check:contracts"
+      ],
+      "startedAt": "2026-11-06T06:42:08.712Z",
+      "finishedAt": "2026-11-06T06:42:21.050Z",
+      "exitCode": 0,
+      "log": "docs/readiness/contract-hardening-20261106T064201Z/contract-size.log",
+      "sha256": "818dd6d98a1b5e2db699a21955adcd4012621b816d8802df5b5a74b9e1794e90"
+    },
+    {
+      "name": "foundry-verbose",
+      "argv": [
+        "/opt/homebrew/Cellar/node@24/24.22.1/bin/node",
+        "scripts/foundry.mjs",
+        "forge",
+        "test",
+        "--root",
+        "contracts",
+        "-vvv"
+      ],
+      "startedAt": "2026-11-06T06:42:21.050Z",
+      "finishedAt": "2026-11-06T06:42:21.301Z",
+      "exitCode": 0,
+      "log": "docs/readiness/contract-hardening-20261106T064201Z/foundry-verbose.log",
+      "sha256": "32994511c545b933653a73bf1da144104318024e2785777ea4efed53c331465b"
+    }
+  ]
+}

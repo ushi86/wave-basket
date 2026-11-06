@@ -1,0 +1,1 @@
+{"name":"@wave/readiness","version":"0.1.0","private":true,"type":"module","scripts":{"typecheck":"tsc --noEmit","test":"vitest run"},"dependencies":{"viem":"^2.57.16"}}

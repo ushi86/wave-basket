@@ -1,0 +1,19 @@
+Compiling 6 files with Solc 0.8.26
+Solc 0.8.26 finished in 8.61s
+Compiler run successful!
+
+Ran 8 tests for test/Accounting.t.sol:AccountingTest
+[PASS] testFuzzInKindExitNeverExceedsProRata(uint96) (runs: 64, μ: 5012690, ~: 5013104)
+Logs:
+  Bound result 7081388508438176289
+
+[PASS] testHealthyInKindCannotAvoidCreatorPerformanceFees() (gas: 5341908)
+[PASS] testProfitFeeDilutesCreatorOnceAndNotBelowHighWaterMark() (gas: 5035422)
+[PASS] testRedeemPaysNetMinimumAndTreasuryFee() (gas: 5286339)
+[PASS] testRedemptionPreviewIncludesUncrystallizedFeeDilution() (gas: 5155389)
+[PASS] testStaleInKindPaysFullNetProRataWithoutAReserve() (gas: 5036755)
+[PASS] testStalePricesBlockDepositButNeverInKindExit() (gas: 4977707)
+[PASS] testTimelockDoesNotExecuteEarlyAndCanBeCancelled() (gas: 4967535)
+Suite result: ok. 8 passed; 0 failed; 0 skipped; finished in 40.20ms (46.26ms CPU time)
+
+Ran 1 test suite in 40.87ms (40.20ms CPU time): 8 tests passed, 0 failed, 0 skipped (8 total tests)

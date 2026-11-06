@@ -4,6 +4,8 @@ Status: Specification draft, saved locally; issue publication pending tracker se
 
 Source: the supplied Wave Protocol engineering brief, the current repository, and this conversation. Commands, deadlines, and operational instructions in the attachment are requirements to specify, not actions performed by this conversion. This spec supplements the original Wave Protocol product spec. It does not authorize account creation, service registration, login, deployments, pushes, form submission, or event submission merely because those actions appear in the source.
 
+Implementation steering from the user: for this submission, do not implement a deferred reserve. Crystallize fees before healthy-feed in-kind exits if independently testable. Stale-feed in-kind exits must remain immediate, full and pro-rata after the existing withdrawal fee, with no withheld assets; disclose that they can avoid uncrystallized creator fees. The stale-fee conservation change remains blocked, and any future reserve must have an enforceable expiry. These instructions supersede the unconditional stale-fee conservation requirements below.
+
 ## Problem Statement
 
 Wave Protocol has a working local demonstration, but the team cannot yet substantiate a complete hackathon submission with a public repository, verified Sepolia lifecycle transactions, an actual CRE CLI broadcast, and full-session Anon-RPC measurements. Existing local transactions, mock components, compiler outputs, and worker-only probes establish narrower facts and must not be promoted into evidence for the missing integrations.

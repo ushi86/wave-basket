@@ -1,5 +1,7 @@
 import { AnonRpcWorker } from "@anon-rpc/browser-harness";
 import {
+  parseEventLogs,
+  type TransactionReceipt,
   createPublicClient,
   createWalletClient,
   custom,
@@ -12,6 +14,7 @@ import {
 } from "viem";
 import type { Deployment } from "./config";
 import { PrivateRpc } from "./privacy";
+import { hookAbi } from "../../../shared/abi";
 export type PrivacyState = "booting" | "ready" | "failed" | "local";
 export type WalletProvider = EIP1193Provider & {
   on?: (event: string, listener: (...args: unknown[]) => void) => void;
@@ -49,6 +52,23 @@ export function createChainSession(
   let status: PrivacyState = local ? "local" : "booting";
   let id = 0;
   let stopped = false;
+  const startedAt = new Date().toISOString();
+  const lifecycle: Record<string, Hash> = {};
+  const observations: Array<{
+    functionName: string;
+    hash: Hash;
+    blockNumber: string;
+    observedAt: string;
+  }> = [];
+  let failureDemo:
+    | {
+        privateReadFailed: boolean;
+        directBefore: number;
+        directAfter: number;
+        observedAt: string;
+      }
+    | undefined;
+
   const bootStarted = performance.now();
   let bootTimeMs: number | undefined;
   const meter = new PrivateRpc({
@@ -206,6 +226,131 @@ export function createChainSession(
     if (data.error) throw new Error(data.error.message);
     return BigInt(data.result).toString();
   }
+  function recordTransaction(
+    functionName: string,
+    receipt: TransactionReceipt,
+  ) {
+    if (receipt.status !== "success") return;
+    observations.push({
+      functionName,
+      hash: receipt.transactionHash,
+      blockNumber: receipt.blockNumber.toString(),
+      observedAt: new Date().toISOString(),
+    });
+    const kinds: Record<string, string> = {
+      createBasket: "createBasket",
+      deposit: "deposit",
+      redeem: "redeemUsdc",
+      redeemInKind: "redeemInKind",
+    };
+    if (kinds[functionName])
+      lifecycle[kinds[functionName]] = receipt.transactionHash;
+    if (functionName === "swap")
+      for (const log of parseEventLogs({
+        abi: hookAbi,
+        logs: receipt.logs,
+        eventName: "HookFeeApplied",
+        strict: true,
+      })) {
+        if (log.address.toLowerCase() !== config.hook?.toLowerCase()) continue;
+        const { spot18, nav18, sellingFund, fee } = log.args;
+        const toward =
+          spot18 > nav18 ? sellingFund : spot18 < nav18 ? !sellingFund : false;
+        if (toward && fee === 500)
+          lifecycle.hookToward = receipt.transactionHash;
+        if (!toward && fee === 10000)
+          lifecycle.hookAway = receipt.transactionHash;
+      }
+  }
+  function recordRebalance(hash: Hash, timestamp: bigint) {
+    if (Number(timestamp) >= Math.floor(Date.parse(startedAt) / 1000))
+      lifecycle.rebalance = hash;
+  }
+  async function testFailClosed() {
+    if (status !== "ready")
+      throw new Error(
+        "Start a private worker before testing its failure behavior",
+      );
+    const directBefore = meter.snapshot().direct;
+    status = "failed";
+    worker?.close();
+    clearTimeout(timeout);
+    update(
+      "failed",
+      "Worker stopped for a fail-closed test. Reload to reconnect privately.",
+    );
+    let privateReadFailed = false;
+    try {
+      await client.getBlockNumber({ cacheTime: 0 });
+    } catch {
+      privateReadFailed = true;
+    }
+    failureDemo = {
+      privateReadFailed,
+      directBefore,
+      directAfter: meter.snapshot().direct,
+      observedAt: new Date().toISOString(),
+    };
+    return { ...failureDemo };
+  }
+  function exportMeasurement(intendedArtifactPath: string) {
+    const snapshot = meter.snapshot();
+    const required = [
+      "createBasket",
+      "deposit",
+      "hookToward",
+      "hookAway",
+      "rebalance",
+      "redeemUsdc",
+      "redeemInKind",
+    ];
+    const complete =
+      required.every((kind) => lifecycle[kind]) &&
+      !config.workingTreeDirty &&
+      Boolean(config.codeCommit);
+    return {
+      schemaVersion: 1,
+      environment: local ? "local" : "sepolia",
+      scope:
+        complete && !local
+          ? "full-lifecycle"
+          : config.factory
+            ? "partial-session"
+            : "worker-only",
+      verification: "unverified-browser-observation",
+      releaseCommit: config.codeCommit ?? null,
+      workingTreeDirty: config.workingTreeDirty ?? null,
+      startedAt,
+      finishedAt: new Date().toISOString(),
+      workerSpecifier: local
+        ? null
+        : config.anonSpecifier ||
+          import.meta.env.VITE_ANON_SPECIFIER ||
+          "0xDf5Db854BA75B52a4bF1a250a93D8d25cB982b2d",
+      harnessVersion: "0.4.0",
+      startupSeconds: bootTimeMs === undefined ? null : bootTimeMs / 1000,
+      rpcOrigin: new URL(rpcUrl).origin,
+      mockComponents: {
+        tokens: config.mockTokens ?? true,
+        oracleMode: config.oracleMode,
+        receiverMode: config.receiverMode ?? "unconfigured",
+      },
+      routes: {
+        anon: snapshot.anon,
+        bootstrap: snapshot.bootstrap,
+        direct: snapshot.direct,
+        failed: snapshot.failed,
+        attempted: snapshot.attempted,
+      },
+      coveragePercent: snapshot.coverage,
+      methods: snapshot.byMethod,
+      lifecycle: { ...lifecycle },
+      observations: [...observations],
+      failureDemo: failureDemo
+        ? { ...failureDemo, artifact: intendedArtifactPath }
+        : null,
+    };
+  }
   return {
     get bootTimeMs() {
       return bootTimeMs;
@@ -217,6 +362,10 @@ export function createChainSession(
     connect,
     send,
     readBlockDirectlyOnce,
+    recordTransaction,
+    recordRebalance,
+    testFailClosed,
+    exportMeasurement,
     close() {
       stopped = true;
       clearTimeout(timeout);
