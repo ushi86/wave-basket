@@ -1,0 +1,17 @@
+{
+  "scope": "read-only Sepolia deployment simulation to reproduce owner RPC error; NO broadcast/unlock",
+  "startedAt": "2026-11-06T10:43:29.640Z",
+  "args": [
+    "script",
+    "script/DeployDemo.s.sol:DeployDemo",
+    "--rpc-url",
+    "https://ethereum-sepolia-rpc.publicnode.com",
+    "--sender",
+    "0xDe25D83481c0c2A711397c44eE3317dD826952D5",
+    "--non-interactive"
+  ],
+  "code": 1,
+  "signal": null,
+  "finishedAt": "2026-11-06T10:43:31.890Z",
+  "exactSymptom": true
+}

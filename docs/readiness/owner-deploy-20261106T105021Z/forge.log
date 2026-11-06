@@ -1,0 +1,44 @@
+No files changed, compilation skipped
+2026-11-06T10:50:22.712352Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for ../node_modules/@uniswap/v4-core/lib/forge-std/src/Test.sol
+2026-11-06T10:50:22.713484Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for /Users/hano/Projects/Wave Eth/node_modules/@uniswap/v4-core/lib/forge-std/src/StdAssertions.sol
+2026-11-06T10:50:22.713642Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for /Users/hano/Projects/Wave Eth/node_modules/@uniswap/v4-core/lib/forge-std/src/StdError.sol
+2026-11-06T10:50:22.713698Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for /Users/hano/Projects/Wave Eth/node_modules/@uniswap/v4-core/lib/forge-std/src/StdInvariant.sol
+2026-11-06T10:50:22.713945Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for /Users/hano/Projects/Wave Eth/node_modules/@uniswap/v4-core/lib/forge-std/src/StdToml.sol
+2026-11-06T10:50:22.715685Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for test/Lifecycle.t.sol
+2026-11-06T10:50:22.715728Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for test/WaveFixture.sol
+2026-11-06T10:50:22.716667Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for test/Accounting.t.sol
+2026-11-06T10:50:22.718197Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for test/Guards.t.sol
+2026-11-06T10:50:22.718242Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for test/Hook.t.sol
+2026-11-06T10:50:22.718290Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for test/Receiver.t.sol
+2026-11-06T10:50:22.718333Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for test/V4Integration.t.sol
+2026-11-06T10:50:23.471532Z  WARN foundry_fork_db::cache: Failed to read cache file err=Os { code: 2, kind: NotFound, message: "No such file or directory" } path="/Users/hano/.foundry/cache/rpc/sepolia/12076079"
+2026-11-06T10:50:42.896396Z  WARN evm::traces::external: etherscan config not found
+2026-11-06T10:50:43.061866Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body")
+2026-11-06T10:50:43.068525Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body")
+2026-11-06T10:50:43.488877Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body")
+2026-11-06T10:50:43.528164Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body")
+2026-11-06T10:50:44.035539Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body")
+2026-11-06T10:50:44.527369Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body")
+2026-11-06T10:50:44.566509Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body")
+Script ran successfully.
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 11155111
+
+Estimated gas price: 0.027500025 gwei
+
+Estimated total gas used for script: 27791510
+
+Estimated amount required: 0.00076426721978775 ETH
+
+==========================
+
+SIMULATION COMPLETE. To broadcast these transactions, add --broadcast and wallet configuration(s) to the previous command. See forge script --help for more.
+
+Transactions saved to: /Users/hano/Projects/Wave Eth/contracts/broadcast/DeployDemo.s.sol/11155111/dry-run/run-latest.json
+
+Sensitive values saved to: /Users/hano/Projects/Wave Eth/contracts/cache/DeployDemo.s.sol/11155111/dry-run/run-latest.json
+

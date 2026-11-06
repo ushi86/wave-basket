@@ -1,0 +1,4 @@
+mode=--dry-run
+block=12076079
+blockHash=0x13aa1a0b42afa5b6f229b88b5c693158c49d06ec4141b396508faa22f522d714
+exitCode=0

@@ -20,8 +20,9 @@ Status: submission incomplete. Each ID maps to the exact README paragraph/list i
 | claim-2d7ade9a7896 | Partial | [- Contracts: vault(contracts/src/WaveVault.sol), factory/deployer(contracts/src/WaveF...](docs/READINESS.md) | 2026-11-06T14:12:30.843+05:30 |
 | claim-3ae21887748b | Partial | [- Up to four distinct allowlisted assets; positive target weights total 10,000 bps, a...](docs/READINESS.md) | 2026-11-06T14:12:30.843+05:30 |
 | claim-3834002999e9 | Partial | [A funded Sepolia deployer and a CRE account are external prerequisites. No live deplo...](docs/READINESS.md) | 2026-11-06T14:12:30.843+05:30 |
-| claim-68a64ecb69a7 | Partial | [1. Create a Foundry keystore with the official Foundry tooling. Keep keys out of sour...](docs/READINESS.md) | 2026-11-06T14:12:30.843+05:30 |
-| claim-2869db9a25c2 | Partial | [DEPLOYER_ADDRESS must match the keystore. No raw deployer key is needed for Sepolia. ...](docs/READINESS.md) | 2026-11-06T14:12:30.843+05:30 |
+| claim-0551b22ba7cb | Partial | [1. Create a Foundry keystore with the official Foundry tooling. Keep keys out of sour...](docs/READINESS.md) | 2026-11-06T16:22:26.754+05:30 |
+| claim-f58b162e773b | Partial | [Inspect the successful dry run before broadcasting. In your own interactive terminal ...](docs/READINESS.md) | 2026-11-06T16:22:26.754+05:30 |
+| claim-3f4edeabf56a | Partial | [The helper checks both providers, selects a recent common fixed block to avoid the ob...](docs/READINESS.md) | 2026-11-06T16:22:26.754+05:30 |
 | claim-d6b1770ee286 | Partial | [The converter also populates CRE factory/receiver addresses and token-to-market-ID ma...](docs/READINESS.md) | 2026-11-06T14:12:30.843+05:30 |
 | claim-ff09b60a5d8c | Partial | [Check the current CLI configuration conventions against the installed version. Observ...](docs/READINESS.md) | 2026-11-06T14:12:30.843+05:30 |
 | claim-b4977509bc0c | Partial | [CRE modes: current simulation mock forwarders omit workflow metadata. Set CRE_SIMULAT...](docs/READINESS.md) | 2026-11-06T14:12:30.843+05:30 |
@@ -59,3 +60,7 @@ Both providers observed zero Sepolia ETH at the owner-confirmed public address a
 The [configured dry-run record](docs/readiness/CONFIGURED_DEPLOYMENT_DRY_RUN.md) captures the owner-supplied public tenant simulation forwarder, two-provider balance/feed/code checks and a genuine completed Forge dry run. Actual deployment estimate: **27,792,864 gas** at **1.00000002 gwei**, requiring approximately **0.02779286455585728 Sepolia ETH**. The observed funded balance was **0.199243140019909222 Sepolia ETH**.
 
 This is **dry-run evidence only**. No broadcast, contract deployment, CRE workflow execution or browser measurement occurred. Generated addresses are archived explicitly as predictions outside the canonical deployment-manifest path. Actual addresses, transaction hashes, deployed block numbers and missing live submission gates remain unfilled until real receipts are verified.
+
+## RPC tip workaround and local demo
+
+The [diagnosis record](docs/readiness/RPC_TIP_DIAGNOSIS.md) retains the failed owner attempt, a matching read-only reproduction, and a successful fixed-block comparison. The guarded owner helper defaults to dry run and preserves all checks. No real Sepolia deployment or transaction is claimed. The separately launched Anvil demo is chain 31337 with mock assets and direct reads; it remains local-only evidence.

@@ -93,13 +93,19 @@ The factory uses a dedicated, factory-only deployer to keep both factory and vau
 A funded Sepolia deployer and a CRE account are external prerequisites. No live deployment, verification transaction, or CLI broadcast is claimed by the local demo.
 
 1. Create a Foundry keystore with the official Foundry tooling. Keep keys out of source and frontend environment files. Populate the deployment environment from the names in `contracts/.env.example`, using current official contract/feed/forwarder addresses. The script reads feed metadata and refuses unhealthy feed values before pool creation. Verify heartbeats/bounds and adequate gas before broadcasting.
-2. From the contracts directory, run the deployment with the funded keystore:
+2. From the repository root, run the guarded deployment helper in dry-run mode first:
 
    ```sh
-   forge script script/DeployDemo.s.sol:DeployDemo --rpc-url "$SEPOLIA_RPC_URL" --account deployer --broadcast --verify
+   bash scripts/deploy-sepolia.sh --dry-run
    ```
 
-   `DEPLOYER_ADDRESS` must match the keystore. No raw deployer key is needed for Sepolia. The script writes `deployments/sepolia.json`; archive addresses, transaction receipts, and explorer verification results. The local deployment path also uses this script, but uses only the public disposable Anvil key.
+   Inspect the successful dry run before broadcasting. In your own interactive terminal with the explorer API key already configured, run separately:
+
+   ```sh
+   bash scripts/deploy-sepolia.sh --broadcast
+   ```
+
+   The helper checks both providers, selects a recent common fixed block to avoid the observed PublicNode tip/state lookup error, and defaults to no broadcast. It refuses a changed deployer nonce or an existing broadcast record until reviewed. Tenderly stays read-only. It is configured for the current `wave-sepolia` initial deployment; the owner enters the keystore password locally. `DEPLOYER_ADDRESS` must match the keystore. No raw deployer key is needed for Sepolia. The script writes `deployments/sepolia.json`; archive addresses, transaction receipts, and explorer verification results. The local deployment path also uses this script, but uses only the public disposable Anvil key.
 3. Convert the generated manifest and configure the browser and CRE addresses:
 
    ```sh

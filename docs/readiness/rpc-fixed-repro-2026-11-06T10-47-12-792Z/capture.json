@@ -1,0 +1,25 @@
+{
+  "scope": "read-only Sepolia simulation; only fixed fork block added relative to reproduced failing command; NO broadcast/unlock",
+  "startedAt": "2026-11-06T10:47:12.792Z",
+  "args": [
+    "script",
+    "script/DeployDemo.s.sol:DeployDemo",
+    "--rpc-url",
+    "https://ethereum-sepolia-rpc.publicnode.com",
+    "--sender",
+    "0xDe25D83481c0c2A711397c44eE3317dD826952D5",
+    "--non-interactive",
+    "--fork-block-number",
+    "12076057"
+  ],
+  "blockHash": "0xb4f41419bf9a3eb412d5cbe8aaed0abba119d034042fa6b05356db85474d7ad4",
+  "code": 0,
+  "signal": null,
+  "finishedAt": "2026-11-06T10:47:55.746Z",
+  "exactSymptom": false,
+  "estimateLines": [
+    "Estimated gas price: 0.156640656 gwei",
+    "Estimated total gas used for script: 27791510",
+    "Estimated amount required: 0.00435328035763056 ETH"
+  ]
+}

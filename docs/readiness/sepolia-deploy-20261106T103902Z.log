@@ -1,0 +1,6 @@
+No files changed, compilation skipped
+[2m2026-11-06T10:39:06.396423Z[0m [31mERROR[0m [2msharedbackend[0m[2m:[0m Failed to send/recv `basic` [3merr[0m[2m=[0mfailed to get account for 0xA2F78ab2355fe2f984D808B5CeE7FD0A93D5270E: server returned an error response: error code -32001: block not found: 0xb843fd [3maddress[0m[2m=[0m0xA2F78ab2355fe2f984D808B5CeE7FD0A93D5270E
+Error: EVM error
+
+Context:
+- database error: failed to get account for 0xA2F78ab2355fe2f984D808B5CeE7FD0A93D5270E: server returned an error response: error code -32001: block not found: 0xb843fd

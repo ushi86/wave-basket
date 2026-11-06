@@ -135,20 +135,15 @@ Require no uncommitted source changes. New evidence/log files are expected later
 From the repo root, with the exported variables above:
 
 ```bash
-set -o pipefail
-cd contracts
-forge script script/DeployDemo.s.sol:DeployDemo \
-  --rpc-url "$SEPOLIA_RPC_URL" --sender "$DEPLOYER_ADDRESS" \
-  --non-interactive 2>&1 | tee "$WAVE_RUN/deploy-dry-run.log"
+bash scripts/deploy-sepolia.sh --dry-run
 ```
+
+The helper defaults to read-only simulation, pins a recent common block after checking both providers, and archives predictions outside the canonical manifest path. This avoids the reproduced PublicNode latest-block state lookup failure. It refuses noninteractive broadcast, missing API-key configuration, changed initial nonce, or existing broadcast records. Logs are saved under its printed `docs/readiness/owner-deploy-*` path. This does not change contract behavior or oracle/execution limits.
 
 This is **dry-run evidence only**. Inspect its exit code, full output, oracle checks and gas estimate. If it fails, stop and report it. Do not broadcast by blindly continuing. For explorer verification, set `ETHERSCAN_API_KEY` privately in your terminal; do not add it to source or provide it to me. Then run the actual deployment yourself:
 
 ```bash
-forge script script/DeployDemo.s.sol:DeployDemo \
-  --rpc-url "$SEPOLIA_RPC_URL" --account wave-sepolia \
-  --broadcast --slow --verify 2>&1 | tee "$WAVE_RUN/deploy-broadcast.log"
-cd ..
+bash scripts/deploy-sepolia.sh --broadcast
 ```
 
 The keystore prompts for its password. No raw deployment key is passed. Retain `contracts/broadcast/DeployDemo.s.sol/11155111/run-latest.json` and its matching timestamped broadcast file. A dry run may write a predicted manifest; only successful canonical receipts make the addresses actual deployment evidence. Do not rerun an interrupted partially broadcast deployment as if it were fresh: inspect receipts/nonces and the exact saved broadcast before deciding whether a supported resume is appropriate. Do not use Anvil-only size-limit overrides on Sepolia.
