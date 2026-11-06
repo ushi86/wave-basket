@@ -1,0 +1,25 @@
+{
+  "scope": "Phase 2A read-only browser setup check; NOT lifecycle or full privacy acceptance",
+  "observedAt": "2026-11-06T23:19:02.620Z",
+  "url": "http://127.0.0.1:5173/#baskets",
+  "chainId": 11155111,
+  "flagship": "0x237eFeB9Db74341ebb3Ba207e991D8aeAc536b91",
+  "presentationName": "Growth",
+  "onchainName": "Wave Blue Chip",
+  "symbol": "FUND",
+  "privateRouteObserved": "active",
+  "walletConnected": false,
+  "transactionsSent": 0,
+  "screenshot": "docs/screenshots/phase2a/growth-sepolia.jpg",
+  "observedCounters": {
+    "anon": 32,
+    "bootstrap": 2,
+    "displayedCoveragePercent": 94.1
+  },
+  "limitations": [
+    "Partial read-only observation, not a full measured session or target acceptance",
+    "An initial locator readiness wait timed out; subsequent UI observation showed private reads and actual basket data",
+    "Four MetaMask extension liveness warnings observed; no app error observed in the inspected error/warn log slice",
+    "No wallet connection, deposit, hook swap or withdrawal completed"
+  ]
+}
