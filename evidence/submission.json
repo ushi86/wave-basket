@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "release": {
-    "repository": null,
+    "repository": "https://github.com/ushi86/wave-basket",
     "commit": null
   },
   "deployment": "deployments/sepolia.json",
@@ -37,13 +37,44 @@
   },
   "claims": [
     {
-      "id": "claim-fcbd695e896d",
-      "quote": "Token baskets, in balance. A Sepolia-oriented demo with independent ERC-20 basket vaults, Uniswap v4 swaps and NAV-sensitive hook fees, Chainlink CRE rebalance automation, and Anon-RPC browser reads.",
+      "id": "claim-e4f3e7a6f36f",
+      "quote": "**Token baskets, in balance.**",
       "status": "Partial",
       "artifacts": [
-        "docs/READINESS.md"
+        "docs/READINESS.md",
+        "docs/SUBMISSION.md"
       ],
-      "observedAtIST": "2026-11-06T14:12:30.843+05:30"
+      "observedAtIST": "2026-11-06T15:04:08.511+05:30"
+    },
+    {
+      "id": "claim-3995cf96ddcb",
+      "quote": "Managing a token portfolio usually means many swaps, constant rebalancing, and exposing what you hold to an RPC provider. Wave Protocol turns a basket into one ERC-20 token and keeps three things in balance:",
+      "status": "Partial",
+      "artifacts": [
+        "docs/READINESS.md",
+        "docs/SUBMISSION.md"
+      ],
+      "observedAtIST": "2026-11-06T15:04:08.511+05:30"
+    },
+    {
+      "id": "claim-484858c07431",
+      "quote": "- **Fair value - Uniswap Foundation integration:** Uniswap v4 executes swaps. NavGuardHook adjusts flagship-pool fees according to pool price relative to the Chainlink-based net asset value (NAV); it does not guarantee price convergence.\n- **Target allocation - Chainlink integration:** a CRE workflow reads market data and proposes or submits a bounded rebalance. The vault enforces allocation, turnover, timing and execution limits on-chain; a run may correctly skip or fail.\n- **Private visibility - Ethereum Foundation / Anon-RPC integration:** Anon-RPC is the default for Sepolia app reads, reducing exposure to the RPC provider. On-chain holdings and transactions stay public. Wallet RPC and broadcast remain outside the app meter; local demo reads are direct.",
+      "status": "Partial",
+      "artifacts": [
+        "docs/READINESS.md",
+        "docs/SUBMISSION.md"
+      ],
+      "observedAtIST": "2026-11-06T15:04:08.511+05:30"
+    },
+    {
+      "id": "claim-90600b9f4fc5",
+      "quote": "This is an unaudited testnet demo with mock tokens and an explicitly labeled CRE simulation receiver. Real Sepolia deployment, CRE CLI broadcast and full-session privacy acceptance remain unverified. No returns, safety or production readiness are promised. Healthy-feed exits crystallize pending creator fees; stale-feed in-kind exits remain immediate and pro-rata after the withdrawal fee, but can avoid uncrystallized creator fees. No reserve is withheld.",
+      "status": "Partial",
+      "artifacts": [
+        "docs/READINESS.md",
+        "docs/SUBMISSION.md"
+      ],
+      "observedAtIST": "2026-11-06T15:04:08.511+05:30"
     },
     {
       "id": "claim-90c97fc534fb",
@@ -137,7 +168,7 @@
     },
     {
       "id": "claim-3ae21887748b",
-      "quote": "- Up to four distinct allowlisted assets; positive target weights total 10,000 bps, at most 5,000 bps each. A settlement-token component is supported without self-swapping.\n- Six-decimal mock USDC settlement, eighteen-decimal shares, normalized eighteen-decimal USD prices; WBTC uses eight token decimals. USDC/USD is valued through its feed rather than assumed to be a permanent dollar peg.\n- Initial share price is one settlement token per share. Minimum seed is 10 mUSDC; 1,000 smallest share units are permanently locked from the seed entitlement. Later deposits use measured value added and crystallize pre-existing gains before participation. Settlement redemptions use a fresh on-chain preview that includes pending performance-fee dilution before the UI applies execution tolerance.\n- A 10 bps withdrawal fee applies to both exits. Settlement exits pay treasury in mUSDC. In-kind exits transfer fee shares to the treasury and burn only net shares against pre-burn supply.\n- Creator performance fees range from 0\u20132,000 bps. They mint dilution-adjusted shares only above a fund-level high-water mark. **Healthy-feed in-kind exits crystallize the same outstanding performance fees as settlement exits. Stale-feed exits remain immediate and fully pro-rata after the unchanged withdrawal fee, with no withheld assets.** A holder exiting during stale feeds can avoid uncrystallized creator fees. This is an explicit submission limitation; no deferred reserve is implemented.\n- Manual proposals replace previous pending proposals and may be cancelled by the creator. Automation pauses while a proposal exists. Permissionless execution after ten minutes activates target weights without trading and starts a five-minute cooldown. Later CRE reports may change those targets again within vault bounds.\n- Turnover is half the absolute difference between actual and proposed weights, including residual mUSDC as a cash leg; odd basis points round up. Actual weights use current oracle-valued holdings. Rebalances cap turnover at 20%, require a five-minute interval, cap per-swap and total NAV loss at 1%, and enforce the asset rules again on-chain.\n- Strategy: tilt current target weights using external 24-hour market changes clipped to \u00b150%, normalize under 50% asset caps, interpolate toward the result to respect turnover, and skip changes below 300 bps turnover. A proposal that cannot meet all bounds is skipped. No LLM dependency is included. At most the first three registered baskets are inspected per run.\n- Hook fees: 500 v4 fee units (0.05%) within a \u00b11% NAV band; outside it, 500 toward NAV and 10,000 (1%) away. Direction and deviation are evaluated before the trade, including trades that cross NAV. Pool spot measures deviation; underlying holdings and feeds supply reference NAV. Only the flagship pool is hooked.\n- Recent history retains 32 records with monotonic IDs. Expired IDs revert; older events remain queryable from the deployment block with adaptive log pagination.\n- Registry, pool configuration, and factory rebalancer are administered through two-step ownership. These are trusted demo administration roles and can affect valuation and trading. Mock-token faucets are public and hourly limited; mock feeds are owner-controlled. This software is unaudited and testnet-only.",
+      "quote": "- Up to four distinct allowlisted assets; positive target weights total 10,000 bps, at most 5,000 bps each. A settlement-token component is supported without self-swapping.\n- Six-decimal mock USDC settlement, eighteen-decimal shares, normalized eighteen-decimal USD prices; WBTC uses eight token decimals. USDC/USD is valued through its feed rather than assumed to be a permanent dollar peg.\n- Initial share price is one settlement token per share. Minimum seed is 10 mUSDC; 1,000 smallest share units are permanently locked from the seed entitlement. Later deposits use measured value added and crystallize pre-existing gains before participation. Settlement redemptions use a fresh on-chain preview that includes pending performance-fee dilution before the UI applies execution tolerance.\n- A 10 bps withdrawal fee applies to both exits. Settlement exits pay treasury in mUSDC. In-kind exits transfer fee shares to the treasury and burn only net shares against pre-burn supply.\n- Creator performance fees range from 0–2,000 bps. They mint dilution-adjusted shares only above a fund-level high-water mark. **Healthy-feed in-kind exits crystallize the same outstanding performance fees as settlement exits. Stale-feed exits remain immediate and fully pro-rata after the unchanged withdrawal fee, with no withheld assets.** A holder exiting during stale feeds can avoid uncrystallized creator fees. This is an explicit submission limitation; no deferred reserve is implemented.\n- Manual proposals replace previous pending proposals and may be cancelled by the creator. Automation pauses while a proposal exists. Permissionless execution after ten minutes activates target weights without trading and starts a five-minute cooldown. Later CRE reports may change those targets again within vault bounds.\n- Turnover is half the absolute difference between actual and proposed weights, including residual mUSDC as a cash leg; odd basis points round up. Actual weights use current oracle-valued holdings. Rebalances cap turnover at 20%, require a five-minute interval, cap per-swap and total NAV loss at 1%, and enforce the asset rules again on-chain.\n- Strategy: tilt current target weights using external 24-hour market changes clipped to ±50%, normalize under 50% asset caps, interpolate toward the result to respect turnover, and skip changes below 300 bps turnover. A proposal that cannot meet all bounds is skipped. No LLM dependency is included. At most the first three registered baskets are inspected per run.\n- Hook fees: 500 v4 fee units (0.05%) within a ±1% NAV band; outside it, 500 toward NAV and 10,000 (1%) away. Direction and deviation are evaluated before the trade, including trades that cross NAV. Pool spot measures deviation; underlying holdings and feeds supply reference NAV. Only the flagship pool is hooked.\n- Recent history retains 32 records with monotonic IDs. Expired IDs revert; older events remain queryable from the deployment block with adaptive log pagination.\n- Registry, pool configuration, and factory rebalancer are administered through two-step ownership. These are trusted demo administration roles and can affect valuation and trading. Mock-token faucets are public and hourly limited; mock feeds are owner-controlled. This software is unaudited and testnet-only.",
       "status": "Partial",
       "artifacts": [
         "docs/READINESS.md"
@@ -218,7 +249,7 @@
     },
     {
       "id": "claim-fd6350056369",
-      "quote": "A failed private read never silently uses a public fallback. The single-read direct action authorizes only its specific block request and makes the badge amber. The private worker has a sixty-second startup deadline. A full Sepolia lifecycle must still be measured against the spec's <10s startup and \u226595% coverage targets; a successful worker-only probe is not full-session acceptance evidence.",
+      "quote": "A failed private read never silently uses a public fallback. The single-read direct action authorizes only its specific block request and makes the badge amber. The private worker has a sixty-second startup deadline. A full Sepolia lifecycle must still be measured against the spec's <10s startup and ≥95% coverage targets; a successful worker-only probe is not full-session acceptance evidence.",
       "status": "Partial",
       "artifacts": [
         "docs/READINESS.md"
@@ -227,7 +258,7 @@
     },
     {
       "id": "claim-98eb09886b36",
-      "quote": "A holder exiting in kind during stale feeds can avoid uncrystallized creator performance fees. The exit pays the complete net pro-rata slice immediately; no assets are withheld. Healthy feeds crystallize the same pending fees as settlement redemption. Stale-period fee conservation remains blocked by the owner\u2019s explicit decision. [A post-event reserve option](docs/STALE_EXIT_DESIGN.md) requires an enforceable expiry and a new reviewed design.",
+      "quote": "A holder exiting in kind during stale feeds can avoid uncrystallized creator performance fees. The exit pays the complete net pro-rata slice immediately; no assets are withheld. Healthy feeds crystallize the same pending fees as settlement redemption. Stale-period fee conservation remains blocked by the owner’s explicit decision. [A post-event reserve option](docs/STALE_EXIT_DESIGN.md) requires an enforceable expiry and a new reviewed design.",
       "status": "Partial",
       "artifacts": [
         "docs/READINESS.md"
@@ -253,13 +284,14 @@
       "observedAtIST": "2026-11-06T14:12:30.843+05:30"
     },
     {
-      "id": "claim-f3e4593fa07e",
-      "quote": "The local chain and browser flows have been exercised. See [verification notes](docs/VERIFICATION.md) for actual evidence and limitations. Sepolia deployment/fork checks, real CRE CLI broadcast, event eligibility, partner forms, a public remote, a demo video, and submission are still external delivery steps. No tracker is configured. No form, issue, remote repository, or hackathon submission has been published.",
+      "id": "claim-6281ac452932",
+      "quote": "The local chain and browser flows have been exercised. See [verification notes](docs/VERIFICATION.md) for actual evidence and limitations. The [public repository](https://github.com/ushi86/wave-basket) contains the preserved Git history. Sepolia deployment/fork checks, real CRE CLI broadcast, event eligibility, partner forms, a demo video, and submission remain external delivery steps. No tracker is configured. No form, issue or hackathon submission has been published.",
       "status": "Partial",
       "artifacts": [
-        "docs/READINESS.md"
+        "docs/READINESS.md",
+        "docs/SUBMISSION.md"
       ],
-      "observedAtIST": "2026-11-06T14:12:30.843+05:30"
+      "observedAtIST": "2026-11-06T15:04:08.511+05:30"
     },
     {
       "id": "claim-d3c9434685dc",

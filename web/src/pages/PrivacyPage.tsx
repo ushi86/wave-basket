@@ -13,7 +13,7 @@ export function PrivacyPage({ model }: { model: WaveProtocolModel }) {
     <>
       <PageTitle
         eyebrow="PRIVACY, MADE VISIBLE"
-        title="Know where your reads go."
+        title="Private visibility. Public holdings."
       />
       <div
         className={`privacy-banner ${privacy === "ready" && !meter.direct ? "" : "warning"}`}
@@ -164,7 +164,10 @@ export function PrivacyPage({ model }: { model: WaveProtocolModel }) {
               Your wallet signs, broadcasts, and uses its own RPC independently.
             </li>
             <li>CRE runs off-browser and is outside this meter.</li>
-            <li>On-chain balances and transactions remain public.</li>
+            <li>
+              On-chain holdings and transactions stay public. Anon-RPC only
+              reduces RPC exposure; it does not hide your portfolio on-chain.
+            </li>
             <li>A failure never silently switches to direct reads.</li>
           </ul>
         </div>

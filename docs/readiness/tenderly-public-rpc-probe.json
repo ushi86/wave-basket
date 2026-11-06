@@ -1,0 +1,23 @@
+{
+  "observedAt": "2026-11-06T09:33:27.711Z",
+  "scope": "read-only candidate infrastructure check; not Wave lifecycle or browser privacy evidence",
+  "endpoint": "https://sepolia.gateway.tenderly.co",
+  "noAccountOrKeyUsed": true,
+  "chainId": 11155111,
+  "blockNumber": "12075629",
+  "blockHash": "0xa23e95a527b5ebcb277db5cca897b98fad769325c3a30b7f0fc957441cddb262",
+  "blockHashMatches": true,
+  "manager": "0xE03A1074c86CFeDd5C142C4F04F1a1536e203543",
+  "managerCodeHashMatches": true,
+  "historicalCallMatches": true,
+  "receiptProbe": {
+    "scope": "existing non-Wave transaction",
+    "hash": "0x2eb9e81d86a16fea1191d08c4ce831ce9ab3c53769ad861595ffafaab04e9b81",
+    "statusMatches": true,
+    "blockHashMatches": true,
+    "logsMatch": false,
+    "normalizedConsensusLogsMatch": true,
+    "extraOrDifferingFirstLogFields": [],
+    "followupAt": "2026-11-06T09:34:08.341Z"
+  }
+}

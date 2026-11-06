@@ -135,7 +135,7 @@ export function ExplorePage({
   };
   return (
     <>
-      <PageTitle eyebrow="DIVERSIFY WITH INTENTION" title="Find your balance.">
+      <PageTitle eyebrow="WAVE PROTOCOL" title="Token baskets, in balance.">
         <button className="button secondary" onClick={() => navigate("create")}>
           <Plus size={16} />
           Create a basket
@@ -144,16 +144,26 @@ export function ExplorePage({
       <section className="hero">
         <div className="hero-copy">
           <span className="hero-tag">
-            <span className="tiny-dot" /> ONE POSITION. A WIDER HORIZON.
+            <span className="tiny-dot" /> FAIR VALUE. TARGET ALLOCATION. PRIVATE
+            VISIBILITY.
           </span>
           <h2>
-            A basket of assets.
-            <br />A clearer way forward.
+            One basket token.
+            <br />
+            Three things in balance.
           </h2>
           <p>
-            Transparent allocations. Bounded rebalances.
+            Fair value: Uniswap v4 and NavGuardHook respond to Chainlink-based
+            NAV.
             <br />
-            Your assets, always in view.
+            Target allocation: CRE proposes or submits bounded rebalances.
+            <br />
+            Private visibility: Anon-RPC reduces exposure from app reads.
+          </p>
+          <p>
+            On-chain holdings stay public. Local demo reads are direct.
+            <br />
+            Testnet demo - Mock tokens - Unaudited - No promised returns.
           </p>
           <button
             className="hero-link"

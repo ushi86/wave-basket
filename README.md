@@ -1,6 +1,14 @@
 # Wave Protocol
 
-Token baskets, in balance. A Sepolia-oriented demo with independent ERC-20 basket vaults, Uniswap v4 swaps and NAV-sensitive hook fees, Chainlink CRE rebalance automation, and Anon-RPC browser reads.
+**Token baskets, in balance.**
+
+Managing a token portfolio usually means many swaps, constant rebalancing, and exposing what you hold to an RPC provider. Wave Protocol turns a basket into one ERC-20 token and keeps three things in balance:
+
+- **Fair value - Uniswap Foundation integration:** Uniswap v4 executes swaps. NavGuardHook adjusts flagship-pool fees according to pool price relative to the Chainlink-based net asset value (NAV); it does not guarantee price convergence.
+- **Target allocation - Chainlink integration:** a CRE workflow reads market data and proposes or submits a bounded rebalance. The vault enforces allocation, turnover, timing and execution limits on-chain; a run may correctly skip or fail.
+- **Private visibility - Ethereum Foundation / Anon-RPC integration:** Anon-RPC is the default for Sepolia app reads, reducing exposure to the RPC provider. On-chain holdings and transactions stay public. Wallet RPC and broadcast remain outside the app meter; local demo reads are direct.
+
+This is an unaudited testnet demo with mock tokens and an explicitly labeled CRE simulation receiver. Real Sepolia deployment, CRE CLI broadcast and full-session privacy acceptance remain unverified. No returns, safety or production readiness are promised. Healthy-feed exits crystallize pending creator fees; stale-feed in-kind exits remain immediate and pro-rata after the withdrawal fee, but can avoid uncrystallized creator fees. No reserve is withheld.
 
 ## Run the complete local demo
 
@@ -129,7 +137,7 @@ This increment changes immutable vault/hook/receiver code and report encoding to
 
 Submission is **not ready**. `npm run check:evidence` is read-only and intentionally exits nonzero until genuine public-source, Sepolia, CRE, privacy, eligibility, and security artifacts satisfy its checks. See [claim matrix](EVIDENCE.md), [readiness record](docs/READINESS.md), [privacy procedure](docs/PRIVACY.md), and [owner submission kit](docs/SUBMISSION.md). `npm run check:secrets` checks working source and reachable history with a location-only heuristic; it is not a professional audit.
 
-The local chain and browser flows have been exercised. See [verification notes](docs/VERIFICATION.md) for actual evidence and limitations. Sepolia deployment/fork checks, real CRE CLI broadcast, event eligibility, partner forms, a public remote, a demo video, and submission are still external delivery steps. No tracker is configured. No form, issue, remote repository, or hackathon submission has been published.
+The local chain and browser flows have been exercised. See [verification notes](docs/VERIFICATION.md) for actual evidence and limitations. The [public repository](https://github.com/ushi86/wave-basket) contains the preserved Git history. Sepolia deployment/fork checks, real CRE CLI broadcast, event eligibility, partner forms, a demo video, and submission remain external delivery steps. No tracker is configured. No form, issue or hackathon submission has been published.
 
 The SDK currently pins a Zod 3 dependency with a reported high-severity collection-size advisory. Vitest was upgraded to remove the critical test-runner advisories found during setup. `npm audit` should be revisited before any production use; do not force-upgrade SDK internals across major versions without compatibility verification.
 
