@@ -1,0 +1,34 @@
+
+> wave-protocol@0.1.0 demo
+> node scripts/local-demo.mjs
+
+Starting Wave Protocol on a disposable local Anvil chain…
+No files changed, compilation skipped
+2026-11-06T08:43:00.205510Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for ../node_modules/@uniswap/v4-core/lib/forge-std/src/Test.sol
+2026-11-06T08:43:00.206047Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for /Users/hano/Projects/Wave Eth/node_modules/@uniswap/v4-core/lib/forge-std/src/StdAssertions.sol
+2026-11-06T08:43:00.206136Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for /Users/hano/Projects/Wave Eth/node_modules/@uniswap/v4-core/lib/forge-std/src/StdError.sol
+2026-11-06T08:43:00.206161Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for /Users/hano/Projects/Wave Eth/node_modules/@uniswap/v4-core/lib/forge-std/src/StdInvariant.sol
+2026-11-06T08:43:00.206296Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for /Users/hano/Projects/Wave Eth/node_modules/@uniswap/v4-core/lib/forge-std/src/StdToml.sol
+2026-11-06T08:43:00.207248Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for test/Lifecycle.t.sol
+2026-11-06T08:43:00.207278Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for test/WaveFixture.sol
+2026-11-06T08:43:00.207836Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for test/Accounting.t.sol
+2026-11-06T08:43:00.208587Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for test/Guards.t.sol
+2026-11-06T08:43:00.208611Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for test/Hook.t.sol
+2026-11-06T08:43:00.208642Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for test/Receiver.t.sol
+2026-11-06T08:43:00.208673Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for test/V4Integration.t.sol
+2026-11-06T08:43:00.239966Z  WARN evm::traces::external: etherscan config not found
+Script ran successfully.
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 31337
+
+Estimated gas price: 2.000000001 gwei
+
+Estimated total gas used for script: 34434767
+
+Estimated amount required: 0.068869534034434767 ETH
+
+==========================

@@ -2,6 +2,8 @@
 import {
   encodeAbiParameters,
   encodeEventTopics,
+  encodeFunctionData,
+  parseAbi,
   parseAbiParameters,
   type Abi,
   type Address,
@@ -218,6 +220,14 @@ export function syntheticFixture() {
       workerSpecifier: address(10),
       harnessVersion: "0.4.0",
       startupSeconds: 4.4,
+      startedAt: "2026-11-06T06:00:00Z",
+      finishedAt: "2026-11-06T06:01:00Z",
+      workingTreeDirty: false,
+      browser: "Synthetic test-only browser",
+      observations: Object.values(hashes).map((hash) => ({
+        hash,
+        observedAt: "2026-11-06T06:00:40Z",
+      })),
       routes: { anon: 40, bootstrap: 2, direct: 0, failed: 0, attempted: 42 },
       coveragePercent: (40 / 42) * 100,
       methods: {
@@ -284,6 +294,35 @@ export function syntheticFixture() {
       },
     ],
   };
+  write(
+    "docs/raw-check.log",
+    "Synthetic passed check output for unit tests only.",
+  );
+  const proof = (subject: string) => ({
+    schemaVersion: 1,
+    subject,
+    status: "Proven",
+    releaseCommit: commit,
+    environment: "reviewed-local-and-sepolia",
+    checks: [
+      {
+        path: "docs/raw-check.log",
+        sha256: digest("Synthetic passed check output for unit tests only."),
+        result: "passed",
+        command: "synthetic test-only check",
+      },
+    ],
+    ownerDecision: "approved",
+    officialRules: "https://ethglobal.com/rules",
+    kickoffAt: "2026-11-06T00:00:00Z",
+    tools: ["dependency-audit", "secret-scan", "static-analysis", "fuzz"],
+    findingsReviewed: true,
+  });
+  write("docs/check.log", JSON.stringify(proof(id)));
+  for (const [gate, record] of Object.entries(manifest.gates)) {
+    record.artifact = `docs/gate-${gate}.json`;
+    write(record.artifact, JSON.stringify(proof(gate)));
+  }
   let rpcOverride:
     ((url: string, method: string, params: unknown[]) => unknown) | undefined;
   const io: EvidenceIO = {
@@ -308,8 +347,25 @@ export function syntheticFixture() {
         else if (request.method === "eth_getTransactionReceipt")
           result = receipts[request.params[0]] ?? null;
         else if (request.method === "eth_getBlockByNumber")
-          result = { hash: `0x${"ab".repeat(32)}` };
-        else if (request.method === "eth_call") result = poolId;
+          result = {
+            hash: `0x${"ab".repeat(32)}`,
+            timestamp:
+              "0x" +
+              Math.floor(Date.parse("2026-11-06T06:00:30Z") / 1000).toString(
+                16,
+              ),
+          };
+        else if (request.method === "eth_call")
+          result =
+            request.params[0].data ===
+            encodeFunctionData({
+              abi: parseAbi([
+                "function rebalanceCount() view returns(uint256)",
+              ]),
+              functionName: "rebalanceCount",
+            })
+              ? "0x" + "0".repeat(63) + "1"
+              : poolId;
         else
           throw new Error(
             `Unsupported synthetic RPC method: ${request.method}`,

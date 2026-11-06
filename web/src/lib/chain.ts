@@ -263,8 +263,16 @@ export function createChainSession(
       }
   }
   function recordRebalance(hash: Hash, timestamp: bigint) {
-    if (Number(timestamp) >= Math.floor(Date.parse(startedAt) / 1000))
+    if (Number(timestamp) >= Math.floor(Date.parse(startedAt) / 1000)) {
       lifecycle.rebalance = hash;
+      if (!observations.some((item) => item.hash === hash))
+        observations.push({
+          functionName: "Rebalanced",
+          hash,
+          blockNumber: "observed-via-history",
+          observedAt: new Date().toISOString(),
+        });
+    }
   }
   async function testFailClosed() {
     if (status !== "ready")
@@ -310,6 +318,7 @@ export function createChainSession(
       Boolean(config.codeCommit);
     return {
       schemaVersion: 1,
+      browser: navigator.userAgent,
       environment: local ? "local" : "sepolia",
       scope:
         complete && !local

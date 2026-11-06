@@ -382,7 +382,7 @@ export function ExplorePage({
               {action === "deposit"
                 ? "Deposit mUSDC. Receive your share of the basket."
                 : action === "kind"
-                  ? "Receive underlying tokens without swaps or oracle reads."
+                  ? "Receive underlying tokens without swaps, even when feeds are stale."
                   : "Sell your proportional assets into mUSDC."}
             </p>
             <label htmlFor="amount">

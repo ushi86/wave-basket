@@ -1,0 +1,13 @@
+
+> @wave/readiness@0.1.0 test
+> vitest run
+
+
+ RUN  v5.1.0 /Users/hano/Projects/Wave Eth/tools
+
+
+ Test Files  2 passed (2)
+      Tests  30 passed (30)
+   Start at  14:19:38
+   Duration  181ms (import 51%, tests 28%, transform 19%, worker 2%)
+

@@ -1,0 +1,59 @@
+
+> wave-protocol@0.1.0 demo
+> node scripts/local-demo.mjs
+
+Starting Wave Protocol on a disposable local Anvil chain…
+No files changed, compilation skipped
+2026-11-06T08:46:21.732149Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for ../node_modules/@uniswap/v4-core/lib/forge-std/src/Test.sol
+2026-11-06T08:46:21.733070Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for /Users/hano/Projects/Wave Eth/node_modules/@uniswap/v4-core/lib/forge-std/src/StdAssertions.sol
+2026-11-06T08:46:21.733262Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for /Users/hano/Projects/Wave Eth/node_modules/@uniswap/v4-core/lib/forge-std/src/StdError.sol
+2026-11-06T08:46:21.733330Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for /Users/hano/Projects/Wave Eth/node_modules/@uniswap/v4-core/lib/forge-std/src/StdInvariant.sol
+2026-11-06T08:46:21.733593Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for /Users/hano/Projects/Wave Eth/node_modules/@uniswap/v4-core/lib/forge-std/src/StdToml.sol
+2026-11-06T08:46:21.735115Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for test/Lifecycle.t.sol
+2026-11-06T08:46:21.735158Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for test/WaveFixture.sol
+2026-11-06T08:46:21.736269Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for test/Accounting.t.sol
+2026-11-06T08:46:21.737780Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for test/Guards.t.sol
+2026-11-06T08:46:21.737821Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for test/Hook.t.sol
+2026-11-06T08:46:21.737888Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for test/Receiver.t.sol
+2026-11-06T08:46:21.737943Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for test/V4Integration.t.sol
+2026-11-06T08:46:21.755363Z  WARN evm::traces::external: etherscan config not found
+Script ran successfully.
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 31337
+
+Estimated gas price: 2.000000001 gwei
+
+Estimated total gas used for script: 34434767
+
+Estimated amount required: 0.068869534034434767 ETH
+
+==========================
+
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+
+Transactions saved to: /Users/hano/Projects/Wave Eth/contracts/broadcast/DeployDemo.s.sol/31337/run-latest.json
+
+Sensitive values saved to: /Users/hano/Projects/Wave Eth/contracts/cache/DeployDemo.s.sol/31337/run-latest.json
+
+
+Wave Protocol deployed on local chain 31337.
+Dashboard: http://127.0.0.1:5173
+Demo reads are direct, counted, and labeled. No real assets or credentials are used.
+
+
+> @wave/web@0.1.0 dev
+> vite --host 127.0.0.1
+
+2:16:25 PM [vite] (client) Re-optimizing dependencies because lockfile has changed
+
+  VITE v7.3.7  ready in 110 ms
+
+  ➜  Local:   http://127.0.0.1:5173/
+2:18:10 PM [vite] (client) hmr update /src/pages/ExplorePage.tsx

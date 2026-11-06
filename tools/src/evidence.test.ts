@@ -268,3 +268,46 @@ it("returns a failed assessment for malformed nested records", async () => {
   const malformed = { ...fixture.manifest, transactions: [null] };
   expect((await validateEvidence(malformed, fixture.io)).ok).toBe(false);
 });
+it("rejects a rebalance event without independently observable vault state", async () => {
+  const fixture = syntheticFixture();
+  // Zero for every getter makes the positive rebalance event inconsistent with state.
+  fixture.overrideRpc((_url, method) =>
+    method === "eth_call" ? "0x" + "0".repeat(64) : undefined,
+  );
+  const result = await validateEvidence(fixture.manifest, fixture.io);
+  expect(result.ok).toBe(false);
+  expect(result.issues.some((issue) => issue.includes("rebalance state"))).toBe(
+    true,
+  );
+});
+
+it("rejects arbitrary text as support for Proven gates and claims", async () => {
+  const f = syntheticFixture();
+  f.write("docs/check.log", "No supporting proof.");
+  expect((await validateEvidence(f.manifest, f.io)).ok).toBe(false);
+});
+it("rejects contradictory or dirty privacy session provenance", async () => {
+  const f = syntheticFixture();
+  const p = JSON.parse(
+    new TextDecoder().decode(f.files.get("docs/privacy.json")),
+  );
+  f.write(
+    "docs/privacy.json",
+    JSON.stringify({
+      ...p,
+      startedAt: "2030-01-01T00:00:00Z",
+      finishedAt: "1990-01-01T00:00:00Z",
+      workingTreeDirty: true,
+    }),
+  );
+  expect((await validateEvidence(f.manifest, f.io)).ok).toBe(false);
+});
+it("rejects creation evidence for an undeclared basket", async () => {
+  const fixture = syntheticFixture();
+  const hash = fixture.manifest.transactions.find(
+    (tx) => tx.kind === "createBasket",
+  )!.hash;
+  fixture.receipts[hash].logs[0].topics[1] =
+    "0x" + "0".repeat(24) + "f".repeat(40);
+  expect((await validateEvidence(fixture.manifest, fixture.io)).ok).toBe(false);
+});

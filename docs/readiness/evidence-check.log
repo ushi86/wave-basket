@@ -18,5 +18,9 @@ Submission evidence is INCOMPLETE. No artifacts were created or changed.
 - Required Sepolia transaction hash is missing: redeemUsdc
 - Required Sepolia transaction hash is missing: redeemInKind
 - Required readiness gate is not Proven: eligibility
+- Required readiness gate is not Proven: healthyInKind
+- Required readiness gate is not Proven: approvedHook
+- Required readiness gate is not Proven: nonceReceiver
+- Required readiness gate is not Proven: rebalanceSafety
 - Required readiness gate is not Proven: securityReview
 Verified: FEEDBACK.md

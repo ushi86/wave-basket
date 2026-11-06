@@ -105,6 +105,7 @@ try {
       "--rpc-url",
       rpcUrl,
       "--broadcast",
+      "--slow",
       "--non-interactive",
       "--code-size-limit",
       "100000",

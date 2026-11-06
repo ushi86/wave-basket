@@ -31,6 +31,7 @@ export type Deployment = {
   hook: Address;
   poolManager: Address;
   oracleMode: string;
+  createdBasket?: Address;
 };
 type Log = { address: string; topics: Hex[]; data: Hex };
 type Receipt = {
@@ -40,6 +41,7 @@ type Receipt = {
   blockNumber: string;
   to: string;
   logs: Log[];
+  timestamp: number;
 };
 export class CanonicalSepolia {
   private id = 0;
@@ -112,12 +114,16 @@ export class CanonicalSepolia {
       RPCS.map((endpoint) =>
         this.rpc(endpoint, "eth_getBlockByNumber", [a.blockNumber, false]),
       ),
-    )) as Array<{ hash?: string } | null>;
+    )) as Array<{ hash?: string; timestamp?: string } | null>;
     if (blocks.some((block) => block?.hash !== a.blockHash))
       throw new Error(
         "Receipt is not on the independently observed canonical Sepolia block",
       );
-    return a;
+    if (!blocks[0]?.timestamp || blocks[0].timestamp !== blocks[1]?.timestamp)
+      throw new Error(
+        "Independent block timestamps are missing or inconsistent",
+      );
+    return { ...a, timestamp: Number(BigInt(blocks[0].timestamp)) * 1000 };
   }
   event(receipt: Receipt, name: string, emitter: string) {
     for (const log of receipt.logs || []) {
@@ -158,6 +164,15 @@ export class CanonicalSepolia {
     if (receipt.to?.toLowerCase() !== target.toLowerCase())
       throw new Error(`Unexpected transaction target for ${kind}`);
     const decoded = this.event(receipt, event, emitter);
+    if (
+      kind === "createBasket" &&
+      (decoded.eventName !== "BasketCreated" ||
+        decoded.args.vault.toLowerCase() !==
+          (deployment.createdBasket ?? deployment.flagship).toLowerCase())
+    )
+      throw new Error(
+        "Basket creation does not match the declared lifecycle basket",
+      );
     if (kind === "hookToward" || kind === "hookAway") {
       if (
         decoded.eventName !== "Swap" ||
@@ -220,6 +235,31 @@ export class CanonicalSepolia {
       )
         throw new Error(
           "CRE receiver did not accept a nonce for the flagship vault",
+        );
+    }
+    if (kind === "rebalance" && decoded.eventName === "Rebalanced") {
+      const call = encodeFunctionData({
+        abi: parseAbi(["function rebalanceCount() view returns(uint256)"]),
+        functionName: "rebalanceCount",
+      });
+      const values = await Promise.all(
+        RPCS.map((endpoint) =>
+          this.rpc(endpoint, "eth_call", [
+            { to: deployment.flagship, data: call },
+            receipt.blockNumber,
+          ]),
+        ),
+      );
+      if (
+        values.some(
+          (value) =>
+            typeof value !== "string" || !/^0x[0-9a-f]{64}$/i.test(value),
+        ) ||
+        values[0] !== values[1] ||
+        BigInt(values[0] as string) <= decoded.args.id
+      )
+        throw new Error(
+          "Canonical rebalance state does not include the emitted history record",
         );
     }
     return receipt;

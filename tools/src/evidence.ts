@@ -182,6 +182,61 @@ async function assessEvidence(
     issues.push(
       "Deployment must identify canonical Sepolia and valid configured contract addresses",
     );
+  const supportingProof = async (path: unknown, subject: string) => {
+    const proof = await json(path);
+    if (
+      !proof ||
+      proof.schemaVersion !== 1 ||
+      proof.subject !== subject ||
+      proof.status !== "Proven" ||
+      proof.releaseCommit !== data.release?.commit ||
+      proof.environment !== "reviewed-local-and-sepolia" ||
+      !Array.isArray(proof.checks) ||
+      !proof.checks.length
+    ) {
+      issues.push(`Unsupported Proven evidence: ${subject}`);
+      return;
+    }
+    for (const item of proof.checks) {
+      if (
+        !item ||
+        typeof item !== "object" ||
+        typeof item.path !== "string" ||
+        typeof item.sha256 !== "string" ||
+        item.result !== "passed" ||
+        typeof item.command !== "string" ||
+        !item.command.trim()
+      ) {
+        issues.push(`Invalid supporting check: ${subject}`);
+        continue;
+      }
+      const bytes = await artifact(item.path);
+      if (bytes && digest(bytes) !== item.sha256)
+        issues.push(`Supporting artifact digest mismatch: ${subject}`);
+    }
+    if (
+      subject === "eligibility" &&
+      (proof.ownerDecision !== "approved" ||
+        typeof proof.officialRules !== "string" ||
+        !proof.officialRules.startsWith("https://ethglobal.com/") ||
+        typeof proof.kickoffAt !== "string" ||
+        !Number.isFinite(Date.parse(proof.kickoffAt)))
+    )
+      issues.push(
+        "Eligibility requires explicit owner decision and official kickoff/rules record",
+      );
+    if (
+      subject === "securityReview" &&
+      (!Array.isArray(proof.tools) ||
+        !["dependency-audit", "secret-scan", "static-analysis", "fuzz"].every(
+          (tool) => (proof.tools as unknown[]).includes(tool),
+        ) ||
+        proof.findingsReviewed !== true)
+    )
+      issues.push(
+        "Security review requires audit, secret, static and fuzz results plus reviewed findings",
+      );
+  };
   const readme = await text("README.md");
   const matrix = await text("EVIDENCE.md");
   if (readme) {
@@ -210,7 +265,10 @@ async function assessEvidence(
         issues.push(`EVIDENCE.md row is absent or inconsistent: ${id}`);
       if (record.status === "Proven" && !record.artifacts?.length)
         issues.push(`Unsupported Proven README claim: ${id}`);
-      for (const path of record.artifacts || []) await artifact(path);
+      for (const path of record.artifacts || []) {
+        if (record.status === "Proven") await supportingProof(path, id);
+        else await artifact(path);
+      }
     }
   }
   const repository = data.release?.repository;
@@ -288,6 +346,7 @@ async function assessEvidence(
     }
   }
   const canonical = new CanonicalSepolia(io);
+  const transactionTimes = new Map<string, number>();
   const kinds = [
     "createBasket",
     "deposit",
@@ -316,11 +375,12 @@ async function assessEvidence(
       transaction.environment === "sepolia"
     )
       await guard(`Sepolia ${kind}`, async () => {
-        await canonical.lifecycle(
+        const verified = await canonical.lifecycle(
           kind,
           transaction.hash,
           deployment as unknown as Deployment,
         );
+        transactionTimes.set(transaction.hash, verified.timestamp);
       });
   }
   if (data.cre) {
@@ -387,6 +447,46 @@ async function assessEvidence(
       )
     )
       issues.push("Anon-RPC screenshot is not a JPEG or PNG artifact");
+    if (measurement) {
+      const start =
+        typeof measurement.startedAt === "string"
+          ? Date.parse(measurement.startedAt)
+          : NaN;
+      const end =
+        typeof measurement.finishedAt === "string"
+          ? Date.parse(measurement.finishedAt)
+          : NaN;
+      const observations = measurement.observations as
+        Array<{ hash: string; observedAt: string }> | undefined;
+      if (
+        !Number.isFinite(start) ||
+        !Number.isFinite(end) ||
+        end < start ||
+        end > Date.now() + 60_000 ||
+        measurement.workingTreeDirty !== false ||
+        typeof measurement.browser !== "string" ||
+        !measurement.browser.trim()
+      )
+        issues.push(
+          "Privacy session chronology, browser or clean release provenance is invalid",
+        );
+      for (const tx of transactions) {
+        const observed = observations?.find((item) => item.hash === tx.hash);
+        const when = observed ? Date.parse(observed.observedAt) : NaN;
+        const blockTime = transactionTimes.get(tx.hash);
+        if (
+          !Number.isFinite(when) ||
+          when < start ||
+          when > end ||
+          blockTime === undefined ||
+          blockTime < start - 30_000 ||
+          blockTime > end + 30_000
+        )
+          issues.push(
+            `Privacy lifecycle transaction is outside its observed session: ${tx.kind}`,
+          );
+      }
+    }
     const routes = measurement?.routes as Record<string, unknown> | undefined;
     const counts = ["anon", "bootstrap", "direct", "failed", "attempted"];
     if (
@@ -498,7 +598,7 @@ async function assessEvidence(
     const record = data.gates?.[gate];
     if (!record || record.status !== "Proven")
       issues.push(`Required readiness gate is not Proven: ${gate}`);
-    else await artifact(record.artifact);
+    else await supportingProof(record.artifact, gate);
   }
   return { ok: issues.length === 0, issues, checked };
 }

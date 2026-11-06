@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "browser": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36",
+  "environment": "local",
+  "scope": "partial-session",
+  "verification": "unverified-browser-observation",
+  "releaseCommit": "54f5b6e1a8add95c0685283c32b5d81bd79084fe",
+  "workingTreeDirty": true,
+  "startedAt": "2026-11-06T08:47:03.110Z",
+  "finishedAt": "2026-11-06T08:47:39.056Z",
+  "workerSpecifier": null,
+  "harnessVersion": "0.4.0",
+  "startupSeconds": null,
+  "rpcOrigin": "http://127.0.0.1:8545",
+  "mockComponents": {
+    "tokens": true,
+    "oracleMode": "demo",
+    "receiverMode": "authenticated-fixture"
+  },
+  "routes": {
+    "anon": 0,
+    "bootstrap": 0,
+    "direct": 94,
+    "failed": 0,
+    "attempted": 94
+  },
+  "coveragePercent": 0,
+  "methods": {
+    "direct:eth_call": {
+      "attempted": 91,
+      "successful": 91
+    },
+    "direct:eth_getTransactionReceipt": {
+      "attempted": 3,
+      "successful": 3
+    }
+  },
+  "lifecycle": {
+    "deposit": "0x417cbe5489526006ae860625258c6cc9e2e68a6a169d5291c2f92b9933f1dde5",
+    "redeemInKind": "0x4dc8c9502714230db03620f35a34369cff23a6756cace47a53ca854ecdb0a014"
+  },
+  "observations": [
+    {
+      "functionName": "approve",
+      "hash": "0x7b5cf1c0d8544a9359c0cf3e35959de23744002f944ca4a544f5cb8c58e3e20b",
+      "blockNumber": "49",
+      "observedAt": "2026-11-06T08:47:12.554Z"
+    },
+    {
+      "functionName": "deposit",
+      "hash": "0x417cbe5489526006ae860625258c6cc9e2e68a6a169d5291c2f92b9933f1dde5",
+      "blockNumber": "50",
+      "observedAt": "2026-11-06T08:47:12.630Z"
+    },
+    {
+      "functionName": "redeemInKind",
+      "hash": "0x4dc8c9502714230db03620f35a34369cff23a6756cace47a53ca854ecdb0a014",
+      "blockNumber": "51",
+      "observedAt": "2026-11-06T08:47:29.287Z"
+    }
+  ],
+  "failureDemo": null
+}

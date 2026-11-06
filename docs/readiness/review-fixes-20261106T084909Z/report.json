@@ -1,0 +1,89 @@
+{
+  "phase": "review-fixes",
+  "scope": "local-check-only",
+  "startedAt": "2026-11-06T08:49:09.377Z",
+  "finishedAt": "2026-11-06T08:49:19.504Z",
+  "checks": [
+    {
+      "name": "typecheck",
+      "argv": [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      "startedAt": "2026-11-06T08:49:09.377Z",
+      "finishedAt": "2026-11-06T08:49:11.931Z",
+      "exitCode": 0,
+      "log": "docs/readiness/review-fixes-20261106T084909Z/typecheck.log",
+      "sha256": "38cb13f0ce3941278a4182d9bee7176ef41cabee0bf3a8ac6577e563de68c223"
+    },
+    {
+      "name": "tests",
+      "argv": [
+        "npm",
+        "test"
+      ],
+      "startedAt": "2026-11-06T08:49:11.931Z",
+      "finishedAt": "2026-11-06T08:49:13.249Z",
+      "exitCode": 0,
+      "log": "docs/readiness/review-fixes-20261106T084909Z/tests.log",
+      "sha256": "8d416014681f75fecaf29b3c3fd41e86fe19445188210cf0ca230eb179d5e646"
+    },
+    {
+      "name": "web-build",
+      "argv": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "startedAt": "2026-11-06T08:49:13.249Z",
+      "finishedAt": "2026-11-06T08:49:15.980Z",
+      "exitCode": 0,
+      "log": "docs/readiness/review-fixes-20261106T084909Z/web-build.log",
+      "sha256": "3c020a11cd976435fd5a7025bfc6f53e638349c131d34fa0126135f4f22b35ec"
+    },
+    {
+      "name": "workflow-build",
+      "argv": [
+        "npm",
+        "run",
+        "build:workflow"
+      ],
+      "startedAt": "2026-11-06T08:49:15.980Z",
+      "finishedAt": "2026-11-06T08:49:18.979Z",
+      "exitCode": 0,
+      "log": "docs/readiness/review-fixes-20261106T084909Z/workflow-build.log",
+      "sha256": "9857ff33fa643039cd1329bfb9b4ffd4b48ee54ff53a8b89c97bad5d18feb095"
+    },
+    {
+      "name": "contract-size",
+      "argv": [
+        "npm",
+        "run",
+        "check:contracts"
+      ],
+      "startedAt": "2026-11-06T08:49:18.979Z",
+      "finishedAt": "2026-11-06T08:49:19.233Z",
+      "exitCode": 0,
+      "log": "docs/readiness/review-fixes-20261106T084909Z/contract-size.log",
+      "sha256": "fcf70ec42caab5ff827cb3b212f7dc177efbd709398768c79fb9250691746984"
+    },
+    {
+      "name": "foundry-verbose",
+      "argv": [
+        "/opt/homebrew/Cellar/node@24/24.22.1/bin/node",
+        "scripts/foundry.mjs",
+        "forge",
+        "test",
+        "--root",
+        "contracts",
+        "-vvv"
+      ],
+      "startedAt": "2026-11-06T08:49:19.233Z",
+      "finishedAt": "2026-11-06T08:49:19.504Z",
+      "exitCode": 0,
+      "log": "docs/readiness/review-fixes-20261106T084909Z/foundry-verbose.log",
+      "sha256": "31b992da47e5948b0a831ecbcad91bd238dd2b9ef4dcf7941b8027189a6c34bd"
+    }
+  ]
+}
