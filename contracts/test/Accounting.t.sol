@@ -1,0 +1,77 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.26;
+import {WaveFixture} from "./WaveFixture.sol";
+import {WaveVault} from "../src/WaveVault.sol";
+
+contract AccountingTest is WaveFixture {
+    function testStalePricesBlockDepositButNeverInKindExit() public {
+        WaveVault v = createBasket();
+        uint256 shares = v.balanceOf(address(this));
+        vm.warp(block.timestamp + 2 days);
+        usdc.approve(address(v), 100e6);
+        vm.expectRevert(WaveVault.UnhealthyOracle.selector);
+        v.deposit(100e6, 0, address(this));
+        uint256 beforeEth = eth.balanceOf(address(this));
+        v.redeemInKind(shares, address(this));
+        assertGt(eth.balanceOf(address(this)), beforeEth);
+        assertEq(v.balanceOf(treasury), shares / 1000);
+    }
+
+    function testProfitFeeDilutesCreatorOnceAndNotBelowHighWaterMark() public {
+        WaveVault v = createBasket();
+        uint256 beforeSupply = v.totalSupply();
+        v.crystallizeFees();
+        assertEq(v.totalSupply(), beforeSupply);
+        ethFeed.setAnswer(4_000e8);
+        v.crystallizeFees();
+        assertGt(v.totalSupply(), beforeSupply);
+        uint256 chargedSupply = v.totalSupply();
+        // $4 gain on $10 seed, 10% fee: $0.40 / $13.60 of post-fee NAV.
+        assertApproxEqAbs(chargedSupply - beforeSupply, 294117647058823529, 2);
+        assertApproxEqAbs(v.hwm(), 1.36e18, 2);
+        v.crystallizeFees();
+        assertEq(v.totalSupply(), chargedSupply);
+        ethFeed.setAnswer(2_000e8);
+        v.crystallizeFees();
+        assertEq(v.totalSupply(), chargedSupply);
+    }
+
+    function testRedeemPaysNetMinimumAndTreasuryFee() public {
+        WaveVault v = createBasket();
+        usdc.approve(address(v), 1_000e6);
+        uint256 minted = v.deposit(1_000e6, 0, address(this));
+        uint256 beforeTreasury = usdc.balanceOf(treasury);
+        uint256 out = v.redeem(minted / 2, 499e6, address(this));
+        assertApproxEqAbs(out, 499_500_000, 3);
+        assertApproxEqAbs(usdc.balanceOf(treasury) - beforeTreasury, 500_000, 2);
+    }
+
+    function testTimelockDoesNotExecuteEarlyAndCanBeCancelled() public {
+        WaveVault v = createBasket();
+        uint16[] memory bps = new uint16[](3);
+        bps[0] = 4500;
+        bps[1] = 3000;
+        bps[2] = 2500;
+        v.proposeWeights(bps);
+        vm.expectRevert(WaveVault.Timelocked.selector);
+        v.executeWeights();
+        vm.warp(block.timestamp + 10 minutes);
+        v.executeWeights();
+        assertEq(v.targetWeights()[0], 4500);
+        v.proposeWeights(bps);
+        v.cancelWeights();
+        vm.warp(block.timestamp + 10 minutes);
+        vm.expectRevert();
+        v.executeWeights();
+    }
+
+    function testFuzzInKindExitNeverExceedsProRata(uint96 raw) public {
+        WaveVault v = createBasket();
+        uint256 shares = bound(uint256(raw), 1e12, v.balanceOf(address(this)));
+        uint256 held = eth.balanceOf(address(v));
+        uint256 supply = v.totalSupply();
+        uint256 before = eth.balanceOf(address(this));
+        v.redeemInKind(shares, address(this));
+        assertLe(eth.balanceOf(address(this)) - before, held * shares / supply);
+    }
+}

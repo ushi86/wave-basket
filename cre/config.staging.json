@@ -1,0 +1,10 @@
+{
+  "schedule": "0 */10 * * * *",
+  "chainSelector": "16015286601757825753",
+  "factory": "0x0000000000000000000000000000000000000000",
+  "receiver": "0x0000000000000000000000000000000000000000",
+  "maxBaskets": 3,
+  "driftThresholdBps": 300,
+  "marketApiUrl": "https://api.coingecko.com/api/v3/simple/price",
+  "assetIds": {}
+}

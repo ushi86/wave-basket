@@ -3,24 +3,33 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "workspaces": ["web", "cre"],
+  "workspaces": [
+    "web",
+    "cre"
+  ],
   "scripts": {
     "dev": "npm run dev -w web",
     "build": "npm run build -w web",
     "typecheck": "npm run typecheck --workspaces",
     "test": "npm run test --workspaces && npm run test:contracts",
-    "test:contracts": "forge test --root contracts",
-    "contracts:build": "forge build --root contracts",
-    "demo": "node scripts/local-demo.mjs"
+    "test:contracts": "node scripts/foundry.mjs forge test --root contracts",
+    "contracts:build": "node scripts/foundry.mjs forge build --root contracts",
+    "demo": "node scripts/local-demo.mjs",
+    "format": "prettier --write web/src web/vite.config.ts cre/src shared scripts && node scripts/foundry.mjs forge fmt --root contracts",
+    "check:contracts": "node scripts/foundry.mjs forge build --root contracts --sizes",
+    "build:workflow": "npm run build -w cre",
+    "rebalance:local": "node scripts/rebalance-local.mjs"
   },
   "devDependencies": {
-    "@foundry-rs/forge": "1.7.1",
     "@foundry-rs/anvil": "1.7.1",
+    "@foundry-rs/forge": "1.7.1",
     "@openzeppelin/contracts": "5.4.0",
     "@uniswap/v4-core": "1.0.2",
     "@uniswap/v4-periphery": "1.0.3",
+    "bun": "^1.4.4",
+    "prettier": "^3.9.10",
+    "tsx": "^4.20.6",
     "typescript": "~5.9.3",
-    "vitest": "^3.2.4",
-    "tsx": "^4.20.6"
+    "vitest": "^5.1.0"
   }
 }

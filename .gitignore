@@ -10,3 +10,9 @@ cre/secrets.yaml
 .playwright/
 *.log
 .DS_Store
+
+web/public/deployment.local.json
+deployments/demo.json
+playwright-report/
+test-results/
+*.tsbuildinfo
