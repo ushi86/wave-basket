@@ -1,5 +1,7 @@
 # Funding and deployment preflight
 
+Historical record of the initial failed attempts. The later [configured deployment dry run](CONFIGURED_DEPLOYMENT_DRY_RUN.md) completed successfully and supplies the actual estimate; no broadcast has occurred.
+
 Owner decisions on 6 November 2026: retain the existing immutable Nox 0.4.0 pin for submission; no automatic switch after browser failure. Approve accountless read-only Tenderly as the second receipt-verification provider. This is provider diversity, not proof of fully independent infrastructure. Any account/key/payment requirement stops work for owner input.
 
 ## Balance and feeds

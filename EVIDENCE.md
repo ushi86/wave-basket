@@ -53,3 +53,9 @@ The [exact owner command runbook](docs/EXTERNAL_EVIDENCE_RUNBOOK.md) covers inst
 The owner selected the existing immutable Nox 0.4.0 pin for submission and approved accountless read-only Tenderly as the second verification provider. The checker now uses PublicNode/Tenderly while preserving its chain, canonical-block, receipt/log and state checks. This is provider diversity, not proof of fully independent infrastructure. The [funding and dry-run record](docs/readiness/FUNDING_AND_DRY_RUN.md) supersedes the earlier dRPC availability blocker for current provider selection; historical failure logs remain unchanged.
 
 Both providers observed zero Sepolia ETH at the owner-confirmed public address and healthy USDC/ETH/BTC/LINK feeds at block 12,075,811. The actual deployment dry run failed first at an RPC block lookup, then at the missing `CRE_FORWARDER` configuration in a fixed-block retry. No full gas estimate, deployment, broadcast, CRE execution or browser measurement is claimed. Simulated addresses are not deployment evidence.
+
+## Configured deployment dry run completed
+
+The [configured dry-run record](docs/readiness/CONFIGURED_DEPLOYMENT_DRY_RUN.md) captures the owner-supplied public tenant simulation forwarder, two-provider balance/feed/code checks and a genuine completed Forge dry run. Actual deployment estimate: **27,792,864 gas** at **1.00000002 gwei**, requiring approximately **0.02779286455585728 Sepolia ETH**. The observed funded balance was **0.199243140019909222 Sepolia ETH**.
+
+This is **dry-run evidence only**. No broadcast, contract deployment, CRE workflow execution or browser measurement occurred. Generated addresses are archived explicitly as predictions outside the canonical deployment-manifest path. Actual addresses, transaction hashes, deployed block numbers and missing live submission gates remain unfilled until real receipts are verified.

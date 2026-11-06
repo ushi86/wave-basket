@@ -1,0 +1,131 @@
+{
+  "observedAt": "2026-11-06T10:20:03.511Z",
+  "scope": "two-provider fixed-block balance/feed/forwarder preflight; no broadcast",
+  "priorAttempt": {
+    "outcome": "HTTP 429 rate limit during parallel Tenderly BTC/USD read; retried with sequential paced requests"
+  },
+  "results": [
+    {
+      "endpoint": "https://ethereum-sepolia-rpc.publicnode.com",
+      "chainId": 11155111,
+      "block": "12075850",
+      "blockHash": "0x432a57edec896040d1481326ffacc302eb9f6f6d6432dab49ec01871b3b8d990",
+      "blockTimestamp": "1793959380",
+      "balanceETH": "0",
+      "forwarder": "0x15fC6ae953E024d975e77382eEeC56A9101f9F88",
+      "forwarderCodeBytes": 4579,
+      "forwarderCodeHash": "0x0a1b63dd9c5ee32c042a5124c96d3d344eea29c0daca30e54d2d91c09cc940b7",
+      "feeds": [
+        {
+          "symbol": "USDC",
+          "address": "0xA2F78ab2355fe2f984D808B5CeE7FD0A93D5270E",
+          "decimals": 8,
+          "answer": "99978205",
+          "updatedAt": "1793956272",
+          "roundId": "18446744073709553247",
+          "answeredInRound": "18446744073709553247",
+          "ageSeconds": "3108",
+          "maxAge": "108000",
+          "healthy": true
+        },
+        {
+          "symbol": "ETH",
+          "address": "0x694AA1769357215DE4FAC081bf1f309aDC325306",
+          "decimals": 8,
+          "answer": "223640000000",
+          "updatedAt": "1793956188",
+          "roundId": "18446744073709588987",
+          "answeredInRound": "18446744073709588987",
+          "ageSeconds": "3192",
+          "maxAge": "4500",
+          "healthy": true
+        },
+        {
+          "symbol": "BTC",
+          "address": "0x1b44F3514812d835EB1BDB0acB33d3fA3351Ee43",
+          "decimals": 8,
+          "answer": "7598714799294",
+          "updatedAt": "1793958612",
+          "roundId": "18446744073709586705",
+          "answeredInRound": "18446744073709586705",
+          "ageSeconds": "768",
+          "maxAge": "4500",
+          "healthy": true
+        },
+        {
+          "symbol": "LINK",
+          "address": "0xc59E3633BAAC79493d908e63626716e204A45EdF",
+          "decimals": 8,
+          "answer": "1082402000",
+          "updatedAt": "1793956908",
+          "roundId": "18446744073709594404",
+          "answeredInRound": "18446744073709594404",
+          "ageSeconds": "2472",
+          "maxAge": "4500",
+          "healthy": true
+        }
+      ]
+    },
+    {
+      "endpoint": "https://sepolia.gateway.tenderly.co",
+      "chainId": 11155111,
+      "block": "12075850",
+      "blockHash": "0x432a57edec896040d1481326ffacc302eb9f6f6d6432dab49ec01871b3b8d990",
+      "blockTimestamp": "1793959380",
+      "balanceETH": "0",
+      "forwarder": "0x15fC6ae953E024d975e77382eEeC56A9101f9F88",
+      "forwarderCodeBytes": 4579,
+      "forwarderCodeHash": "0x0a1b63dd9c5ee32c042a5124c96d3d344eea29c0daca30e54d2d91c09cc940b7",
+      "feeds": [
+        {
+          "symbol": "USDC",
+          "address": "0xA2F78ab2355fe2f984D808B5CeE7FD0A93D5270E",
+          "decimals": 8,
+          "answer": "99978205",
+          "updatedAt": "1793956272",
+          "roundId": "18446744073709553247",
+          "answeredInRound": "18446744073709553247",
+          "ageSeconds": "3108",
+          "maxAge": "108000",
+          "healthy": true
+        },
+        {
+          "symbol": "ETH",
+          "address": "0x694AA1769357215DE4FAC081bf1f309aDC325306",
+          "decimals": 8,
+          "answer": "223640000000",
+          "updatedAt": "1793956188",
+          "roundId": "18446744073709588987",
+          "answeredInRound": "18446744073709588987",
+          "ageSeconds": "3192",
+          "maxAge": "4500",
+          "healthy": true
+        },
+        {
+          "symbol": "BTC",
+          "address": "0x1b44F3514812d835EB1BDB0acB33d3fA3351Ee43",
+          "decimals": 8,
+          "answer": "7598714799294",
+          "updatedAt": "1793958612",
+          "roundId": "18446744073709586705",
+          "answeredInRound": "18446744073709586705",
+          "ageSeconds": "768",
+          "maxAge": "4500",
+          "healthy": true
+        },
+        {
+          "symbol": "LINK",
+          "address": "0xc59E3633BAAC79493d908e63626716e204A45EdF",
+          "decimals": 8,
+          "answer": "1082402000",
+          "updatedAt": "1793956908",
+          "roundId": "18446744073709594404",
+          "answeredInRound": "18446744073709594404",
+          "ageSeconds": "2472",
+          "maxAge": "4500",
+          "healthy": true
+        }
+      ]
+    }
+  ]
+}

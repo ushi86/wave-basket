@@ -1,0 +1,11 @@
+{
+  "scope": "public tenant Sepolia entry supplied by owner from CRE CLI v1.39.0; not a workflow execution log",
+  "chain": {
+    "chainName": "ethereum-testnet-sepolia",
+    "chainSelector": "16015286601757825753",
+    "address": "0xF8344CFd5c43616a4366C34E3EEE75af79a74482",
+    "mockAddress": "0x15fC6ae953E024d975e77382eEeC56A9101f9F88"
+  },
+  "selectedField": "mockAddress",
+  "selectedPurpose": "CRE simulation with broadcast after deployment; receiver simulation mode"
+}
