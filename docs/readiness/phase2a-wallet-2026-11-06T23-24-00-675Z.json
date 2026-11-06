@@ -1,0 +1,58 @@
+{
+  "scope": "Read-only Sepolia pre-flow wallet check; no transaction submitted or new lifecycle proof claimed",
+  "observedAt": "2026-11-06T23:24:00.671Z",
+  "address": "0x0051F2113BB7b760AE761E63D027BecF271DC0ac",
+  "providers": [
+    {
+      "endpoint": "https://ethereum-sepolia-rpc.publicnode.com",
+      "chainId": 11155111,
+      "blockNumber": "12079785",
+      "blockHash": "0xb072c65afcaa0185ddf0d603a6550a233b3bf53d26edd28db318206332f4850c",
+      "timestamp": "1794007380",
+      "ethBalance": "100000000000000000",
+      "latestNonce": 0,
+      "pendingNonce": 0,
+      "usdcBalance": "0",
+      "fundBalance": "0",
+      "usdcAllowanceToVault": "0",
+      "nextUSDCClaim": "0",
+      "usdcClaimAmount": "1000000000000000"
+    },
+    {
+      "endpoint": "https://sepolia.gateway.tenderly.co",
+      "chainId": 11155111,
+      "blockNumber": "12079785",
+      "blockHash": "0xb072c65afcaa0185ddf0d603a6550a233b3bf53d26edd28db318206332f4850c",
+      "timestamp": "1794007380",
+      "ethBalance": "100000000000000000",
+      "latestNonce": 0,
+      "pendingNonce": 0,
+      "usdcBalance": "0",
+      "fundBalance": "0",
+      "usdcAllowanceToVault": "0",
+      "nextUSDCClaim": "0",
+      "usdcClaimAmount": "1000000000000000"
+    }
+  ],
+  "faucetPreparation": {
+    "scope": "Read-only simulation and gas estimation only; no transaction submitted",
+    "preparedAt": "2026-11-06T23:24:53.944Z",
+    "chainId": 11155111,
+    "from": "0x0051F2113BB7b760AE761E63D027BecF271DC0ac",
+    "to": "0x33297104581Dd29347d9Ed37936e4F16621D59aE",
+    "valueWei": "0",
+    "data": "0xde5f72fd",
+    "providers": [
+      {
+        "endpoint": "https://ethereum-sepolia-rpc.publicnode.com",
+        "simulationSucceeded": true,
+        "estimatedGas": "253118"
+      },
+      {
+        "endpoint": "https://sepolia.gateway.tenderly.co",
+        "simulationSucceeded": true,
+        "estimatedGas": "253118"
+      }
+    ]
+  }
+}

@@ -12,9 +12,11 @@ Status: preparation only; no new user-flow transaction has been sent or claimed.
 - Default app reads: immutable Nox 0.4.0. No silent direct fallback. Wallet RPC/broadcast is outside the app meter; on-chain holdings stay public.
 - Testnet, mock assets, unaudited, real Chainlink feeds, CRE simulation receiver. No returns or production readiness claimed. Stale in-kind exits remain immediate and net pro-rata, with no reserve; they may avoid uncrystallized creator fees.
 
-## Current owner action — connect only
+## Current owner action — claim mock mUSDC only
 
-Open **http://127.0.0.1:5173/#baskets** in the browser containing your Ethereum wallet. Click **Connect wallet**, select your account and permit the Sepolia network switch if requested. Do not sign a deposit, approval or swap yet. Supply only the public connected address/status afterward. Never share a key, seed, password or API credential.
+The owner reported connected address **0x0051F2113BB7b760AE761E63D027BecF271DC0ac**. Both approved providers confirm 0.1 Sepolia ETH, zero mUSDC and zero FUND at block 12,079,785. The hourly mUSDC claim is unused. This records the owner's reported connection and public chain state; it is not a wallet-authentication attestation.
+
+In the existing app, open **Demo setup**, then choose **Claim tokens** on the **mUSDC** row. Confirm only the Sepolia `faucet()` transaction to **0x33297104581Dd29347d9Ed37936e4F16621D59aE**, calldata `0xde5f72fd`, native value **0 ETH** apart from gas. Both providers' read-only simulations succeeded and estimated 253,118 gas. The immutable claim amount is 1,000,000,000 mock mUSDC with no real value. Send the resulting transaction hash before continuing to deposit or approval.
 
 ## Subsequent actions, presented one at a time
 
