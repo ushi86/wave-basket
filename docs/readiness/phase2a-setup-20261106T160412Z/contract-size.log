@@ -1,0 +1,712 @@
+
+> wave-protocol@0.1.0 check:contracts
+> node scripts/foundry.mjs forge build --root contracts --sizes
+
+Compiling 1 files with Solc 0.8.26
+Solc 0.8.26 finished in 916.69ms
+Compiler run successful!
+
+╭--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------╮
+| Contract                                                                                                           | Runtime Size (B) | Initcode Size (B) | Runtime Margin (B) | Initcode Margin (B) |
++======================================================================================================================================================================================================+
+| AssetRegistry                                                                                                      | 2,509            | 2,727             | 22,067             | 46,425              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| BalanceDeltaLibrary (../node_modules/@uniswap/v4-core/src/types/BalanceDelta.sol)                                  | 111              | 139               | 24,465             | 49,013              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| BalanceDeltaLibrary (/Users/hano/Projects/Wave Eth/node_modules/@uniswap/v4-core/src/types/BalanceDelta.sol)       | 111              | 139               | 24,465             | 49,013              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| BeforeSwapDeltaLibrary (../node_modules/@uniswap/v4-core/src/types/BeforeSwapDelta.sol)                            | 111              | 139               | 24,465             | 49,013              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| BeforeSwapDeltaLibrary (/Users/hano/Projects/Wave Eth/node_modules/@uniswap/v4-core/src/types/BeforeSwapDelta.sol) | 111              | 139               | 24,465             | 49,013              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| BitMath                                                                                                            | 57               | 85                | 24,519             | 49,067              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| CurrencyDelta                                                                                                      | 57               | 85                | 24,519             | 49,067              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| CurrencyLibrary (../node_modules/@uniswap/v4-core/src/types/Currency.sol)                                          | 111              | 139               | 24,465             | 49,013              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| CurrencyLibrary (/Users/hano/Projects/Wave Eth/node_modules/@uniswap/v4-core/src/types/Currency.sol)               | 111              | 139               | 24,465             | 49,013              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| CurrencyReserves                                                                                                   | 57               | 85                | 24,519             | 49,067              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| CustomRevert                                                                                                       | 57               | 85                | 24,519             | 49,067              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| DemoFeed                                                                                                           | 787              | 1,035             | 23,789             | 48,117              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| DemoForwarder                                                                                                      | 419              | 445               | 24,157             | 48,707              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| DemoLiquiditySeeder                                                                                                | 2,491            | 2,767             | 22,085             | 46,385              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| DemoToken                                                                                                          | 1,984            | 2,952             | 22,592             | 46,200              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| FixedPoint128                                                                                                      | 57               | 85                | 24,519             | 49,067              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| FixedPoint96                                                                                                       | 57               | 85                | 24,519             | 49,067              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| FullMath                                                                                                           | 57               | 85                | 24,519             | 49,067              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| Hooks (../node_modules/@uniswap/v4-core/src/libraries/Hooks.sol)                                                   | 57               | 85                | 24,519             | 49,067              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| Hooks (/Users/hano/Projects/Wave Eth/node_modules/@uniswap/v4-core/src/libraries/Hooks.sol)                        | 57               | 85                | 24,519             | 49,067              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| ImmutableState                                                                                                     | 156              | 281               | 24,420             | 48,871              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| LPFeeLibrary (../node_modules/@uniswap/v4-core/src/libraries/LPFeeLibrary.sol)                                     | 215              | 244               | 24,361             | 48,908              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| LPFeeLibrary (/Users/hano/Projects/Wave Eth/node_modules/@uniswap/v4-core/src/libraries/LPFeeLibrary.sol)          | 215              | 244               | 24,361             | 48,908              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| LiquidityMath                                                                                                      | 57               | 85                | 24,519             | 49,067              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| Lock                                                                                                               | 57               | 85                | 24,519             | 49,067              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| Math                                                                                                               | 57               | 85                | 24,519             | 49,067              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| NavGuardHook                                                                                                       | 5,629            | 6,356             | 18,947             | 42,796              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| NonzeroDeltaCount                                                                                                  | 57               | 85                | 24,519             | 49,067              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| OracleExchange                                                                                                     | 1,174            | 1,310             | 23,402             | 47,842              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| Panic                                                                                                              | 57               | 85                | 24,519             | 49,067              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| ParseBytes                                                                                                         | 57               | 85                | 24,519             | 49,067              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| Pool                                                                                                               | 57               | 85                | 24,519             | 49,067              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| PoolIdLibrary (../node_modules/@uniswap/v4-core/src/types/PoolId.sol)                                              | 57               | 85                | 24,519             | 49,067              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| PoolIdLibrary (/Users/hano/Projects/Wave Eth/node_modules/@uniswap/v4-core/src/types/PoolId.sol)                   | 57               | 85                | 24,519             | 49,067              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| PoolManager                                                                                                        | 17,151           | 17,336            | 7,425              | 31,816              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| Position                                                                                                           | 57               | 85                | 24,519             | 49,067              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| ProtocolFeeLibrary                                                                                                 | 113              | 141               | 24,463             | 49,011              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| SafeCast (/Users/hano/Projects/Wave Eth/node_modules/@openzeppelin/contracts/utils/math/SafeCast.sol)              | 57               | 85                | 24,519             | 49,067              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| SafeCast (/Users/hano/Projects/Wave Eth/node_modules/@uniswap/v4-core/src/libraries/SafeCast.sol)                  | 57               | 85                | 24,519             | 49,067              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| SafeERC20                                                                                                          | 57               | 85                | 24,519             | 49,067              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| Slot0Library                                                                                                       | 57               | 85                | 24,519             | 49,067              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| SqrtPriceMath                                                                                                      | 57               | 85                | 24,519             | 49,067              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| StateLibrary                                                                                                       | 269              | 299               | 24,307             | 48,853              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| SwapMath                                                                                                           | 57               | 85                | 24,519             | 49,067              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| TestHook                                                                                                           | 5,629            | 5,826             | 18,947             | 43,326              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| TickBitmap                                                                                                         | 57               | 85                | 24,519             | 49,067              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| TickMath (../node_modules/@uniswap/v4-core/src/libraries/TickMath.sol)                                             | 57               | 85                | 24,519             | 49,067              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| TickMath (/Users/hano/Projects/Wave Eth/node_modules/@uniswap/v4-core/src/libraries/TickMath.sol)                  | 57               | 85                | 24,519             | 49,067              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| UnsafeMath                                                                                                         | 57               | 85                | 24,519             | 49,067              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| WaveFactory                                                                                                        | 3,536            | 28,323            | 21,040             | 20,829              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| WaveRebalanceReceiver                                                                                              | 2,557            | 3,133             | 22,019             | 46,019              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| WaveSwapAdapter                                                                                                    | 4,145            | 4,421             | 20,431             | 44,731              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| WaveVault                                                                                                          | 20,222           | 22,978            | 4,354              | 26,174              |
+|--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| WaveVaultDeployer                                                                                                  | 24,186           | 24,225            | 390                | 24,927              |
+╰--------------------------------------------------------------------------------------------------------------------+------------------+-------------------+--------------------+---------------------╯
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+   ╭▸ contracts/src/mocks/DemoAssets.sol:21:17
+   │
+21 │         require(block.timestamp >= nextClaim[msg.sender], "Faucet: wait one hour");
+   │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ contracts/test/Guards.t.sol:54:9
+   │
+54 │         eth.transfer(address(v), 100e18);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ contracts/test/Guards.t.sol:56:9
+   │
+56 │         usdc.transfer(holder, 1000e6);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+   ╭▸ contracts/test/Guards.t.sol:68:81
+   │
+68 │             address(0xF00), factory, false, bytes32(uint256(1)), address(this), bytes10("wave"), 900
+   │                                                                                 ━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'bytes10' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+   ╭▸ contracts/test/Guards.t.sol:75:71
+   │
+75 │         bytes memory metadata = abi.encodePacked(bytes32(uint256(1)), bytes10("wave"), address(this));
+   │                                                                       ━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'bytes10' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+   ╭▸ contracts/test/Guards.t.sol:95:81
+   │
+95 │             address(0xF00), factory, false, bytes32(uint256(1)), address(this), bytes10("wave"), 900
+   │                                                                                 ━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'bytes10' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+    ╭▸ contracts/test/Guards.t.sol:102:71
+    │
+102 │         bytes memory metadata = abi.encodePacked(bytes32(uint256(1)), bytes10("wave"), address(this), bytes2(0));
+    │                                                                       ━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'bytes10' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+   ╭▸ contracts/src/AssetRegistry.sol:58:20
+   │
+58 │                 && updatedAt <= block.timestamp && block.timestamp - updatedAt <= a.maxStaleness
+   │                    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+   ╭▸ contracts/src/AssetRegistry.sol:58:52
+   │
+58 │                 && updatedAt <= block.timestamp && block.timestamp - updatedAt <= a.maxStaleness
+   │                                                    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ contracts/test/WaveFixture.sol:29:9
+   │
+29 │         IERC20(a).transferFrom(msg.sender, address(this), amount);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ contracts/test/WaveFixture.sol:30:9
+   │
+30 │         IERC20(b).transfer(recipient, out);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+   ╭▸ contracts/src/WaveRebalanceReceiver.sol:68:74
+   │
+68 │             !factory.isBasket(vault) || nonce != lastNonce[vault] + 1 || asOf > block.timestamp
+   │                                                                          ━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+   ╭▸ contracts/src/WaveRebalanceReceiver.sol:69:20
+   │
+69 │                 || block.timestamp - asOf > maxReportAge || asOf <= lastObservation[vault] || consumed[reportHash]
+   │                    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ contracts/test/WaveFixture.sol:68:9
+   │
+68 │         usdc.transfer(address(exchange), 10_000_000e6);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ contracts/test/WaveFixture.sol:69:9
+   │
+69 │         eth.transfer(address(exchange), 500_000e18);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+   ╭▸ contracts/script/DeployDemo.s.sol:60:26
+   │
+60 │         seeder.seed(key, int256(liq));
+   │                          ━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'int256' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ contracts/src/WaveVault.sol:355:32
+    │
+355 │         if (weightsEta == 0 || block.timestamp < weightsEta) revert Timelocked();
+    │                                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ contracts/src/WaveVault.sol:367:35
+    │
+367 │         if (lastRebalance != 0 && block.timestamp < lastRebalance + MIN_INTERVAL) revert Interval();
+    │                                   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ contracts/test/WaveFixture.sol:70:9
+   │
+70 │         btc.transfer(address(exchange), 500_000e8);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+   ╭▸ contracts/test/RecoveryCompatibility.t.sol:42:80
+   │
+42 │             address(this), factory, false, bytes32(uint256(1)), address(this), bytes10("probe"), 900
+   │                                                                                ━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'bytes10' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+   ╭▸ contracts/test/RecoveryCompatibility.t.sol:45:71
+   │
+45 │         bytes memory metadata = abi.encodePacked(bytes32(uint256(1)), bytes10("probe"), address(this));
+   │                                                                       ━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'bytes10' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+   ╭▸ contracts/test/V4Integration.t.sol:49:26
+   │
+49 │         seeder.seed(key, int256(liq));
+   │                          ━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'int256' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+    ╭▸ contracts/script/DeployDemo.s.sol:181:57
+    │
+181 │             fixtureIdentity ? vm.envOr("WORKFLOW_NAME", bytes32(bytes10("wave"))) : vm.envBytes32("WORKFLOW_NAME")
+    │                                                         ━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'bytes32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+    ╭▸ contracts/script/DeployDemo.s.sol:181:65
+    │
+181 │             fixtureIdentity ? vm.envOr("WORKFLOW_NAME", bytes32(bytes10("wave"))) : vm.envBytes32("WORKFLOW_NAME")
+    │                                                                 ━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'bytes10' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ contracts/test/WaveFixture.sol:71:9
+   │
+71 │         link.transfer(address(exchange), 50_000_000e18);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ contracts/test/Accounting.t.sol:95:9
+   │
+95 │         v.transfer(holder, 4e18);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ contracts/test/Accounting.t.sol:112:9
+    │
+112 │         v.transfer(holder, 4e18);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+   ╭▸ contracts/src/mocks/DemoLiquiditySeeder.sol:44:91
+   │
+44 │             IERC20(Currency.unwrap(currency)).safeTransferFrom(owner(), address(manager), uint256(uint128(-delta)));
+   │                                                                                           ━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint256' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+   ╭▸ contracts/src/mocks/DemoLiquiditySeeder.sol:44:99
+   │
+44 │             IERC20(Currency.unwrap(currency)).safeTransferFrom(owner(), address(manager), uint256(uint128(-delta)));
+   │                                                                                                   ━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint128' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+   ╭▸ contracts/src/mocks/DemoLiquiditySeeder.sol:47:45
+   │
+47 │             manager.take(currency, owner(), uint256(uint128(delta)));
+   │                                             ━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint256' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+   ╭▸ contracts/src/mocks/DemoLiquiditySeeder.sol:47:53
+   │
+47 │             manager.take(currency, owner(), uint256(uint128(delta)));
+   │                                                     ━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint128' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ contracts/test/Accounting.t.sol:134:9
+    │
+134 │         v.transfer(holder, shares);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+   ╭▸ contracts/test/Receiver.t.sol:11:81
+   │
+11 │             address(0xF00), factory, false, bytes32(uint256(1)), address(this), bytes10("wave"), 900
+   │                                                                                 ━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'bytes10' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+   ╭▸ contracts/test/Receiver.t.sol:19:71
+   │
+19 │         bytes memory metadata = abi.encodePacked(bytes32(uint256(1)), bytes10("wave"), address(this));
+   │                                                                       ━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'bytes10' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+   ╭▸ contracts/src/WaveSwapAdapter.sol:72:30
+   │
+72 │                 zeroForOne, -int256(amount), zeroForOne ? TickMath.MIN_SQRT_PRICE + 1 : TickMath.MAX_SQRT_PRICE - 1
+   │                              ━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'int256' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+   ╭▸ contracts/test/Receiver.t.sol:50:81
+   │
+50 │             address(0xF00), factory, false, bytes32(uint256(1)), address(this), bytes10("wave"), 900
+   │                                                                                 ━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'bytes10' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+   ╭▸ contracts/src/WaveSwapAdapter.sol:78:42
+   │
+78 │         if (input >= 0 || output <= 0 || uint256(uint128(-input)) != amount || uint256(uint128(output)) < minOut) {
+   │                                          ━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint256' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+   ╭▸ contracts/src/WaveSwapAdapter.sol:78:50
+   │
+78 │         if (input >= 0 || output <= 0 || uint256(uint128(-input)) != amount || uint256(uint128(output)) < minOut) {
+   │                                                  ━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint128' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+   ╭▸ contracts/src/AssetRegistry.sol:60:36
+   │
+60 │             if (healthy) price18 = uint256(answer) * 10 ** (18 - a.feedDecimals);
+   │                                    ━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint256' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+   ╭▸ contracts/src/WaveSwapAdapter.sol:78:80
+   │
+78 │         if (input >= 0 || output <= 0 || uint256(uint128(-input)) != amount || uint256(uint128(output)) < minOut) {
+   │                                                                                ━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint256' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+   ╭▸ contracts/src/WaveSwapAdapter.sol:78:88
+   │
+78 │         if (input >= 0 || output <= 0 || uint256(uint128(-input)) != amount || uint256(uint128(output)) < minOut) {
+   │                                                                                        ━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint128' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+   ╭▸ contracts/src/WaveSwapAdapter.sol:86:46
+   │
+86 │         manager.take(outCurrency, recipient, uint256(uint128(output)));
+   │                                              ━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint256' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+   ╭▸ contracts/src/WaveSwapAdapter.sol:86:54
+   │
+86 │         manager.take(outCurrency, recipient, uint256(uint128(output)));
+   │                                                      ━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint128' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+   ╭▸ contracts/src/WaveSwapAdapter.sol:87:27
+   │
+87 │         return abi.encode(uint256(uint128(output)));
+   │                           ━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint256' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+   ╭▸ contracts/src/WaveSwapAdapter.sol:87:35
+   │
+87 │         return abi.encode(uint256(uint128(output)));
+   │                                   ━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint128' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+   ╭▸ contracts/test/Receiver.t.sol:54:71
+   │
+54 │         bytes memory metadata = abi.encodePacked(bytes32(uint256(1)), bytes10("wave"), address(this));
+   │                                                                       ━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'bytes10' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+   ╭▸ contracts/test/Receiver.t.sol:62:62
+   │
+62 │             bytes memory report = abi.encode(address(vault), uint64(i + 1), bps, uint64(timestamp), bytes32(i));
+   │                                                              ━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint64' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+   ╭▸ contracts/test/Receiver.t.sol:62:82
+   │
+62 │             bytes memory report = abi.encode(address(vault), uint64(i + 1), bps, uint64(timestamp), bytes32(i));
+   │                                                                                  ━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint64' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+   ╭▸ contracts/test/Receiver.t.sol:76:81
+   │
+76 │             address(0xF00), factory, false, bytes32(uint256(1)), address(this), bytes10("wave"), 900
+   │                                                                                 ━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'bytes10' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+   ╭▸ contracts/test/Receiver.t.sol:83:71
+   │
+83 │         bytes memory metadata = abi.encodePacked(bytes32(uint256(1)), bytes10("wave"), address(this));
+   │                                                                       ━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'bytes10' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+

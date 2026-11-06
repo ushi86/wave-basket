@@ -1,15 +1,17 @@
 # Wave Protocol product progress
 
-Updated 6 November 2026. Source baseline: commit 1213bf0. Product spec: [Basket Product Experience and Submission](../specs/WAVE_PRODUCT_EXPERIENCE_SPEC.md). The owner confirmed the testing boundaries and all added negative/regression conditions. The original [product brief](provenance/PRODUCT_EXPERIENCE_BRIEF.txt) is preserved as planning provenance.
+Updated 7 November 2026. Source baseline: commit 1213bf0. Product spec: [Basket Product Experience and Submission](../specs/WAVE_PRODUCT_EXPERIENCE_SPEC.md). The owner confirmed the testing boundaries and all added negative/regression conditions. The original [product brief](provenance/PRODUCT_EXPERIENCE_BRIEF.txt) is preserved as planning provenance.
 
-**Current phase: Phase 1 approved. Separate Sepolia recovery is prepared; Phase 2 remains paused pending verified deployment and explicit continue.** Phase 0 changed no product code and sent no transactions. The owner explicitly authorized Phase 1 next, revoked setup/implement-spec, and designated the spec and this document as the source of truth and tracker. Stop after Phase 1.
+**Current phase: Phase 2A — live flagship flow, approved 6 November 2026.** Deployment is verified and must not be repeated. The owner changed execution order: **2A flagship user flow → 2B real CRE → 2C full Anon-RPC session → 2D draft submission**, before Balanced/Yield creation, AI Decision Card, Crash Replay or further UI/animation polish. The owner’s target is **02:00 IST on 7 November 2026**, superseding earlier targets. The owner performs all wallet connections, signatures and funding; stop at each required wallet action and provide one clear step. No prior signing delegation is used for these flows.
+
+Use this tracker and the product spec directly. No setup skill, implement-spec, external tracker or dependency-ticket graph is required. Ask the owner to choose the LLM and news source before adding either. Required-source failure must hold. Yield remains reserve-backed and labeled simulated; omit it if not proven by the 02:00 target.
 
 ## Resolved prerequisites and remaining live-integration gates
 
 - Resolved: the original whitepaper was supplied at the repository root. All 15 pages were read and its NAV formula/diagram visually reviewed. An identical documentation copy is preserved as [whitepaper.pdf](whitepaper.pdf); the original is untouched.
 - Removed by explicit owner instruction: external tracker, ticket graph, setup skill and implement-spec are not project requirements. Track phases here.
-- No verified successful Wave Sepolia deployment. Preserve the failed broadcast record. A guarded nonce-1 recovery command and fresh pre-broadcast checks remain pending. No automatic retry/resume is authorized here.
-- No actual CRE CLI broadcast or full Sepolia Anon-RPC browser session accepted. LLM provider and privately configured credentials are not selected; this becomes a prerequisite at Phase 5, not a reason to invent AI output now.
+- Resolved: all 42 Sepolia deployment transactions, 12 runtimes and 76 state checks are corroborated on PublicNode/Tenderly; all 12 sources have exact explorer constructor matches. [Live record](readiness/SEPOLIA_DEPLOYMENT.md). Preserve all prior failures. Do not redeploy or resume deployment.
+- No actual CRE CLI broadcast or full Sepolia Anon-RPC browser session accepted. LLM provider and privately configured credentials are not selected; this becomes a prerequisite before adding either in Phase 2B, not a reason to invent AI output now.
 
 ## Current behavior versus requested product
 
@@ -17,7 +19,7 @@ Updated 6 November 2026. Source baseline: commit 1213bf0. Product spec: [Basket 
 | --- | --- | --- |
 | Product shell | Existing Explore, Portfolio, Create, Privacy and Faucet pages, cards, basket controls and a shared protocol model | Refine around the 100-test-USDC entry point and card system; move faucet prominence into setup; verify screenshots/responsiveness during UI phases |
 | Basket lifecycle | Public factory/vault flow and local real-v4 integration tests; registry supports up to four assets with settlement exposure | Create and verify actual Growth, Balanced and Yield instances with valid weights and liquidity; do not hard-code cards as live products |
-| Deployment | Known first Sepolia creation reverted; later Amsterdam fork simulation completed 42 operations | Owner recovery, fresh gas/state checks, canonical receipts and deployed-state validation; dry-run predictions remain quarantined |
+| Deployment | Verified live stack; original failed attempts preserved | No redeployment. Use deployments/sepolia.json and the existing flagship as Growth. New user-flow receipts remain pending |
 | Strategy/CRE | External 24-hour market-change data, deterministic bounded strategy, first three factory entries only, receiver with nonce/freshness/authentication | Explicit coverage for all intended baskets, sourced news/structured risk, optional approved LLM, hold on every required-source failure, genuine CRE execution evidence |
 | Yield | No separately implemented reserve-backed yield asset identified | Separate token/adapter and backing conservation, stop at depletion, valid registry integration and NAV history; no frozen vault/deployer changes |
 | Rebalance UX | Current/target holdings, recent history and transaction references exist | Coherent before/after cards, actual swap activity, sourced decisions and visible multi-step animation/cooldown |
@@ -105,3 +107,19 @@ Validation: 35 workspace tests, 33 Foundry tests (all 27 existing tests retained
 **Closing checks:** all 12 operational verifier/guard tests pass, including the corrected factory-funded seed-event regression. Secret scanning returned no heuristic findings. The evidence checker remains nonzero for missing CRE/privacy/lifecycle/readiness proof and an anonymous GitHub API rate-limit response; public HTML and all six immutable source anchors remain accessible. No checker policy or gate status was weakened.
 
 **Exact explorer check:** the initial source-availability result accepted three token SimilarMatch associations. Individual mWETH/mWBTC/mLINK source requests now pass exact constructor matching with no SimilarMatch. The stricter source helper and its regression pass. This required no signing or additional chain transaction; all raw initial observations are retained and the final exact report supersedes them.
+
+## Current live-flow execution order
+
+| Stage | Required result | Current status |
+| --- | --- | --- |
+| 2A | Existing flagship as Growth; real deposit, both hook directions, settlement and in-kind exits; two-provider receipt verification | App configured for verified Sepolia, alias uses actual flagship; local checks pass; waiting for owner wallet connection. No new user-flow transaction claimed |
+| 2B | Real sourced workflow run, Growth within first three baskets, actual receiver outcome or honest hold/skip | Not started. Ask about LLM/news before adding them; preserve every safety bound and source failure hold |
+| 2C | Full app session, actual startup/coverage/methods/failures/exceptions, fail-closed proof | Not started as acceptance measurement. Initial 2A read-only Sepolia UI check is partial only; it cannot satisfy this gate |
+| 2D | README/evidence/feedback/attribution/partner/submission draft; remind owner to submit Uniswap feedback form | Pending; owner submits by 02:00 IST, 7 November. FEEDBACK.md alone is not form submission |
+| Later product work | Balanced and simulated reserve-backed Yield, AI card, Crash Replay, polish | Deferred until 2A–2D are complete. No new basket or yield asset has been created |
+
+[Live flagship wallet checklist](LIVE_FLAGSHIP_FLOW.md). The verified flagship remains `0x237eFeB9Db74341ebb3Ba207e991D8aeAc536b91`, on-chain Wave Blue Chip / FUND. Growth is a UI alias only. All values and weights still come from contracts; Balanced and Yield remain clearly planned. The default frontend manifest now comes from the corroborated deployment proof, not the old failed broadcast. Anon-RPC 0.4.0, disclosures, contract logic and safety limits are unchanged.
+
+Historical entries above/below describe their dated increments and do not override this execution order. Stop before the first wallet action: owner connects their own wallet to the app on Sepolia, then the agent prepares the next exact step from that account’s live state.
+
+**Deadline observation — 7 November, 04:47 IST:** the owner’s 02:00 IST target has passed. No submission, new live user-flow transaction, CRE run or full privacy acceptance has been completed. Yield is unproven and excluded under the owner’s cutoff; it must not be represented as delivered. Phase 2A is awaiting the owner’s first wallet connection.

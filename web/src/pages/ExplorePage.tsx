@@ -22,6 +22,7 @@ import {
 import { AddressLink, PageTitle } from "../components/Common";
 import type { WaveProtocolModel } from "../hooks/useWaveProtocol";
 import { loadOlderHistory } from "../lib/baskets";
+import { collectionName, hasGrowthFlagship } from "../lib/collections";
 import {
   colors,
   errorText,
@@ -75,6 +76,7 @@ export function ExplorePage({
     config?.tokens.find(
       (t) => t.address.toLowerCase() === address.toLowerCase(),
     );
+  const displayName = basket ? collectionName(basket, config) : undefined;
   const totalNav = baskets.reduce((sum, b) => sum + number(b.nav), 0);
   const totalPosition = baskets.reduce(
     (sum, b) => sum + number(b.balance, 18) * number(b.price, 18),
@@ -308,6 +310,7 @@ export function ExplorePage({
           <BasketCard
             key={b.address}
             basket={b}
+            displayName={collectionName(b, config)}
             chainId={config?.chainId ?? 0}
             symbol={(a) => token(a)?.symbol || short(a)}
             selected={basket?.address === b.address}
@@ -334,7 +337,7 @@ export function ExplorePage({
           </div>
         )}
       </div>
-      <PlannedCollections />
+      <PlannedCollections growthAvailable={hasGrowthFlagship(config)} />
       <section id="basket-detail" className="basket-layout">
         <div className="basket-panel">
           <div className="basket-heading">
@@ -342,8 +345,11 @@ export function ExplorePage({
               <Layers size={22} />
             </div>
             <div>
-              <h2>{basket?.name || "Choose an available basket"}</h2>
+              <h2>{displayName || "Choose an available basket"}</h2>
               <span>
+                {basket && displayName !== basket.name
+                  ? `${basket.name} · `
+                  : ""}
                 {basket?.symbol || "—"} <span className="separator">·</span>{" "}
                 {basket?.assets.length ?? 0} underlying assets
               </span>

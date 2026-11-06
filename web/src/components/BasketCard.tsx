@@ -6,12 +6,14 @@ import { AddressLink } from "./Common";
 /** A basket overview is always derived from a loaded contract, never a catalog mock. */
 export function BasketCard({
   basket,
+  displayName = basket.name,
   chainId,
   symbol,
   selected,
   onSelect,
 }: {
   basket: Basket;
+  displayName?: string;
   chainId: number;
   symbol: (address: string) => string;
   selected?: boolean;
@@ -29,7 +31,12 @@ export function BasketCard({
           {basket.healthy ? "Onchain basket" : "Prices unavailable"}
         </span>
       </div>
-      <h3>{basket.name}</h3>
+      <h3>{displayName}</h3>
+      {displayName !== basket.name && (
+        <small className="muted">
+          On-chain: {basket.name} · {basket.symbol}
+        </small>
+      )}
       <p className="collection-purpose">
         One share token. {basket.assets.length} underlying assets. Market
         exposure follows the holdings.
@@ -75,7 +82,11 @@ export function BasketCard({
   );
 }
 
-export function PlannedCollections() {
+export function PlannedCollections({
+  growthAvailable = false,
+}: {
+  growthAvailable?: boolean;
+}) {
   return (
     <section
       className="planned-collections"
@@ -94,16 +105,18 @@ export function PlannedCollections() {
           ["Growth", "A mix of risk assets for broader crypto exposure."],
           ["Balanced", "Risk assets alongside a settlement-token allocation."],
           ["Yield", "Reserve-backed simulated yield, with NAV in focus."],
-        ].map(([name, description]) => (
-          <article className="planned-card" key={name}>
-            <span className="subtle-tag">PLANNED · NOT DEPLOYED</span>
-            <h3>{name}</h3>
-            <p>{description}</p>
-            {name === "Yield" && (
-              <small>Future demo: simulated yield on Sepolia</small>
-            )}
-          </article>
-        ))}
+        ]
+          .filter(([name]) => name !== "Growth" || !growthAvailable)
+          .map(([name, description]) => (
+            <article className="planned-card" key={name}>
+              <span className="subtle-tag">PLANNED · NOT DEPLOYED</span>
+              <h3>{name}</h3>
+              <p>{description}</p>
+              {name === "Yield" && (
+                <small>Future demo: simulated yield on Sepolia</small>
+              )}
+            </article>
+          ))}
       </div>
     </section>
   );

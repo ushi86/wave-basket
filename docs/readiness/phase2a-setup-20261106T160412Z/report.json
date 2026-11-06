@@ -1,0 +1,89 @@
+{
+  "phase": "phase2a-setup",
+  "scope": "local-check-only",
+  "startedAt": "2026-11-06T16:04:12.777Z",
+  "finishedAt": "2026-11-06T16:04:23.699Z",
+  "checks": [
+    {
+      "name": "typecheck",
+      "argv": [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      "startedAt": "2026-11-06T16:04:12.777Z",
+      "finishedAt": "2026-11-06T16:04:15.511Z",
+      "exitCode": 0,
+      "log": "docs/readiness/phase2a-setup-20261106T160412Z/typecheck.log",
+      "sha256": "38cb13f0ce3941278a4182d9bee7176ef41cabee0bf3a8ac6577e563de68c223"
+    },
+    {
+      "name": "tests",
+      "argv": [
+        "npm",
+        "test"
+      ],
+      "startedAt": "2026-11-06T16:04:15.511Z",
+      "finishedAt": "2026-11-06T16:04:16.857Z",
+      "exitCode": 0,
+      "log": "docs/readiness/phase2a-setup-20261106T160412Z/tests.log",
+      "sha256": "17b068aca2f42e0d9185e091e1c533a19626a872e5576d9309d36c534a5f5fd3"
+    },
+    {
+      "name": "web-build",
+      "argv": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "startedAt": "2026-11-06T16:04:16.857Z",
+      "finishedAt": "2026-11-06T16:04:19.315Z",
+      "exitCode": 0,
+      "log": "docs/readiness/phase2a-setup-20261106T160412Z/web-build.log",
+      "sha256": "6f8fcc1072e3728e9e989cf9848c10aa09f0aad7b1c1df70baac6afd77c9bb4b"
+    },
+    {
+      "name": "workflow-build",
+      "argv": [
+        "npm",
+        "run",
+        "build:workflow"
+      ],
+      "startedAt": "2026-11-06T16:04:19.316Z",
+      "finishedAt": "2026-11-06T16:04:22.222Z",
+      "exitCode": 0,
+      "log": "docs/readiness/phase2a-setup-20261106T160412Z/workflow-build.log",
+      "sha256": "c01ecbad7c32f6881e7e261bfeacd782df241a70ba984f7b4101b0c2ec994163"
+    },
+    {
+      "name": "contract-size",
+      "argv": [
+        "npm",
+        "run",
+        "check:contracts"
+      ],
+      "startedAt": "2026-11-06T16:04:22.222Z",
+      "finishedAt": "2026-11-06T16:04:23.406Z",
+      "exitCode": 0,
+      "log": "docs/readiness/phase2a-setup-20261106T160412Z/contract-size.log",
+      "sha256": "abd2394b3dbb78c2240caf5c53ebefa03f21ad5ab38c56a81dba8d292508fa9a"
+    },
+    {
+      "name": "foundry-verbose",
+      "argv": [
+        "/opt/homebrew/Cellar/node@24/24.22.1/bin/node",
+        "scripts/foundry.mjs",
+        "forge",
+        "test",
+        "--root",
+        "contracts",
+        "-vvv"
+      ],
+      "startedAt": "2026-11-06T16:04:23.406Z",
+      "finishedAt": "2026-11-06T16:04:23.699Z",
+      "exitCode": 0,
+      "log": "docs/readiness/phase2a-setup-20261106T160412Z/foundry-verbose.log",
+      "sha256": "fe6d6539ee38601cf844395b18238b0c98ed38c042faada414076865568b9f42"
+    }
+  ]
+}

@@ -4,6 +4,7 @@ import { PageTitle } from "../components/Common";
 import type { WaveProtocolModel } from "../hooks/useWaveProtocol";
 import { money, number, percent, short } from "../lib/format";
 import type { Page } from "../lib/navigation";
+import { collectionName } from "../lib/collections";
 export function PortfolioPage({
   model,
   onSelect,
@@ -73,8 +74,9 @@ export function PortfolioPage({
             <span className="collection-icon">
               <Layers size={22} />
             </span>
-            <h3>{b.name}</h3>
+            <h3>{collectionName(b, config)}</h3>
             <span className="muted">
+              {collectionName(b, config) !== b.name ? `${b.name} · ` : ""}
               {b.symbol} · {config?.name}
             </span>
             <dl>
