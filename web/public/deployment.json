@@ -70,8 +70,8 @@
       "marketId": "chainlink"
     }
   ],
-  "codeCommit": "81fe66a179470a5b8b59af37e9117ce34bef2413",
-  "workingTreeDirty": true,
+  "codeCommit": "1889c9ed63bdb7b46e3f2abcbce17da5370ec558",
+  "workingTreeDirty": false,
   "transactionHashes": [
     "0xd4edc8dbcca9761b87d5c4eafb89a0df235bb73320b44bb6aed32bddf976fb3c",
     "0x5234c897226abb53b57624f73e93a2c6fa6f0b01c4a9664b7a819ca6a72deda5",
