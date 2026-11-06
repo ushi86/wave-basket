@@ -239,6 +239,24 @@
       "observedAtIST": "2026-11-06T14:12:30.843+05:30"
     },
     {
+      "id": "claim-ead66315f1de",
+      "quote": "**Submission worker decision:** retain Nox 0.4.0 at `0xDf5Db854BA75B52a4bF1a250a93D8d25cB982b2d`, with fixed worker hash `0xd8bef626ec8511d7a468bca5137880680ca2da20d2ea4d9c981a2a3d0c86ba1e`. The per-release immutable specifier gives us known bytes. The officially listed stable address can be updated by its owner and currently serves different 0.4.1 bytes. We will not switch automatically. If 0.4.0 fails the full Sepolia browser session, stop, preserve the actual error and present options for owner approval. Fixed bytes do not establish anonymity, code safety or infrastructure availability. See the [specifier review](docs/NOX_SPECIFIER_REVIEW.md).",
+      "status": "Partial",
+      "artifacts": [
+        "docs/NOX_SPECIFIER_REVIEW.md"
+      ],
+      "observedAtIST": "2026-11-06T15:27:38.978+05:30"
+    },
+    {
+      "id": "claim-33c219e01432",
+      "quote": "Receipt verification uses PublicNode and the approved accountless, read-only Tenderly endpoint (`https://sepolia.gateway.tenderly.co`). This provides **provider diversity**, not proof of fully independent infrastructure. Chain identity, canonical block, receipt/log and state checks remain enforced. If Tenderly requires an account, API key or payment, stop and ask the owner; do not silently substitute or downgrade verification.",
+      "status": "Partial",
+      "artifacts": [
+        "docs/RPC_SOURCE_REVIEW.md"
+      ],
+      "observedAtIST": "2026-11-06T15:27:38.978+05:30"
+    },
+    {
       "id": "claim-35bfbcaa86cd",
       "quote": "The meter counts individual JSON-RPC methods, including batch members. Successful coverage is `anon / (anon + bootstrap + explicit-direct)`. Attempts/errors are shown separately. It never inflates success counts using failed requests. Bootstrap is direct and metered. Wallet-side RPC and transaction broadcasts are separate and outside this meter; CRE is off-browser. Local Anvil reads are explicitly direct and counted. Page reloads reset session counters.",
       "status": "Partial",

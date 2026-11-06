@@ -7,9 +7,10 @@ import {
 } from "viem";
 import type { EvidenceIO } from "./evidence";
 export const SEPOLIA_MANAGER = "0xe03a1074c86cfedd5c142c4f04f1a1536e203543";
+// Provider diversity, not proof of fully independent downstream infrastructure.
 const RPCS = [
   "https://ethereum-sepolia-rpc.publicnode.com",
-  "https://sepolia.drpc.org",
+  "https://sepolia.gateway.tenderly.co",
 ];
 export const receiptAbi = parseAbi([
   "event BasketCreated(address indexed vault,address indexed creator,address[] assets,uint16[] targetBps,uint16 perfFeeBps)",
@@ -95,7 +96,7 @@ export class CanonicalSepolia {
       a.blockNumber !== b.blockNumber
     )
       throw new Error(
-        "Sepolia transaction is missing, reverted, or disagrees across independent RPCs",
+        "Sepolia transaction is missing, reverted, or disagrees across the selected providers",
       );
     const normalizedLogs = (receipt: Receipt) =>
       (receipt.logs || []).map((log) => ({
@@ -108,7 +109,7 @@ export class CanonicalSepolia {
       JSON.stringify(normalizedLogs(a)) !== JSON.stringify(normalizedLogs(b))
     )
       throw new Error(
-        "Independent Sepolia sources disagree on transaction target or logs",
+        "Selected Sepolia providers disagree on transaction target or logs",
       );
     const blocks = (await Promise.all(
       RPCS.map((endpoint) =>
@@ -117,12 +118,10 @@ export class CanonicalSepolia {
     )) as Array<{ hash?: string; timestamp?: string } | null>;
     if (blocks.some((block) => block?.hash !== a.blockHash))
       throw new Error(
-        "Receipt is not on the independently observed canonical Sepolia block",
+        "Receipt is not on the provider-corroborated canonical Sepolia block",
       );
     if (!blocks[0]?.timestamp || blocks[0].timestamp !== blocks[1]?.timestamp)
-      throw new Error(
-        "Independent block timestamps are missing or inconsistent",
-      );
+      throw new Error("Provider block timestamps are missing or inconsistent");
     return { ...a, timestamp: Number(BigInt(blocks[0].timestamp)) * 1000 };
   }
   event(receipt: Receipt, name: string, emitter: string) {

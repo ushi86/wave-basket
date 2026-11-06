@@ -2,6 +2,10 @@
 
 Reviewed 2026-11-06. Research only: no application pin, configuration or contract was changed; workers were fetched as byte data, never imported, evaluated or executed. No privacy measurements or installs were performed.
 
+## Owner decision
+
+On 6 November 2026 the owner selected the existing immutable 0.4.0 pin for this submission. Do not switch to the owner-updatable stable address. If the full Sepolia browser session fails, preserve and show the actual error and options; any pin change requires explicit approval. No privacy measurement was performed as part of this research.
+
 ## Finding and recommendation
 
 The mismatch is real and intentional upstream: Wave's current address is a **per-release immutable 0.4.0 pin**; the official adopter address is an **owner-updatable stable address**, currently serving **0.4.1**. They are neither equivalent addresses nor identical worker bytes. The [official adopter listing](https://ethereum.github.io/anon-rpc/adopters/) publishes `0x35133267A8F7EC35046a83DCA0f4Ca8A6e1b7A9A` on Sepolia. Upstream's [release history](https://github.com/hisoka-io/nox-sdk/blob/66bce4af274b4be457ef11336ba9cb6d9200efd1/packages/anon-rpc-worker/CHANGELOG.md) explicitly distinguishes the stable address from per-release immutable pins.

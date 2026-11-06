@@ -1,0 +1,20 @@
+{
+  "scope": "fixed-block Sepolia deployment dry run ONLY; no state override, unlock or broadcast",
+  "startedAt": "2026-11-06T09:57:07.445Z",
+  "argv": [
+    "script",
+    "script/DeployDemo.s.sol:DeployDemo",
+    "--rpc-url",
+    "https://sepolia.gateway.tenderly.co",
+    "--fork-block-number",
+    "12075754",
+    "--sender",
+    "0xDe25D83481c0c2A711397c44eE3317dD826952D5",
+    "--non-interactive"
+  ],
+  "blockHash": "0x19b1f58df363b484e6c1360913d2eb58731b806cc05503f986484c50786f2bc8",
+  "forwarderConfigured": false,
+  "finishedAt": "2026-11-06T09:57:54.624Z",
+  "code": 1,
+  "signal": null
+}

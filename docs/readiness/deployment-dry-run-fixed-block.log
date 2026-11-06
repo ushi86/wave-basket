@@ -1,0 +1,675 @@
+No files changed, compilation skipped
+2026-11-06T09:57:08.851537Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for ../node_modules/@uniswap/v4-core/lib/forge-std/src/Test.sol
+2026-11-06T09:57:08.852421Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for /Users/hano/Projects/Wave Eth/node_modules/@uniswap/v4-core/lib/forge-std/src/StdAssertions.sol
+2026-11-06T09:57:08.852537Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for /Users/hano/Projects/Wave Eth/node_modules/@uniswap/v4-core/lib/forge-std/src/StdError.sol
+2026-11-06T09:57:08.852579Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for /Users/hano/Projects/Wave Eth/node_modules/@uniswap/v4-core/lib/forge-std/src/StdInvariant.sol
+2026-11-06T09:57:08.852754Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for /Users/hano/Projects/Wave Eth/node_modules/@uniswap/v4-core/lib/forge-std/src/StdToml.sol
+2026-11-06T09:57:08.853922Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for test/Lifecycle.t.sol
+2026-11-06T09:57:08.853961Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for test/WaveFixture.sol
+2026-11-06T09:57:08.854664Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for test/Accounting.t.sol
+2026-11-06T09:57:08.855831Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for test/Guards.t.sol
+2026-11-06T09:57:08.855961Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for test/Hook.t.sol
+2026-11-06T09:57:08.855996Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for test/Receiver.t.sol
+2026-11-06T09:57:08.856074Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for test/V4Integration.t.sol
+2026-11-06T09:57:10.099610Z  WARN foundry_fork_db::cache: Failed to read cache file err=Os { code: 2, kind: NotFound, message: "No such file or directory" } path="/Users/hano/.foundry/cache/rpc/sepolia/12075754"
+2026-11-06T09:57:51.089627Z  WARN evm::traces::external: etherscan config not found
+2026-11-06T09:57:51.679662Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body")
+2026-11-06T09:57:52.671836Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body")
+2026-11-06T09:57:52.673533Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body")
+2026-11-06T09:57:53.074010Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body")
+2026-11-06T09:57:53.416650Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body")
+2026-11-06T09:57:53.458201Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body")
+2026-11-06T09:57:54.202125Z  WARN evm::traces::external: could not get info err=Unknown("error decoding response body")
+Traces:
+  [17521957] → new DeployDemo@0x5b73C5498c1E3b4dbA84de0F1833c4a029d90519
+    └─ ← [Return] 87344 bytes of code
+
+  [39608863] DeployDemo::run()
+    ├─ [0] VM::envAddress("DEPLOYER_ADDRESS") [staticcall]
+    │   └─ ← [Return] <env var value>
+    ├─ [0] VM::startBroadcast(0xDe25D83481c0c2A711397c44eE3317dD826952D5)
+    │   └─ ← [Return]
+    ├─ [443161] → new DemoToken@0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3
+    │   └─ ← [Return] 1984 bytes of code
+    ├─ [443161] → new DemoToken@0x33297104581Dd29347d9Ed37936e4F16621D59aE
+    │   └─ ← [Return] 1984 bytes of code
+    ├─ [443161] → new DemoToken@0x7B178cB5e0776E769BE44919889D5A57D8BB1742
+    │   └─ ← [Return] 1984 bytes of code
+    ├─ [443161] → new DemoToken@0xBe28019380A99649579B7E9fa7F1979e6f203F79
+    │   └─ ← [Return] 1984 bytes of code
+    ├─ [528455] → new AssetRegistry@0xDd71a1BF041dcdb68AD70A6e0766996557759525
+    │   ├─ emit OwnershipTransferred(previousOwner: 0x0000000000000000000000000000000000000000, newOwner: 0xDe25D83481c0c2A711397c44eE3317dD826952D5)
+    │   └─ ← [Return] 2509 bytes of code
+    ├─ [0] VM::envOr("USE_CHAINLINK_FEEDS", true) [staticcall]
+    │   └─ ← [Return] <env var value>
+    ├─ [0] VM::envOr("USDC_FEED", 0x0000000000000000000000000000000000000000) [staticcall]
+    │   └─ ← [Return] <env var value>
+    ├─ [0] VM::envOr("ETH_FEED", 0x0000000000000000000000000000000000000000) [staticcall]
+    │   └─ ← [Return] <env var value>
+    ├─ [0] VM::envOr("BTC_FEED", 0x0000000000000000000000000000000000000000) [staticcall]
+    │   └─ ← [Return] <env var value>
+    ├─ [0] VM::envOr("LINK_FEED", 0x0000000000000000000000000000000000000000) [staticcall]
+    │   └─ ← [Return] <env var value>
+    ├─ [5661] 0xA2F78ab2355fe2f984D808B5CeE7FD0A93D5270E::decimals() [staticcall]
+    │   ├─ [341] 0x0524b20f305e2e2F7990B9AfE28B4D5e4a76eA0C::decimals() [staticcall]
+    │   │   └─ ← [Return] 8
+    │   └─ ← [Return] 8
+    ├─ [94229] AssetRegistry::setAsset(DemoToken: [0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3], 0xA2F78ab2355fe2f984D808B5CeE7FD0A93D5270E, 108000 [1.08e5], 1, 100000000000000 [1e14], true)
+    │   ├─ [247] DemoToken::decimals() [staticcall]
+    │   │   └─ ← [Return] 6
+    │   ├─ [1161] 0xA2F78ab2355fe2f984D808B5CeE7FD0A93D5270E::decimals() [staticcall]
+    │   │   ├─ [341] 0x0524b20f305e2e2F7990B9AfE28B4D5e4a76eA0C::decimals() [staticcall]
+    │   │   │   └─ ← [Return] 8
+    │   │   └─ ← [Return] 8
+    │   ├─ emit AssetConfigured(token: DemoToken: [0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3], feed: 0xA2F78ab2355fe2f984D808B5CeE7FD0A93D5270E, allowed: true)
+    │   └─ ← [Stop]
+    ├─ [5661] 0x694AA1769357215DE4FAC081bf1f309aDC325306::decimals() [staticcall]
+    │   ├─ [341] 0x719E22E3D4b690E5d96cCb40619180B5427F14AE::decimals() [staticcall]
+    │   │   └─ ← [Return] 8
+    │   └─ ← [Return] 8
+    ├─ [94229] AssetRegistry::setAsset(DemoToken: [0x33297104581Dd29347d9Ed37936e4F16621D59aE], 0x694AA1769357215DE4FAC081bf1f309aDC325306, 4500, 1, 100000000000000 [1e14], true)
+    │   ├─ [247] DemoToken::decimals() [staticcall]
+    │   │   └─ ← [Return] 18
+    │   ├─ [1161] 0x694AA1769357215DE4FAC081bf1f309aDC325306::decimals() [staticcall]
+    │   │   ├─ [341] 0x719E22E3D4b690E5d96cCb40619180B5427F14AE::decimals() [staticcall]
+    │   │   │   └─ ← [Return] 8
+    │   │   └─ ← [Return] 8
+    │   ├─ emit AssetConfigured(token: DemoToken: [0x33297104581Dd29347d9Ed37936e4F16621D59aE], feed: 0x694AA1769357215DE4FAC081bf1f309aDC325306, allowed: true)
+    │   └─ ← [Stop]
+    ├─ [5661] 0x1b44F3514812d835EB1BDB0acB33d3fA3351Ee43::decimals() [staticcall]
+    │   ├─ [341] 0x17Dac87b07EAC97De4E182Fc51C925ebB7E723e2::decimals() [staticcall]
+    │   │   └─ ← [Return] 8
+    │   └─ ← [Return] 8
+    ├─ [94229] AssetRegistry::setAsset(DemoToken: [0x7B178cB5e0776E769BE44919889D5A57D8BB1742], 0x1b44F3514812d835EB1BDB0acB33d3fA3351Ee43, 4500, 1, 100000000000000 [1e14], true)
+    │   ├─ [247] DemoToken::decimals() [staticcall]
+    │   │   └─ ← [Return] 8
+    │   ├─ [1161] 0x1b44F3514812d835EB1BDB0acB33d3fA3351Ee43::decimals() [staticcall]
+    │   │   ├─ [341] 0x17Dac87b07EAC97De4E182Fc51C925ebB7E723e2::decimals() [staticcall]
+    │   │   │   └─ ← [Return] 8
+    │   │   └─ ← [Return] 8
+    │   ├─ emit AssetConfigured(token: DemoToken: [0x7B178cB5e0776E769BE44919889D5A57D8BB1742], feed: 0x1b44F3514812d835EB1BDB0acB33d3fA3351Ee43, allowed: true)
+    │   └─ ← [Stop]
+    ├─ [5661] 0xc59E3633BAAC79493d908e63626716e204A45EdF::decimals() [staticcall]
+    │   ├─ [341] 0x5A2734CC0341ea6564dF3D00171cc99C63B1A7d3::decimals() [staticcall]
+    │   │   └─ ← [Return] 8
+    │   └─ ← [Return] 8
+    ├─ [94229] AssetRegistry::setAsset(DemoToken: [0xBe28019380A99649579B7E9fa7F1979e6f203F79], 0xc59E3633BAAC79493d908e63626716e204A45EdF, 4500, 1, 100000000000000 [1e14], true)
+    │   ├─ [247] DemoToken::decimals() [staticcall]
+    │   │   └─ ← [Return] 18
+    │   ├─ [1161] 0xc59E3633BAAC79493d908e63626716e204A45EdF::decimals() [staticcall]
+    │   │   ├─ [341] 0x5A2734CC0341ea6564dF3D00171cc99C63B1A7d3::decimals() [staticcall]
+    │   │   │   └─ ← [Return] 8
+    │   │   └─ ← [Return] 8
+    │   ├─ emit AssetConfigured(token: DemoToken: [0xBe28019380A99649579B7E9fa7F1979e6f203F79], feed: 0xc59E3633BAAC79493d908e63626716e204A45EdF, allowed: true)
+    │   └─ ← [Stop]
+    ├─ [0] VM::envOr("POOL_MANAGER", 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543) [staticcall]
+    │   └─ ← [Return] <env var value>
+    ├─ [878211] → new WaveSwapAdapter@0xaA8a9233C07a9125242E32D81910F1c9526252e5
+    │   ├─ emit OwnershipTransferred(previousOwner: 0x0000000000000000000000000000000000000000, newOwner: 0xDe25D83481c0c2A711397c44eE3317dD826952D5)
+    │   └─ ← [Return] 4145 bytes of code
+    ├─ [522783] → new DemoLiquiditySeeder@0x7cbe10AA965Edc8414ad0a4C68192f8ef117f21D
+    │   ├─ emit OwnershipTransferred(previousOwner: 0x0000000000000000000000000000000000000000, newOwner: 0xDe25D83481c0c2A711397c44eE3317dD826952D5)
+    │   └─ ← [Return] 2491 bytes of code
+    ├─ [68763] DemoToken::faucet()
+    │   ├─ emit Transfer(from: 0x0000000000000000000000000000000000000000, to: 0xDe25D83481c0c2A711397c44eE3317dD826952D5, amount: 1000000000000000 [1e15])
+    │   └─ ← [Stop]
+    ├─ [68763] DemoToken::faucet()
+    │   ├─ emit Transfer(from: 0x0000000000000000000000000000000000000000, to: 0xDe25D83481c0c2A711397c44eE3317dD826952D5, amount: 1000000000000000000000000 [1e24])
+    │   └─ ← [Stop]
+    ├─ [68763] DemoToken::faucet()
+    │   ├─ emit Transfer(from: 0x0000000000000000000000000000000000000000, to: 0xDe25D83481c0c2A711397c44eE3317dD826952D5, amount: 100000000000000 [1e14])
+    │   └─ ← [Stop]
+    ├─ [68763] DemoToken::faucet()
+    │   ├─ emit Transfer(from: 0x0000000000000000000000000000000000000000, to: 0xDe25D83481c0c2A711397c44eE3317dD826952D5, amount: 100000000000000000000000000 [1e26])
+    │   └─ ← [Stop]
+    ├─ [13941] AssetRegistry::priceUsd(DemoToken: [0x33297104581Dd29347d9Ed37936e4F16621D59aE]) [staticcall]
+    │   ├─ [11543] 0x694AA1769357215DE4FAC081bf1f309aDC325306::latestRoundData() [staticcall]
+    │   │   ├─ [7612] 0x719E22E3D4b690E5d96cCb40619180B5427F14AE::latestRoundData() [staticcall]
+    │   │   │   └─ ← [Return] 37371 [3.737e4], 223640000000 [2.236e11], 1793956188 [1.793e9], 1793956188 [1.793e9], 37371 [3.737e4]
+    │   │   └─ ← [Return] 18446744073709588987 [1.844e19], 223640000000 [2.236e11], 1793956188 [1.793e9], 1793956188 [1.793e9], 18446744073709588987 [1.844e19]
+    │   └─ ← [Return] 2236400000000000000000 [2.236e21], true
+    ├─ [13941] AssetRegistry::priceUsd(DemoToken: [0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3]) [staticcall]
+    │   ├─ [11543] 0xA2F78ab2355fe2f984D808B5CeE7FD0A93D5270E::latestRoundData() [staticcall]
+    │   │   ├─ [7612] 0x0524b20f305e2e2F7990B9AfE28B4D5e4a76eA0C::latestRoundData() [staticcall]
+    │   │   │   └─ ← [Return] 1631, 99978205 [9.997e7], 1793956272 [1.793e9], 1793956272 [1.793e9], 1631
+    │   │   └─ ← [Return] 18446744073709553247 [1.844e19], 99978205 [9.997e7], 1793956272 [1.793e9], 1793956272 [1.793e9], 18446744073709553247 [1.844e19]
+    │   └─ ← [Return] 999782050000000000 [9.997e17], true
+    ├─ [247] DemoToken::decimals() [staticcall]
+    │   └─ ← [Return] 6
+    ├─ [247] DemoToken::decimals() [staticcall]
+    │   └─ ← [Return] 18
+    ├─ [29379] 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543::initialize(PoolKey({ currency0: 0x33297104581Dd29347d9Ed37936e4F16621D59aE, currency1: 0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3, fee: 3000, tickSpacing: 60, hooks: 0x0000000000000000000000000000000000000000 }), 3747155000016647940472832 [3.747e24])
+    │   ├─ emit Initialize(id: 0x7a32361e4fce4506c4eededb936bbf70e1ee9e59ac3c54ff1f0439536118ec48, currency0: DemoToken: [0x33297104581Dd29347d9Ed37936e4F16621D59aE], currency1: DemoToken: [0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3], fee: 3000, tickSpacing: 60, hooks: 0x0000000000000000000000000000000000000000, sqrtPriceX96: 3747155000016647940472832 [3.747e24], tick: -199192 [-1.991e5])
+    │   └─ ← [Return] -199192 [-1.991e5]
+    ├─ [50446] WaveSwapAdapter::setPool(PoolKey({ currency0: 0x33297104581Dd29347d9Ed37936e4F16621D59aE, currency1: 0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3, fee: 3000, tickSpacing: 60, hooks: 0x0000000000000000000000000000000000000000 }))
+    │   ├─ emit PoolConfigured(token0: DemoToken: [0x33297104581Dd29347d9Ed37936e4F16621D59aE], token1: DemoToken: [0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3], fee: 3000, hook: 0x0000000000000000000000000000000000000000)
+    │   └─ ← [Stop]
+    ├─ [24325] DemoToken::approve(DemoLiquiditySeeder: [0x7cbe10AA965Edc8414ad0a4C68192f8ef117f21D], 115792089237316195423570985008687907853269984665640564039457584007913129639935 [1.157e77])
+    │   ├─ emit Approval(owner: 0xDe25D83481c0c2A711397c44eE3317dD826952D5, spender: DemoLiquiditySeeder: [0x7cbe10AA965Edc8414ad0a4C68192f8ef117f21D], amount: 115792089237316195423570985008687907853269984665640564039457584007913129639935 [1.157e77])
+    │   └─ ← [Return] true
+    ├─ [24325] DemoToken::approve(DemoLiquiditySeeder: [0x7cbe10AA965Edc8414ad0a4C68192f8ef117f21D], 115792089237316195423570985008687907853269984665640564039457584007913129639935 [1.157e77])
+    │   ├─ emit Approval(owner: 0xDe25D83481c0c2A711397c44eE3317dD826952D5, spender: DemoLiquiditySeeder: [0x7cbe10AA965Edc8414ad0a4C68192f8ef117f21D], amount: 115792089237316195423570985008687907853269984665640564039457584007913129639935 [1.157e77])
+    │   └─ ← [Return] true
+    ├─ [232771] DemoLiquiditySeeder::seed(PoolKey({ currency0: 0x33297104581Dd29347d9Ed37936e4F16621D59aE, currency1: 0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3, fee: 3000, tickSpacing: 60, hooks: 0x0000000000000000000000000000000000000000 }), 2114355091100110377 [2.114e18])
+    │   ├─ [230385] 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543::unlock(0x00000000000000000000000033297104581dd29347d9ed37936e4f16621d59ae0000000000000000000000005d8b7a6fd3257fa7a42a38c7231646f0d3aeb3d30000000000000000000000000000000000000000000000000000000000000bb8000000000000000000000000000000000000000000000000000000000000003c00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001d57b2c0c60f8e29)
+    │   │   ├─ [228408] DemoLiquiditySeeder::unlockCallback(0x00000000000000000000000033297104581dd29347d9ed37936e4f16621d59ae0000000000000000000000005d8b7a6fd3257fa7a42a38c7231646f0d3aeb3d30000000000000000000000000000000000000000000000000000000000000bb8000000000000000000000000000000000000000000000000000000000000003c00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001d57b2c0c60f8e29)
+    │   │   │   ├─ [164250] 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543::modifyLiquidity(PoolKey({ currency0: 0x33297104581Dd29347d9Ed37936e4F16621D59aE, currency1: 0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3, fee: 3000, tickSpacing: 60, hooks: 0x0000000000000000000000000000000000000000 }), ModifyLiquidityParams({ tickLower: -887220 [-8.872e5], tickUpper: 887220 [8.872e5], liquidityDelta: 2114355091100110377 [2.114e18], salt: 0x0000000000000000000000000000000000000000000000000000000000000000 }), 0x)
+    │   │   │   │   ├─ emit ModifyLiquidity(id: 0x7a32361e4fce4506c4eededb936bbf70e1ee9e59ac3c54ff1f0439536118ec48, sender: DemoLiquiditySeeder: [0x7cbe10AA965Edc8414ad0a4C68192f8ef117f21D], tickLower: -887220 [-8.872e5], tickUpper: 887220 [8.872e5], liquidityDelta: 2114355091100110377 [2.114e18], salt: 0x0000000000000000000000000000000000000000000000000000000000000000)
+    │   │   │   │   └─ ← [Return] -15212314540291008626968500997658941126670416627712313062473728 [-1.521e61], 0
+    │   │   │   ├─ [3888] 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543::sync(DemoToken: [0x33297104581Dd29347d9Ed37936e4F16621D59aE])
+    │   │   │   │   ├─ [2515] DemoToken::balanceOf(0xE03A1074c86CFeDd5C142C4F04F1a1536e203543) [staticcall]
+    │   │   │   │   │   └─ ← [Return] 0
+    │   │   │   │   └─ ← [Stop]
+    │   │   │   ├─ [23092] DemoToken::transferFrom(0xDe25D83481c0c2A711397c44eE3317dD826952D5, 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543, 44704974512609560526439 [4.47e22])
+    │   │   │   │   ├─ emit Transfer(from: 0xDe25D83481c0c2A711397c44eE3317dD826952D5, to: 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543, amount: 44704974512609560526439 [4.47e22])
+    │   │   │   │   └─ ← [Return] true
+    │   │   │   ├─ [2489] 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543::settle()
+    │   │   │   │   ├─ [515] DemoToken::balanceOf(0xE03A1074c86CFeDd5C142C4F04F1a1536e203543) [staticcall]
+    │   │   │   │   │   └─ ← [Return] 44704974512609560526439 [4.47e22]
+    │   │   │   │   └─ ← [Return] 44704974512609560526439 [4.47e22]
+    │   │   │   ├─ [3888] 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543::sync(DemoToken: [0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3])
+    │   │   │   │   ├─ [2515] DemoToken::balanceOf(0xE03A1074c86CFeDd5C142C4F04F1a1536e203543) [staticcall]
+    │   │   │   │   │   └─ ← [Return] 0
+    │   │   │   │   └─ ← [Stop]
+    │   │   │   ├─ [23092] DemoToken::transferFrom(0xDe25D83481c0c2A711397c44eE3317dD826952D5, 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543, 100000000000000 [1e14])
+    │   │   │   │   ├─ emit Transfer(from: 0xDe25D83481c0c2A711397c44eE3317dD826952D5, to: 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543, amount: 100000000000000 [1e14])
+    │   │   │   │   └─ ← [Return] true
+    │   │   │   ├─ [2489] 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543::settle()
+    │   │   │   │   ├─ [515] DemoToken::balanceOf(0xE03A1074c86CFeDd5C142C4F04F1a1536e203543) [staticcall]
+    │   │   │   │   │   └─ ← [Return] 100000000000000 [1e14]
+    │   │   │   │   └─ ← [Return] 100000000000000 [1e14]
+    │   │   │   └─ ← [Return] 0x
+    │   │   └─ ← [Return] 0x
+    │   └─ ← [Stop]
+    ├─ [5941] AssetRegistry::priceUsd(DemoToken: [0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3]) [staticcall]
+    │   ├─ [3543] 0xA2F78ab2355fe2f984D808B5CeE7FD0A93D5270E::latestRoundData() [staticcall]
+    │   │   ├─ [1612] 0x0524b20f305e2e2F7990B9AfE28B4D5e4a76eA0C::latestRoundData() [staticcall]
+    │   │   │   └─ ← [Return] 1631, 99978205 [9.997e7], 1793956272 [1.793e9], 1793956272 [1.793e9], 1631
+    │   │   └─ ← [Return] 18446744073709553247 [1.844e19], 99978205 [9.997e7], 1793956272 [1.793e9], 1793956272 [1.793e9], 18446744073709553247 [1.844e19]
+    │   └─ ← [Return] 999782050000000000 [9.997e17], true
+    ├─ [13941] AssetRegistry::priceUsd(DemoToken: [0x7B178cB5e0776E769BE44919889D5A57D8BB1742]) [staticcall]
+    │   ├─ [11543] 0x1b44F3514812d835EB1BDB0acB33d3fA3351Ee43::latestRoundData() [staticcall]
+    │   │   ├─ [7612] 0x17Dac87b07EAC97De4E182Fc51C925ebB7E723e2::latestRoundData() [staticcall]
+    │   │   │   └─ ← [Return] 35088 [3.508e4], 7557865352442 [7.557e12], 1793954988 [1.793e9], 1793954988 [1.793e9], 35088 [3.508e4]
+    │   │   └─ ← [Return] 18446744073709586704 [1.844e19], 7557865352442 [7.557e12], 1793954988 [1.793e9], 1793954988 [1.793e9], 18446744073709586704 [1.844e19]
+    │   └─ ← [Return] 75578653524420000000000 [7.557e22], true
+    ├─ [247] DemoToken::decimals() [staticcall]
+    │   └─ ← [Return] 8
+    ├─ [247] DemoToken::decimals() [staticcall]
+    │   └─ ← [Return] 6
+    ├─ [29415] 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543::initialize(PoolKey({ currency0: 0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3, currency1: 0x7B178cB5e0776E769BE44919889D5A57D8BB1742, fee: 3000, tickSpacing: 60, hooks: 0x0000000000000000000000000000000000000000 }), 2881593236427713064548171776 [2.881e27])
+    │   ├─ emit Initialize(id: 0xb783376fa931f323f9b7aeb58c47cf5a6f8a7b3b16c4c8a66aabc91349fcdc3e, currency0: DemoToken: [0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3], currency1: DemoToken: [0x7B178cB5e0776E769BE44919889D5A57D8BB1742], fee: 3000, tickSpacing: 60, hooks: 0x0000000000000000000000000000000000000000, sqrtPriceX96: 2881593236427713064548171776 [2.881e27], tick: -66284 [-6.628e4])
+    │   └─ ← [Return] -66284 [-6.628e4]
+    ├─ [50446] WaveSwapAdapter::setPool(PoolKey({ currency0: 0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3, currency1: 0x7B178cB5e0776E769BE44919889D5A57D8BB1742, fee: 3000, tickSpacing: 60, hooks: 0x0000000000000000000000000000000000000000 }))
+    │   ├─ emit PoolConfigured(token0: DemoToken: [0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3], token1: DemoToken: [0x7B178cB5e0776E769BE44919889D5A57D8BB1742], fee: 3000, hook: 0x0000000000000000000000000000000000000000)
+    │   └─ ← [Stop]
+    ├─ [2325] DemoToken::approve(DemoLiquiditySeeder: [0x7cbe10AA965Edc8414ad0a4C68192f8ef117f21D], 115792089237316195423570985008687907853269984665640564039457584007913129639935 [1.157e77])
+    │   ├─ emit Approval(owner: 0xDe25D83481c0c2A711397c44eE3317dD826952D5, spender: DemoLiquiditySeeder: [0x7cbe10AA965Edc8414ad0a4C68192f8ef117f21D], amount: 115792089237316195423570985008687907853269984665640564039457584007913129639935 [1.157e77])
+    │   └─ ← [Return] true
+    ├─ [24325] DemoToken::approve(DemoLiquiditySeeder: [0x7cbe10AA965Edc8414ad0a4C68192f8ef117f21D], 115792089237316195423570985008687907853269984665640564039457584007913129639935 [1.157e77])
+    │   ├─ emit Approval(owner: 0xDe25D83481c0c2A711397c44eE3317dD826952D5, spender: DemoLiquiditySeeder: [0x7cbe10AA965Edc8414ad0a4C68192f8ef117f21D], amount: 115792089237316195423570985008687907853269984665640564039457584007913129639935 [1.157e77])
+    │   └─ ← [Return] true
+    ├─ [210871] DemoLiquiditySeeder::seed(PoolKey({ currency0: 0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3, currency1: 0x7B178cB5e0776E769BE44919889D5A57D8BB1742, fee: 3000, tickSpacing: 60, hooks: 0x0000000000000000000000000000000000000000 }), 3637081998347 [3.637e12])
+    │   ├─ [208485] 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543::unlock(0x0000000000000000000000005d8b7a6fd3257fa7a42a38c7231646f0d3aeb3d30000000000000000000000007b178cb5e0776e769be44919889d5a57d8bb17420000000000000000000000000000000000000000000000000000000000000bb8000000000000000000000000000000000000000000000000000000000000003c00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000034ed2fb040b)
+    │   │   ├─ [206508] DemoLiquiditySeeder::unlockCallback(0x0000000000000000000000005d8b7a6fd3257fa7a42a38c7231646f0d3aeb3d30000000000000000000000007b178cb5e0776e769be44919889d5a57d8bb17420000000000000000000000000000000000000000000000000000000000000bb8000000000000000000000000000000000000000000000000000000000000003c00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000034ed2fb040b)
+    │   │   │   ├─ [164250] 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543::modifyLiquidity(PoolKey({ currency0: 0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3, currency1: 0x7B178cB5e0776E769BE44919889D5A57D8BB1742, fee: 3000, tickSpacing: 60, hooks: 0x0000000000000000000000000000000000000000 }), ModifyLiquidityParams({ tickLower: -887220 [-8.872e5], tickUpper: 887220 [8.872e5], liquidityDelta: 3637081998347 [3.637e12], salt: 0x0000000000000000000000000000000000000000000000000000000000000000 }), 0x)
+    │   │   │   │   ├─ emit ModifyLiquidity(id: 0xb783376fa931f323f9b7aeb58c47cf5a6f8a7b3b16c4c8a66aabc91349fcdc3e, sender: DemoLiquiditySeeder: [0x7cbe10AA965Edc8414ad0a4C68192f8ef117f21D], tickLower: -887220 [-8.872e5], tickUpper: 887220 [8.872e5], liquidityDelta: 3637081998347 [3.637e12], salt: 0x0000000000000000000000000000000000000000000000000000000000000000)
+    │   │   │   │   └─ ← [Return] -34028236692090103240301330420078724024918382833328612 [-3.402e52], 0
+    │   │   │   ├─ [1888] 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543::sync(DemoToken: [0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3])
+    │   │   │   │   ├─ [515] DemoToken::balanceOf(0xE03A1074c86CFeDd5C142C4F04F1a1536e203543) [staticcall]
+    │   │   │   │   │   └─ ← [Return] 100000000000000 [1e14]
+    │   │   │   │   └─ ← [Stop]
+    │   │   │   ├─ [3192] DemoToken::transferFrom(0xDe25D83481c0c2A711397c44eE3317dD826952D5, 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543, 99999999999990 [9.999e13])
+    │   │   │   │   ├─ emit Transfer(from: 0xDe25D83481c0c2A711397c44eE3317dD826952D5, to: 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543, amount: 99999999999990 [9.999e13])
+    │   │   │   │   └─ ← [Return] true
+    │   │   │   ├─ [2489] 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543::settle()
+    │   │   │   │   ├─ [515] DemoToken::balanceOf(0xE03A1074c86CFeDd5C142C4F04F1a1536e203543) [staticcall]
+    │   │   │   │   │   └─ ← [Return] 199999999999990 [1.999e14]
+    │   │   │   │   └─ ← [Return] 99999999999990 [9.999e13]
+    │   │   │   ├─ [3888] 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543::sync(DemoToken: [0x7B178cB5e0776E769BE44919889D5A57D8BB1742])
+    │   │   │   │   ├─ [2515] DemoToken::balanceOf(0xE03A1074c86CFeDd5C142C4F04F1a1536e203543) [staticcall]
+    │   │   │   │   │   └─ ← [Return] 0
+    │   │   │   │   └─ ← [Stop]
+    │   │   │   ├─ [23092] DemoToken::transferFrom(0xDe25D83481c0c2A711397c44eE3317dD826952D5, 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543, 132283654628 [1.322e11])
+    │   │   │   │   ├─ emit Transfer(from: 0xDe25D83481c0c2A711397c44eE3317dD826952D5, to: 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543, amount: 132283654628 [1.322e11])
+    │   │   │   │   └─ ← [Return] true
+    │   │   │   ├─ [2489] 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543::settle()
+    │   │   │   │   ├─ [515] DemoToken::balanceOf(0xE03A1074c86CFeDd5C142C4F04F1a1536e203543) [staticcall]
+    │   │   │   │   │   └─ ← [Return] 132283654628 [1.322e11]
+    │   │   │   │   └─ ← [Return] 132283654628 [1.322e11]
+    │   │   │   └─ ← [Return] 0x
+    │   │   └─ ← [Return] 0x
+    │   └─ ← [Stop]
+    ├─ [5941] AssetRegistry::priceUsd(DemoToken: [0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3]) [staticcall]
+    │   ├─ [3543] 0xA2F78ab2355fe2f984D808B5CeE7FD0A93D5270E::latestRoundData() [staticcall]
+    │   │   ├─ [1612] 0x0524b20f305e2e2F7990B9AfE28B4D5e4a76eA0C::latestRoundData() [staticcall]
+    │   │   │   └─ ← [Return] 1631, 99978205 [9.997e7], 1793956272 [1.793e9], 1793956272 [1.793e9], 1631
+    │   │   └─ ← [Return] 18446744073709553247 [1.844e19], 99978205 [9.997e7], 1793956272 [1.793e9], 1793956272 [1.793e9], 18446744073709553247 [1.844e19]
+    │   └─ ← [Return] 999782050000000000 [9.997e17], true
+    ├─ [13941] AssetRegistry::priceUsd(DemoToken: [0xBe28019380A99649579B7E9fa7F1979e6f203F79]) [staticcall]
+    │   ├─ [11543] 0xc59E3633BAAC79493d908e63626716e204A45EdF::latestRoundData() [staticcall]
+    │   │   ├─ [7612] 0x5A2734CC0341ea6564dF3D00171cc99C63B1A7d3::latestRoundData() [staticcall]
+    │   │   │   └─ ← [Return] 42788 [4.278e4], 1082402000 [1.082e9], 1793956908 [1.793e9], 1793956908 [1.793e9], 42788 [4.278e4]
+    │   │   └─ ← [Return] 18446744073709594404 [1.844e19], 1082402000 [1.082e9], 1793956908 [1.793e9], 1793956908 [1.793e9], 18446744073709594404 [1.844e19]
+    │   └─ ← [Return] 10824020000000000000 [1.082e19], true
+    ├─ [247] DemoToken::decimals() [staticcall]
+    │   └─ ← [Return] 18
+    ├─ [247] DemoToken::decimals() [staticcall]
+    │   └─ ← [Return] 6
+    ├─ [29548] 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543::initialize(PoolKey({ currency0: 0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3, currency1: 0xBe28019380A99649579B7E9fa7F1979e6f203F79, fee: 3000, tickSpacing: 60, hooks: 0x0000000000000000000000000000000000000000 }), 24078972920600345101665374872535040 [2.407e34])
+    │   ├─ emit Initialize(id: 0x18da4177de62fe8e617b06874b6e0ec1d7b0e96403ae9b098a6a5f0e0f52dc07, currency0: DemoToken: [0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3], currency1: DemoToken: [0xBe28019380A99649579B7E9fa7F1979e6f203F79], fee: 3000, tickSpacing: 60, hooks: 0x0000000000000000000000000000000000000000, sqrtPriceX96: 24078972920600345101665374872535040 [2.407e34], tick: 252502 [2.525e5])
+    │   └─ ← [Return] 252502 [2.525e5]
+    ├─ [50446] WaveSwapAdapter::setPool(PoolKey({ currency0: 0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3, currency1: 0xBe28019380A99649579B7E9fa7F1979e6f203F79, fee: 3000, tickSpacing: 60, hooks: 0x0000000000000000000000000000000000000000 }))
+    │   ├─ emit PoolConfigured(token0: DemoToken: [0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3], token1: DemoToken: [0xBe28019380A99649579B7E9fa7F1979e6f203F79], fee: 3000, hook: 0x0000000000000000000000000000000000000000)
+    │   └─ ← [Stop]
+    ├─ [2325] DemoToken::approve(DemoLiquiditySeeder: [0x7cbe10AA965Edc8414ad0a4C68192f8ef117f21D], 115792089237316195423570985008687907853269984665640564039457584007913129639935 [1.157e77])
+    │   ├─ emit Approval(owner: 0xDe25D83481c0c2A711397c44eE3317dD826952D5, spender: DemoLiquiditySeeder: [0x7cbe10AA965Edc8414ad0a4C68192f8ef117f21D], amount: 115792089237316195423570985008687907853269984665640564039457584007913129639935 [1.157e77])
+    │   └─ ← [Return] true
+    ├─ [24325] DemoToken::approve(DemoLiquiditySeeder: [0x7cbe10AA965Edc8414ad0a4C68192f8ef117f21D], 115792089237316195423570985008687907853269984665640564039457584007913129639935 [1.157e77])
+    │   ├─ emit Approval(owner: 0xDe25D83481c0c2A711397c44eE3317dD826952D5, spender: DemoLiquiditySeeder: [0x7cbe10AA965Edc8414ad0a4C68192f8ef117f21D], amount: 115792089237316195423570985008687907853269984665640564039457584007913129639935 [1.157e77])
+    │   └─ ← [Return] true
+    ├─ [210871] DemoLiquiditySeeder::seed(PoolKey({ currency0: 0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3, currency1: 0xBe28019380A99649579B7E9fa7F1979e6f203F79, fee: 3000, tickSpacing: 60, hooks: 0x0000000000000000000000000000000000000000 }), 30391936599899229852 [3.039e19])
+    │   ├─ [208485] 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543::unlock(0x0000000000000000000000005d8b7a6fd3257fa7a42a38c7231646f0d3aeb3d3000000000000000000000000be28019380a99649579b7e9fa7f1979e6f203f790000000000000000000000000000000000000000000000000000000000000bb8000000000000000000000000000000000000000000000000000000000000003c0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001a5c5d950712fce9c)
+    │   │   ├─ [206508] DemoLiquiditySeeder::unlockCallback(0x0000000000000000000000005d8b7a6fd3257fa7a42a38c7231646f0d3aeb3d3000000000000000000000000be28019380a99649579b7e9fa7f1979e6f203f790000000000000000000000000000000000000000000000000000000000000bb8000000000000000000000000000000000000000000000000000000000000003c0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001a5c5d950712fce9c)
+    │   │   │   ├─ [164250] 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543::modifyLiquidity(PoolKey({ currency0: 0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3, currency1: 0xBe28019380A99649579B7E9fa7F1979e6f203F79, fee: 3000, tickSpacing: 60, hooks: 0x0000000000000000000000000000000000000000 }), ModifyLiquidityParams({ tickLower: -887220 [-8.872e5], tickUpper: 887220 [8.872e5], liquidityDelta: 30391936599899229852 [3.039e19], salt: 0x0000000000000000000000000000000000000000000000000000000000000000 }), 0x)
+    │   │   │   │   ├─ emit ModifyLiquidity(id: 0x18da4177de62fe8e617b06874b6e0ec1d7b0e96403ae9b098a6a5f0e0f52dc07, sender: DemoLiquiditySeeder: [0x7cbe10AA965Edc8414ad0a4C68192f8ef117f21D], tickLower: -887220 [-8.872e5], tickUpper: 887220 [8.872e5], liquidityDelta: 30391936599899229852 [3.039e19], salt: 0x0000000000000000000000000000000000000000000000000000000000000000)
+    │   │   │   │   └─ ← [Return] -34028236692093165781603618875486592499308080064765590 [-3.402e52], 0
+    │   │   │   ├─ [1888] 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543::sync(DemoToken: [0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3])
+    │   │   │   │   ├─ [515] DemoToken::balanceOf(0xE03A1074c86CFeDd5C142C4F04F1a1536e203543) [staticcall]
+    │   │   │   │   │   └─ ← [Return] 199999999999990 [1.999e14]
+    │   │   │   │   └─ ← [Stop]
+    │   │   │   ├─ [3192] DemoToken::transferFrom(0xDe25D83481c0c2A711397c44eE3317dD826952D5, 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543, 99999999999999 [9.999e13])
+    │   │   │   │   ├─ emit Transfer(from: 0xDe25D83481c0c2A711397c44eE3317dD826952D5, to: 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543, amount: 99999999999999 [9.999e13])
+    │   │   │   │   └─ ← [Return] true
+    │   │   │   ├─ [2489] 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543::settle()
+    │   │   │   │   ├─ [515] DemoToken::balanceOf(0xE03A1074c86CFeDd5C142C4F04F1a1536e203543) [staticcall]
+    │   │   │   │   │   └─ ← [Return] 299999999999989 [2.999e14]
+    │   │   │   │   └─ ← [Return] 99999999999999 [9.999e13]
+    │   │   │   ├─ [3888] 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543::sync(DemoToken: [0xBe28019380A99649579B7E9fa7F1979e6f203F79])
+    │   │   │   │   ├─ [2515] DemoToken::balanceOf(0xE03A1074c86CFeDd5C142C4F04F1a1536e203543) [staticcall]
+    │   │   │   │   │   └─ ← [Return] 0
+    │   │   │   │   └─ ← [Stop]
+    │   │   │   ├─ [23092] DemoToken::transferFrom(0xDe25D83481c0c2A711397c44eE3317dD826952D5, 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543, 9236698102922943601188502 [9.236e24])
+    │   │   │   │   ├─ emit Transfer(from: 0xDe25D83481c0c2A711397c44eE3317dD826952D5, to: 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543, amount: 9236698102922943601188502 [9.236e24])
+    │   │   │   │   └─ ← [Return] true
+    │   │   │   ├─ [2489] 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543::settle()
+    │   │   │   │   ├─ [515] DemoToken::balanceOf(0xE03A1074c86CFeDd5C142C4F04F1a1536e203543) [staticcall]
+    │   │   │   │   │   └─ ← [Return] 9236698102922943601188502 [9.236e24]
+    │   │   │   │   └─ ← [Return] 9236698102922943601188502 [9.236e24]
+    │   │   │   └─ ← [Return] 0x
+    │   │   └─ ← [Return] 0x
+    │   └─ ← [Stop]
+    ├─ [0] VM::envOr("TREASURY", 0xDe25D83481c0c2A711397c44eE3317dD826952D5) [staticcall]
+    │   └─ ← [Return] <env var value>
+    ├─ [5639091] → new WaveFactory@0x221b73FED738820Abfe432C6f912e48F31232DE0
+    │   ├─ emit OwnershipTransferred(previousOwner: 0x0000000000000000000000000000000000000000, newOwner: 0xDe25D83481c0c2A711397c44eE3317dD826952D5)
+    │   ├─ [4842953] → new WaveVaultDeployer@0xFb894a86d630CEa41eAe90f85eB08b901208550f
+    │   │   └─ ← [Return] 24186 bytes of code
+    │   └─ ← [Return] 3536 bytes of code
+    ├─ [24325] DemoToken::approve(WaveFactory: [0x221b73FED738820Abfe432C6f912e48F31232DE0], 100000000000 [1e11])
+    │   ├─ emit Approval(owner: 0xDe25D83481c0c2A711397c44eE3317dD826952D5, spender: WaveFactory: [0x221b73FED738820Abfe432C6f912e48F31232DE0], amount: 100000000000 [1e11])
+    │   └─ ← [Return] true
+    ├─ [5174008] WaveFactory::createBasket("Wave Blue Chip", "FUND", [0x33297104581Dd29347d9Ed37936e4F16621D59aE, 0x7B178cB5e0776E769BE44919889D5A57D8BB1742, 0xBe28019380A99649579B7E9fa7F1979e6f203F79], [4000, 3500, 2500], 1000, 100000000000 [1e11])
+    │   ├─ [4352918] WaveVaultDeployer::deploy("Wave Blue Chip", "FUND", [0x33297104581Dd29347d9Ed37936e4F16621D59aE, 0x7B178cB5e0776E769BE44919889D5A57D8BB1742, 0xBe28019380A99649579B7E9fa7F1979e6f203F79], [4000, 3500, 2500], Config({ factory: 0x221b73FED738820Abfe432C6f912e48F31232DE0, creator: 0xDe25D83481c0c2A711397c44eE3317dD826952D5, registry: 0xDd71a1BF041dcdb68AD70A6e0766996557759525, adapter: 0xaA8a9233C07a9125242E32D81910F1c9526252e5, usdc: 0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3, treasury: 0xDe25D83481c0c2A711397c44eE3317dD826952D5, perfFeeBps: 1000 }))
+    │   │   ├─ [4309834] → new WaveVault@0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369
+    │   │   │   ├─ emit OwnershipTransferred(previousOwner: 0x0000000000000000000000000000000000000000, newOwner: 0xDe25D83481c0c2A711397c44eE3317dD826952D5)
+    │   │   │   ├─ [548] AssetRegistry::allowed(DemoToken: [0x33297104581Dd29347d9Ed37936e4F16621D59aE]) [staticcall]
+    │   │   │   │   └─ ← [Return] true
+    │   │   │   ├─ [548] AssetRegistry::allowed(DemoToken: [0x7B178cB5e0776E769BE44919889D5A57D8BB1742]) [staticcall]
+    │   │   │   │   └─ ← [Return] true
+    │   │   │   ├─ [548] AssetRegistry::allowed(DemoToken: [0xBe28019380A99649579B7E9fa7F1979e6f203F79]) [staticcall]
+    │   │   │   │   └─ ← [Return] true
+    │   │   │   └─ ← [Return] 20222 bytes of code
+    │   │   └─ ← [Return] WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369]
+    │   ├─ [2515] DemoToken::balanceOf(WaveFactory: [0x221b73FED738820Abfe432C6f912e48F31232DE0]) [staticcall]
+    │   │   └─ ← [Return] 0
+    │   ├─ [23423] DemoToken::transferFrom(0xDe25D83481c0c2A711397c44eE3317dD826952D5, WaveFactory: [0x221b73FED738820Abfe432C6f912e48F31232DE0], 100000000000 [1e11])
+    │   │   ├─ emit Transfer(from: 0xDe25D83481c0c2A711397c44eE3317dD826952D5, to: WaveFactory: [0x221b73FED738820Abfe432C6f912e48F31232DE0], amount: 100000000000 [1e11])
+    │   │   └─ ← [Return] true
+    │   ├─ [515] DemoToken::balanceOf(WaveFactory: [0x221b73FED738820Abfe432C6f912e48F31232DE0]) [staticcall]
+    │   │   └─ ← [Return] 100000000000 [1e11]
+    │   ├─ [24325] DemoToken::approve(WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369], 100000000000 [1e11])
+    │   │   ├─ emit Approval(owner: WaveFactory: [0x221b73FED738820Abfe432C6f912e48F31232DE0], spender: WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369], amount: 100000000000 [1e11])
+    │   │   └─ ← [Return] true
+    │   ├─ [689378] WaveVault::deposit(100000000000 [1e11], 0, 0xDe25D83481c0c2A711397c44eE3317dD826952D5)
+    │   │   ├─ [5941] AssetRegistry::priceUsd(DemoToken: [0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3]) [staticcall]
+    │   │   │   ├─ [3543] 0xA2F78ab2355fe2f984D808B5CeE7FD0A93D5270E::latestRoundData() [staticcall]
+    │   │   │   │   ├─ [1612] 0x0524b20f305e2e2F7990B9AfE28B4D5e4a76eA0C::latestRoundData() [staticcall]
+    │   │   │   │   │   └─ ← [Return] 1631, 99978205 [9.997e7], 1793956272 [1.793e9], 1793956272 [1.793e9], 1631
+    │   │   │   │   └─ ← [Return] 18446744073709553247 [1.844e19], 99978205 [9.997e7], 1793956272 [1.793e9], 1793956272 [1.793e9], 18446744073709553247 [1.844e19]
+    │   │   │   └─ ← [Return] 999782050000000000 [9.997e17], true
+    │   │   ├─ [2515] DemoToken::balanceOf(WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369]) [staticcall]
+    │   │   │   └─ ← [Return] 0
+    │   │   ├─ [6304] AssetRegistry::valueUsd(DemoToken: [0x33297104581Dd29347d9Ed37936e4F16621D59aE], 0) [staticcall]
+    │   │   │   ├─ [3543] 0x694AA1769357215DE4FAC081bf1f309aDC325306::latestRoundData() [staticcall]
+    │   │   │   │   ├─ [1612] 0x719E22E3D4b690E5d96cCb40619180B5427F14AE::latestRoundData() [staticcall]
+    │   │   │   │   │   └─ ← [Return] 37371 [3.737e4], 223640000000 [2.236e11], 1793956188 [1.793e9], 1793956188 [1.793e9], 37371 [3.737e4]
+    │   │   │   │   └─ ← [Return] 18446744073709588987 [1.844e19], 223640000000 [2.236e11], 1793956188 [1.793e9], 1793956188 [1.793e9], 18446744073709588987 [1.844e19]
+    │   │   │   └─ ← [Return] 0, true
+    │   │   ├─ [2515] DemoToken::balanceOf(WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369]) [staticcall]
+    │   │   │   └─ ← [Return] 0
+    │   │   ├─ [6304] AssetRegistry::valueUsd(DemoToken: [0x7B178cB5e0776E769BE44919889D5A57D8BB1742], 0) [staticcall]
+    │   │   │   ├─ [3543] 0x1b44F3514812d835EB1BDB0acB33d3fA3351Ee43::latestRoundData() [staticcall]
+    │   │   │   │   ├─ [1612] 0x17Dac87b07EAC97De4E182Fc51C925ebB7E723e2::latestRoundData() [staticcall]
+    │   │   │   │   │   └─ ← [Return] 35088 [3.508e4], 7557865352442 [7.557e12], 1793954988 [1.793e9], 1793954988 [1.793e9], 35088 [3.508e4]
+    │   │   │   │   └─ ← [Return] 18446744073709586704 [1.844e19], 7557865352442 [7.557e12], 1793954988 [1.793e9], 1793954988 [1.793e9], 18446744073709586704 [1.844e19]
+    │   │   │   └─ ← [Return] 0, true
+    │   │   ├─ [2515] DemoToken::balanceOf(WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369]) [staticcall]
+    │   │   │   └─ ← [Return] 0
+    │   │   ├─ [6304] AssetRegistry::valueUsd(DemoToken: [0xBe28019380A99649579B7E9fa7F1979e6f203F79], 0) [staticcall]
+    │   │   │   ├─ [3543] 0xc59E3633BAAC79493d908e63626716e204A45EdF::latestRoundData() [staticcall]
+    │   │   │   │   ├─ [1612] 0x5A2734CC0341ea6564dF3D00171cc99C63B1A7d3::latestRoundData() [staticcall]
+    │   │   │   │   │   └─ ← [Return] 42788 [4.278e4], 1082402000 [1.082e9], 1793956908 [1.793e9], 1793956908 [1.793e9], 42788 [4.278e4]
+    │   │   │   │   └─ ← [Return] 18446744073709594404 [1.844e19], 1082402000 [1.082e9], 1793956908 [1.793e9], 1793956908 [1.793e9], 18446744073709594404 [1.844e19]
+    │   │   │   └─ ← [Return] 0, true
+    │   │   ├─ [2515] DemoToken::balanceOf(WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369]) [staticcall]
+    │   │   │   └─ ← [Return] 0
+    │   │   ├─ [515] DemoToken::balanceOf(WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369]) [staticcall]
+    │   │   │   └─ ← [Return] 0
+    │   │   ├─ [23423] DemoToken::transferFrom(WaveFactory: [0x221b73FED738820Abfe432C6f912e48F31232DE0], WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369], 100000000000 [1e11])
+    │   │   │   ├─ emit Transfer(from: WaveFactory: [0x221b73FED738820Abfe432C6f912e48F31232DE0], to: WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369], amount: 100000000000 [1e11])
+    │   │   │   └─ ← [Return] true
+    │   │   ├─ [515] DemoToken::balanceOf(WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369]) [staticcall]
+    │   │   │   └─ ← [Return] 100000000000 [1e11]
+    │   │   ├─ [6304] AssetRegistry::valueUsd(DemoToken: [0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3], 40000000000 [4e10]) [staticcall]
+    │   │   │   ├─ [3543] 0xA2F78ab2355fe2f984D808B5CeE7FD0A93D5270E::latestRoundData() [staticcall]
+    │   │   │   │   ├─ [1612] 0x0524b20f305e2e2F7990B9AfE28B4D5e4a76eA0C::latestRoundData() [staticcall]
+    │   │   │   │   │   └─ ← [Return] 1631, 99978205 [9.997e7], 1793956272 [1.793e9], 1793956272 [1.793e9], 1631
+    │   │   │   │   └─ ← [Return] 18446744073709553247 [1.844e19], 99978205 [9.997e7], 1793956272 [1.793e9], 1793956272 [1.793e9], 18446744073709553247 [1.844e19]
+    │   │   │   └─ ← [Return] 39991282000000000000000 [3.999e22], true
+    │   │   ├─ [5941] AssetRegistry::priceUsd(DemoToken: [0x33297104581Dd29347d9Ed37936e4F16621D59aE]) [staticcall]
+    │   │   │   ├─ [3543] 0x694AA1769357215DE4FAC081bf1f309aDC325306::latestRoundData() [staticcall]
+    │   │   │   │   ├─ [1612] 0x719E22E3D4b690E5d96cCb40619180B5427F14AE::latestRoundData() [staticcall]
+    │   │   │   │   │   └─ ← [Return] 37371 [3.737e4], 223640000000 [2.236e11], 1793956188 [1.793e9], 1793956188 [1.793e9], 37371 [3.737e4]
+    │   │   │   │   └─ ← [Return] 18446744073709588987 [1.844e19], 223640000000 [2.236e11], 1793956188 [1.793e9], 1793956188 [1.793e9], 18446744073709588987 [1.844e19]
+    │   │   │   └─ ← [Return] 2236400000000000000000 [2.236e21], true
+    │   │   ├─ [1078] AssetRegistry::assets(DemoToken: [0x33297104581Dd29347d9Ed37936e4F16621D59aE]) [staticcall]
+    │   │   │   └─ ← [Return] 0x694AA1769357215DE4FAC081bf1f309aDC325306, 4500, 18, 8, 1, 100000000000000 [1e14], true
+    │   │   ├─ [24325] DemoToken::approve(WaveSwapAdapter: [0xaA8a9233C07a9125242E32D81910F1c9526252e5], 40000000000 [4e10])
+    │   │   │   ├─ emit Approval(owner: WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369], spender: WaveSwapAdapter: [0xaA8a9233C07a9125242E32D81910F1c9526252e5], amount: 40000000000 [4e10])
+    │   │   │   └─ ← [Return] true
+    │   │   ├─ [128796] WaveSwapAdapter::swap(DemoToken: [0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3], DemoToken: [0x33297104581Dd29347d9Ed37936e4F16621D59aE], 40000000000 [4e10], 17703169906993382220 [1.77e19], WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369])
+    │   │   │   ├─ [2515] DemoToken::balanceOf(WaveSwapAdapter: [0xaA8a9233C07a9125242E32D81910F1c9526252e5]) [staticcall]
+    │   │   │   │   └─ ← [Return] 0
+    │   │   │   ├─ [23423] DemoToken::transferFrom(WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369], WaveSwapAdapter: [0xaA8a9233C07a9125242E32D81910F1c9526252e5], 40000000000 [4e10])
+    │   │   │   │   ├─ emit Transfer(from: WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369], to: WaveSwapAdapter: [0xaA8a9233C07a9125242E32D81910F1c9526252e5], amount: 40000000000 [4e10])
+    │   │   │   │   └─ ← [Return] true
+    │   │   │   ├─ [515] DemoToken::balanceOf(WaveSwapAdapter: [0xaA8a9233C07a9125242E32D81910F1c9526252e5]) [staticcall]
+    │   │   │   │   └─ ← [Return] 40000000000 [4e10]
+    │   │   │   ├─ [75316] 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543::unlock(0x00000000000000000000000033297104581dd29347d9ed37936e4f16621d59ae0000000000000000000000005d8b7a6fd3257fa7a42a38c7231646f0d3aeb3d30000000000000000000000000000000000000000000000000000000000000bb8000000000000000000000000000000000000000000000000000000000000003c00000000000000000000000000000000000000000000000000000000000000000000000000000000000000005d8b7a6fd3257fa7a42a38c7231646f0d3aeb3d300000000000000000000000000000000000000000000000000000009502f9000000000000000000000000000000000000000000000000000f5ae4b3c28b9c34c000000000000000000000000a607bdd88de6c5c1ab8f1b1ebafbf1bda4959369)
+    │   │   │   │   ├─ [73312] WaveSwapAdapter::unlockCallback(0x00000000000000000000000033297104581dd29347d9ed37936e4f16621d59ae0000000000000000000000005d8b7a6fd3257fa7a42a38c7231646f0d3aeb3d30000000000000000000000000000000000000000000000000000000000000bb8000000000000000000000000000000000000000000000000000000000000003c00000000000000000000000000000000000000000000000000000000000000000000000000000000000000005d8b7a6fd3257fa7a42a38c7231646f0d3aeb3d300000000000000000000000000000000000000000000000000000009502f9000000000000000000000000000000000000000000000000000f5ae4b3c28b9c34c000000000000000000000000a607bdd88de6c5c1ab8f1b1ebafbf1bda4959369)
+    │   │   │   │   │   ├─ [36809] 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543::swap(PoolKey({ currency0: 0x33297104581Dd29347d9Ed37936e4F16621D59aE, currency1: 0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3, fee: 3000, tickSpacing: 60, hooks: 0x0000000000000000000000000000000000000000 }), SwapParams({ zeroForOne: false, amountSpecified: -40000000000 [-4e10], sqrtPriceLimitX96: 1461446703485210103287273052203988822378723970341 [1.461e48] }), 0x)
+    │   │   │   │   │   │   ├─ emit Swap(id: 0x7a32361e4fce4506c4eededb936bbf70e1ee9e59ac3c54ff1f0439536118ec48, sender: WaveSwapAdapter: [0xaA8a9233C07a9125242E32D81910F1c9526252e5], amount0: 17821236726422195570 [1.782e19], amount1: -40000000000 [-4e10], sqrtPriceX96: 3748649365430654579671856 [3.748e24], liquidity: 2114355091100110377 [2.114e18], tick: -199184 [-1.991e5], fee: 3000)
+    │   │   │   │   │   │   └─ ← [Return] 6064252614725301791662917836296642269090557356591314661376 [6.064e57]
+    │   │   │   │   │   ├─ [1888] 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543::sync(DemoToken: [0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3])
+    │   │   │   │   │   │   ├─ [515] DemoToken::balanceOf(0xE03A1074c86CFeDd5C142C4F04F1a1536e203543) [staticcall]
+    │   │   │   │   │   │   │   └─ ← [Return] 299999999999989 [2.999e14]
+    │   │   │   │   │   │   └─ ← [Stop]
+    │   │   │   │   │   ├─ [2930] DemoToken::transfer(0xE03A1074c86CFeDd5C142C4F04F1a1536e203543, 40000000000 [4e10])
+    │   │   │   │   │   │   ├─ emit Transfer(from: WaveSwapAdapter: [0xaA8a9233C07a9125242E32D81910F1c9526252e5], to: 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543, amount: 40000000000 [4e10])
+    │   │   │   │   │   │   └─ ← [Return] true
+    │   │   │   │   │   ├─ [2489] 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543::settle()
+    │   │   │   │   │   │   ├─ [515] DemoToken::balanceOf(0xE03A1074c86CFeDd5C142C4F04F1a1536e203543) [staticcall]
+    │   │   │   │   │   │   │   └─ ← [Return] 300039999999989 [3e14]
+    │   │   │   │   │   │   └─ ← [Return] 40000000000 [4e10]
+    │   │   │   │   │   ├─ [24403] 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543::take(DemoToken: [0x33297104581Dd29347d9Ed37936e4F16621D59aE], WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369], 17821236726422195570 [1.782e19])
+    │   │   │   │   │   │   ├─ [22830] DemoToken::transfer(WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369], 17821236726422195570 [1.782e19])
+    │   │   │   │   │   │   │   ├─ emit Transfer(from: 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543, to: WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369], amount: 17821236726422195570 [1.782e19])
+    │   │   │   │   │   │   │   └─ ← [Return] true
+    │   │   │   │   │   │   └─ ← [Stop]
+    │   │   │   │   │   └─ ← [Return] 0x000000000000000000000000000000000000000000000000f751c061b88a4d72
+    │   │   │   │   └─ ← [Return] 0x000000000000000000000000000000000000000000000000f751c061b88a4d72
+    │   │   │   └─ ← [Return] 17821236726422195570 [1.782e19]
+    │   │   ├─ [2325] DemoToken::approve(WaveSwapAdapter: [0xaA8a9233C07a9125242E32D81910F1c9526252e5], 0)
+    │   │   │   ├─ emit Approval(owner: WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369], spender: WaveSwapAdapter: [0xaA8a9233C07a9125242E32D81910F1c9526252e5], amount: 0)
+    │   │   │   └─ ← [Return] true
+    │   │   ├─ [6304] AssetRegistry::valueUsd(DemoToken: [0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3], 35000000000 [3.5e10]) [staticcall]
+    │   │   │   ├─ [3543] 0xA2F78ab2355fe2f984D808B5CeE7FD0A93D5270E::latestRoundData() [staticcall]
+    │   │   │   │   ├─ [1612] 0x0524b20f305e2e2F7990B9AfE28B4D5e4a76eA0C::latestRoundData() [staticcall]
+    │   │   │   │   │   └─ ← [Return] 1631, 99978205 [9.997e7], 1793956272 [1.793e9], 1793956272 [1.793e9], 1631
+    │   │   │   │   └─ ← [Return] 18446744073709553247 [1.844e19], 99978205 [9.997e7], 1793956272 [1.793e9], 1793956272 [1.793e9], 18446744073709553247 [1.844e19]
+    │   │   │   └─ ← [Return] 34992371750000000000000 [3.499e22], true
+    │   │   ├─ [5941] AssetRegistry::priceUsd(DemoToken: [0x7B178cB5e0776E769BE44919889D5A57D8BB1742]) [staticcall]
+    │   │   │   ├─ [3543] 0x1b44F3514812d835EB1BDB0acB33d3fA3351Ee43::latestRoundData() [staticcall]
+    │   │   │   │   ├─ [1612] 0x17Dac87b07EAC97De4E182Fc51C925ebB7E723e2::latestRoundData() [staticcall]
+    │   │   │   │   │   └─ ← [Return] 35088 [3.508e4], 7557865352442 [7.557e12], 1793954988 [1.793e9], 1793954988 [1.793e9], 35088 [3.508e4]
+    │   │   │   │   └─ ← [Return] 18446744073709586704 [1.844e19], 7557865352442 [7.557e12], 1793954988 [1.793e9], 1793954988 [1.793e9], 18446744073709586704 [1.844e19]
+    │   │   │   └─ ← [Return] 75578653524420000000000 [7.557e22], true
+    │   │   ├─ [1078] AssetRegistry::assets(DemoToken: [0x7B178cB5e0776E769BE44919889D5A57D8BB1742]) [staticcall]
+    │   │   │   └─ ← [Return] 0x1b44F3514812d835EB1BDB0acB33d3fA3351Ee43, 4500, 8, 8, 1, 100000000000000 [1e14], true
+    │   │   ├─ [22225] DemoToken::approve(WaveSwapAdapter: [0xaA8a9233C07a9125242E32D81910F1c9526252e5], 35000000000 [3.5e10])
+    │   │   │   ├─ emit Approval(owner: WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369], spender: WaveSwapAdapter: [0xaA8a9233C07a9125242E32D81910F1c9526252e5], amount: 35000000000 [3.5e10])
+    │   │   │   └─ ← [Return] true
+    │   │   ├─ [124829] WaveSwapAdapter::swap(DemoToken: [0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3], DemoToken: [0x7B178cB5e0776E769BE44919889D5A57D8BB1742], 35000000000 [3.5e10], 45836286 [4.583e7], WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369])
+    │   │   │   ├─ [515] DemoToken::balanceOf(WaveSwapAdapter: [0xaA8a9233C07a9125242E32D81910F1c9526252e5]) [staticcall]
+    │   │   │   │   └─ ← [Return] 0
+    │   │   │   ├─ [23423] DemoToken::transferFrom(WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369], WaveSwapAdapter: [0xaA8a9233C07a9125242E32D81910F1c9526252e5], 35000000000 [3.5e10])
+    │   │   │   │   ├─ emit Transfer(from: WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369], to: WaveSwapAdapter: [0xaA8a9233C07a9125242E32D81910F1c9526252e5], amount: 35000000000 [3.5e10])
+    │   │   │   │   └─ ← [Return] true
+    │   │   │   ├─ [515] DemoToken::balanceOf(WaveSwapAdapter: [0xaA8a9233C07a9125242E32D81910F1c9526252e5]) [staticcall]
+    │   │   │   │   └─ ← [Return] 35000000000 [3.5e10]
+    │   │   │   ├─ [75361] 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543::unlock(0x0000000000000000000000005d8b7a6fd3257fa7a42a38c7231646f0d3aeb3d30000000000000000000000007b178cb5e0776e769be44919889d5a57d8bb17420000000000000000000000000000000000000000000000000000000000000bb8000000000000000000000000000000000000000000000000000000000000003c00000000000000000000000000000000000000000000000000000000000000000000000000000000000000005d8b7a6fd3257fa7a42a38c7231646f0d3aeb3d30000000000000000000000000000000000000000000000000000000826299e000000000000000000000000000000000000000000000000000000000002bb67fe000000000000000000000000a607bdd88de6c5c1ab8f1b1ebafbf1bda4959369)
+    │   │   │   │   ├─ [73357] WaveSwapAdapter::unlockCallback(0x0000000000000000000000005d8b7a6fd3257fa7a42a38c7231646f0d3aeb3d30000000000000000000000007b178cb5e0776e769be44919889d5a57d8bb17420000000000000000000000000000000000000000000000000000000000000bb8000000000000000000000000000000000000000000000000000000000000003c00000000000000000000000000000000000000000000000000000000000000000000000000000000000000005d8b7a6fd3257fa7a42a38c7231646f0d3aeb3d30000000000000000000000000000000000000000000000000000000826299e000000000000000000000000000000000000000000000000000000000002bb67fe000000000000000000000000a607bdd88de6c5c1ab8f1b1ebafbf1bda4959369)
+    │   │   │   │   │   ├─ [36917] 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543::swap(PoolKey({ currency0: 0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3, currency1: 0x7B178cB5e0776E769BE44919889D5A57D8BB1742, fee: 3000, tickSpacing: 60, hooks: 0x0000000000000000000000000000000000000000 }), SwapParams({ zeroForOne: true, amountSpecified: -35000000000 [-3.5e10], sqrtPriceLimitX96: 4295128740 [4.295e9] }), 0x)
+    │   │   │   │   │   │   ├─ emit Swap(id: 0xb783376fa931f323f9b7aeb58c47cf5a6f8a7b3b16c4c8a66aabc91349fcdc3e, sender: WaveSwapAdapter: [0xaA8a9233C07a9125242E32D81910F1c9526252e5], amount0: -35000000000 [-3.5e10], amount1: 46144279 [4.614e7], sqrtPriceX96: 2880588055225841902738925027 [2.88e27], liquidity: 3637081998347 [3.637e12], tick: -66291 [-6.629e4], fee: 3000)
+    │   │   │   │   │   │   └─ ← [Return] -11909882842232846221218111260111887400959953855721 [-1.19e49]
+    │   │   │   │   │   ├─ [1888] 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543::sync(DemoToken: [0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3])
+    │   │   │   │   │   │   ├─ [515] DemoToken::balanceOf(0xE03A1074c86CFeDd5C142C4F04F1a1536e203543) [staticcall]
+    │   │   │   │   │   │   │   └─ ← [Return] 300039999999989 [3e14]
+    │   │   │   │   │   │   └─ ← [Stop]
+    │   │   │   │   │   ├─ [2930] DemoToken::transfer(0xE03A1074c86CFeDd5C142C4F04F1a1536e203543, 35000000000 [3.5e10])
+    │   │   │   │   │   │   ├─ emit Transfer(from: WaveSwapAdapter: [0xaA8a9233C07a9125242E32D81910F1c9526252e5], to: 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543, amount: 35000000000 [3.5e10])
+    │   │   │   │   │   │   └─ ← [Return] true
+    │   │   │   │   │   ├─ [2489] 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543::settle()
+    │   │   │   │   │   │   ├─ [515] DemoToken::balanceOf(0xE03A1074c86CFeDd5C142C4F04F1a1536e203543) [staticcall]
+    │   │   │   │   │   │   │   └─ ← [Return] 300074999999989 [3e14]
+    │   │   │   │   │   │   └─ ← [Return] 35000000000 [3.5e10]
+    │   │   │   │   │   ├─ [24403] 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543::take(DemoToken: [0x7B178cB5e0776E769BE44919889D5A57D8BB1742], WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369], 46144279 [4.614e7])
+    │   │   │   │   │   │   ├─ [22830] DemoToken::transfer(WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369], 46144279 [4.614e7])
+    │   │   │   │   │   │   │   ├─ emit Transfer(from: 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543, to: WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369], amount: 46144279 [4.614e7])
+    │   │   │   │   │   │   │   └─ ← [Return] true
+    │   │   │   │   │   │   └─ ← [Stop]
+    │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000002c01b17
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000002c01b17
+    │   │   │   └─ ← [Return] 46144279 [4.614e7]
+    │   │   ├─ [2325] DemoToken::approve(WaveSwapAdapter: [0xaA8a9233C07a9125242E32D81910F1c9526252e5], 0)
+    │   │   │   ├─ emit Approval(owner: WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369], spender: WaveSwapAdapter: [0xaA8a9233C07a9125242E32D81910F1c9526252e5], amount: 0)
+    │   │   │   └─ ← [Return] true
+    │   │   ├─ [6304] AssetRegistry::valueUsd(DemoToken: [0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3], 25000000000 [2.5e10]) [staticcall]
+    │   │   │   ├─ [3543] 0xA2F78ab2355fe2f984D808B5CeE7FD0A93D5270E::latestRoundData() [staticcall]
+    │   │   │   │   ├─ [1612] 0x0524b20f305e2e2F7990B9AfE28B4D5e4a76eA0C::latestRoundData() [staticcall]
+    │   │   │   │   │   └─ ← [Return] 1631, 99978205 [9.997e7], 1793956272 [1.793e9], 1793956272 [1.793e9], 1631
+    │   │   │   │   └─ ← [Return] 18446744073709553247 [1.844e19], 99978205 [9.997e7], 1793956272 [1.793e9], 1793956272 [1.793e9], 18446744073709553247 [1.844e19]
+    │   │   │   └─ ← [Return] 24994551250000000000000 [2.499e22], true
+    │   │   ├─ [5941] AssetRegistry::priceUsd(DemoToken: [0xBe28019380A99649579B7E9fa7F1979e6f203F79]) [staticcall]
+    │   │   │   ├─ [3543] 0xc59E3633BAAC79493d908e63626716e204A45EdF::latestRoundData() [staticcall]
+    │   │   │   │   ├─ [1612] 0x5A2734CC0341ea6564dF3D00171cc99C63B1A7d3::latestRoundData() [staticcall]
+    │   │   │   │   │   └─ ← [Return] 42788 [4.278e4], 1082402000 [1.082e9], 1793956908 [1.793e9], 1793956908 [1.793e9], 42788 [4.278e4]
+    │   │   │   │   └─ ← [Return] 18446744073709594404 [1.844e19], 1082402000 [1.082e9], 1793956908 [1.793e9], 1793956908 [1.793e9], 18446744073709594404 [1.844e19]
+    │   │   │   └─ ← [Return] 10824020000000000000 [1.082e19], true
+    │   │   ├─ [1078] AssetRegistry::assets(DemoToken: [0xBe28019380A99649579B7E9fa7F1979e6f203F79]) [staticcall]
+    │   │   │   └─ ← [Return] 0xc59E3633BAAC79493d908e63626716e204A45EdF, 4500, 18, 8, 1, 100000000000000 [1e14], true
+    │   │   ├─ [22225] DemoToken::approve(WaveSwapAdapter: [0xaA8a9233C07a9125242E32D81910F1c9526252e5], 25000000000 [2.5e10])
+    │   │   │   ├─ emit Approval(owner: WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369], spender: WaveSwapAdapter: [0xaA8a9233C07a9125242E32D81910F1c9526252e5], amount: 25000000000 [2.5e10])
+    │   │   │   └─ ← [Return] true
+    │   │   ├─ [125436] WaveSwapAdapter::swap(DemoToken: [0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3], DemoToken: [0xBe28019380A99649579B7E9fa7F1979e6f203F79], 25000000000 [2.5e10], 2286082780473428541336 [2.286e21], WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369])
+    │   │   │   ├─ [515] DemoToken::balanceOf(WaveSwapAdapter: [0xaA8a9233C07a9125242E32D81910F1c9526252e5]) [staticcall]
+    │   │   │   │   └─ ← [Return] 0
+    │   │   │   ├─ [23423] DemoToken::transferFrom(WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369], WaveSwapAdapter: [0xaA8a9233C07a9125242E32D81910F1c9526252e5], 25000000000 [2.5e10])
+    │   │   │   │   ├─ emit Transfer(from: WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369], to: WaveSwapAdapter: [0xaA8a9233C07a9125242E32D81910F1c9526252e5], amount: 25000000000 [2.5e10])
+    │   │   │   │   └─ ← [Return] true
+    │   │   │   ├─ [515] DemoToken::balanceOf(WaveSwapAdapter: [0xaA8a9233C07a9125242E32D81910F1c9526252e5]) [staticcall]
+    │   │   │   │   └─ ← [Return] 25000000000 [2.5e10]
+    │   │   │   ├─ [75968] 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543::unlock(0x0000000000000000000000005d8b7a6fd3257fa7a42a38c7231646f0d3aeb3d3000000000000000000000000be28019380a99649579b7e9fa7f1979e6f203f790000000000000000000000000000000000000000000000000000000000000bb8000000000000000000000000000000000000000000000000000000000000003c00000000000000000000000000000000000000000000000000000000000000000000000000000000000000005d8b7a6fd3257fa7a42a38c7231646f0d3aeb3d300000000000000000000000000000000000000000000000000000005d21dba0000000000000000000000000000000000000000000000007bedc590a7a803ff98000000000000000000000000a607bdd88de6c5c1ab8f1b1ebafbf1bda4959369)
+    │   │   │   │   ├─ [73964] WaveSwapAdapter::unlockCallback(0x0000000000000000000000005d8b7a6fd3257fa7a42a38c7231646f0d3aeb3d3000000000000000000000000be28019380a99649579b7e9fa7f1979e6f203f790000000000000000000000000000000000000000000000000000000000000bb8000000000000000000000000000000000000000000000000000000000000003c00000000000000000000000000000000000000000000000000000000000000000000000000000000000000005d8b7a6fd3257fa7a42a38c7231646f0d3aeb3d300000000000000000000000000000000000000000000000000000005d21dba0000000000000000000000000000000000000000000000007bedc590a7a803ff98000000000000000000000000a607bdd88de6c5c1ab8f1b1ebafbf1bda4959369)
+    │   │   │   │   │   ├─ [37524] 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543::swap(PoolKey({ currency0: 0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3, currency1: 0xBe28019380A99649579B7E9fa7F1979e6f203F79, fee: 3000, tickSpacing: 60, hooks: 0x0000000000000000000000000000000000000000 }), SwapParams({ zeroForOne: true, amountSpecified: -25000000000 [-2.5e10], sqrtPriceLimitX96: 4295128740 [4.295e9] }), 0x)
+    │   │   │   │   │   │   ├─ emit Swap(id: 0x18da4177de62fe8e617b06874b6e0ec1d7b0e96403ae9b098a6a5f0e0f52dc07, sender: WaveSwapAdapter: [0xaA8a9233C07a9125242E32D81910F1c9526252e5], amount0: -25000000000 [-2.5e10], amount1: 2301673310081006001893 [2.301e21], sqrtPriceX96: 24072972732146857497434027596539393 [2.407e34], liquidity: 30391936599899229852 [3.039e19], tick: 252497 [2.524e5], fee: 3000)
+    │   │   │   │   │   │   └─ ← [Return] -8507059173023461586584365183492531976318993998107 [-8.507e48]
+    │   │   │   │   │   ├─ [1888] 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543::sync(DemoToken: [0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3])
+    │   │   │   │   │   │   ├─ [515] DemoToken::balanceOf(0xE03A1074c86CFeDd5C142C4F04F1a1536e203543) [staticcall]
+    │   │   │   │   │   │   │   └─ ← [Return] 300074999999989 [3e14]
+    │   │   │   │   │   │   └─ ← [Stop]
+    │   │   │   │   │   ├─ [2930] DemoToken::transfer(0xE03A1074c86CFeDd5C142C4F04F1a1536e203543, 25000000000 [2.5e10])
+    │   │   │   │   │   │   ├─ emit Transfer(from: WaveSwapAdapter: [0xaA8a9233C07a9125242E32D81910F1c9526252e5], to: 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543, amount: 25000000000 [2.5e10])
+    │   │   │   │   │   │   └─ ← [Return] true
+    │   │   │   │   │   ├─ [2489] 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543::settle()
+    │   │   │   │   │   │   ├─ [515] DemoToken::balanceOf(0xE03A1074c86CFeDd5C142C4F04F1a1536e203543) [staticcall]
+    │   │   │   │   │   │   │   └─ ← [Return] 300099999999989 [3e14]
+    │   │   │   │   │   │   └─ ← [Return] 25000000000 [2.5e10]
+    │   │   │   │   │   ├─ [24403] 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543::take(DemoToken: [0xBe28019380A99649579B7E9fa7F1979e6f203F79], WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369], 2301673310081006001893 [2.301e21])
+    │   │   │   │   │   │   ├─ [22830] DemoToken::transfer(WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369], 2301673310081006001893 [2.301e21])
+    │   │   │   │   │   │   │   ├─ emit Transfer(from: 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543, to: WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369], amount: 2301673310081006001893 [2.301e21])
+    │   │   │   │   │   │   │   └─ ← [Return] true
+    │   │   │   │   │   │   └─ ← [Stop]
+    │   │   │   │   │   └─ ← [Return] 0x00000000000000000000000000000000000000000000007cc62240bb17e15ee5
+    │   │   │   │   └─ ← [Return] 0x00000000000000000000000000000000000000000000007cc62240bb17e15ee5
+    │   │   │   └─ ← [Return] 2301673310081006001893 [2.301e21]
+    │   │   ├─ [2325] DemoToken::approve(WaveSwapAdapter: [0xaA8a9233C07a9125242E32D81910F1c9526252e5], 0)
+    │   │   │   ├─ emit Approval(owner: WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369], spender: WaveSwapAdapter: [0xaA8a9233C07a9125242E32D81910F1c9526252e5], amount: 0)
+    │   │   │   └─ ← [Return] true
+    │   │   ├─ [5941] AssetRegistry::priceUsd(DemoToken: [0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3]) [staticcall]
+    │   │   │   ├─ [3543] 0xA2F78ab2355fe2f984D808B5CeE7FD0A93D5270E::latestRoundData() [staticcall]
+    │   │   │   │   ├─ [1612] 0x0524b20f305e2e2F7990B9AfE28B4D5e4a76eA0C::latestRoundData() [staticcall]
+    │   │   │   │   │   └─ ← [Return] 1631, 99978205 [9.997e7], 1793956272 [1.793e9], 1793956272 [1.793e9], 1631
+    │   │   │   │   └─ ← [Return] 18446744073709553247 [1.844e19], 99978205 [9.997e7], 1793956272 [1.793e9], 1793956272 [1.793e9], 18446744073709553247 [1.844e19]
+    │   │   │   └─ ← [Return] 999782050000000000 [9.997e17], true
+    │   │   ├─ [515] DemoToken::balanceOf(WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369]) [staticcall]
+    │   │   │   └─ ← [Return] 17821236726422195570 [1.782e19]
+    │   │   ├─ [6304] AssetRegistry::valueUsd(DemoToken: [0x33297104581Dd29347d9Ed37936e4F16621D59aE], 17821236726422195570 [1.782e19]) [staticcall]
+    │   │   │   ├─ [3543] 0x694AA1769357215DE4FAC081bf1f309aDC325306::latestRoundData() [staticcall]
+    │   │   │   │   ├─ [1612] 0x719E22E3D4b690E5d96cCb40619180B5427F14AE::latestRoundData() [staticcall]
+    │   │   │   │   │   └─ ← [Return] 37371 [3.737e4], 223640000000 [2.236e11], 1793956188 [1.793e9], 1793956188 [1.793e9], 37371 [3.737e4]
+    │   │   │   │   └─ ← [Return] 18446744073709588987 [1.844e19], 223640000000 [2.236e11], 1793956188 [1.793e9], 1793956188 [1.793e9], 18446744073709588987 [1.844e19]
+    │   │   │   └─ ← [Return] 39855413814970598172748 [3.985e22], true
+    │   │   ├─ [515] DemoToken::balanceOf(WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369]) [staticcall]
+    │   │   │   └─ ← [Return] 46144279 [4.614e7]
+    │   │   ├─ [6304] AssetRegistry::valueUsd(DemoToken: [0x7B178cB5e0776E769BE44919889D5A57D8BB1742], 46144279 [4.614e7]) [staticcall]
+    │   │   │   ├─ [3543] 0x1b44F3514812d835EB1BDB0acB33d3fA3351Ee43::latestRoundData() [staticcall]
+    │   │   │   │   ├─ [1612] 0x17Dac87b07EAC97De4E182Fc51C925ebB7E723e2::latestRoundData() [staticcall]
+    │   │   │   │   │   └─ ← [Return] 35088 [3.508e4], 7557865352442 [7.557e12], 1793954988 [1.793e9], 1793954988 [1.793e9], 35088 [3.508e4]
+    │   │   │   │   └─ ← [Return] 18446744073709586704 [1.844e19], 7557865352442 [7.557e12], 1793954988 [1.793e9], 1793954988 [1.793e9], 18446744073709586704 [1.844e19]
+    │   │   │   └─ ← [Return] 34875224746751697931800 [3.487e22], true
+    │   │   ├─ [515] DemoToken::balanceOf(WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369]) [staticcall]
+    │   │   │   └─ ← [Return] 2301673310081006001893 [2.301e21]
+    │   │   ├─ [6304] AssetRegistry::valueUsd(DemoToken: [0xBe28019380A99649579B7E9fa7F1979e6f203F79], 2301673310081006001893 [2.301e21]) [staticcall]
+    │   │   │   ├─ [3543] 0xc59E3633BAAC79493d908e63626716e204A45EdF::latestRoundData() [staticcall]
+    │   │   │   │   ├─ [1612] 0x5A2734CC0341ea6564dF3D00171cc99C63B1A7d3::latestRoundData() [staticcall]
+    │   │   │   │   │   └─ ← [Return] 42788 [4.278e4], 1082402000 [1.082e9], 1793956908 [1.793e9], 1793956908 [1.793e9], 42788 [4.278e4]
+    │   │   │   │   └─ ← [Return] 18446744073709594404 [1.844e19], 1082402000 [1.082e9], 1793956908 [1.793e9], 1793956908 [1.793e9], 18446744073709594404 [1.844e19]
+    │   │   │   └─ ← [Return] 24913357941783010584609 [2.491e22], true
+    │   │   ├─ [515] DemoToken::balanceOf(WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369]) [staticcall]
+    │   │   │   └─ ← [Return] 0
+    │   │   ├─ emit Transfer(from: 0x0000000000000000000000000000000000000000, to: 0x000000000000000000000000000000000000dEaD, amount: 1000)
+    │   │   ├─ emit Transfer(from: 0x0000000000000000000000000000000000000000, to: 0xDe25D83481c0c2A711397c44eE3317dD826952D5, amount: 99665718644999999999000 [9.966e22])
+    │   │   ├─ emit Deposited(user: WaveFactory: [0x221b73FED738820Abfe432C6f912e48F31232DE0], receiver: 0xDe25D83481c0c2A711397c44eE3317dD826952D5, usdcIn: 100000000000 [1e11], valueAdded6: 99665718645 [9.966e10], shares: 99665718644999999999000 [9.966e22])
+    │   │   └─ ← [Return] 99665718644999999999000 [9.966e22]
+    │   ├─ [2325] DemoToken::approve(WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369], 0)
+    │   │   ├─ emit Approval(owner: WaveFactory: [0x221b73FED738820Abfe432C6f912e48F31232DE0], spender: WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369], amount: 0)
+    │   │   └─ ← [Return] true
+    │   ├─ emit BasketCreated(vault: WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369], creator: 0xDe25D83481c0c2A711397c44eE3317dD826952D5, assets: [0x33297104581Dd29347d9Ed37936e4F16621D59aE, 0x7B178cB5e0776E769BE44919889D5A57D8BB1742, 0xBe28019380A99649579B7E9fa7F1979e6f203F79], targetBps: [4000, 3500, 2500], perfFeeBps: 1000)
+    │   └─ ← [Return] WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369]
+    ├─ [1189268] Create2Deployer::create2()
+    │   ├─ [1154295] → new NavGuardHook@0x9f02ff1c41370500CE9129D9AF7F5d4258272080
+    │   │   ├─ emit OwnershipTransferred(previousOwner: 0x0000000000000000000000000000000000000000, newOwner: 0xDe25D83481c0c2A711397c44eE3317dD826952D5)
+    │   │   └─ ← [Return] 5629 bytes of code
+    │   └─ ← [Return] 0x9f02ff1c41370500ce9129d9af7f5d4258272080
+    ├─ [138760] NavGuardHook::registerPool(PoolKey({ currency0: 0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3, currency1: 0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369, fee: 8388608 [8.388e6], tickSpacing: 60, hooks: 0x9f02ff1c41370500CE9129D9AF7F5d4258272080 }), WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369])
+    │   ├─ [482] WaveVault::usdc() [staticcall]
+    │   │   └─ ← [Return] DemoToken: [0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3]
+    │   ├─ emit PoolRegistered(id: 0x1d1d0fa63ae39f12ddb79d7d5ba0371f5c5b569df1fc40a91ad86b239c72a445, vault: WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369])
+    │   └─ ← [Stop]
+    ├─ [36442] WaveVault::navPerShare() [staticcall]
+    │   ├─ [5941] AssetRegistry::priceUsd(DemoToken: [0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3]) [staticcall]
+    │   │   ├─ [3543] 0xA2F78ab2355fe2f984D808B5CeE7FD0A93D5270E::latestRoundData() [staticcall]
+    │   │   │   ├─ [1612] 0x0524b20f305e2e2F7990B9AfE28B4D5e4a76eA0C::latestRoundData() [staticcall]
+    │   │   │   │   └─ ← [Return] 1631, 99978205 [9.997e7], 1793956272 [1.793e9], 1793956272 [1.793e9], 1631
+    │   │   │   └─ ← [Return] 18446744073709553247 [1.844e19], 99978205 [9.997e7], 1793956272 [1.793e9], 1793956272 [1.793e9], 18446744073709553247 [1.844e19]
+    │   │   └─ ← [Return] 999782050000000000 [9.997e17], true
+    │   ├─ [515] DemoToken::balanceOf(WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369]) [staticcall]
+    │   │   └─ ← [Return] 17821236726422195570 [1.782e19]
+    │   ├─ [6304] AssetRegistry::valueUsd(DemoToken: [0x33297104581Dd29347d9Ed37936e4F16621D59aE], 17821236726422195570 [1.782e19]) [staticcall]
+    │   │   ├─ [3543] 0x694AA1769357215DE4FAC081bf1f309aDC325306::latestRoundData() [staticcall]
+    │   │   │   ├─ [1612] 0x719E22E3D4b690E5d96cCb40619180B5427F14AE::latestRoundData() [staticcall]
+    │   │   │   │   └─ ← [Return] 37371 [3.737e4], 223640000000 [2.236e11], 1793956188 [1.793e9], 1793956188 [1.793e9], 37371 [3.737e4]
+    │   │   │   └─ ← [Return] 18446744073709588987 [1.844e19], 223640000000 [2.236e11], 1793956188 [1.793e9], 1793956188 [1.793e9], 18446744073709588987 [1.844e19]
+    │   │   └─ ← [Return] 39855413814970598172748 [3.985e22], true
+    │   ├─ [515] DemoToken::balanceOf(WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369]) [staticcall]
+    │   │   └─ ← [Return] 46144279 [4.614e7]
+    │   ├─ [6304] AssetRegistry::valueUsd(DemoToken: [0x7B178cB5e0776E769BE44919889D5A57D8BB1742], 46144279 [4.614e7]) [staticcall]
+    │   │   ├─ [3543] 0x1b44F3514812d835EB1BDB0acB33d3fA3351Ee43::latestRoundData() [staticcall]
+    │   │   │   ├─ [1612] 0x17Dac87b07EAC97De4E182Fc51C925ebB7E723e2::latestRoundData() [staticcall]
+    │   │   │   │   └─ ← [Return] 35088 [3.508e4], 7557865352442 [7.557e12], 1793954988 [1.793e9], 1793954988 [1.793e9], 35088 [3.508e4]
+    │   │   │   └─ ← [Return] 18446744073709586704 [1.844e19], 7557865352442 [7.557e12], 1793954988 [1.793e9], 1793954988 [1.793e9], 18446744073709586704 [1.844e19]
+    │   │   └─ ← [Return] 34875224746751697931800 [3.487e22], true
+    │   ├─ [515] DemoToken::balanceOf(WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369]) [staticcall]
+    │   │   └─ ← [Return] 2301673310081006001893 [2.301e21]
+    │   ├─ [6304] AssetRegistry::valueUsd(DemoToken: [0xBe28019380A99649579B7E9fa7F1979e6f203F79], 2301673310081006001893 [2.301e21]) [staticcall]
+    │   │   ├─ [3543] 0xc59E3633BAAC79493d908e63626716e204A45EdF::latestRoundData() [staticcall]
+    │   │   │   ├─ [1612] 0x5A2734CC0341ea6564dF3D00171cc99C63B1A7d3::latestRoundData() [staticcall]
+    │   │   │   │   └─ ← [Return] 42788 [4.278e4], 1082402000 [1.082e9], 1793956908 [1.793e9], 1793956908 [1.793e9], 42788 [4.278e4]
+    │   │   │   └─ ← [Return] 18446744073709594404 [1.844e19], 1082402000 [1.082e9], 1793956908 [1.793e9], 1793956908 [1.793e9], 18446744073709594404 [1.844e19]
+    │   │   └─ ← [Return] 24913357941783010584609 [2.491e22], true
+    │   ├─ [515] DemoToken::balanceOf(WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369]) [staticcall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 1000000000000000000 [1e18]
+    ├─ [5941] AssetRegistry::priceUsd(DemoToken: [0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3]) [staticcall]
+    │   ├─ [3543] 0xA2F78ab2355fe2f984D808B5CeE7FD0A93D5270E::latestRoundData() [staticcall]
+    │   │   ├─ [1612] 0x0524b20f305e2e2F7990B9AfE28B4D5e4a76eA0C::latestRoundData() [staticcall]
+    │   │   │   └─ ← [Return] 1631, 99978205 [9.997e7], 1793956272 [1.793e9], 1793956272 [1.793e9], 1631
+    │   │   └─ ← [Return] 18446744073709553247 [1.844e19], 99978205 [9.997e7], 1793956272 [1.793e9], 1793956272 [1.793e9], 18446744073709553247 [1.844e19]
+    │   └─ ← [Return] 999782050000000000 [9.997e17], true
+    ├─ [417] WaveVault::decimals() [staticcall]
+    │   └─ ← [Return] 18
+    ├─ [247] DemoToken::decimals() [staticcall]
+    │   └─ ← [Return] 6
+    ├─ [31621] 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543::initialize(PoolKey({ currency0: 0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3, currency1: 0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369, fee: 8388608 [8.388e6], tickSpacing: 60, hooks: 0x9f02ff1c41370500CE9129D9AF7F5d4258272080 }), 79228162514264337593543950336000000 [7.922e34])
+    │   ├─ [1457] NavGuardHook::beforeInitialize(0xDe25D83481c0c2A711397c44eE3317dD826952D5, PoolKey({ currency0: 0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3, currency1: 0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369, fee: 8388608 [8.388e6], tickSpacing: 60, hooks: 0x9f02ff1c41370500CE9129D9AF7F5d4258272080 }), 79228162514264337593543950336000000 [7.922e34])
+    │   │   └─ ← [Return] 0xdc98354e
+    │   ├─ emit Initialize(id: 0x1d1d0fa63ae39f12ddb79d7d5ba0371f5c5b569df1fc40a91ad86b239c72a445, currency0: DemoToken: [0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3], currency1: WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369], fee: 8388608 [8.388e6], tickSpacing: 60, hooks: NavGuardHook: [0x9f02ff1c41370500CE9129D9AF7F5d4258272080], sqrtPriceX96: 79228162514264337593543950336000000 [7.922e34], tick: 276324 [2.763e5])
+    │   └─ ← [Return] 276324 [2.763e5]
+    ├─ [70346] WaveSwapAdapter::setPool(PoolKey({ currency0: 0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3, currency1: 0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369, fee: 8388608 [8.388e6], tickSpacing: 60, hooks: 0x9f02ff1c41370500CE9129D9AF7F5d4258272080 }))
+    │   ├─ emit PoolConfigured(token0: DemoToken: [0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3], token1: WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369], fee: 8388608 [8.388e6], hook: NavGuardHook: [0x9f02ff1c41370500CE9129D9AF7F5d4258272080])
+    │   └─ ← [Stop]
+    ├─ [2325] DemoToken::approve(DemoLiquiditySeeder: [0x7cbe10AA965Edc8414ad0a4C68192f8ef117f21D], 115792089237316195423570985008687907853269984665640564039457584007913129639935 [1.157e77])
+    │   ├─ emit Approval(owner: 0xDe25D83481c0c2A711397c44eE3317dD826952D5, spender: DemoLiquiditySeeder: [0x7cbe10AA965Edc8414ad0a4C68192f8ef117f21D], amount: 115792089237316195423570985008687907853269984665640564039457584007913129639935 [1.157e77])
+    │   └─ ← [Return] true
+    ├─ [24413] WaveVault::approve(DemoLiquiditySeeder: [0x7cbe10AA965Edc8414ad0a4C68192f8ef117f21D], 115792089237316195423570985008687907853269984665640564039457584007913129639935 [1.157e77])
+    │   ├─ emit Approval(owner: 0xDe25D83481c0c2A711397c44eE3317dD826952D5, spender: DemoLiquiditySeeder: [0x7cbe10AA965Edc8414ad0a4C68192f8ef117f21D], amount: 115792089237316195423570985008687907853269984665640564039457584007913129639935 [1.157e77])
+    │   └─ ← [Return] true
+    ├─ [211729] DemoLiquiditySeeder::seed(PoolKey({ currency0: 0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3, currency1: 0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369, fee: 8388608 [8.388e6], tickSpacing: 60, hooks: 0x9f02ff1c41370500CE9129D9AF7F5d4258272080 }), 25000000000000000 [2.5e16])
+    │   ├─ [209343] 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543::unlock(0x0000000000000000000000005d8b7a6fd3257fa7a42a38c7231646f0d3aeb3d3000000000000000000000000a607bdd88de6c5c1ab8f1b1ebafbf1bda49593690000000000000000000000000000000000000000000000000000000000800000000000000000000000000000000000000000000000000000000000000000003c0000000000000000000000009f02ff1c41370500ce9129d9af7f5d42582720800000000000000000000000000000000000000000000000000058d15e17628000)
+    │   │   ├─ [207366] DemoLiquiditySeeder::unlockCallback(0x0000000000000000000000005d8b7a6fd3257fa7a42a38c7231646f0d3aeb3d3000000000000000000000000a607bdd88de6c5c1ab8f1b1ebafbf1bda49593690000000000000000000000000000000000000000000000000000000000800000000000000000000000000000000000000000000000000000000000000000003c0000000000000000000000009f02ff1c41370500ce9129d9af7f5d42582720800000000000000000000000000000000000000000000000000058d15e17628000)
+    │   │   │   ├─ [164250] 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543::modifyLiquidity(PoolKey({ currency0: 0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3, currency1: 0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369, fee: 8388608 [8.388e6], tickSpacing: 60, hooks: 0x9f02ff1c41370500CE9129D9AF7F5d4258272080 }), ModifyLiquidityParams({ tickLower: -887220 [-8.872e5], tickUpper: 887220 [8.872e5], liquidityDelta: 25000000000000000 [2.5e16], salt: 0x0000000000000000000000000000000000000000000000000000000000000000 }), 0x)
+    │   │   │   │   ├─ emit ModifyLiquidity(id: 0x1d1d0fa63ae39f12ddb79d7d5ba0371f5c5b569df1fc40a91ad86b239c72a445, sender: DemoLiquiditySeeder: [0x7cbe10AA965Edc8414ad0a4C68192f8ef117f21D], tickLower: -887220 [-8.872e5], tickUpper: 887220 [8.872e5], liquidityDelta: 25000000000000000 [2.5e16], salt: 0x0000000000000000000000000000000000000000000000000000000000000000)
+    │   │   │   │   └─ ← [Return] -8507059172683179219663426747330830678968231788544 [-8.507e48], 0
+    │   │   │   ├─ [1888] 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543::sync(DemoToken: [0x5d8B7a6Fd3257FA7a42a38c7231646f0D3aeb3D3])
+    │   │   │   │   ├─ [515] DemoToken::balanceOf(0xE03A1074c86CFeDd5C142C4F04F1a1536e203543) [staticcall]
+    │   │   │   │   │   └─ ← [Return] 300099999999989 [3e14]
+    │   │   │   │   └─ ← [Stop]
+    │   │   │   ├─ [3192] DemoToken::transferFrom(0xDe25D83481c0c2A711397c44eE3317dD826952D5, 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543, 25000000000 [2.5e10])
+    │   │   │   │   ├─ emit Transfer(from: 0xDe25D83481c0c2A711397c44eE3317dD826952D5, to: 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543, amount: 25000000000 [2.5e10])
+    │   │   │   │   └─ ← [Return] true
+    │   │   │   ├─ [2489] 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543::settle()
+    │   │   │   │   ├─ [515] DemoToken::balanceOf(0xE03A1074c86CFeDd5C142C4F04F1a1536e203543) [staticcall]
+    │   │   │   │   │   └─ ← [Return] 300124999999989 [3.001e14]
+    │   │   │   │   └─ ← [Return] 25000000000 [2.5e10]
+    │   │   │   ├─ [4240] 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543::sync(WaveVault: [0xA607bDD88DE6C5c1aB8F1B1ebafbF1BdA4959369])
+    │   │   │   │   ├─ [2867] WaveVault::balanceOf(0xE03A1074c86CFeDd5C142C4F04F1a1536e203543) [staticcall]
+    │   │   │   │   │   └─ ← [Return] 0
+    │   │   │   │   └─ ← [Stop]
+    │   │   │   ├─ [23246] WaveVault::transferFrom(0xDe25D83481c0c2A711397c44eE3317dD826952D5, 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543, 25000000000000000000000 [2.5e22])
+    │   │   │   │   ├─ emit Transfer(from: 0xDe25D83481c0c2A711397c44eE3317dD826952D5, to: 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543, amount: 25000000000000000000000 [2.5e22])
+    │   │   │   │   └─ ← [Return] true
+    │   │   │   ├─ [2841] 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543::settle()
+    │   │   │   │   ├─ [867] WaveVault::balanceOf(0xE03A1074c86CFeDd5C142C4F04F1a1536e203543) [staticcall]
+    │   │   │   │   │   └─ ← [Return] 25000000000000000000000 [2.5e22]
+    │   │   │   │   └─ ← [Return] 25000000000000000000000 [2.5e22]
+    │   │   │   └─ ← [Return] 0x
+    │   │   └─ ← [Return] 0x
+    │   └─ ← [Stop]
+    ├─ [0] VM::envAddress("CRE_FORWARDER") [staticcall]
+    │   └─ ← [Revert] vm.envAddress: environment variable "CRE_FORWARDER" not found
+    └─ ← [Revert] vm.envAddress: environment variable "CRE_FORWARDER" not found
+
+
+Error: script failed: vm.envAddress: environment variable "CRE_FORWARDER" not found

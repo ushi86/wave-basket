@@ -304,7 +304,7 @@ cast tx "$WAVE_TX_HASH" --rpc-url "$SEPOLIA_RPC_URL" --json \
   > "$WAVE_RUN/transaction-$WAVE_TX_HASH.json"
 ```
 
-I will check chain identity, successful status, expected target and emitter, canonical block hash/number/time, event arguments and state, and confirmations. I will independently corroborate receipts and relevant state against a second Sepolia provider before marking them verified. The current checker's fixed dRPC endpoint returns code 35 (“chain is not available on free plan”); its two-provider validation currently fails closed. A working independent provider must be explicitly established before that check can pass. I will report this failure, not bypass it or count two calls to one provider as independence.
+I will check chain identity, successful status, expected target and emitter, canonical block hash/number/time, event arguments and state, and confirmations. The approved read-only verification providers are PublicNode and `https://sepolia.gateway.tenderly.co`. This is provider diversity, not proof of fully independent infrastructure. Both sources must agree under the existing checks. If an account, API key or payment becomes necessary, stop and ask the owner; do not silently change providers or lower verification requirements.
 
 Only then will I update `EVIDENCE.md`, `evidence/submission.json` and deployment records with **actual addresses, complete hashes, block numbers, environment/mock labels and observation times in IST**, plus immutable public source anchors. Failed, local, dry-run, worker-only and mock-only artifacts remain separately labeled. Genuine Sepolia transactions using disclosed mock tokens/CRE simulation forwarder are labeled as such, not as all-real infrastructure.
 
@@ -322,4 +322,4 @@ This command remains read-only and nonzero until all required evidence and revie
 - CRE login ready, installed version, actual tenant Sepolia forwarder, public simulation-wallet address and confirmation its secret configuration/funding is ready.
 - Locally configured explorer API credential if explorer verification is desired. Do not send the credential.
 - Completed deployment output and exact broadcast file path, if you deploy before returning; then keep the browser available for owner-signed Sepolia actions.
-- A working independent Sepolia verification source, or confirmation to establish one explicitly. No provider credential should enter the public browser manifest, documentation or Git.
+- The owner approved accountless Tenderly as the read-only second verification provider. Stop for owner input if account/key/payment requirements appear. No provider credential should enter the public browser manifest, documentation or Git.

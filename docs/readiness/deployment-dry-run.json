@@ -1,0 +1,17 @@
+{
+  "scope": "Sepolia deployment dry run ONLY; no account unlock, broadcast, CRE simulation or browser measurement",
+  "startedAt": "2026-11-06T09:55:54.715Z",
+  "argv": [
+    "script",
+    "script/DeployDemo.s.sol:DeployDemo",
+    "--rpc-url",
+    "https://ethereum-sepolia-rpc.publicnode.com",
+    "--sender",
+    "0xDe25D83481c0c2A711397c44eE3317dD826952D5",
+    "--non-interactive"
+  ],
+  "forwarderConfigured": false,
+  "finishedAt": "2026-11-06T09:55:57.825Z",
+  "code": 1,
+  "signal": null
+}

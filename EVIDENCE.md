@@ -26,6 +26,8 @@ Status: submission incomplete. Each ID maps to the exact README paragraph/list i
 | claim-ff09b60a5d8c | Partial | [Check the current CLI configuration conventions against the installed version. Observ...](docs/READINESS.md) | 2026-11-06T14:12:30.843+05:30 |
 | claim-b4977509bc0c | Partial | [CRE modes: current simulation mock forwarders omit workflow metadata. Set CRE_SIMULAT...](docs/READINESS.md) | 2026-11-06T14:12:30.843+05:30 |
 | claim-f5783cad8488 | Partial | [On Sepolia, app-originated contract reads, logs, blocks, balances, simulations, and r...](docs/READINESS.md) | 2026-11-06T14:12:30.843+05:30 |
+| claim-ead66315f1de | Partial | [Submission worker decision: retain Nox 0.4.0 at 0xDf5Db854BA75B52a4bF1a250a93D8d25cB9...](docs/READINESS.md) | 2026-11-06T15:27:38.978+05:30 |
+| claim-33c219e01432 | Partial | [Receipt verification uses PublicNode and the approved accountless, read-only Tenderly...](docs/READINESS.md) | 2026-11-06T15:27:38.978+05:30 |
 | claim-35bfbcaa86cd | Partial | [The meter counts individual JSON-RPC methods, including batch members. Successful cov...](docs/READINESS.md) | 2026-11-06T14:12:30.843+05:30 |
 | claim-fd6350056369 | Partial | [A failed private read never silently uses a public fallback. The single-read direct a...](docs/READINESS.md) | 2026-11-06T14:12:30.843+05:30 |
 | claim-98eb09886b36 | Partial | [A holder exiting in kind during stale feeds can avoid uncrystallized creator performa...](docs/READINESS.md) | 2026-11-06T14:12:30.843+05:30 |
@@ -45,3 +47,9 @@ The [current preflight record](docs/readiness/EXTERNAL_PREFLIGHT.md) retains bot
 A [read-only infrastructure observation](docs/readiness/external-infrastructure-preflight.json), 6 November 2026 at 14:34:09 IST, found the expected official Sepolia PoolManager and four currently healthy real feeds at block **12,075,560**. It contains **no Wave deployment or lifecycle transaction hashes**. The second provider rejects Sepolia on its free plan, so independent two-provider receipt validation remains blocked. No transaction, CRE simulation or full Anon-RPC measurement was run in this phase.
 
 The [exact owner command runbook](docs/EXTERNAL_EVIDENCE_RUNBOOK.md) covers installation, encrypted keystore creation, tenant forwarder discovery, configuration, dry run, deployment, browser/CLI lifecycle, CRE and receipt verification. The public remote is configured and its history has been pushed. Actual Wave addresses/receipts and other live evidence fields remain unfilled until genuine results are available.
+
+## Approved provider and worker decisions; funding preflight
+
+The owner selected the existing immutable Nox 0.4.0 pin for submission and approved accountless read-only Tenderly as the second verification provider. The checker now uses PublicNode/Tenderly while preserving its chain, canonical-block, receipt/log and state checks. This is provider diversity, not proof of fully independent infrastructure. The [funding and dry-run record](docs/readiness/FUNDING_AND_DRY_RUN.md) supersedes the earlier dRPC availability blocker for current provider selection; historical failure logs remain unchanged.
+
+Both providers observed zero Sepolia ETH at the owner-confirmed public address and healthy USDC/ETH/BTC/LINK feeds at block 12,075,811. The actual deployment dry run failed first at an RPC block lookup, then at the missing `CRE_FORWARDER` configuration in a fixed-block retry. No full gas estimate, deployment, broadcast, CRE execution or browser measurement is claimed. Simulated addresses are not deployment evidence.

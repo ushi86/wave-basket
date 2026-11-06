@@ -429,7 +429,7 @@ async function assessEvidence(
       )
     )
       issues.push(
-        "CRE CLI transaction is not the independently verified Sepolia rebalance",
+        "CRE CLI transaction is not the Sepolia rebalance verified against both selected providers",
       );
   }
   if (data.privacy) {

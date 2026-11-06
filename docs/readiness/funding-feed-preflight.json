@@ -1,0 +1,120 @@
+{
+  "observedAt": "2026-11-06T09:55:24.866Z",
+  "scope": "read-only public balance/feed checks; no deployment, CRE, broadcast or browser measurement",
+  "reports": [
+    {
+      "endpoint": "https://ethereum-sepolia-rpc.publicnode.com",
+      "chainId": 11155111,
+      "block": "12075811",
+      "blockHash": "0xf764a0b4fed2c5518b0512e51df3dd2dbd93f7f674a0493f9d587122b7f69cfc",
+      "blockTimestamp": "1793958912",
+      "address": "0xDe25D83481c0c2A711397c44eE3317dD826952D5",
+      "balanceWei": "0",
+      "balanceETH": "0",
+      "gasPriceWei": "19",
+      "feeds": [
+        {
+          "symbol": "USDC",
+          "address": "0xA2F78ab2355fe2f984D808B5CeE7FD0A93D5270E",
+          "answer": "99978205",
+          "roundId": "18446744073709553247",
+          "updatedAt": "1793956272",
+          "answeredInRound": "18446744073709553247",
+          "ageSeconds": "2640",
+          "maxAgeSeconds": "108000",
+          "healthy": true
+        },
+        {
+          "symbol": "ETH",
+          "address": "0x694AA1769357215DE4FAC081bf1f309aDC325306",
+          "answer": "223640000000",
+          "roundId": "18446744073709588987",
+          "updatedAt": "1793956188",
+          "answeredInRound": "18446744073709588987",
+          "ageSeconds": "2724",
+          "maxAgeSeconds": "4500",
+          "healthy": true
+        },
+        {
+          "symbol": "BTC",
+          "address": "0x1b44F3514812d835EB1BDB0acB33d3fA3351Ee43",
+          "answer": "7598714799294",
+          "roundId": "18446744073709586705",
+          "updatedAt": "1793958612",
+          "answeredInRound": "18446744073709586705",
+          "ageSeconds": "300",
+          "maxAgeSeconds": "4500",
+          "healthy": true
+        },
+        {
+          "symbol": "LINK",
+          "address": "0xc59E3633BAAC79493d908e63626716e204A45EdF",
+          "answer": "1082402000",
+          "roundId": "18446744073709594404",
+          "updatedAt": "1793956908",
+          "answeredInRound": "18446744073709594404",
+          "ageSeconds": "2004",
+          "maxAgeSeconds": "4500",
+          "healthy": true
+        }
+      ]
+    },
+    {
+      "endpoint": "https://sepolia.gateway.tenderly.co",
+      "chainId": 11155111,
+      "block": "12075811",
+      "blockHash": "0xf764a0b4fed2c5518b0512e51df3dd2dbd93f7f674a0493f9d587122b7f69cfc",
+      "blockTimestamp": "1793958912",
+      "address": "0xDe25D83481c0c2A711397c44eE3317dD826952D5",
+      "balanceWei": "0",
+      "balanceETH": "0",
+      "gasPriceWei": "19",
+      "feeds": [
+        {
+          "symbol": "USDC",
+          "address": "0xA2F78ab2355fe2f984D808B5CeE7FD0A93D5270E",
+          "answer": "99978205",
+          "roundId": "18446744073709553247",
+          "updatedAt": "1793956272",
+          "answeredInRound": "18446744073709553247",
+          "ageSeconds": "2640",
+          "maxAgeSeconds": "108000",
+          "healthy": true
+        },
+        {
+          "symbol": "ETH",
+          "address": "0x694AA1769357215DE4FAC081bf1f309aDC325306",
+          "answer": "223640000000",
+          "roundId": "18446744073709588987",
+          "updatedAt": "1793956188",
+          "answeredInRound": "18446744073709588987",
+          "ageSeconds": "2724",
+          "maxAgeSeconds": "4500",
+          "healthy": true
+        },
+        {
+          "symbol": "BTC",
+          "address": "0x1b44F3514812d835EB1BDB0acB33d3fA3351Ee43",
+          "answer": "7598714799294",
+          "roundId": "18446744073709586705",
+          "updatedAt": "1793958612",
+          "answeredInRound": "18446744073709586705",
+          "ageSeconds": "300",
+          "maxAgeSeconds": "4500",
+          "healthy": true
+        },
+        {
+          "symbol": "LINK",
+          "address": "0xc59E3633BAAC79493d908e63626716e204A45EdF",
+          "answer": "1082402000",
+          "roundId": "18446744073709594404",
+          "updatedAt": "1793956908",
+          "answeredInRound": "18446744073709594404",
+          "ageSeconds": "2004",
+          "maxAgeSeconds": "4500",
+          "healthy": true
+        }
+      ]
+    }
+  ]
+}

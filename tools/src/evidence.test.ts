@@ -212,11 +212,11 @@ it("rejects a wrong effective hook fee", async () => {
   ];
   expect((await validateEvidence(fixture.manifest, fixture.io)).ok).toBe(false);
 });
-it("rejects contradictory receipts from independent canonical sources", async () => {
+it("rejects contradictory receipts from the approved second provider", async () => {
   const fixture = syntheticFixture();
   const hash = fixture.manifest.transactions[0].hash;
   fixture.overrideRpc((url, method, params) =>
-    url.includes("drpc") &&
+    url === "https://sepolia.gateway.tenderly.co" &&
     method === "eth_getTransactionReceipt" &&
     params[0] === hash
       ? {

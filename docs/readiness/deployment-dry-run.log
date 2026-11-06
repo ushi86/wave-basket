@@ -1,0 +1,16 @@
+No files changed, compilation skipped
+2026-11-06T09:55:55.816309Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for ../node_modules/@uniswap/v4-core/lib/forge-std/src/Test.sol
+2026-11-06T09:55:55.817483Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for /Users/hano/Projects/Wave Eth/node_modules/@uniswap/v4-core/lib/forge-std/src/StdAssertions.sol
+2026-11-06T09:55:55.817700Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for /Users/hano/Projects/Wave Eth/node_modules/@uniswap/v4-core/lib/forge-std/src/StdError.sol
+2026-11-06T09:55:55.817776Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for /Users/hano/Projects/Wave Eth/node_modules/@uniswap/v4-core/lib/forge-std/src/StdInvariant.sol
+2026-11-06T09:55:55.818021Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for /Users/hano/Projects/Wave Eth/node_modules/@uniswap/v4-core/lib/forge-std/src/StdToml.sol
+2026-11-06T09:55:55.819661Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for test/Lifecycle.t.sol
+2026-11-06T09:55:55.819720Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for test/WaveFixture.sol
+2026-11-06T09:55:55.820609Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for test/Accounting.t.sol
+2026-11-06T09:55:55.821814Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for test/Guards.t.sol
+2026-11-06T09:55:55.821876Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for test/Hook.t.sol
+2026-11-06T09:55:55.821924Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for test/Receiver.t.sol
+2026-11-06T09:55:55.821963Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for test/V4Integration.t.sol
+2026-11-06T09:55:56.425461Z  WARN foundry_fork_db::cache: Failed to read cache file err=Os { code: 2, kind: NotFound, message: "No such file or directory" } path="/Users/hano/.foundry/cache/rpc/sepolia/12075814"
+2026-11-06T09:55:57.806507Z ERROR sharedbackend: Failed to send/recv `basic` err=failed to get account for 0x5b73C5498c1E3b4dbA84de0F1833c4a029d90519: server returned an error response: error code -32001: block not found: 0xb84326 address=0x5b73C5498c1E3b4dbA84de0F1833c4a029d90519
+Error: failed to get account for 0x5b73C5498c1E3b4dbA84de0F1833c4a029d90519: server returned an error response: error code -32001: block not found: 0xb84326
