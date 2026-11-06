@@ -34,3 +34,11 @@ Status: submission incomplete. Each ID maps to the exact README paragraph/list i
 | claim-444e1653f821 | Partial | [- Uniswap unlock callbacks and settlement(https://developers.uniswap.org/docs/protoco…](docs/READINESS.md) | 2026-11-06T14:12:30.843+05:30 |
 
 Live proof still absent: public repository and immutable source anchors, canonical Sepolia lifecycle, actual CRE CLI broadcast, full privacy export/screenshot, eligibility and final user submission. No local/dry-run artifact fills those fields.
+
+## External evidence preparation
+
+The [current preflight record](docs/readiness/EXTERNAL_PREFLIGHT.md) retains both the initial TypeScript failure and the successful rerun. Local tests/typechecks/builds/size/format checks pass; npm audit still fails on the recorded SDK/Zod advisory. These checks do not establish a live Wave integration.
+
+A [read-only infrastructure observation](docs/readiness/external-infrastructure-preflight.json), 6 November 2026 at 14:34:09 IST, found the expected official Sepolia PoolManager and four currently healthy real feeds at block **12,075,560**. It contains **no Wave deployment or lifecycle transaction hashes**. The second provider rejects Sepolia on its free plan, so independent two-provider receipt validation remains blocked. No transaction, CRE simulation or full Anon-RPC measurement was run in this phase.
+
+The [exact owner command runbook](docs/EXTERNAL_EVIDENCE_RUNBOOK.md) covers installation, encrypted keystore creation, tenant forwarder discovery, configuration, dry run, deployment, browser/CLI lifecycle, CRE and receipt verification. Public remote, actual Wave addresses/receipts and live evidence fields remain unfilled until genuine results are available.

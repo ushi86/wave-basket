@@ -1,0 +1,15 @@
+{
+  "startedAt": "2026-11-06T09:10:46.811Z",
+  "finishedAt": "2026-11-06T09:10:47.249Z",
+  "endpoint": "https://sepolia.drpc.org",
+  "httpStatus": 400,
+  "method": "eth_chainId",
+  "response": {
+    "id": 1,
+    "jsonrpc": "2.0",
+    "error": {
+      "message": "chain is not available on free plan, please upgrade to paid plan",
+      "code": 35
+    }
+  }
+}

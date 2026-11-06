@@ -1,0 +1,89 @@
+{
+  "phase": "external-preflight-recheck",
+  "scope": "local-check-only",
+  "startedAt": "2026-11-06T09:09:05.633Z",
+  "finishedAt": "2026-11-06T09:09:15.189Z",
+  "checks": [
+    {
+      "name": "typecheck",
+      "argv": [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      "startedAt": "2026-11-06T09:09:05.633Z",
+      "finishedAt": "2026-11-06T09:09:08.203Z",
+      "exitCode": 0,
+      "log": "docs/readiness/external-preflight-recheck-20261106T090905Z/typecheck.log",
+      "sha256": "38cb13f0ce3941278a4182d9bee7176ef41cabee0bf3a8ac6577e563de68c223"
+    },
+    {
+      "name": "tests",
+      "argv": [
+        "npm",
+        "test"
+      ],
+      "startedAt": "2026-11-06T09:09:08.203Z",
+      "finishedAt": "2026-11-06T09:09:09.520Z",
+      "exitCode": 0,
+      "log": "docs/readiness/external-preflight-recheck-20261106T090905Z/tests.log",
+      "sha256": "099a607cd8a0bdccca7ee269744f9a63ae22cb30aaa566f7f0ab629b63649831"
+    },
+    {
+      "name": "web-build",
+      "argv": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "startedAt": "2026-11-06T09:09:09.520Z",
+      "finishedAt": "2026-11-06T09:09:11.858Z",
+      "exitCode": 0,
+      "log": "docs/readiness/external-preflight-recheck-20261106T090905Z/web-build.log",
+      "sha256": "6648e865bb30863f35a6140058ca0634bc5b221337c911cae63ab8bd25bf882e"
+    },
+    {
+      "name": "workflow-build",
+      "argv": [
+        "npm",
+        "run",
+        "build:workflow"
+      ],
+      "startedAt": "2026-11-06T09:09:11.858Z",
+      "finishedAt": "2026-11-06T09:09:14.683Z",
+      "exitCode": 0,
+      "log": "docs/readiness/external-preflight-recheck-20261106T090905Z/workflow-build.log",
+      "sha256": "c01ecbad7c32f6881e7e261bfeacd782df241a70ba984f7b4101b0c2ec994163"
+    },
+    {
+      "name": "contract-size",
+      "argv": [
+        "npm",
+        "run",
+        "check:contracts"
+      ],
+      "startedAt": "2026-11-06T09:09:14.683Z",
+      "finishedAt": "2026-11-06T09:09:14.940Z",
+      "exitCode": 0,
+      "log": "docs/readiness/external-preflight-recheck-20261106T090905Z/contract-size.log",
+      "sha256": "edfae8835b88ade01f5cc04bfcac8c89c591267fef4cd8cc0f02cb4712798764"
+    },
+    {
+      "name": "foundry-verbose",
+      "argv": [
+        "/opt/homebrew/Cellar/node@24/24.22.1/bin/node",
+        "scripts/foundry.mjs",
+        "forge",
+        "test",
+        "--root",
+        "contracts",
+        "-vvv"
+      ],
+      "startedAt": "2026-11-06T09:09:14.940Z",
+      "finishedAt": "2026-11-06T09:09:15.189Z",
+      "exitCode": 0,
+      "log": "docs/readiness/external-preflight-recheck-20261106T090905Z/foundry-verbose.log",
+      "sha256": "76cc6f3338acc0da91ffebdc5f07df45738cf3f4b06e0dd46ddca83e1a15e16f"
+    }
+  ]
+}

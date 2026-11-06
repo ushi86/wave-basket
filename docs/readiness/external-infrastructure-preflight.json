@@ -1,0 +1,65 @@
+{
+  "observedAt": "2026-11-06T09:04:09.421Z",
+  "scope": "read-only public Sepolia infrastructure preflight; not Wave deployment/lifecycle evidence",
+  "reports": [
+    {
+      "endpoint": "https://ethereum-sepolia-rpc.publicnode.com",
+      "chainId": 11155111,
+      "blockNumber": "12075560",
+      "blockHash": "0xaddf67e9efe277d9c86e6de25cc79c8f07b9e4ca8dc12b59f44f59845d2e0b5a",
+      "blockTimestamp": "1793955840",
+      "manager": "0xE03A1074c86CFeDd5C142C4F04F1a1536e203543",
+      "managerCodeBytes": 24009,
+      "feeds": [
+        {
+          "symbol": "USDC",
+          "address": "0xA2F78ab2355fe2f984D808B5CeE7FD0A93D5270E",
+          "decimals": 8,
+          "roundId": "18446744073709553246",
+          "answer": "99988193",
+          "updatedAt": "1793869836",
+          "answeredInRound": "18446744073709553246",
+          "ageSeconds": "86004",
+          "withinCurrentPolicy": true
+        },
+        {
+          "symbol": "ETH",
+          "address": "0x694AA1769357215DE4FAC081bf1f309aDC325306",
+          "decimals": 8,
+          "roundId": "18446744073709588986",
+          "answer": "222446000000",
+          "updatedAt": "1793952552",
+          "answeredInRound": "18446744073709588986",
+          "ageSeconds": "3288",
+          "withinCurrentPolicy": true
+        },
+        {
+          "symbol": "BTC",
+          "address": "0x1b44F3514812d835EB1BDB0acB33d3fA3351Ee43",
+          "decimals": 8,
+          "roundId": "18446744073709586704",
+          "answer": "7557865352442",
+          "updatedAt": "1793954988",
+          "answeredInRound": "18446744073709586704",
+          "ageSeconds": "852",
+          "withinCurrentPolicy": true
+        },
+        {
+          "symbol": "LINK",
+          "address": "0xc59E3633BAAC79493d908e63626716e204A45EdF",
+          "decimals": 8,
+          "roundId": "18446744073709594403",
+          "answer": "1078502599",
+          "updatedAt": "1793953284",
+          "answeredInRound": "18446744073709594403",
+          "ageSeconds": "2556",
+          "withinCurrentPolicy": true
+        }
+      ]
+    },
+    {
+      "endpoint": "https://sepolia.drpc.org",
+      "error": "RPC Request failed."
+    }
+  ]
+}
