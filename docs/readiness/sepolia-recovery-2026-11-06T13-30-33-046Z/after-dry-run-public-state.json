@@ -1,0 +1,19 @@
+{
+  "observedAt": "2026-11-06T13:35:31.043Z",
+  "scope": "Read-only public state after private fork validation; no Sepolia transactions sent",
+  "reviewedSourcesAndCreationsUnchanged": true,
+  "rows": [
+    {
+      "endpoint": "https://ethereum-sepolia-rpc.publicnode.com",
+      "balanceWei": "199039970082895696",
+      "latestNonce": 1,
+      "pendingNonce": 1
+    },
+    {
+      "endpoint": "https://sepolia.gateway.tenderly.co",
+      "balanceWei": "199039970082895696",
+      "latestNonce": 1,
+      "pendingNonce": 1
+    }
+  ]
+}
