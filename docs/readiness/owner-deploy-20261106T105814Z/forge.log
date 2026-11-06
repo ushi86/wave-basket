@@ -1,0 +1,22 @@
+No files changed, compilation skipped
+Script ran successfully.
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 11155111
+
+Estimated gas price: 0.038437607 gwei
+
+Estimated total gas used for script: 27794694
+
+Estimated amount required: 0.001068361524657258 ETH
+
+==========================
+
+Transactions saved to: /Users/hano/Projects/Wave Eth/contracts/broadcast/DeployDemo.s.sol/11155111/run-latest.json
+
+Sensitive values saved to: /Users/hano/Projects/Wave Eth/contracts/cache/DeployDemo.s.sol/11155111/run-latest.json
+
+Error: Transaction Failure: 0x5eb42ec1baaeb837ca64021bd561ca05bb3596ff42ceb9b42eca3e621d18765f

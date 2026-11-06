@@ -1,0 +1,4 @@
+mode=--broadcast
+block=12076118
+blockHash=0x1d628e47f34551025217fdaa2a67532fb1d71bf33ef7b9bae3cc82f9036ed772
+exitCode=1

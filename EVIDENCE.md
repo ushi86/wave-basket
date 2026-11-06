@@ -1,5 +1,7 @@
 # Claim–evidence matrix
 
+**Current deployment blocker (6 November 2026):** the owner's first actual Sepolia transaction [0x5eb42ec1…18765f](https://sepolia.etherscan.io/tx/0x5eb42ec1baaeb837ca64021bd561ca05bb3596ff42ceb9b42eca3e621d18765f) reverted at canonical block **12,076,125**, using **706,678 / 706,678 gas**. Both approved providers corroborate the failed receipt and absence of created code. Read-only replay succeeds with more gas; both providers estimate **3,542,382 gas** for that first creation. No successful Wave deployment is claimed. Account nonce is now **1**; do not rerun or resume the original plan. The generated manifest was quarantined as predictions. See the [failure diagnosis and proposed recovery](docs/readiness/SEPOLIA_CREATION_GAS_FAILURE.md) and [public receipt/replay observations](docs/readiness/owner-deploy-20261106T105814Z/failed-first-transaction.json). Earlier “no transaction” statements below describe their historical phases; this failed transaction does not satisfy any successful deployment/lifecycle gate.
+
 Status: submission incomplete. Each ID maps to the exact README paragraph/list in `evidence/submission.json`. All README groups are conservatively Partial: source/local checks support implementation claims, while live integration claims are not established. This documentation is an inventory, not fabricated execution evidence. Environment and blocker details are in the linked readiness record.
 
 | Claim | Status | Evidence link | Date/time IST |
