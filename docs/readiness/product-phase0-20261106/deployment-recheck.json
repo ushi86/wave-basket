@@ -1,0 +1,34 @@
+{
+  "observedAt": "2026-11-06T12:01:06.800Z",
+  "scope": "read-only Phase 0 deployment receipt check; no transactions sent",
+  "results": [
+    {
+      "endpoint": "https://ethereum-sepolia-rpc.publicnode.com",
+      "chainId": 11155111,
+      "transactionHash": "0x5eb42ec1baaeb837ca64021bd561ca05bb3596ff42ceb9b42eca3e621d18765f",
+      "status": "0x0",
+      "block": 12076125,
+      "blockHash": "0x9e81d1cc51adb2a1309667a63f47f25c1efed688bd6ff260fa95d64c9ead7bff",
+      "canonical": true,
+      "gasUsed": 706678,
+      "predictedAddressNotDeployed": "0x5d8b7a6fd3257fa7a42a38c7231646f0d3aeb3d3",
+      "code": "0x",
+      "latestNonce": 1,
+      "pendingNonce": 1
+    },
+    {
+      "endpoint": "https://sepolia.gateway.tenderly.co",
+      "chainId": 11155111,
+      "transactionHash": "0x5eb42ec1baaeb837ca64021bd561ca05bb3596ff42ceb9b42eca3e621d18765f",
+      "status": "0x0",
+      "block": 12076125,
+      "blockHash": "0x9e81d1cc51adb2a1309667a63f47f25c1efed688bd6ff260fa95d64c9ead7bff",
+      "canonical": true,
+      "gasUsed": 706678,
+      "predictedAddressNotDeployed": "0x5d8b7a6fd3257fa7a42a38c7231646f0d3aeb3d3",
+      "code": "0x",
+      "latestNonce": 1,
+      "pendingNonce": 1
+    }
+  ]
+}

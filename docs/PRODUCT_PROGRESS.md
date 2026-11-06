@@ -2,12 +2,12 @@
 
 Updated 6 November 2026. Source baseline: commit 1213bf0. Product spec: [Basket Product Experience and Submission](../specs/WAVE_PRODUCT_EXPERIENCE_SPEC.md). The owner confirmed the testing boundaries and all added negative/regression conditions. The original [product brief](provenance/PRODUCT_EXPERIENCE_BRIEF.txt) is preserved as planning provenance.
 
-**Current phase: Phase 0 read-only preparation; incomplete and blocked.** No product code was changed, no implementation ticket was started/closed, and no deployment, wallet unlock or fund movement occurred. Do not advance to Phase 1. The implement-spec workflow additionally requires configured tracker/dependency tickets before an integration branch can be managed against that graph.
+**Current phase: Phase 0 complete; Phase 1 authorized and in progress.** Phase 0 changed no product code and sent no transactions. The owner explicitly authorized Phase 1 next, revoked setup/implement-spec, and designated the spec and this document as the source of truth and tracker. Stop after Phase 1.
 
 ## Blockers
 
-- The requested whitepaper is absent. Its contents have not been read; the brief's origin summary is not a verified substitute. Restore the source document for the Phase 0 review, or obtain an explicit owner scope decision.
-- Project issue tracker and triage vocabulary are unconfigured. Both invoked skills require `/setup-matt-pocock-skills`. After configuration, publish the spec with `ready-for-agent` and create the dependency tickets required by implement-spec; do not invent issue IDs or assume the public Git remote is sufficient configuration.
+- Resolved: the original whitepaper was supplied at the repository root. All 15 pages were read and its NAV formula/diagram visually reviewed. An identical documentation copy is preserved as [whitepaper.pdf](whitepaper.pdf); the original is untouched.
+- Removed by explicit owner instruction: external tracker, ticket graph, setup skill and implement-spec are not project requirements. Track phases here.
 - No verified successful Wave Sepolia deployment. Preserve the failed broadcast record. A guarded nonce-1 recovery command and fresh pre-broadcast checks remain pending. No automatic retry/resume is authorized here.
 - No actual CRE CLI broadcast or full Sepolia Anon-RPC browser session accepted. LLM provider and privately configured credentials are not selected; this becomes a prerequisite at Phase 5, not a reason to invent AI output now.
 
@@ -50,4 +50,12 @@ The [local baseline logs](readiness/product-phase0-20261106/) are local verifica
 
 No UI product change was made, so no new product screenshots are claimed. Existing local/mock/replay/live distinctions remain intact. The official [submission rules](https://ethglobal.com/events/mumbai/info/details) confirm 7 November 2026 at 09:00 IST; the owner's target remains 07:30 IST.
 
-**Next:** resolve the Phase 0 prerequisites and tracker/ticket graph, complete that phase's source review, then stop for owner review. Later phases require an explicit “continue”; this report does not authorize them.
+**Next:** implement the authorized Phase 1 UI only, run checks and unchanged contract regressions, capture actual local-app screenshots, commit/push, and stop. Phase 2 and all deployment activity require their respective owner approval.
+
+## Phase 0 completion — whitepaper and deployment answer
+
+All 15 whitepaper pages were read. Pages 3–11 describe asset-management abstraction, collateralized shares, NAV per share = total fund value / share supply, deposit allocation, exits and the Vault/Allocation/Settlement layers. Pages 13–14 describe manual and algorithmic products. The illustrated issuance/fee examples, trustless/decentralized/ETF language, governance, cross-chain, audits and backtesting promises are not copied as current product claims. Wave retains actual measured-value issuance, high-water-mark fee dilution and the disclosed stale-feed fee exception. Risk/return protection is not promised.
+
+**Did deployment succeed? No.** The [fresh two-provider observation](readiness/product-phase0-20261106/deployment-recheck.json) at 12:01 UTC confirms transaction `0x5eb42ec1baaeb837ca64021bd561ca05bb3596ff42ceb9b42eca3e621d18765f` reverted at block 12,076,125, consumed all 706,678 gas and created no code. Latest/pending nonces remain 1/1. There are no verified successful Wave Sepolia addresses to list; predicted addresses are not deployed contracts.
+
+**What the owner needs to do:** do not retry the old helper or use resume. No new funding, login or secret is requested now. A new recovery plan must start from freshly verified nonce 1, preserve the failed plan/cache, use native Foundry 1.8.3 Amsterdam runtime with the existing compiler target, recheck feeds/balance/gas/receiver settings and pass its deployment checks. The full Foundry fork run passes; the optional full remote RPC batch remains incomplete and must be disclosed. Once a reviewed exact recovery command is ready, separately approve broadcast and run it locally, entering the encrypted keystore password yourself. The agent will then verify every receipt before publishing any address as deployed. This work is not silently folded into Phase 1.
