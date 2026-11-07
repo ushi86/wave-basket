@@ -1,0 +1,106 @@
+{
+  "scope": "UI-only, disconnected-wallet checks; not full privacy or lifecycle acceptance",
+  "observedAt": "2026-11-07T00:00:43.138Z",
+  "observations": [
+    {
+      "documentWidth": 390,
+      "fonts": "loaded",
+      "height": 844,
+      "state": "mobile portfolio disconnected",
+      "width": 390
+    },
+    {
+      "documentWidth": 390,
+      "height": 844,
+      "state": "mobile create form",
+      "width": 390
+    },
+    {
+      "documentWidth": 390,
+      "height": 844,
+      "state": "mobile privacy",
+      "width": 390
+    },
+    {
+      "documentWidth": 390,
+      "height": 844,
+      "state": "mobile setup",
+      "width": 390
+    },
+    {
+      "documentWidth": 820,
+      "height": 1180,
+      "state": "tablet landing startup",
+      "width": 820
+    },
+    {
+      "color": "rgb(245, 249, 239)",
+      "documentWidth": 1504,
+      "font": "Manrope, sans-serif",
+      "fontSize": "62.416px",
+      "fonts": "loaded",
+      "height": 1046,
+      "state": "desktop landing",
+      "width": 1504
+    },
+    {
+      "documentWidth": 1440,
+      "fonts": "loaded",
+      "height": 1000,
+      "state": "desktop privacy",
+      "width": 1440
+    }
+  ],
+  "readFailure": "One mobile HMR preview showed HTTP request failed; retained capture; one full reload recovered with Nox 0.4.0 unchanged. No public fallback was added.",
+  "interactionLimitations": "Browser viewport override did not change existing tab dimensions. Temporary same-origin iframe harnesses provided measured 390x844, 820x1180 and 1504x1046 content viewports. Keyboard navigation was used for iframe bottom controls outside the parent viewport. No touch hardware, wallet connection/signature or submission was exercised.",
+  "console": [
+    {
+      "level": "warn",
+      "message": "ObjectMultiplex - orphaned data for stream \"background-liveness\"",
+      "timestamp": "2026-11-06T23:54:48.302Z",
+      "url": "chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/scripts/contentscript.js"
+    },
+    {
+      "level": "warn",
+      "message": "ObjectMultiplex - orphaned data for stream \"background-liveness\"",
+      "timestamp": "2026-11-06T23:54:48.302Z",
+      "url": "chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/scripts/contentscript.js"
+    },
+    {
+      "level": "warn",
+      "message": "MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 close listeners added. Use emitter.setMaxListeners() to increase limit",
+      "timestamp": "2026-11-06T23:55:56.279Z",
+      "url": "chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/scripts/contentscript.js"
+    },
+    {
+      "level": "warn",
+      "message": "MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 end listeners added. Use emitter.setMaxListeners() to increase limit",
+      "timestamp": "2026-11-06T23:55:56.279Z",
+      "url": "chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/scripts/contentscript.js"
+    },
+    {
+      "level": "warn",
+      "message": "ObjectMultiplex - orphaned data for stream \"app-init-liveness\"",
+      "timestamp": "2026-11-06T23:55:56.282Z",
+      "url": "chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/scripts/contentscript.js"
+    },
+    {
+      "level": "warn",
+      "message": "ObjectMultiplex - orphaned data for stream \"app-init-liveness\"",
+      "timestamp": "2026-11-06T23:55:56.282Z",
+      "url": "chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/scripts/contentscript.js"
+    },
+    {
+      "level": "warn",
+      "message": "ObjectMultiplex - orphaned data for stream \"background-liveness\"",
+      "timestamp": "2026-11-06T23:55:56.282Z",
+      "url": "chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/scripts/contentscript.js"
+    },
+    {
+      "level": "warn",
+      "message": "ObjectMultiplex - orphaned data for stream \"background-liveness\"",
+      "timestamp": "2026-11-06T23:55:56.282Z",
+      "url": "chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/scripts/contentscript.js"
+    }
+  ]
+}

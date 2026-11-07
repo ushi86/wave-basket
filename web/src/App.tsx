@@ -96,6 +96,8 @@ export function App() {
             <button
               key={item.id}
               className={page === item.id ? "nav-item active" : "nav-item"}
+              aria-current={page === item.id ? "page" : undefined}
+              title={item.label}
               onClick={() => navigate(item.id)}
             >
               <item.icon size={18} />
@@ -108,6 +110,8 @@ export function App() {
         <nav aria-label="Tools">
           <button
             className={`nav-item ${page === "privacy" ? "active" : ""}`}
+            aria-current={page === "privacy" ? "page" : undefined}
+            title="Privacy center"
             onClick={() => navigate("privacy")}
           >
             <ShieldCheck size={18} />
@@ -115,6 +119,8 @@ export function App() {
           </button>
           <button
             className={`nav-item ${page === "faucet" ? "active" : ""}`}
+            aria-current={page === "faucet" ? "page" : undefined}
+            title="Demo setup"
             onClick={() => navigate("faucet")}
           >
             <Settings2 size={18} />
@@ -134,6 +140,13 @@ export function App() {
       </aside>
       <div className="workspace">
         <header className="topbar">
+          <a
+            href="#baskets"
+            className="mobile-brand"
+            aria-label="Wave Protocol home"
+          >
+            <Waves size={24} /> Wave
+          </a>
           <div className="breadcrumb">
             Wave <span>/</span>{" "}
             {page === "baskets"

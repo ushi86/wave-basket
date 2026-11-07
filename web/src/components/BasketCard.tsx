@@ -33,7 +33,7 @@ export function BasketCard({
       </div>
       <h3>{displayName}</h3>
       {displayName !== basket.name && (
-        <small className="muted">
+        <small className="muted collection-provenance">
           On-chain: {basket.name} · {basket.symbol}
         </small>
       )}

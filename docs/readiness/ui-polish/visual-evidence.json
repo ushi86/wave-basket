@@ -1,0 +1,485 @@
+{
+  "schemaVersion": "uizze.visual-evidence.v1",
+  "scope": "Wave presentation-only refinement of existing product at 1504x1046, 1440x1000, 820x1180 and 390x844. Target is a generated design reference, not execution evidence or a pixel-perfect claim.",
+  "platform": "web",
+  "recordedAt": "2026-11-07T00:01:48.533587+00:00",
+  "sources": [
+    {
+      "path": "../../../web/src/App.tsx",
+      "sha256": "af91dea18f41a7079b92594e75810cc1f2074175a38aa73e1b1a9c35d5de0e83"
+    },
+    {
+      "path": "../../../web/src/components/BasketCard.tsx",
+      "sha256": "cabe145f8f978177dc1ac02763768df32c6d50085ce532fda0071ce0355e0be6"
+    },
+    {
+      "path": "../../../web/src/pages/ExplorePage.tsx",
+      "sha256": "3a78125c4f9d2b1ead5fef9393e6fc8b2f489247386a5ea73ac7c559c81d2fc7"
+    },
+    {
+      "path": "../../../web/src/main.tsx",
+      "sha256": "3d4397179592a3f88d4107f8032ed9506c9209d47f1bfd81c336a1fc57634b04"
+    },
+    {
+      "path": "../../../web/src/polish.css",
+      "sha256": "54f45d89fab5aa916f13051c52a9f39dc55332d34a8bd5e10d268caef27390e7"
+    },
+    {
+      "path": "../../../web/src/styles.css",
+      "sha256": "9fa3a6bff82874ed0d8f744075eef6a2541b0da5e12d88bfb2810d080a468c17"
+    },
+    {
+      "path": "../../../web/public/deployment.json",
+      "sha256": "24a754468440b2fb72383573111e520f55b5653ef9c1b04bdf85225e38e86dbd"
+    },
+    {
+      "path": "../../../package-lock.json",
+      "sha256": "b981003d63bbb9b84c2518fd623a831ae411681fe38414440fd4f551d759d34b"
+    }
+  ],
+  "comparison": "target",
+  "target": {
+    "path": "../../screenshots/ui-polish/visual-target.png",
+    "kind": "image",
+    "sha256": "e310cfc8f756b6fec93cfc2f17164ad071dba3d5a985dace1a92deee856efe75"
+  },
+  "targetDimensions": {
+    "width": 1504,
+    "height": 1046
+  },
+  "requiredChecks": [
+    {
+      "id": "landing-desktop",
+      "kind": "visual"
+    },
+    {
+      "id": "growth-desktop",
+      "kind": "visual"
+    },
+    {
+      "id": "in-kind-desktop",
+      "kind": "visual"
+    },
+    {
+      "id": "portfolio-desktop",
+      "kind": "visual"
+    },
+    {
+      "id": "create-desktop",
+      "kind": "visual"
+    },
+    {
+      "id": "privacy-desktop",
+      "kind": "visual"
+    },
+    {
+      "id": "setup-desktop",
+      "kind": "visual"
+    },
+    {
+      "id": "landing-mobile",
+      "kind": "visual"
+    },
+    {
+      "id": "growth-mobile",
+      "kind": "visual"
+    },
+    {
+      "id": "in-kind-mobile",
+      "kind": "visual"
+    },
+    {
+      "id": "portfolio-mobile",
+      "kind": "visual"
+    },
+    {
+      "id": "create-mobile",
+      "kind": "visual"
+    },
+    {
+      "id": "privacy-mobile",
+      "kind": "visual"
+    },
+    {
+      "id": "setup-mobile",
+      "kind": "visual"
+    },
+    {
+      "id": "landing-tablet",
+      "kind": "visual"
+    },
+    {
+      "id": "mobile-error",
+      "kind": "visual"
+    },
+    {
+      "id": "prepare-100-and-navigate",
+      "kind": "interaction"
+    }
+  ],
+  "checks": [
+    {
+      "id": "landing-desktop",
+      "kind": "visual",
+      "status": "pass",
+      "state": "Landing with real loaded Sepolia basket data and private route; compared with the 1504x1046 visual target.",
+      "environment": {
+        "kind": "browser",
+        "name": "ChatGPT in-app Chromium; measured iframe content viewport where needed",
+        "width": 1504,
+        "height": 1046
+      },
+      "observed": "Inspected pixels for layout, wrapping, controls, disclosures and navigation; source-derived values were not substituted for chain state.",
+      "artifacts": [
+        {
+          "path": "../../screenshots/ui-polish/landing-desktop.jpg",
+          "kind": "image",
+          "sha256": "7d0fc5e9aa66ce6e2dc0e26ae38b52351e799c08e939bd0ad1c8334101f55a91"
+        }
+      ]
+    },
+    {
+      "id": "growth-desktop",
+      "kind": "visual",
+      "status": "pass",
+      "state": "Actual Growth NAV, target allocation and deposit controls; disconnected wallet.",
+      "environment": {
+        "kind": "browser",
+        "name": "ChatGPT in-app Chromium; measured iframe content viewport where needed",
+        "width": 1440,
+        "height": 1000
+      },
+      "observed": "Inspected pixels for layout, wrapping, controls, disclosures and navigation; source-derived values were not substituted for chain state.",
+      "artifacts": [
+        {
+          "path": "../../screenshots/ui-polish/growth-desktop.jpg",
+          "kind": "image",
+          "sha256": "1181bd8265fcc55809365db845ff1bfb44ddfc78082d5c58c0c3a3651cd20417"
+        }
+      ]
+    },
+    {
+      "id": "in-kind-desktop",
+      "kind": "visual",
+      "status": "pass",
+      "state": "In-kind tab with full stale-feed fee limitation visible; no transaction.",
+      "environment": {
+        "kind": "browser",
+        "name": "ChatGPT in-app Chromium; measured iframe content viewport where needed",
+        "width": 1440,
+        "height": 1000
+      },
+      "observed": "Inspected pixels for layout, wrapping, controls, disclosures and navigation; source-derived values were not substituted for chain state.",
+      "artifacts": [
+        {
+          "path": "../../screenshots/ui-polish/in-kind-desktop.jpg",
+          "kind": "image",
+          "sha256": "5fd131dbda4a46fa78212c03cb9d930fd0e59441a5948fd7295756b2c531e0b1"
+        }
+      ]
+    },
+    {
+      "id": "portfolio-desktop",
+      "kind": "visual",
+      "status": "pass",
+      "state": "Disconnected portfolio empty state, no invented position.",
+      "environment": {
+        "kind": "browser",
+        "name": "ChatGPT in-app Chromium; measured iframe content viewport where needed",
+        "width": 1440,
+        "height": 1000
+      },
+      "observed": "Inspected pixels for layout, wrapping, controls, disclosures and navigation; source-derived values were not substituted for chain state.",
+      "artifacts": [
+        {
+          "path": "../../screenshots/ui-polish/portfolio-desktop.jpg",
+          "kind": "image",
+          "sha256": "36a6acf0587e9e997b899d71d889ce24055c70d93c0993385c852b470f283dda"
+        }
+      ]
+    },
+    {
+      "id": "create-desktop",
+      "kind": "visual",
+      "status": "pass",
+      "state": "Existing form with long test name and focused symbol field; no wallet connection or submission.",
+      "environment": {
+        "kind": "browser",
+        "name": "ChatGPT in-app Chromium; measured iframe content viewport where needed",
+        "width": 1440,
+        "height": 1000
+      },
+      "observed": "Inspected pixels for layout, wrapping, controls, disclosures and navigation; source-derived values were not substituted for chain state.",
+      "artifacts": [
+        {
+          "path": "../../screenshots/ui-polish/create-desktop.jpg",
+          "kind": "image",
+          "sha256": "c15883d914bcaf855192aca67dfd43fd14c9059dc25360b9a70b4ae23cce96e8"
+        }
+      ]
+    },
+    {
+      "id": "privacy-desktop",
+      "kind": "visual",
+      "status": "pass",
+      "state": "Default private route and measured page counters visible; full privacy acceptance not claimed.",
+      "environment": {
+        "kind": "browser",
+        "name": "ChatGPT in-app Chromium; measured iframe content viewport where needed",
+        "width": 1440,
+        "height": 1000
+      },
+      "observed": "Inspected pixels for layout, wrapping, controls, disclosures and navigation; source-derived values were not substituted for chain state.",
+      "artifacts": [
+        {
+          "path": "../../screenshots/ui-polish/privacy-desktop.jpg",
+          "kind": "image",
+          "sha256": "d72439886339b1be861caec3dc4a93def15d3705d6e816e9213e29d53ef29c7e"
+        }
+      ]
+    },
+    {
+      "id": "setup-desktop",
+      "kind": "visual",
+      "status": "pass",
+      "state": "Mock faucets remain secondary; no token claim.",
+      "environment": {
+        "kind": "browser",
+        "name": "ChatGPT in-app Chromium; measured iframe content viewport where needed",
+        "width": 1440,
+        "height": 1000
+      },
+      "observed": "Inspected pixels for layout, wrapping, controls, disclosures and navigation; source-derived values were not substituted for chain state.",
+      "artifacts": [
+        {
+          "path": "../../screenshots/ui-polish/setup-desktop.jpg",
+          "kind": "image",
+          "sha256": "646c25fe10ee2d4f5403a5dad2721bc5abe6490f1898f7382683ba8edb37aedf"
+        }
+      ]
+    },
+    {
+      "id": "landing-mobile",
+      "kind": "visual",
+      "status": "pass",
+      "state": "390px landing, branded header, complete primary CTA and bottom navigation.",
+      "environment": {
+        "kind": "browser",
+        "name": "ChatGPT in-app Chromium; measured iframe content viewport where needed",
+        "width": 390,
+        "height": 844
+      },
+      "observed": "Inspected pixels for layout, wrapping, controls, disclosures and navigation; source-derived values were not substituted for chain state.",
+      "artifacts": [
+        {
+          "path": "../../screenshots/ui-polish/landing-mobile.jpg",
+          "kind": "image",
+          "sha256": "8bf11b0d45c63f7f486de7daa680678f445ad37f2f862e98ed0a4e5c1781c257"
+        }
+      ]
+    },
+    {
+      "id": "growth-mobile",
+      "kind": "visual",
+      "status": "pass",
+      "state": "Responsive live Growth summary and 100 mUSDC preparation; no signing.",
+      "environment": {
+        "kind": "browser",
+        "name": "ChatGPT in-app Chromium; measured iframe content viewport where needed",
+        "width": 390,
+        "height": 844
+      },
+      "observed": "Inspected pixels for layout, wrapping, controls, disclosures and navigation; source-derived values were not substituted for chain state.",
+      "artifacts": [
+        {
+          "path": "../../screenshots/ui-polish/growth-mobile.jpg",
+          "kind": "image",
+          "sha256": "527a3d8ec7d64279447ac8a5f4bf1946b400efcf85ade1779a67d733c05880e0"
+        }
+      ]
+    },
+    {
+      "id": "in-kind-mobile",
+      "kind": "visual",
+      "status": "pass",
+      "state": "Mobile in-kind tab selected; content scrolls above fixed navigation.",
+      "environment": {
+        "kind": "browser",
+        "name": "ChatGPT in-app Chromium; measured iframe content viewport where needed",
+        "width": 390,
+        "height": 844
+      },
+      "observed": "Inspected pixels for layout, wrapping, controls, disclosures and navigation; source-derived values were not substituted for chain state.",
+      "artifacts": [
+        {
+          "path": "../../screenshots/ui-polish/in-kind-mobile.jpg",
+          "kind": "image",
+          "sha256": "c2e2fd7aecb87c88e93a87793b749e6e5be526341cd44a9ad35a40dce6e97e46"
+        }
+      ]
+    },
+    {
+      "id": "portfolio-mobile",
+      "kind": "visual",
+      "status": "pass",
+      "state": "Keyboard-selected mobile portfolio with visible focus and disconnected empty state.",
+      "environment": {
+        "kind": "browser",
+        "name": "ChatGPT in-app Chromium; measured iframe content viewport where needed",
+        "width": 390,
+        "height": 844
+      },
+      "observed": "Inspected pixels for layout, wrapping, controls, disclosures and navigation; source-derived values were not substituted for chain state.",
+      "artifacts": [
+        {
+          "path": "../../screenshots/ui-polish/portfolio-mobile.jpg",
+          "kind": "image",
+          "sha256": "f46f00860c933a066e77ad6afa97c357c69fa6d3f8b05ed8243231a9885e70fb"
+        }
+      ]
+    },
+    {
+      "id": "create-mobile",
+      "kind": "visual",
+      "status": "pass",
+      "state": "Mobile form labels and inputs; no submission.",
+      "environment": {
+        "kind": "browser",
+        "name": "ChatGPT in-app Chromium; measured iframe content viewport where needed",
+        "width": 390,
+        "height": 844
+      },
+      "observed": "Inspected pixels for layout, wrapping, controls, disclosures and navigation; source-derived values were not substituted for chain state.",
+      "artifacts": [
+        {
+          "path": "../../screenshots/ui-polish/create-mobile.jpg",
+          "kind": "image",
+          "sha256": "abff37a1ad465be5dc57ba717e85d2e5186954b78d45aa68cf6aaa1006177146"
+        }
+      ]
+    },
+    {
+      "id": "privacy-mobile",
+      "kind": "visual",
+      "status": "pass",
+      "state": "Mobile privacy disclosures, buttons and startup observation; not a full acceptance session.",
+      "environment": {
+        "kind": "browser",
+        "name": "ChatGPT in-app Chromium; measured iframe content viewport where needed",
+        "width": 390,
+        "height": 844
+      },
+      "observed": "Inspected pixels for layout, wrapping, controls, disclosures and navigation; source-derived values were not substituted for chain state.",
+      "artifacts": [
+        {
+          "path": "../../screenshots/ui-polish/privacy-mobile.jpg",
+          "kind": "image",
+          "sha256": "bd59ba2efcabd4746f44c3e8cfafcbd823ddb78b9bc2a859e7204e41f091415a"
+        }
+      ]
+    },
+    {
+      "id": "setup-mobile",
+      "kind": "visual",
+      "status": "pass",
+      "state": "Mobile demo setup with mock-token disclosures.",
+      "environment": {
+        "kind": "browser",
+        "name": "ChatGPT in-app Chromium; measured iframe content viewport where needed",
+        "width": 390,
+        "height": 844
+      },
+      "observed": "Inspected pixels for layout, wrapping, controls, disclosures and navigation; source-derived values were not substituted for chain state.",
+      "artifacts": [
+        {
+          "path": "../../screenshots/ui-polish/setup-mobile.jpg",
+          "kind": "image",
+          "sha256": "abaf29d3402b2a2fb99dbd55a3f49916ad65d2691ffc11e0a658c5f4632ceb2d"
+        }
+      ]
+    },
+    {
+      "id": "landing-tablet",
+      "kind": "visual",
+      "status": "pass",
+      "state": "820px intermediate landing; single-column hero and partner explanations during startup.",
+      "environment": {
+        "kind": "browser",
+        "name": "ChatGPT in-app Chromium; measured iframe content viewport where needed",
+        "width": 820,
+        "height": 1180
+      },
+      "observed": "Inspected pixels for layout, wrapping, controls, disclosures and navigation; source-derived values were not substituted for chain state.",
+      "artifacts": [
+        {
+          "path": "../../screenshots/ui-polish/landing-tablet.jpg",
+          "kind": "image",
+          "sha256": "43dbd00461e4a3251dd9970d589a9dd74370fec847726d49ecaa3cef5258b1f9"
+        }
+      ]
+    },
+    {
+      "id": "mobile-error",
+      "kind": "visual",
+      "status": "pass",
+      "state": "Real HTTP request failed alert remained readable; one reload recovered without changing the immutable Nox pin.",
+      "environment": {
+        "kind": "browser",
+        "name": "ChatGPT in-app Chromium; measured iframe content viewport where needed",
+        "width": 390,
+        "height": 844
+      },
+      "observed": "Inspected pixels for layout, wrapping, controls, disclosures and navigation; source-derived values were not substituted for chain state.",
+      "artifacts": [
+        {
+          "path": "../../screenshots/ui-polish/mobile-error.jpg",
+          "kind": "image",
+          "sha256": "8bf11b0d45c63f7f486de7daa680678f445ad37f2f862e98ed0a4e5c1781c257"
+        }
+      ]
+    },
+    {
+      "id": "prepare-100-and-navigate",
+      "kind": "interaction",
+      "status": "pass",
+      "state": "Disconnected wallet; preparation and navigation only",
+      "environment": {
+        "kind": "browser",
+        "name": "ChatGPT in-app Chromium in 390px same-origin frame",
+        "width": 390,
+        "height": 844
+      },
+      "steps": [
+        "Fill the existing deposit field with 25.",
+        "Activate Put in $100; read the actual input property as 100 and selected Deposit tab.",
+        "Select Redeem and In kind; inspect the changed explanatory text without connecting or signing.",
+        "Use Enter on bottom-navigation controls to open Portfolio, Create, Privacy and Demo setup; inspect focus, headings and overflow."
+      ],
+      "observed": "Preparation reset the input to 100. Both withdrawal views and existing routes worked. No wallet connection, approval, deposit or other transaction was initiated by the agent.",
+      "artifacts": [
+        {
+          "path": "../../screenshots/ui-polish/growth-mobile.jpg",
+          "kind": "image",
+          "sha256": "527a3d8ec7d64279447ac8a5f4bf1946b400efcf85ade1779a67d733c05880e0"
+        },
+        {
+          "path": "../../screenshots/ui-polish/portfolio-mobile.jpg",
+          "kind": "image",
+          "sha256": "f46f00860c933a066e77ad6afa97c357c69fa6d3f8b05ed8243231a9885e70fb"
+        }
+      ]
+    }
+  ],
+  "intentionalDepartures": [
+    "Keep real Feeds: Chainlink / Receiver: simulation disclosure rather than the generated image\u2019s inaccurate Funds/Receipts labels.",
+    "Preserve existing licensed DM Sans and Manrope fonts, actual chain data, fees and controls. No generated balance or claim is used in the app.",
+    "Use the existing 216px sidebar and existing content instead of claiming a pixel-identical reproduction.",
+    "Keep testnet, mock, unaudited, public-holdings and stale-fee disclosures visible."
+  ],
+  "limitations": [
+    "Read-only disconnected-wallet UI checks only; signed transaction, CRE execution, full privacy acceptance, physical touch and full accessibility conformance are not established.",
+    "One real HTTP read error was captured, then a single reload recovered; no pin change or public fallback was made. Extension listener warnings are retained in browser-observations.json.",
+    "Viewport capability calls did not resize existing tabs. Temporary same-origin fixed-size frames supplied measured content viewports; harness copies retained here, removed from the product before committing."
+  ],
+  "unresolved": []
+}

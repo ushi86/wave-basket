@@ -7,10 +7,9 @@ import {
   Plus,
   RefreshCw,
   ShieldCheck,
-  Waves,
 } from "lucide-react";
 import { useState } from "react";
-import { BasketCard, PlannedCollections } from "../components/BasketCard";
+import { BasketCard } from "../components/BasketCard";
 import { formatUnits, parseUnits, type Address } from "viem";
 import { adapterAbi, tokenAbi, vaultAbi } from "../../../shared/abi";
 import {
@@ -22,7 +21,7 @@ import {
 import { AddressLink, PageTitle } from "../components/Common";
 import type { WaveProtocolModel } from "../hooks/useWaveProtocol";
 import { loadOlderHistory } from "../lib/baskets";
-import { collectionName, hasGrowthFlagship } from "../lib/collections";
+import { collectionName } from "../lib/collections";
 import {
   colors,
   errorText,
@@ -147,6 +146,19 @@ export function ExplorePage({
         </button>
       </PageTitle>
       <section className="wave-hero">
+        <svg
+          className="hero-contours"
+          viewBox="0 0 640 260"
+          fill="none"
+          aria-hidden="true"
+        >
+          {Array.from({ length: 7 }, (_, i) => (
+            <path
+              key={i}
+              d={`M-30 ${255 + i * 19} C90 ${110 + i * 17} 150 ${270 + i * 10} 275 ${180 + i * 17} S460 ${235 + i * 12} 535 ${115 + i * 16} S650 ${20 + i * 19} 700 ${45 + i * 19}`}
+            />
+          ))}
+        </svg>
         <div className="wave-hero-copy">
           <span className="eyebrow">ONE TOKEN. A WHOLE BASKET.</span>
           <h2>
@@ -180,9 +192,6 @@ export function ExplorePage({
           </small>
         </div>
         <div className="wave-hero-visual">
-          <div className="visual-wave" aria-hidden="true">
-            <Waves size={44} strokeWidth={1.25} />
-          </div>
           <span className="eyebrow">MANY ASSETS. ONE POSITION.</span>
           <h3>
             A portfolio,
@@ -337,7 +346,6 @@ export function ExplorePage({
           </div>
         )}
       </div>
-      <PlannedCollections growthAvailable={hasGrowthFlagship(config)} />
       <section id="basket-detail" className="basket-layout">
         <div className="basket-panel">
           <div className="basket-heading">
