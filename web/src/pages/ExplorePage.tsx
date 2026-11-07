@@ -18,7 +18,7 @@ import {
   HookTrading,
   PendingAllocation,
 } from "../components/BasketControls";
-import { AddressLink, PageTitle } from "../components/Common";
+import { AddressLink } from "../components/Common";
 import type { WaveProtocolModel } from "../hooks/useWaveProtocol";
 import { loadOlderHistory } from "../lib/baskets";
 import { collectionName } from "../lib/collections";
@@ -35,7 +35,6 @@ export function ExplorePage({
   model,
   selected,
   onSelect,
-  navigate,
 }: {
   model: WaveProtocolModel;
   selected?: Address;
@@ -137,35 +136,14 @@ export function ExplorePage({
   };
   return (
     <>
-      <PageTitle
-        eyebrow="A LITTLE LESS TO MANAGE"
-        title="Token baskets, in balance."
-      >
-        <button className="text-button" onClick={() => navigate("portfolio")}>
-          My portfolio <ArrowUpRight size={16} />
-        </button>
-      </PageTitle>
       <section className="wave-hero">
-        <svg
-          className="hero-contours"
-          viewBox="0 0 640 260"
-          fill="none"
-          aria-hidden="true"
-        >
-          {Array.from({ length: 7 }, (_, i) => (
-            <path
-              key={i}
-              d={`M-30 ${255 + i * 19} C90 ${110 + i * 17} 150 ${270 + i * 10} 275 ${180 + i * 17} S460 ${235 + i * 12} 535 ${115 + i * 16} S650 ${20 + i * 19} 700 ${45 + i * 19}`}
-            />
-          ))}
-        </svg>
         <div className="wave-hero-copy">
-          <span className="eyebrow">ONE TOKEN. A WHOLE BASKET.</span>
-          <h2>
+          <span className="eyebrow">TOKEN BASKETS, IN BALANCE.</span>
+          <h1>
             Put in $100.
             <br />
-            Find your balance.
-          </h2>
+            Own the basket.
+          </h1>
           <p>
             Choose a basket. Your deposit is split across its assets through
             Uniswap v4. See what you own, how it’s valued, and when its
@@ -192,36 +170,33 @@ export function ExplorePage({
           </small>
         </div>
         <div className="wave-hero-visual">
-          <span className="eyebrow">MANY ASSETS. ONE POSITION.</span>
-          <h3>
-            A portfolio,
-            <br />
-            with a little more flow.
-          </h3>
-          <div className="journey-step">
-            <span>01</span>
-            <div>
-              <b>Choose your basket</b>
-              <small>Know the assets and the fees</small>
+          {basket ? (
+            <BasketCard
+              basket={basket}
+              displayName={collectionName(basket, config)}
+              chainId={config?.chainId ?? 0}
+              symbol={(a) => token(a)?.symbol || short(a)}
+              selected
+              onSelect={() =>
+                document
+                  .getElementById("basket-detail")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            />
+          ) : (
+            <div className="hero-loading">
+              <Layers size={32} />
+              <h2>
+                {loading || !ready
+                  ? "Reading the basket…"
+                  : "No basket available"}
+              </h2>
+              <p>
+                Holdings and NAV load from the configured chain. No sample
+                balances.
+              </p>
             </div>
-            <Layers size={18} />
-          </div>
-          <div className="journey-step">
-            <span>02</span>
-            <div>
-              <b>Let the allocation happen</b>
-              <small>Onchain swaps, visible holdings</small>
-            </div>
-            <ArrowRight size={18} />
-          </div>
-          <div className="journey-step">
-            <span>03</span>
-            <div>
-              <b>Stay in the picture</b>
-              <small>Watch NAV, weights and activity</small>
-            </div>
-            <Activity size={18} />
-          </div>
+          )}
         </div>
       </section>
       <section className="partner-cards" aria-label="Three things in balance">
@@ -314,38 +289,40 @@ export function ExplorePage({
           {loading ? "Refreshing" : "Refresh"}
         </button>
       </div>
-      <div className="collection-grid">
-        {baskets.map((b) => (
-          <BasketCard
-            key={b.address}
-            basket={b}
-            displayName={collectionName(b, config)}
-            chainId={config?.chainId ?? 0}
-            symbol={(a) => token(a)?.symbol || short(a)}
-            selected={basket?.address === b.address}
-            onSelect={() => {
-              setSelected(b.address);
-              setOlder([]);
-              document
-                .getElementById("basket-detail")
-                ?.scrollIntoView({ behavior: "smooth" });
-            }}
-          />
-        ))}
-        {!baskets.length && (
-          <div className="empty-collection">
-            <Layers size={28} />
-            <h3>
-              {loading ? "Reading your baskets…" : "No baskets available"}
-            </h3>
-            <p>
-              {loading
-                ? "Loading holdings and NAV from the configured chain."
-                : "A verified deployment is needed before a basket can accept deposits. No example balances are shown."}
-            </p>
-          </div>
-        )}
-      </div>
+      {baskets.length !== 1 && (
+        <div className="collection-grid">
+          {baskets.map((b) => (
+            <BasketCard
+              key={b.address}
+              basket={b}
+              displayName={collectionName(b, config)}
+              chainId={config?.chainId ?? 0}
+              symbol={(a) => token(a)?.symbol || short(a)}
+              selected={basket?.address === b.address}
+              onSelect={() => {
+                setSelected(b.address);
+                setOlder([]);
+                document
+                  .getElementById("basket-detail")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
+            />
+          ))}
+          {!baskets.length && (
+            <div className="empty-collection">
+              <Layers size={28} />
+              <h3>
+                {loading ? "Reading your baskets…" : "No baskets available"}
+              </h3>
+              <p>
+                {loading
+                  ? "Loading holdings and NAV from the configured chain."
+                  : "A verified deployment is needed before a basket can accept deposits. No example balances are shown."}
+              </p>
+            </div>
+          )}
+        </div>
+      )}
       <section id="basket-detail" className="basket-layout">
         <div className="basket-panel">
           <div className="basket-heading">

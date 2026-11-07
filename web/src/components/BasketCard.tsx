@@ -64,6 +64,14 @@ export function BasketCard({
           />
         ))}
       </div>
+      <div className="collection-weights" aria-label="Target allocation">
+        {basket.assets.map((a, i) => (
+          <span key={a}>
+            <i style={{ background: colors[i] }} />
+            {symbol(a)} <b>{percent(basket.targets[i])}</b>
+          </span>
+        ))}
+      </div>
       <div className="collection-facts">
         <span>
           Creator fee <b>{percent(basket.fee)} of profit</b>
