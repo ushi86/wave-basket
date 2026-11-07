@@ -11,7 +11,7 @@ transforming...
 ✓ 2050 modules transformed.
 rendering chunks...
 computing gzip size...
-dist/index.html                                        0.58 kB │ gzip:   0.37 kB
+dist/index.html                                        0.58 kB │ gzip:   0.36 kB
 dist/assets/manrope-latin-500-normal-BYYD-dBL.woff2   14.04 kB
 dist/assets/manrope-latin-400-normal-PaqtzbVb.woff2   14.11 kB
 dist/assets/dm-sans-latin-600-normal-Aqo67rzb.woff2   14.14 kB
@@ -28,12 +28,12 @@ dist/assets/manrope-latin-600-normal-BqgrALkZ.woff    18.38 kB
 dist/assets/manrope-latin-700-normal-DGRFkw-m.woff    18.41 kB
 dist/assets/dm-sans-latin-700-normal-CUSSCpQX.woff    18.50 kB
 dist/assets/dm-sans-latin-500-normal-Dr3UlScf.woff    18.52 kB
-dist/assets/index-BcUFtEJF.css                        59.18 kB │ gzip:  12.51 kB
-dist/assets/ccip-Cjv9BiCW.js                           4.31 kB │ gzip:   1.95 kB
-dist/assets/index-Ct0YegHC.js                        638.07 kB │ gzip: 196.77 kB
+dist/assets/index-D-MthbMW.css                        59.24 kB │ gzip:  12.53 kB
+dist/assets/ccip-rAhvUahx.js                           4.31 kB │ gzip:   1.95 kB
+dist/assets/index-DrEaxNhE.js                        638.07 kB │ gzip: 196.77 kB
 
 (!) Some chunks are larger than 500 kB after minification. Consider:
 - Using dynamic import() to code-split the application
 - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
 - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
-✓ built in 917ms
+✓ built in 927ms

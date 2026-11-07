@@ -1,0 +1,41 @@
+Narration seconds: [5.971791383219955, 14.168299319727891, 17.34403628117914, 22.106167800453516, 20.362403628117914, 18.077142857142857, 19.573287981859412, 19.82281179138322, 15.048798185941044] Chapter seconds: [9.0, 16.0, 20.0, 25.0, 23.0, 20.0, 25.0, 25.0, 17.0]
+Rendering chapter 2/9
+Rendering chapter 3/9
+Rendering chapter 4/9
+Rendering chapter 5/9
+Rendering chapter 6/9
+Rendering chapter 7/9
+Rendering chapter 8/9
+Rendering chapter 9/9
+Encoding narration mix
+{
+  "audioTracks" : 1,
+  "chapterSeconds" : [
+    9,
+    16,
+    20,
+    25,
+    23,
+    20,
+    25,
+    25,
+    17
+  ],
+  "durationSeconds" : 180,
+  "height" : 1080,
+  "narrationSeconds" : [
+    5.971791383219955,
+    14.168299319727891,
+    17.34403628117914,
+    22.106167800453516,
+    20.362403628117914,
+    18.077142857142857,
+    19.573287981859412,
+    19.82281179138322,
+    15.048798185941044
+  ],
+  "output" : "\/Users\/hano\/Downloads\/Wave Protocol Demo\/Wave-Protocol-Demo.mp4",
+  "scope" : "Edited product walkthrough with real app captures. Not an uninterrupted live recording or transaction proof.",
+  "videoTracks" : 1,
+  "width" : 1920
+}

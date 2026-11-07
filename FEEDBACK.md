@@ -24,3 +24,8 @@ Wave vaults acquire and sell underlying mock assets through a small exact-input 
 A compact end-to-end example combining multi-decimal ERC-20 settlement, oracle-derived minimum output, mined hook deployment, and directional dynamic-fee assertions would shorten the path to an executable integration.
 
 No upstream bug is claimed. Time to first hook deployment was not tracked separately. This feedback was drafted during AI-assisted implementation and has not been submitted through the Uniswap feedback form.
+
+
+## Demo recording status — 7 November
+
+The edited captioned video shows the actual v4/PoolManager/hook UI and discloses missing live directional receipts. It is not new swap-execution evidence. The official Uniswap feedback form remains an owner action; no form confirmation or submission has been recorded.

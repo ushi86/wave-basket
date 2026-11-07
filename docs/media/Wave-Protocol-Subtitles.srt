@@ -1,0 +1,163 @@
+1
+00:00:00,550 --> 00:00:01,830
+Meet Wave Protocol.
+
+2
+00:00:01,830 --> 00:00:03,536
+Token baskets, in balance.
+
+3
+00:00:03,536 --> 00:00:06,522
+One token brings your basket into view.
+
+4
+00:00:09,550 --> 00:00:15,801
+Managing a portfolio means many swaps, constant rebalancing, and exposing reads to an RPC provider.
+
+5
+00:00:15,801 --> 00:00:23,718
+Wave brings a basket into one token, with fair value, target allocation, and private visibility in the same journey.
+
+6
+00:00:25,550 --> 00:00:27,615
+Growth is the existing flagship.
+
+7
+00:00:27,615 --> 00:00:32,157
+Assets, target weights, fees, and net asset value come from contracts.
+
+8
+00:00:32,157 --> 00:00:35,048
+This button prepares one hundred test USDC.
+
+9
+00:00:35,048 --> 00:00:40,416
+Approval and the mock token faucet are verified; the deposit is still pending.
+
+10
+00:00:40,416 --> 00:00:42,894
+No completed deposit is staged here.
+
+11
+00:00:45,550 --> 00:00:47,392
+Uniswap v4 executes the swaps.
+
+12
+00:00:47,392 --> 00:00:53,656
+Nav Guard Hook compares the approved pool price with Chainlink based net asset value before each swap.
+
+13
+00:00:53,656 --> 00:01:01,393
+Outside a one percent band, a trade toward NAV pays zero point zero five percent; a trade away pays one percent.
+
+14
+00:01:01,393 --> 00:01:05,077
+Inside the band, both pay zero point zero five percent.
+
+15
+00:01:05,077 --> 00:01:07,656
+Live directional swap receipts are still pending.
+
+16
+00:01:10,550 --> 00:01:12,812
+Chainlink feeds value the holdings.
+
+17
+00:01:12,812 --> 00:01:20,052
+CRE proposes a bounded rebalance, while the vault independently enforces weight, turnover, timing, and execution limits.
+
+18
+00:01:20,052 --> 00:01:22,315
+A genuine hold is acceptable.
+
+19
+00:01:22,315 --> 00:01:27,745
+The workflow compiles, but real CRE broadcast and receiver proof remain pending.
+
+20
+00:01:27,745 --> 00:01:30,912
+Local reports do not replace that proof.
+
+21
+00:01:33,550 --> 00:01:37,969
+Withdraw into mock USDC, or take the underlying assets in kind.
+
+22
+00:01:37,969 --> 00:01:39,977
+Healthy feeds crystallize creator fees.
+
+23
+00:01:39,977 --> 00:01:46,807
+Stale feed in kind exits stay immediate and pro rata after the withdrawal fee, with no reserve.
+
+24
+00:01:46,807 --> 00:01:49,217
+They can avoid uncrystallized creator fees.
+
+25
+00:01:49,217 --> 00:01:51,627
+These are controls, not completed withdrawals.
+
+26
+00:01:53,550 --> 00:01:56,882
+Anon RPC is the default for application reads.
+
+27
+00:01:56,882 --> 00:02:00,630
+This short session shows actual startup and method counters.
+
+28
+00:02:00,630 --> 00:02:05,211
+Stopping the private worker rejects a read without increasing direct successes.
+
+29
+00:02:05,211 --> 00:02:08,542
+It is partial evidence, not full lifecycle acceptance.
+
+30
+00:02:08,542 --> 00:02:11,041
+Wallet RPC and bootstrap are separate.
+
+31
+00:02:11,041 --> 00:02:13,123
+On chain holdings remain public.
+
+32
+00:02:18,550 --> 00:02:27,517
+The public record verifies forty two deployment transactions, plus approval and the mock token faucet, using PublicNode and Tenderly.
+
+33
+00:02:27,517 --> 00:02:30,821
+Provider diversity does not prove independent infrastructure.
+
+34
+00:02:30,821 --> 00:02:33,181
+Sixty eight local tests pass.
+
+35
+00:02:33,181 --> 00:02:38,373
+Missing live deposits, swaps, withdrawals, and CRE execution stay visibly pending.
+
+36
+00:02:43,550 --> 00:02:44,625
+Wave Protocol.
+
+37
+00:02:44,625 --> 00:02:46,775
+Token baskets, in balance.
+
+38
+00:02:46,775 --> 00:02:48,387
+Uniswap for execution.
+
+39
+00:02:48,387 --> 00:02:51,612
+Chainlink for valuation and bounded allocation.
+
+40
+00:02:51,612 --> 00:02:54,837
+Anon RPC for less RPC exposure.
+
+41
+00:02:54,837 --> 00:02:58,599
+Unaudited Sepolia, mock assets, no promised returns.

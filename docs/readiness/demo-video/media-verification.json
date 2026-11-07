@@ -1,0 +1,50 @@
+{
+  "audioCodec": "aac ",
+  "audioDecodedToEnd": true,
+  "audioPeak": 0.06315132975578308,
+  "audioRms": 0.015798917571050407,
+  "audioSampleValues": 3969000,
+  "durationSeconds": 180,
+  "file": "/Users/hano/Downloads/Wave Protocol Demo/Wave-Protocol-Demo.mp4",
+  "fps": 24,
+  "height": 1080,
+  "scope": "Technical media checks only. Visual keyframes reviewed separately; not live transaction or full privacy acceptance.",
+  "videoCodec": "avc1",
+  "width": 1920,
+  "publicArtifact": "docs/media/Wave-Protocol-Demo.mp4",
+  "sha256": "16f0b520cf77c2bec6cdb4464fa1e17a1940a5448b3ca42a65c0f04166195277",
+  "bytes": 34875732,
+  "publicAudio": "Original authored tone score only; no Apple System Voice audio",
+  "captions": "Authored script; word-weighted chapter timing, not an ASR transcript",
+  "reviewedFrameSeconds": [
+    3,
+    16,
+    36,
+    58,
+    80,
+    104,
+    124,
+    150,
+    172
+  ],
+  "playbackCheck": "Narrated private preview opened and advanced in QuickTime; public copy uses identical picture with replacement music-only AAC, decoded to end. Full-film human audition is not claimed.",
+  "pictureSourceSha256": "b9054a24b01970eceafb6c6c83978d3a67b8b37772bb3d33cda625837cd76aeb",
+  "originalScoreSha256": "c2fd0e3252afb30b5d2c6c65be0d068e5a495b0afc4c450458f10191c047cd5e",
+  "assets": [
+    {
+      "path": "docs/media/Wave-Protocol-Demo.mp4",
+      "sha256": "16f0b520cf77c2bec6cdb4464fa1e17a1940a5448b3ca42a65c0f04166195277",
+      "bytes": 34875732
+    },
+    {
+      "path": "docs/media/Wave-Protocol-Subtitles.srt",
+      "sha256": "8552d64a82c7ef8f95d715f44ec246f2c5257c545ddd62233f43433f79c401e0",
+      "bytes": 3727
+    },
+    {
+      "path": "docs/media/Wave-Protocol-Voiceover-Script.md",
+      "sha256": "8c9cf7f54b0093c663d109a654b14740d965c0783af5fc1ea5b4a91513ae0822",
+      "bytes": 2927
+    }
+  ]
+}

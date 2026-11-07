@@ -1,5 +1,7 @@
 # Owner submission kit — draft, not submitted
 
+A [three-minute edited captioned walkthrough](media/Wave-Protocol-Demo.mp4) and [voiceover script](media/Wave-Protocol-Voiceover-Script.md) are now available. It contains original music, real UI captures and explicit pending labels; it does not demonstrate completed deposits, swaps, exits or real CRE execution. No public video-hosting upload, feedback-form confirmation or ETHGlobal submission has been performed. The owner's stated 09:00 IST close had passed at the final clock check. Historical recording suggestions below remain conditional on obtaining genuine proof.
+
 Readiness is incomplete. Do not describe local Anvil, mock forwarding, workflow compilation or a worker-only probe as canonical Sepolia or CRE CLI evidence. Confirm event kickoff/track, public source, genuine integration evidence and current partner rules before recording final claims. No form or event submission has been sent.
 
 ## Submission narrative

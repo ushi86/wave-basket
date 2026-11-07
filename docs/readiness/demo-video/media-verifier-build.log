@@ -1,0 +1,25 @@
+docs/readiness/demo-video/verify-media.swift:15:10: warning: 'add' was deprecated in macOS 27.0: Use the appropriate AVAssetReader.outputProvider(for:...) overload for your output and optional adaptor instead [#DeprecatedDeclaration]
+13 |   guard abs(duration-180)<0.01,size.width==1920,size.height==1080,abs(fps-24)<0.01 else {throw Invalid(message:"Wrong duration, dimensions or frame rate")}
+14 |   let reader=try AVAssetReader(asset:asset),output=AVAssetReaderTrackOutput(track:audios[0],outputSettings:[AVFormatIDKey:kAudioFormatLinearPCM,AVLinearPCMIsFloatKey:true,AVLinearPCMBitDepthKey:32,AVLinearPCMIsNonInterleaved:false])
+15 |   reader.add(output);guard reader.startReading() else {throw Invalid(message:"Audio decode failed")};var count=0;var squared=0.0;var peak=0.0
+   |          `- warning: 'add' was deprecated in macOS 27.0: Use the appropriate AVAssetReader.outputProvider(for:...) overload for your output and optional adaptor instead [#DeprecatedDeclaration]
+16 |   while let sample=output.copyNextSampleBuffer() {if let data=CMSampleBufferGetDataBuffer(sample) {let bytes=CMBlockBufferGetDataLength(data);var values=[Float](repeating:0,count:bytes/4);let copied=values.withUnsafeMutableBytes{CMBlockBufferCopyDataBytes(data,atOffset:0,dataLength:bytes,destination:$0.baseAddress!)};guard copied==kCMBlockBufferNoErr else {throw Invalid(message:"Audio data unavailable")};for f in values {let v=Double(f);squared+=v*v;peak=max(peak,abs(v))};count+=values.count}}
+17 |   guard reader.status == .completed,count>0,squared>0,peak<1.001 else {throw Invalid(message:"Missing, silent, clipped or incompletely decoded audio")}
+
+docs/readiness/demo-video/verify-media.swift:15:35: warning: 'startReading()' was deprecated in macOS 27.0: Use start() instead [#DeprecatedDeclaration]
+13 |   guard abs(duration-180)<0.01,size.width==1920,size.height==1080,abs(fps-24)<0.01 else {throw Invalid(message:"Wrong duration, dimensions or frame rate")}
+14 |   let reader=try AVAssetReader(asset:asset),output=AVAssetReaderTrackOutput(track:audios[0],outputSettings:[AVFormatIDKey:kAudioFormatLinearPCM,AVLinearPCMIsFloatKey:true,AVLinearPCMBitDepthKey:32,AVLinearPCMIsNonInterleaved:false])
+15 |   reader.add(output);guard reader.startReading() else {throw Invalid(message:"Audio decode failed")};var count=0;var squared=0.0;var peak=0.0
+   |                                   `- warning: 'startReading()' was deprecated in macOS 27.0: Use start() instead [#DeprecatedDeclaration]
+16 |   while let sample=output.copyNextSampleBuffer() {if let data=CMSampleBufferGetDataBuffer(sample) {let bytes=CMBlockBufferGetDataLength(data);var values=[Float](repeating:0,count:bytes/4);let copied=values.withUnsafeMutableBytes{CMBlockBufferCopyDataBytes(data,atOffset:0,dataLength:bytes,destination:$0.baseAddress!)};guard copied==kCMBlockBufferNoErr else {throw Invalid(message:"Audio data unavailable")};for f in values {let v=Double(f);squared+=v*v;peak=max(peak,abs(v))};count+=values.count}}
+17 |   guard reader.status == .completed,count>0,squared>0,peak<1.001 else {throw Invalid(message:"Missing, silent, clipped or incompletely decoded audio")}
+
+docs/readiness/demo-video/verify-media.swift:16:27: warning: 'copyNextSampleBuffer()' was deprecated in macOS 27.0: Use AVAssetReaderOutput.Provider.next() instead [#DeprecatedDeclaration]
+14 |   let reader=try AVAssetReader(asset:asset),output=AVAssetReaderTrackOutput(track:audios[0],outputSettings:[AVFormatIDKey:kAudioFormatLinearPCM,AVLinearPCMIsFloatKey:true,AVLinearPCMBitDepthKey:32,AVLinearPCMIsNonInterleaved:false])
+15 |   reader.add(output);guard reader.startReading() else {throw Invalid(message:"Audio decode failed")};var count=0;var squared=0.0;var peak=0.0
+16 |   while let sample=output.copyNextSampleBuffer() {if let data=CMSampleBufferGetDataBuffer(sample) {let bytes=CMBlockBufferGetDataLength(data);var values=[Float](repeating:0,count:bytes/4);let copied=values.withUnsafeMutableBytes{CMBlockBufferCopyDataBytes(data,atOffset:0,dataLength:bytes,destination:$0.baseAddress!)};guard copied==kCMBlockBufferNoErr else {throw Invalid(message:"Audio data unavailable")};for f in values {let v=Double(f);squared+=v*v;peak=max(peak,abs(v))};count+=values.count}}
+   |                           `- warning: 'copyNextSampleBuffer()' was deprecated in macOS 27.0: Use AVAssetReaderOutput.Provider.next() instead [#DeprecatedDeclaration]
+17 |   guard reader.status == .completed,count>0,squared>0,peak<1.001 else {throw Invalid(message:"Missing, silent, clipped or incompletely decoded audio")}
+18 |   let report:[String:Any]=["file":url.path,"durationSeconds":duration,"width":size.width,"height":size.height,"fps":fps,"videoCodec":fourcc(CMFormatDescriptionGetMediaSubType(vd[0])),"audioCodec":fourcc(CMFormatDescriptionGetMediaSubType(ad[0])),"audioDecodedToEnd":true,"audioSampleValues":count,"audioRms":sqrt(squared/Double(count)),"audioPeak":peak,"scope":"Technical media checks only. Visual keyframes reviewed separately; not live transaction or full privacy acceptance."]
+
+[#DeprecatedDeclaration]: <https://docs.swift.org/compiler/documentation/diagnostics/deprecated-declaration>

@@ -1,5 +1,7 @@
 # Wave Protocol
 
+**Demo video:** [three-minute captioned walkthrough](docs/media/Wave-Protocol-Demo.mp4), with the redesigned app, original music, [subtitles](docs/media/Wave-Protocol-Subtitles.srt) and [voiceover script](docs/media/Wave-Protocol-Voiceover-Script.md). This is edited read-only app footage. Deposit, directional swaps, withdrawals and real CRE execution remain pending; it is not a completed live-flow recording. [Media and capture verification](docs/readiness/demo-video/HANDOFF.md).
+
 **Token baskets, in balance.**
 
 Managing a token portfolio usually means many swaps, constant rebalancing, and exposing what you hold to an RPC provider. Wave Protocol turns a basket into one ERC-20 token and keeps three things in balance:
@@ -161,3 +163,6 @@ Own application source is MIT licensed. Third-party dependencies retain their li
 - [Chainlink consumer contracts, metadata, and simulation limitations](https://docs.chain.link/cre/guides/workflow/using-evm-client/onchain-write/building-consumer-contracts)
 - [CRE TypeScript SDK](https://github.com/smartcontractkit/cre-sdk-typescript)
 - [Anon-RPC specification](https://ethereum.github.io/anon-rpc/spec/)
+
+
+**Partial Anon-RPC observation — 7 November:** Chromium 157, immutable Nox 0.4.0, actual 3.2643s startup; 208 anonymous and 2 bootstrap successes, zero direct successes, one deliberately failed private read. Successful anonymous coverage was 99.0476%. Stopping the worker rejected the read with direct successes 0 → 0. [Original export](docs/readiness/demo-video/privacy-after.json), [failure capture](docs/screenshots/demo-video/privacy-failed.jpg). No wallet was connected and no lifecycle action was observed, so full privacy acceptance remains unproven. On-chain holdings remain public.

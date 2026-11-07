@@ -1,0 +1,467 @@
+{
+  "schemaVersion": "uizze.visual-evidence.v1",
+  "platform": "web",
+  "scope": "Approved replacement Wave UI and edited demo captures. Read-only/disconnected-wallet checks; no pixel-perfect, full-lifecycle or production-readiness claim.",
+  "recordedAt": "2026-11-07T03:30:13.331961+00:00",
+  "sourceCommit": "d64b19ffcc8695626684678dfd70099b198f9b1c",
+  "sources": [
+    {
+      "path": "../../../web/src/App.tsx",
+      "sha256": "af91dea18f41a7079b92594e75810cc1f2074175a38aa73e1b1a9c35d5de0e83"
+    },
+    {
+      "path": "../../../web/src/main.tsx",
+      "sha256": "3d4397179592a3f88d4107f8032ed9506c9209d47f1bfd81c336a1fc57634b04"
+    },
+    {
+      "path": "../../../web/src/pages/ExplorePage.tsx",
+      "sha256": "7b35193a265d4819c00d81730addae673b2663f8e8b2c9108626d6bd34652ffc"
+    },
+    {
+      "path": "../../../web/src/components/BasketCard.tsx",
+      "sha256": "a862f31bf0c73625036f1d2e7dea604344581bb1d59c28d4b01aa9cb73781b7a"
+    },
+    {
+      "path": "../../../web/src/styles.css",
+      "sha256": "f99e81acb8bd42cc2dee583914de581ef4d681997048bff62fb368f2a5554b50"
+    },
+    {
+      "path": "../../../web/src/polish.css",
+      "sha256": "f04ee125f245a2e41d583dacb6300ee278e0f094f0382a2b48117f3a4e57063d"
+    },
+    {
+      "path": "../../../web/src/lib/format.ts",
+      "sha256": "f1de45d2a3c53847d971c6b769617f7239f0afbbc3565a4e373f6dfdb25e96cc"
+    },
+    {
+      "path": "../../../web/public/deployment.json",
+      "sha256": "679ab6eb93af54f46b0be3054ce61cf8c1bf32d42e77295c20512887c7058f5e"
+    },
+    {
+      "path": "../../../package-lock.json",
+      "sha256": "b981003d63bbb9b84c2518fd623a831ae411681fe38414440fd4f551d759d34b"
+    }
+  ],
+  "comparison": "target",
+  "target": {
+    "path": "../../screenshots/demo-video/design-target.png",
+    "kind": "image",
+    "sha256": "ea97252a7283155e34bc0622805b4a0d1600552104f795cf134a1fc7e362cbc6"
+  },
+  "targetDimensions": {
+    "width": 1487,
+    "height": 1058
+  },
+  "requiredChecks": [
+    {
+      "id": "target-viewport",
+      "kind": "visual"
+    },
+    {
+      "id": "deposit",
+      "kind": "visual"
+    },
+    {
+      "id": "holdings",
+      "kind": "visual"
+    },
+    {
+      "id": "hook",
+      "kind": "visual"
+    },
+    {
+      "id": "cre",
+      "kind": "visual"
+    },
+    {
+      "id": "limits",
+      "kind": "visual"
+    },
+    {
+      "id": "redeem",
+      "kind": "visual"
+    },
+    {
+      "id": "in-kind",
+      "kind": "visual"
+    },
+    {
+      "id": "privacy-before",
+      "kind": "visual"
+    },
+    {
+      "id": "privacy-failed",
+      "kind": "visual"
+    },
+    {
+      "id": "portfolio",
+      "kind": "visual"
+    },
+    {
+      "id": "create",
+      "kind": "visual"
+    },
+    {
+      "id": "setup",
+      "kind": "visual"
+    },
+    {
+      "id": "mobile",
+      "kind": "visual"
+    },
+    {
+      "id": "mobile-growth",
+      "kind": "visual"
+    },
+    {
+      "id": "prepare-and-fail-closed",
+      "kind": "interaction"
+    }
+  ],
+  "checks": [
+    {
+      "id": "target-viewport",
+      "kind": "visual",
+      "status": "pass",
+      "state": "Actual replacement landing at the generated target dimensions; real state replaces illustrative dashes.",
+      "environment": {
+        "kind": "browser",
+        "name": "ChatGPT in-app Chromium; fixed same-origin frame when needed",
+        "width": 1487,
+        "height": 1058
+      },
+      "observed": "Inspected the actual image for hierarchy, readable controls, reachable disclosures and no page-wide overflow in observed responsive states.",
+      "artifacts": [
+        {
+          "path": "../../screenshots/demo-video/target-viewport.jpg",
+          "kind": "image",
+          "sha256": "a2fd067ba5d5b11abb435612987c34af3f12309b7f2fd15be7ae72937c807371"
+        }
+      ]
+    },
+    {
+      "id": "deposit",
+      "kind": "visual",
+      "status": "pass",
+      "state": "Prepared 100 mUSDC with positive existing tolerance and no wallet connection; Growth heading clears fixed header.",
+      "environment": {
+        "kind": "browser",
+        "name": "ChatGPT in-app Chromium; fixed same-origin frame when needed",
+        "width": 1440,
+        "height": 1000
+      },
+      "observed": "Inspected the actual image for hierarchy, readable controls, reachable disclosures and no page-wide overflow in observed responsive states.",
+      "artifacts": [
+        {
+          "path": "../../screenshots/demo-video/deposit.jpg",
+          "kind": "image",
+          "sha256": "f695f39791e8cf2c0c26f17cbc5bacc6a81ece8da5149fc67443c33155e144c9"
+        }
+      ]
+    },
+    {
+      "id": "holdings",
+      "kind": "visual",
+      "status": "pass",
+      "state": "Contract-valued assets and actual/target weights; no invented personal position.",
+      "environment": {
+        "kind": "browser",
+        "name": "ChatGPT in-app Chromium; fixed same-origin frame when needed",
+        "width": 1440,
+        "height": 1000
+      },
+      "observed": "Inspected the actual image for hierarchy, readable controls, reachable disclosures and no page-wide overflow in observed responsive states.",
+      "artifacts": [
+        {
+          "path": "../../screenshots/demo-video/holdings.jpg",
+          "kind": "image",
+          "sha256": "d675d9e312eb412943da61bd485e3f6f77b839adda4896adf2f5fdb183be4168"
+        }
+      ]
+    },
+    {
+      "id": "hook",
+      "kind": "visual",
+      "status": "pass",
+      "state": "Current pool/NAV read and configured hook rule; no directional swap claimed.",
+      "environment": {
+        "kind": "browser",
+        "name": "ChatGPT in-app Chromium; fixed same-origin frame when needed",
+        "width": 1440,
+        "height": 1000
+      },
+      "observed": "Inspected the actual image for hierarchy, readable controls, reachable disclosures and no page-wide overflow in observed responsive states.",
+      "artifacts": [
+        {
+          "path": "../../screenshots/demo-video/hook.jpg",
+          "kind": "image",
+          "sha256": "848f95b4af6917c0101e972dae8b73cea1c467368f07cd262c03565247717220"
+        }
+      ]
+    },
+    {
+      "id": "cre",
+      "kind": "visual",
+      "status": "pass",
+      "state": "Genuine empty rebalance history; no CRE execution fabricated.",
+      "environment": {
+        "kind": "browser",
+        "name": "ChatGPT in-app Chromium; fixed same-origin frame when needed",
+        "width": 1440,
+        "height": 1000
+      },
+      "observed": "Inspected the actual image for hierarchy, readable controls, reachable disclosures and no page-wide overflow in observed responsive states.",
+      "artifacts": [
+        {
+          "path": "../../screenshots/demo-video/cre.jpg",
+          "kind": "image",
+          "sha256": "8cbdf82d3f882ddc0a2da7c907dfb6e07feb94d7975de644f4a0df016fc9d346"
+        }
+      ]
+    },
+    {
+      "id": "limits",
+      "kind": "visual",
+      "status": "pass",
+      "state": "Unchanged on-chain weight, turnover and timing limits.",
+      "environment": {
+        "kind": "browser",
+        "name": "ChatGPT in-app Chromium; fixed same-origin frame when needed",
+        "width": 1440,
+        "height": 1000
+      },
+      "observed": "Inspected the actual image for hierarchy, readable controls, reachable disclosures and no page-wide overflow in observed responsive states.",
+      "artifacts": [
+        {
+          "path": "../../screenshots/demo-video/limits.jpg",
+          "kind": "image",
+          "sha256": "6b57b7fa52a468ad0552ed9bc1f615d832f9b80789138ce3a244efd39d3ece37"
+        }
+      ]
+    },
+    {
+      "id": "redeem",
+      "kind": "visual",
+      "status": "pass",
+      "state": "Settlement withdrawal interface without execution.",
+      "environment": {
+        "kind": "browser",
+        "name": "ChatGPT in-app Chromium; fixed same-origin frame when needed",
+        "width": 1440,
+        "height": 1000
+      },
+      "observed": "Inspected the actual image for hierarchy, readable controls, reachable disclosures and no page-wide overflow in observed responsive states.",
+      "artifacts": [
+        {
+          "path": "../../screenshots/demo-video/redeem.jpg",
+          "kind": "image",
+          "sha256": "9b93a902709893d27586b656612f112f864e69536ad3abc2b18d753d956b3a2b"
+        }
+      ]
+    },
+    {
+      "id": "in-kind",
+      "kind": "visual",
+      "status": "pass",
+      "state": "In-kind controls and explicit stale-feed fee limitation, without execution.",
+      "environment": {
+        "kind": "browser",
+        "name": "ChatGPT in-app Chromium; fixed same-origin frame when needed",
+        "width": 1487,
+        "height": 1058
+      },
+      "observed": "Inspected the actual image for hierarchy, readable controls, reachable disclosures and no page-wide overflow in observed responsive states.",
+      "artifacts": [
+        {
+          "path": "../../screenshots/demo-video/in-kind.jpg",
+          "kind": "image",
+          "sha256": "43819a3f9444f6cac6bcb88d36e3fbc09ebfed3f6416ed1b20c032917a60e668"
+        }
+      ]
+    },
+    {
+      "id": "privacy-before",
+      "kind": "visual",
+      "status": "pass",
+      "state": "Actual active private route, startup and counters in a partial read-only session.",
+      "environment": {
+        "kind": "browser",
+        "name": "ChatGPT in-app Chromium; fixed same-origin frame when needed",
+        "width": 1440,
+        "height": 820
+      },
+      "observed": "Inspected the actual image for hierarchy, readable controls, reachable disclosures and no page-wide overflow in observed responsive states.",
+      "artifacts": [
+        {
+          "path": "../../screenshots/demo-video/privacy-before.jpg",
+          "kind": "image",
+          "sha256": "a57a294dd4d40be02fb1ace63f43edf9ec00f446843b83af3fa6b64cb8d89376"
+        }
+      ]
+    },
+    {
+      "id": "privacy-failed",
+      "kind": "visual",
+      "status": "pass",
+      "state": "Worker actually stopped; private read rejected, direct successes 0 to 0.",
+      "environment": {
+        "kind": "browser",
+        "name": "ChatGPT in-app Chromium; fixed same-origin frame when needed",
+        "width": 1440,
+        "height": 820
+      },
+      "observed": "Inspected the actual image for hierarchy, readable controls, reachable disclosures and no page-wide overflow in observed responsive states.",
+      "artifacts": [
+        {
+          "path": "../../screenshots/demo-video/privacy-failed.jpg",
+          "kind": "image",
+          "sha256": "2eb1520ba84f8eb8cb34fb2fcbfab1e2bc9840b1c6ecea7d947b7fa1f12e4e8c"
+        }
+      ]
+    },
+    {
+      "id": "portfolio",
+      "kind": "visual",
+      "status": "pass",
+      "state": "Disconnected portfolio; no sample position.",
+      "environment": {
+        "kind": "browser",
+        "name": "ChatGPT in-app Chromium; fixed same-origin frame when needed",
+        "width": 1440,
+        "height": 1000
+      },
+      "observed": "Inspected the actual image for hierarchy, readable controls, reachable disclosures and no page-wide overflow in observed responsive states.",
+      "artifacts": [
+        {
+          "path": "../../screenshots/demo-video/portfolio.jpg",
+          "kind": "image",
+          "sha256": "76c44ab57b3c912d340f6856ab55017b5d8d0a86b2d4326e44fcba3f7b3c50c9"
+        }
+      ]
+    },
+    {
+      "id": "create",
+      "kind": "visual",
+      "status": "pass",
+      "state": "Existing create form; no creation or signature.",
+      "environment": {
+        "kind": "browser",
+        "name": "ChatGPT in-app Chromium; fixed same-origin frame when needed",
+        "width": 1440,
+        "height": 1000
+      },
+      "observed": "Inspected the actual image for hierarchy, readable controls, reachable disclosures and no page-wide overflow in observed responsive states.",
+      "artifacts": [
+        {
+          "path": "../../screenshots/demo-video/create.jpg",
+          "kind": "image",
+          "sha256": "2e176350ed99d125f8ee90012e2c6598b91676d3ec21271b58443582491a7adf"
+        }
+      ]
+    },
+    {
+      "id": "setup",
+      "kind": "visual",
+      "status": "pass",
+      "state": "Secondary mock-token setup; no claim submitted.",
+      "environment": {
+        "kind": "browser",
+        "name": "ChatGPT in-app Chromium; fixed same-origin frame when needed",
+        "width": 613,
+        "height": 827
+      },
+      "observed": "Inspected the actual image for hierarchy, readable controls, reachable disclosures and no page-wide overflow in observed responsive states.",
+      "artifacts": [
+        {
+          "path": "../../screenshots/demo-video/setup.jpg",
+          "kind": "image",
+          "sha256": "f2103110d20e46628b921d396d37e57c07f6c0049b54f78694742d1646110394"
+        }
+      ]
+    },
+    {
+      "id": "mobile",
+      "kind": "visual",
+      "status": "pass",
+      "state": "390px landing, working primary CTA and bottom navigation.",
+      "environment": {
+        "kind": "browser",
+        "name": "ChatGPT in-app Chromium; fixed same-origin frame when needed",
+        "width": 390,
+        "height": 844
+      },
+      "observed": "Inspected the actual image for hierarchy, readable controls, reachable disclosures and no page-wide overflow in observed responsive states.",
+      "artifacts": [
+        {
+          "path": "../../screenshots/demo-video/mobile.jpg",
+          "kind": "image",
+          "sha256": "be0875b9870960bb2edde8deb7c09075ba46db6f46fc67ec360d0ac3aa772466"
+        }
+      ]
+    },
+    {
+      "id": "mobile-growth",
+      "kind": "visual",
+      "status": "pass",
+      "state": "390px contract-backed Growth preview, full text and action reachable by scroll.",
+      "environment": {
+        "kind": "browser",
+        "name": "ChatGPT in-app Chromium; fixed same-origin frame when needed",
+        "width": 390,
+        "height": 844
+      },
+      "observed": "Inspected the actual image for hierarchy, readable controls, reachable disclosures and no page-wide overflow in observed responsive states.",
+      "artifacts": [
+        {
+          "path": "../../screenshots/demo-video/mobile-growth.jpg",
+          "kind": "image",
+          "sha256": "fa113df1d9cc1dd45dfdb07369130396e4783a49bb5096aed9509b75c0e30197"
+        }
+      ]
+    },
+    {
+      "id": "prepare-and-fail-closed",
+      "kind": "interaction",
+      "status": "pass",
+      "state": "Read-only app session; no wallet attached",
+      "environment": {
+        "kind": "browser",
+        "name": "ChatGPT in-app Chromium 157",
+        "width": 1440,
+        "height": 1000
+      },
+      "steps": [
+        "Activate Put in $100; inspect the actual input value as 100.",
+        "Open View basket; verify Growth heading remains below the fixed 76px header.",
+        "Switch Redeem and In kind; inspect both real explanatory states without signing.",
+        "Open Privacy and export the original partial measurement.",
+        "Stop the real private worker; inspect rejected read and direct successes 0 \u2192 0.",
+        "Export the after measurement, reload to reconnect, then restore Explore."
+      ],
+      "observed": "Actions worked without any financial transaction. Raw exports report partial-session and an empty lifecycle.",
+      "artifacts": [
+        {
+          "path": "../../screenshots/demo-video/deposit.jpg",
+          "kind": "image",
+          "sha256": "f695f39791e8cf2c0c26f17cbc5bacc6a81ece8da5149fc67443c33155e144c9"
+        },
+        {
+          "path": "../../screenshots/demo-video/privacy-failed.jpg",
+          "kind": "image",
+          "sha256": "2eb1520ba84f8eb8cb34fb2fcbfab1e2bc9840b1c6ecea7d947b7fa1f12e4e8c"
+        }
+      ]
+    }
+  ],
+  "intentionalDepartures": [
+    "Keep truthful existing safety/privacy/feed/simulation copy rather than generated claims of reliability or one-transaction exposure.",
+    "Use actual on-chain basket alias/provenance, values and weights; no generated numbers are used as evidence.",
+    "Preserve existing licensed fonts, icons and real controls. Replacement composition is not claimed pixel-identical."
+  ],
+  "limitations": [
+    "No connected-wallet flow, CRE broadcast or full privacy lifecycle acceptance occurred.",
+    "Mobile uses a measured same-origin browser frame; physical touch and complete accessibility conformance were not tested.",
+    "The direct browser view was resized during capture; actual image dimensions are recorded and fixed frames were used for final matching views."
+  ],
+  "unresolved": []
+}

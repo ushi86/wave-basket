@@ -1,0 +1,60 @@
+{
+  "scope": "Actual read-only UI capture and short fail-closed demonstration; no signatures, broadcasts or full lifecycle proof",
+  "capturedAt": "2026-11-07T00:23:47.194Z",
+  "sourceCommit": "d64b19ffcc8695626684678dfd70099b198f9b1c",
+  "desktopCaptureSizes": [
+    "1440x1000 viewport captures",
+    "1440x820 top-of-page crops",
+    "1487x1058 fixed same-origin frame"
+  ],
+  "mobileCaptureSize": "390x844 fixed same-origin frame",
+  "additionalObservedSize": {
+    "documentWidth": 613,
+    "height": 827,
+    "width": 613
+  },
+  "privateSession": "privacy-before.json and privacy-after.json are original browser exports, explicitly partial-session. No pin or routing changes.",
+  "notes": [
+    "Native document-coordinate screenshot crops initially captured the page top; replaced affected section assets with true viewport screenshots and re-rendered.",
+    "Browser UI was resized during capture. Final in-kind shot uses a measured fixed-size frame.",
+    "No wallet was connected in the recording browser. Deposit, swaps, withdrawals and CRE remain pending."
+  ],
+  "console": [
+    {
+      "level": "warn",
+      "message": "MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 close listeners added. Use emitter.setMaxListeners() to increase limit",
+      "timestamp": "2026-11-07T00:16:28.050Z",
+      "url": "chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/scripts/contentscript.js"
+    },
+    {
+      "level": "warn",
+      "message": "MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 end listeners added. Use emitter.setMaxListeners() to increase limit",
+      "timestamp": "2026-11-07T00:16:28.050Z",
+      "url": "chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/scripts/contentscript.js"
+    },
+    {
+      "level": "warn",
+      "message": "ObjectMultiplex - orphaned data for stream \"app-init-liveness\"",
+      "timestamp": "2026-11-07T00:16:28.053Z",
+      "url": "chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/scripts/contentscript.js"
+    },
+    {
+      "level": "warn",
+      "message": "ObjectMultiplex - orphaned data for stream \"app-init-liveness\"",
+      "timestamp": "2026-11-07T00:16:28.053Z",
+      "url": "chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/scripts/contentscript.js"
+    },
+    {
+      "level": "warn",
+      "message": "ObjectMultiplex - orphaned data for stream \"background-liveness\"",
+      "timestamp": "2026-11-07T00:16:28.053Z",
+      "url": "chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/scripts/contentscript.js"
+    },
+    {
+      "level": "warn",
+      "message": "ObjectMultiplex - orphaned data for stream \"background-liveness\"",
+      "timestamp": "2026-11-07T00:16:28.053Z",
+      "url": "chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/scripts/contentscript.js"
+    }
+  ]
+}

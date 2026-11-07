@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "browser": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36",
+  "environment": "sepolia",
+  "scope": "partial-session",
+  "verification": "unverified-browser-observation",
+  "releaseCommit": "d64b19ffcc8695626684678dfd70099b198f9b1c",
+  "workingTreeDirty": false,
+  "startedAt": "2026-11-07T00:13:02.807Z",
+  "finishedAt": "2026-11-07T00:16:10.454Z",
+  "workerSpecifier": "0xDf5Db854BA75B52a4bF1a250a93D8d25cB982b2d",
+  "harnessVersion": "0.4.0",
+  "startupSeconds": 3.2642999999821187,
+  "rpcOrigin": "https://ethereum-sepolia-rpc.publicnode.com",
+  "mockComponents": {
+    "tokens": true,
+    "oracleMode": "chainlink",
+    "receiverMode": "simulation"
+  },
+  "routes": {
+    "anon": 207,
+    "bootstrap": 2,
+    "direct": 0,
+    "failed": 0,
+    "attempted": 209
+  },
+  "coveragePercent": 99.04306220095694,
+  "methods": {
+    "bootstrap:eth_call": {
+      "attempted": 2,
+      "successful": 2
+    },
+    "anon:eth_call": {
+      "attempted": 207,
+      "successful": 207
+    }
+  },
+  "lifecycle": {},
+  "observations": [],
+  "failureDemo": null
+}

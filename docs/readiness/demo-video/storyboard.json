@@ -1,0 +1,158 @@
+{
+  "credits": "Public copy: authored captions, actual app captures and original tone score. Apple System Voice preview audio is excluded from this public file.",
+  "duration": 180,
+  "fps": 24,
+  "height": 1080,
+  "output": "/Users/hano/Downloads/Wave Protocol Demo/Wave-Protocol-Demo.mp4",
+  "scenes": [
+    {
+      "audio": "/Users/hano/Downloads/Wave Protocol Demo/voice-00.aiff",
+      "bullets": [],
+      "duration": 9,
+      "images": [],
+      "kicker": "TOKEN BASKETS, IN BALANCE.",
+      "narration": "Meet Wave Protocol. Token baskets, in balance. One token brings your basket into view.",
+      "partner": "ETHGLOBAL MUMBAI \u00b7 TESTNET DEMO",
+      "status": "Edited product walkthrough",
+      "title": "Wave\nProtocol"
+    },
+    {
+      "audio": "/Users/hano/Downloads/Wave Protocol Demo/voice-01.aiff",
+      "bullets": [
+        "One basket share token",
+        "Visible underlying holdings",
+        "You confirm every transaction"
+      ],
+      "duration": 16,
+      "images": [
+        "/Users/hano/Projects/Wave Eth/docs/screenshots/demo-video/landing.jpg"
+      ],
+      "kicker": "A LITTLE LESS TO MANAGE",
+      "narration": "Managing a portfolio means many swaps, constant rebalancing, and exposing reads to an RPC provider. Wave brings a basket into one token, with fair value, target allocation, and private visibility in the same journey.",
+      "partner": "WAVE PROTOCOL",
+      "status": "Actual app \u00b7 read-only capture",
+      "title": "Many assets.\nOne position."
+    },
+    {
+      "audio": "/Users/hano/Downloads/Wave Protocol Demo/voice-02.aiff",
+      "bullets": [
+        "Existing flagship: Growth",
+        "Contract-derived allocation",
+        "Mock assets. No real value."
+      ],
+      "duration": 20,
+      "images": [
+        "/Users/hano/Projects/Wave Eth/docs/screenshots/demo-video/deposit.jpg",
+        "/Users/hano/Projects/Wave Eth/docs/screenshots/demo-video/holdings.jpg"
+      ],
+      "kicker": "THE GROWTH BASKET",
+      "narration": "Growth is the existing flagship. Assets, target weights, fees, and net asset value come from contracts. This button prepares one hundred test USDC. Approval and the mock token faucet are verified; the deposit is still pending. No completed deposit is staged here.",
+      "partner": "UNISWAP V4 \u00b7 CHAINLINK NAV",
+      "status": "Deposit prepared \u00b7 not completed",
+      "title": "Start with\n100 test USDC."
+    },
+    {
+      "audio": "/Users/hano/Downloads/Wave Protocol Demo/voice-03.aiff",
+      "bullets": [
+        "Uniswap v4 execution",
+        "NAV-sensitive hook fees",
+        "Approved flagship pool only"
+      ],
+      "duration": 25,
+      "images": [
+        "/Users/hano/Projects/Wave Eth/docs/screenshots/demo-video/hook.jpg"
+      ],
+      "kicker": "01 / FAIR VALUE",
+      "narration": "Uniswap v4 executes the swaps. Nav Guard Hook compares the approved pool price with Chainlink based net asset value before each swap. Outside a one percent band, a trade toward NAV pays zero point zero five percent; a trade away pays one percent. Inside the band, both pay zero point zero five percent. Live directional swap receipts are still pending.",
+      "partner": "UNISWAP FOUNDATION",
+      "status": "Live pool read \u00b7 directional trades pending",
+      "title": "Fair value.\nA reference\nfor every swap."
+    },
+    {
+      "audio": "/Users/hano/Downloads/Wave Protocol Demo/voice-04.aiff",
+      "bullets": [
+        "Chainlink-valued holdings",
+        "Bounded rebalance workflow",
+        "A genuine hold is acceptable"
+      ],
+      "duration": 23,
+      "images": [
+        "/Users/hano/Projects/Wave Eth/docs/screenshots/demo-video/cre.jpg",
+        "/Users/hano/Projects/Wave Eth/docs/screenshots/demo-video/limits.jpg"
+      ],
+      "kicker": "02 / TARGET ALLOCATION",
+      "narration": "Chainlink feeds value the holdings. CRE proposes a bounded rebalance, while the vault independently enforces weight, turnover, timing, and execution limits. A genuine hold is acceptable. The workflow compiles, but real CRE broadcast and receiver proof remain pending. Local reports do not replace that proof.",
+      "partner": "CHAINLINK CRE",
+      "status": "CRE broadcast and receiver result pending",
+      "title": "A target.\nHard limits."
+    },
+    {
+      "audio": "/Users/hano/Downloads/Wave Protocol Demo/voice-05.aiff",
+      "bullets": [
+        "Redeem to mock USDC",
+        "Or receive underlying tokens",
+        "Stale-fee limitation disclosed"
+      ],
+      "duration": 20,
+      "images": [
+        "/Users/hano/Projects/Wave Eth/docs/screenshots/demo-video/redeem.jpg",
+        "/Users/hano/Projects/Wave Eth/docs/screenshots/demo-video/in-kind.jpg"
+      ],
+      "kicker": "TWO WITHDRAWAL PATHS",
+      "narration": "Withdraw into mock USDC, or take the underlying assets in kind. Healthy feeds crystallize creator fees. Stale feed in kind exits stay immediate and pro rata after the withdrawal fee, with no reserve. They can avoid uncrystallized creator fees. These are controls, not completed withdrawals.",
+      "partner": "SETTLEMENT OR UNDERLYING ASSETS",
+      "status": "Exit interface \u00b7 withdrawals not executed",
+      "title": "Your basket.\nYour exit."
+    },
+    {
+      "audio": "/Users/hano/Downloads/Wave Protocol Demo/voice-06.aiff",
+      "bullets": [
+        "Immutable Nox 0.4.0 pin",
+        "Actual session counters",
+        "No silent public fallback"
+      ],
+      "duration": 25,
+      "images": [
+        "/Users/hano/Projects/Wave Eth/docs/screenshots/demo-video/privacy-before.jpg",
+        "/Users/hano/Projects/Wave Eth/docs/screenshots/demo-video/privacy-failed.jpg"
+      ],
+      "kicker": "03 / PRIVATE VISIBILITY",
+      "narration": "Anon RPC is the default for application reads. This short session shows actual startup and method counters. Stopping the private worker rejects a read without increasing direct successes. It is partial evidence, not full lifecycle acceptance. Wallet RPC and bootstrap are separate. On chain holdings remain public.",
+      "partner": "ETHEREUM FOUNDATION \u00b7 ANON-RPC",
+      "status": "Short read-only session \u00b7 not full lifecycle proof",
+      "title": "Private reads.\nPublic holdings."
+    },
+    {
+      "audio": "/Users/hano/Downloads/Wave Protocol Demo/voice-07.aiff",
+      "bullets": [
+        "42 deployment receipts verified",
+        "Approval + faucet verified",
+        "Deposit, swaps, exits and CRE pending"
+      ],
+      "duration": 25,
+      "images": [],
+      "kicker": "VERIFIED, NOT ASSUMED",
+      "narration": "The public record verifies forty two deployment transactions, plus approval and the mock token faucet, using PublicNode and Tenderly. Provider diversity does not prove independent infrastructure. Sixty eight local tests pass. Missing live deposits, swaps, withdrawals, and CRE execution stay visibly pending.",
+      "partner": "PUBLICNODE + TENDERLY",
+      "status": "Provider diversity \u2260 infrastructure independence",
+      "title": "Show the proof.\nKeep the gaps."
+    },
+    {
+      "audio": "/Users/hano/Downloads/Wave Protocol Demo/voice-08.aiff",
+      "bullets": [
+        "Fair value",
+        "Target allocation",
+        "Private visibility"
+      ],
+      "duration": 17,
+      "images": [],
+      "kicker": "WAVE PROTOCOL",
+      "narration": "Wave Protocol. Token baskets, in balance. Uniswap for execution. Chainlink for valuation and bounded allocation. Anon RPC for less RPC exposure. Unaudited Sepolia, mock assets, no promised returns.",
+      "partner": "github.com/ushi86/wave-basket",
+      "status": "Unaudited Sepolia demo \u00b7 no promised returns",
+      "title": "Token baskets,\nin balance."
+    }
+  ],
+  "title": "Wave Protocol \u2014 Token baskets, in balance.",
+  "width": 1920
+}

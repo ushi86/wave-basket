@@ -1,0 +1,41 @@
+docs/readiness/demo-video/render.swift:142:80: warning: 'expectsMediaDataInRealTime' was deprecated in macOS 27.0: Use the input receiver's appendImmediately(...) method instead [#DeprecatedDeclaration]
+140 |   let writer=try AVAssetWriter(outputURL:silent,fileType:.mp4)
+141 |   let settings:[String:Any]=[AVVideoCodecKey:AVVideoCodecType.h264,AVVideoWidthKey:1920,AVVideoHeightKey:1080,AVVideoCompressionPropertiesKey:[AVVideoAverageBitRateKey:3_000_000,AVVideoExpectedSourceFrameRateKey:24,AVVideoMaxKeyFrameIntervalKey:48,AVVideoProfileLevelKey:AVVideoProfileLevelH264HighAutoLevel]]
+142 |   let input=AVAssetWriterInput(mediaType:.video,outputSettings:settings);input.expectsMediaDataInRealTime=false
+    |                                                                                `- warning: 'expectsMediaDataInRealTime' was deprecated in macOS 27.0: Use the input receiver's appendImmediately(...) method instead [#DeprecatedDeclaration]
+143 |   let attrs:[String:Any]=[kCVPixelBufferPixelFormatTypeKey as String:kCVPixelFormatType_32BGRA,kCVPixelBufferWidthKey as String:1920,kCVPixelBufferHeightKey as String:1080,kCVPixelBufferCGImageCompatibilityKey as String:true,kCVPixelBufferCGBitmapContextCompatibilityKey as String:true,kCVPixelBufferIOSurfacePropertiesKey as String:[:]]
+144 |   let adaptor=AVAssetWriterInputPixelBufferAdaptor(assetWriterInput:input,sourcePixelBufferAttributes:attrs);try require(writer.canAdd(input),"Cannot add video input");writer.add(input);try require(writer.startWriting(),"Cannot start writer");writer.startSession(atSourceTime:.zero)
+
+docs/readiness/demo-video/render.swift:144:15: warning: 'AVAssetWriterInputPixelBufferAdaptor' was deprecated in macOS 27.0: Use AVAssetWriter.inputPixelBufferReceiver(for:pixelBufferAttributes:) instead [#DeprecatedDeclaration]
+142 |   let input=AVAssetWriterInput(mediaType:.video,outputSettings:settings);input.expectsMediaDataInRealTime=false
+143 |   let attrs:[String:Any]=[kCVPixelBufferPixelFormatTypeKey as String:kCVPixelFormatType_32BGRA,kCVPixelBufferWidthKey as String:1920,kCVPixelBufferHeightKey as String:1080,kCVPixelBufferCGImageCompatibilityKey as String:true,kCVPixelBufferCGBitmapContextCompatibilityKey as String:true,kCVPixelBufferIOSurfacePropertiesKey as String:[:]]
+144 |   let adaptor=AVAssetWriterInputPixelBufferAdaptor(assetWriterInput:input,sourcePixelBufferAttributes:attrs);try require(writer.canAdd(input),"Cannot add video input");writer.add(input);try require(writer.startWriting(),"Cannot start writer");writer.startSession(atSourceTime:.zero)
+    |               `- warning: 'AVAssetWriterInputPixelBufferAdaptor' was deprecated in macOS 27.0: Use AVAssetWriter.inputPixelBufferReceiver(for:pixelBufferAttributes:) instead [#DeprecatedDeclaration]
+145 |   guard let pool=adaptor.pixelBufferPool else {throw Failure(message:"No native pixel buffer pool")}
+146 |   var sceneIndex=0,sceneStart=0.0
+
+docs/readiness/demo-video/render.swift:144:176: warning: 'add' was deprecated in macOS 27.0: Use the appropriate AVAssetWriter.inputReceiver(for:...) overload for your input and optional adaptor instead [#DeprecatedDeclaration]
+142 |   let input=AVAssetWriterInput(mediaType:.video,outputSettings:settings);input.expectsMediaDataInRealTime=false
+143 |   let attrs:[String:Any]=[kCVPixelBufferPixelFormatTypeKey as String:kCVPixelFormatType_32BGRA,kCVPixelBufferWidthKey as String:1920,kCVPixelBufferHeightKey as String:1080,kCVPixelBufferCGImageCompatibilityKey as String:true,kCVPixelBufferCGBitmapContextCompatibilityKey as String:true,kCVPixelBufferIOSurfacePropertiesKey as String:[:]]
+144 |   let adaptor=AVAssetWriterInputPixelBufferAdaptor(assetWriterInput:input,sourcePixelBufferAttributes:attrs);try require(writer.canAdd(input),"Cannot add video input");writer.add(input);try require(writer.startWriting(),"Cannot start writer");writer.startSession(atSourceTime:.zero)
+    |                                                                                                                                                                                `- warning: 'add' was deprecated in macOS 27.0: Use the appropriate AVAssetWriter.inputReceiver(for:...) overload for your input and optional adaptor instead [#DeprecatedDeclaration]
+145 |   guard let pool=adaptor.pixelBufferPool else {throw Failure(message:"No native pixel buffer pool")}
+146 |   var sceneIndex=0,sceneStart=0.0
+
+docs/readiness/demo-video/render.swift:144:206: warning: 'startWriting()' was deprecated in macOS 27.0: Use start() instead [#DeprecatedDeclaration]
+142 |   let input=AVAssetWriterInput(mediaType:.video,outputSettings:settings);input.expectsMediaDataInRealTime=false
+143 |   let attrs:[String:Any]=[kCVPixelBufferPixelFormatTypeKey as String:kCVPixelFormatType_32BGRA,kCVPixelBufferWidthKey as String:1920,kCVPixelBufferHeightKey as String:1080,kCVPixelBufferCGImageCompatibilityKey as String:true,kCVPixelBufferCGBitmapContextCompatibilityKey as String:true,kCVPixelBufferIOSurfacePropertiesKey as String:[:]]
+144 |   let adaptor=AVAssetWriterInputPixelBufferAdaptor(assetWriterInput:input,sourcePixelBufferAttributes:attrs);try require(writer.canAdd(input),"Cannot add video input");writer.add(input);try require(writer.startWriting(),"Cannot start writer");writer.startSession(atSourceTime:.zero)
+    |                                                                                                                                                                                                              `- warning: 'startWriting()' was deprecated in macOS 27.0: Use start() instead [#DeprecatedDeclaration]
+145 |   guard let pool=adaptor.pixelBufferPool else {throw Failure(message:"No native pixel buffer pool")}
+146 |   var sceneIndex=0,sceneStart=0.0
+
+docs/readiness/demo-video/render.swift:150:17: warning: 'isReadyForMoreMediaData' was deprecated in macOS 27.0: Use the input receiver's async append(...) method instead [#DeprecatedDeclaration]
+148 |    let time=Double(frame)/Double(plan.fps)
+149 |    while sceneIndex<plan.scenes.count-1 && time>=sceneStart+plan.scenes[sceneIndex].duration {sceneStart+=plan.scenes[sceneIndex].duration;sceneIndex+=1;print("Rendering chapter \(sceneIndex+1)/9");fflush(stdout)}
+150 |    while !input.isReadyForMoreMediaData {if writer.status == .failed {throw writer.error ?? Failure(message:"Video encoder failed")};try await Task.sleep(for:.milliseconds(2))}
+    |                 `- warning: 'isReadyForMoreMediaData' was deprecated in macOS 27.0: Use the input receiver's async append(...) method instead [#DeprecatedDeclaration]
+151 |    try autoreleasepool {
+152 |     var optional:CVPixelBuffer?;let status=CVPixelBufferPoolCreatePixelBuffer(kCFAllocatorDefault,pool,&optional);try require(status==kCVReturnSuccess,"Cannot allocate video frame")
+
+[#DeprecatedDeclaration]: <https://docs.swift.org/compiler/documentation/diagnostics/deprecated-declaration>
